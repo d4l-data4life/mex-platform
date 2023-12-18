@@ -1,0 +1,10 @@
+{
+    "de": {
+        "login": "Erneut anmelden",
+        "title": "Sie sind nun abgemeldet"
+    },
+    "en": {
+        "login": "Sign in again",
+        "title": "You are now signed out"
+    }
+}

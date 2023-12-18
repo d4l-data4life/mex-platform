@@ -1,0 +1,58 @@
+{
+    "name": "contributor",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Mitwirkende*r",
+                "plural": "Mitwirkende"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Contributor",
+                "plural": "Contributors"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Am Projekt mitwirkende Person(en)"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Person(s) contributing to the project"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": {
+        "de": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Vor- und Nachname der Person, z.B. \"Maxi Musterfrau\""
+                }
+            ]
+        },
+        "en": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "First and last name of the person, e.g. \"Maxi Musterfrau\""
+                }
+            ]
+        }
+    }
+}

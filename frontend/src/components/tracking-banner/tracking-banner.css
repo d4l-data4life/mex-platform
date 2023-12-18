@@ -1,0 +1,36 @@
+.tracking-banner {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: var(--color-primary-5);
+  color: var(--color-primary-1);
+  z-index: var(--z-index-banner);
+}
+
+.tracking-banner__inner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-smedium);
+  margin: 0 auto;
+  max-width: var(--viewport-max);
+}
+
+.tracking-banner__text {
+  margin: 0 var(--spacing-medium);
+  flex: 1 1 auto;
+  font-weight: 500;
+}
+
+.tracking-banner__text a {
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tracking-banner__action {
+  flex: none;
+  margin: 0 var(--spacing-small);
+}

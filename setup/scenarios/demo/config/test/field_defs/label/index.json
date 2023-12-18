@@ -1,0 +1,8 @@
+{
+    "name": "label",
+    "kind": "text",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

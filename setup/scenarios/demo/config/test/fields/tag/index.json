@@ -1,0 +1,30 @@
+{
+    "name": "tag",
+    "renderer": "plain",
+    "kind": "coding",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "MeSH-Code",
+                "plural": "MeSH-Codes"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "MeSH code",
+                "plural": "MeSH codes"
+            }
+        ]
+    },
+    "vocabulary": {
+        "de": [],
+        "en": []
+    },
+    "documentation": null
+}

@@ -1,0 +1,93 @@
+syntax = "proto3";
+package d4l.mex.config;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/config/endpoints/config/pb;pbConfig";
+
+import "d4l/security.proto";
+import "d4l/status.proto";
+import "google/api/annotations.proto";
+
+message CannedConfig {
+  bytes tar_data     = 1;
+  string config_hash = 2;
+}
+
+message UpdateConfigRequest {
+  oneof update_type {
+    string ref_name  = 1;
+    CannedConfig canned_config = 2;
+  }
+
+  repeated string changes = 3;
+}
+
+message UpdateConfigResponse {
+  string commit = 1;
+  string job_id = 2;
+}
+
+
+message GetFileRequest {
+  string name = 1;
+}
+
+message GetFileResponse {
+  string mime_type = 1;
+  bytes content    = 2;
+}
+
+message ListConfigRequest{}
+
+message ListConfigResponse {
+  repeated string file_name = 1;
+}
+
+message GetStatusRequest {}
+
+message GetStatusResponse {
+  d4l.mex.status.Color color = 1;
+
+  // This field is repeated so we may also return inconsistent states
+  // where some replicas have run using different configs.
+  repeated string config_hashes = 2;
+
+  repeated d4l.mex.status.Status statuses = 3;
+}
+
+
+service Config {
+
+  // Instruct the service to pull/checkout a new config and inform other services about it.
+  rpc UpdateConfig (UpdateConfigRequest) returns (UpdateConfigResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/config/update"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = API_KEY;
+    option (d4l.api.security.required_privileges) = { resource: "config", verb: "update" };
+  }
+
+  // Get a file from the current checked-out config working tree.
+  rpc GetFile (GetFileRequest) returns (GetFileResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/config/files/{name=**}"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+
+  // Get a list of all current config files names.
+  rpc ListConfig (ListConfigRequest) returns (ListConfigResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/config/list"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+
+  rpc GetStatus(GetStatusRequest) returns (GetStatusResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/config/status"
+    };
+    option (d4l.api.security.authn_type) = API_KEY;
+    option (d4l.api.security.required_privileges) = { resource: "status", verb: "read" };
+  }
+}

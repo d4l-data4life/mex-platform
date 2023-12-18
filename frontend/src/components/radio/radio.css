@@ -1,0 +1,75 @@
+.radio {
+  --radio-size: var(--font-size-m);
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio::before {
+  display: block;
+  content: '';
+  width: var(--radio-size);
+  height: var(--radio-size);
+  border-radius: 50%;
+  margin: 0 var(--spacing-small) 0 0;
+  border: 2px solid var(--color-secondary-1);
+  transition: opacity var(--duration-quick), background-size var(--duration-quick);
+  background: radial-gradient(
+      ellipse at center,
+      var(--color-secondary-1) 0%,
+      var(--color-secondary-1) 40%,
+      transparent 45%
+    )
+    center center no-repeat;
+  background-size: 0% 0%;
+  box-sizing: border-box;
+  flex: none;
+}
+
+.radio--checked::before {
+  background: radial-gradient(
+      ellipse at center,
+      var(--color-secondary-1) 0%,
+      var(--color-secondary-1) 40%,
+      transparent 45%
+    )
+    center center no-repeat;
+  background-size: 100% 100%;
+}
+
+.radio--focused::before {
+  outline: 2px solid var(--outline-color);
+}
+
+.radio--disabled {
+  cursor: not-allowed;
+}
+
+.radio--disabled::before {
+  opacity: 0.8;
+  background-color: var(--color-gray-4);
+}
+
+.radio--disabled.radio--checked::before {
+  background-color: var(--color-secondary-2);
+}
+
+.radio__input {
+  position: absolute;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border: 0 none;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.radio__text {
+  display: block;
+  user-select: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,12 @@
+{
+    "de": {
+        "created": "Neueste zuerst",
+        "label": "Titel Z-A",
+        "null": "Relevanz"
+    },
+    "en": {
+        "created": "Newest first",
+        "label": "Title Z-A",
+        "null": "Relevance"
+    }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "accessPlatform",
+  "renderer": "entity",
+  "kind": "link",
+  "importance": "mandatory",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": false,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Zugriffsplattform",
+        "plural": "Zugriffsplattformen"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Access platform",
+        "plural": "Access platforms"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Zugriffsplattform der Ressource"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "Access platform of the resource"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "exampleValue": [
+        {
+          "entityType": "all",
+          "text": ""
+        }
+      ],
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "Name der Zugriffsplattform."
+        }
+      ]
+    },
+    "en": {
+      "exampleValue": [
+        {
+          "entityType": "all",
+          "text": ""
+        }
+      ],
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "Name of the access platform. It means the platform on which the resources are stored and through which they can be accessed. It is not a priority at this point whether the platform is accessible to others or not."
+        }
+      ]
+    }
+  }
+}

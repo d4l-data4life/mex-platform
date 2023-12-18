@@ -1,0 +1,8 @@
+{
+    "name": "created",
+    "type": "ordinalAxis",
+    "fields": [
+        "created",
+        "startTime"
+    ]
+}

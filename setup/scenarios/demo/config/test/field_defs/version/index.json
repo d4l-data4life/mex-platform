@@ -1,0 +1,8 @@
+{
+    "name": "version",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

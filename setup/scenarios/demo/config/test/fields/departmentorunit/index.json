@@ -1,0 +1,27 @@
+{
+    "name": "departmentOrUnit",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Fachabteilung",
+                "plural": "Fachabteilungen"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Unit",
+                "plural": "Units"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": null
+}

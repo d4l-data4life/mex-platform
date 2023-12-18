@@ -1,0 +1,926 @@
+{
+    "de": {
+        "title": "Data access form",
+        "steps": [
+            {
+                "headline": null,
+                "subHeadline": "Contact <strong>{{ recipient.label }}<\/strong> regarding access to <strong>{{ context.label }}<\/strong>",
+                "blocks": [
+                    {
+                        "type": "text",
+                        "text": "<p>Purpose of this form:<\/p>"
+                    },
+                    {
+                        "type": "list",
+                        "text": "<ul><li>Help data owners understand why you\u2019d like to get access.<\/li><li>Guide you through different sections with helpful questions.<\/li><li>Collect required information (marked with \u201c*\u201d) and let you add optional details, so that you can get a positive reply.<\/li><\/ul>"
+                    },
+                    {
+                        "type": "infobox",
+                        "text": "<p>You can go back and forth between sections and questions. You can edit your answers until you decide to Send, closing the dialog.<\/p>",
+                        "style": "info"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><strong>Some questions will relate to the resource details. For this purpose you can:<br><\/strong><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 1\/5 - Why is the data needed?",
+                "subHeadline": "Let the data owner know why would you want to access the data and which study it will be used for.",
+                "blocks": [
+                    {
+                        "type": "formInputText",
+                        "name": "studyName",
+                        "label": "Study name",
+                        "placeholder": "Example study name",
+                        "width": "1\/2",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputText",
+                        "name": "studyId",
+                        "label": "Study ID",
+                        "placeholder": "123456",
+                        "width": "1\/2",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputText",
+                        "name": "researchProjectTitle",
+                        "label": "Title of own research project",
+                        "placeholder": "Example research project",
+                        "width": "1",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "researchProjectDescription",
+                        "label": "Short description of your research project",
+                        "placeholder": "Type your description here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "researchProjectPurpose",
+                        "label": "Short description of purpose and benefit of your research project",
+                        "placeholder": "Type your description here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 2\/5 - Which data will be used?",
+                "subHeadline": "Let the data owner know which data you want to use.",
+                "blocks": [
+                    {
+                        "type": "text",
+                        "text": "<p>List of all required variables (reference to Art. 5, GDPR: data minimization, only data actually needed may be released). Mention of the required granularity (e.g. variable age, granularity age groups in steps of 10, variable ICD code, granularity C25)<\/p>"
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "repeatable": true,
+                        "repetitionSettings": {
+                            "repeatLabels": false,
+                            "addLabel": "Add variable details",
+                            "deleteLabel": "",
+                            "initialCount": 1
+                        },
+                        "indent": false,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "variableName",
+                                "label": "Variable name",
+                                "placeholder": "Age",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "variableGranularity",
+                                "label": "Variable granularity",
+                                "placeholder": "age groups in steps of 10",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": []
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "variableSelectionReason",
+                        "label": "Reason for variable selection and granularity (Art. 5, GDPR: purpose limitation)",
+                        "placeholder": "Type your description here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 3\/5 - How will the data be used?",
+                "subHeadline": "Let the data owner know if and how you plan to link it with other datasets.",
+                "blocks": [
+                    {
+                        "type": "formInputRadio",
+                        "name": "datasetLinking",
+                        "label": "Linking of the dataset",
+                        "width": "1\/2",
+                        "required": false,
+                        "options": [
+                            {
+                                "value": "yes",
+                                "text": "Yes"
+                            },
+                            {
+                                "value": "no",
+                                "text": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "repeatable": false,
+                        "indent": false,
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "text": "<p>Provide details of up to two datasets that you plan to link with this data.<\/p>"
+                            }
+                        ],
+                        "conditions": [
+                            {
+                                "name": "datasetLinking",
+                                "value": "yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "headline": "Dataset ({{ index }})",
+                        "repeatable": true,
+                        "repetitionSettings": {
+                            "repeatLabels": true,
+                            "addLabel": "Add dataset",
+                            "deleteLabel": "Delete",
+                            "initialCount": 1,
+                            "maxCount": 2
+                        },
+                        "indent": true,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "linkedDatasetName",
+                                "label": "Name of the dataset to link to",
+                                "placeholder": "Example dataset name",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "linkedDatasetOrigin",
+                                "label": "Origin of the dataset to link to",
+                                "placeholder": "Example origin",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputTextarea",
+                                "name": "linkedDatasetDescription",
+                                "label": "Description of the record to be linked + its variables",
+                                "placeholder": "Type your description here",
+                                "width": "1",
+                                "required": false
+                            }
+                        ],
+                        "conditions": [
+                            {
+                                "name": "datasetLinking",
+                                "value": "yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 4\/5 - When is the data needed?",
+                "subHeadline": "Let the data owner know when you need to access the data and for how long.",
+                "blocks": [
+                    {
+                        "type": "formInputText",
+                        "name": "requestedObtainingDate",
+                        "label": "When are the data needed?",
+                        "placeholder": "e.g. specific date, ASAP, etc.",
+                        "width": "1",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "reasonOfUrgency",
+                        "label": "Is your request urgent? If yes, please give reasons.",
+                        "placeholder": "Type your reason here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "formInputRadio",
+                        "name": "requestedAccessInterval",
+                        "label": "Is data access needed once or multiple times?",
+                        "width": "1",
+                        "required": false,
+                        "options": [
+                            {
+                                "value": "once",
+                                "text": "Once"
+                            },
+                            {
+                                "value": "moreThanOnce",
+                                "text": "More than once"
+                            }
+                        ],
+                        "default": "once"
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "repeatable": false,
+                        "indent": false,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "requestedAccessIntervalText",
+                                "label": "Time interval in case of regularity",
+                                "placeholder": "e.g. every 2 months",
+                                "width": "1",
+                                "required": true,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": [
+                            {
+                                "name": "requestedAccessInterval",
+                                "value": "moreThanOnce"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 5\/5 - Who wants to access the data?",
+                "subHeadline": "Let the data owner know about you, and others that you want to share the data access with",
+                "blocks": [
+                    {
+                        "type": "formInputGroup",
+                        "headline": "Main applicant (you)",
+                        "repeatable": false,
+                        "indent": true,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "applicantName",
+                                "label": "Name",
+                                "placeholder": "Max Mustermann",
+                                "width": "1",
+                                "required": true,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantOrganizationName",
+                                "label": "(Scientific) organization",
+                                "placeholder": "Muster Labs",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantOrganizationAddress",
+                                "label": "Address of my organization",
+                                "placeholder": "Musterstr. 1, 12345 Musterstadt",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantRole",
+                                "label": "My function in the organization",
+                                "placeholder": "My role",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantEmail",
+                                "label": "Email address",
+                                "placeholder": "email@address.tld",
+                                "width": "1\/2",
+                                "required": true,
+                                "inputType": "email"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantPhone",
+                                "label": "Phone number",
+                                "placeholder": "+49123456789",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": []
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "headline": "Additional applicant ({{ index }})",
+                        "repeatable": true,
+                        "repetitionSettings": {
+                            "repeatLabels": true,
+                            "addLabel": "Add another applicant",
+                            "deleteLabel": "Delete",
+                            "initialCount": 0,
+                            "maxCount": 2
+                        },
+                        "indent": true,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantName",
+                                "label": "Name",
+                                "placeholder": "Max Mustermann",
+                                "width": "1",
+                                "required": true,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantOrganizationName",
+                                "label": "(Scientific) organization",
+                                "placeholder": "Muster Labs",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantOrganizationAddress",
+                                "label": "Address of my organization",
+                                "placeholder": "Musterstr. 1, 12345 Musterstadt",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantRole",
+                                "label": "My function in the organization",
+                                "placeholder": "My role",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantEmail",
+                                "label": "Email address",
+                                "placeholder": "email@address.tld",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "email"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantPhone",
+                                "label": "Phone number",
+                                "placeholder": "+49123456789",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": []
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Confirm and send",
+                "subHeadline": null,
+                "blocks": [
+                    {
+                        "type": "text",
+                        "text": "Any additional information or comment that you would like to share with the data owner about this request, can be added here."
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "customMessage",
+                        "label": "Type your message here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "list",
+                        "text": "<ul><li>You can review and edit your information with the \"back\" button.<\/li><li>When you're done, click Send to send an email to the data owner. A copy of the email will be sent to the address you entered: <strong>{{ form.applicantEmail }}<\/strong><\/li><\/ul>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p>By clicking Send you agree to our <a href=\"/pages/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">privacy policy</a>.</p>"
+                    }
+                ]
+            }
+        ],
+        "mailTemplate": "data-access-request"
+    },
+    "en": {
+        "title": "Data access form",
+        "steps": [
+            {
+                "headline": null,
+                "subHeadline": "Contact <strong>{{ recipient.label }}<\/strong> regarding access to <strong>{{ context.label }}<\/strong>",
+                "blocks": [
+                    {
+                        "type": "text",
+                        "text": "<p>Purpose of this form:<\/p>"
+                    },
+                    {
+                        "type": "list",
+                        "text": "<ul><li>Help data owners understand why you\u2019d like to get access.<\/li><li>Guide you through different sections with helpful questions.<\/li><li>Collect required information (marked with \u201c*\u201d) and let you add optional details, so that you can get a positive reply.<\/li><\/ul>"
+                    },
+                    {
+                        "type": "infobox",
+                        "text": "<p>You can go back and forth between sections and questions. You can edit your answers until you decide to Send, closing the dialog.<\/p>",
+                        "style": "info"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><strong>Some questions will relate to the resource details. For this purpose you can:<br><\/strong><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 1\/5 - Why is the data needed?",
+                "subHeadline": "Let the data owner know why would you want to access the data and which study it will be used for.",
+                "blocks": [
+                    {
+                        "type": "formInputText",
+                        "name": "studyName",
+                        "label": "Study name",
+                        "placeholder": "Example study name",
+                        "width": "1\/2",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputText",
+                        "name": "studyId",
+                        "label": "Study ID",
+                        "placeholder": "123456",
+                        "width": "1\/2",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputText",
+                        "name": "researchProjectTitle",
+                        "label": "Title of own research project",
+                        "placeholder": "Example research project",
+                        "width": "1",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "researchProjectDescription",
+                        "label": "Short description of your research project",
+                        "placeholder": "Type your description here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "researchProjectPurpose",
+                        "label": "Short description of purpose and benefit of your research project",
+                        "placeholder": "Type your description here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 2\/5 - Which data will be used?",
+                "subHeadline": "Let the data owner know which data you want to use.",
+                "blocks": [
+                    {
+                        "type": "text",
+                        "text": "<p>List of all required variables (reference to Art. 5, GDPR: data minimization, only data actually needed may be released). Mention of the required granularity (e.g. variable age, granularity age groups in steps of 10, variable ICD code, granularity C25)<\/p>"
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "repeatable": true,
+                        "repetitionSettings": {
+                            "repeatLabels": false,
+                            "addLabel": "Add variable details",
+                            "deleteLabel": "",
+                            "initialCount": 1
+                        },
+                        "indent": false,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "variableName",
+                                "label": "Variable name",
+                                "placeholder": "Age",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "variableGranularity",
+                                "label": "Variable granularity",
+                                "placeholder": "age groups in steps of 10",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": []
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "variableSelectionReason",
+                        "label": "Reason for variable selection and granularity (Art. 5, GDPR: purpose limitation)",
+                        "placeholder": "Type your description here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 3\/5 - How will the data be used?",
+                "subHeadline": "Let the data owner know if and how you plan to link it with other datasets.",
+                "blocks": [
+                    {
+                        "type": "formInputRadio",
+                        "name": "datasetLinking",
+                        "label": "Linking of the dataset",
+                        "width": "1\/2",
+                        "required": false,
+                        "options": [
+                            {
+                                "value": "yes",
+                                "text": "Yes"
+                            },
+                            {
+                                "value": "no",
+                                "text": "No"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "repeatable": false,
+                        "indent": false,
+                        "blocks": [
+                            {
+                                "type": "text",
+                                "text": "<p>Provide details of up to two datasets that you plan to link with this data.<\/p>"
+                            }
+                        ],
+                        "conditions": [
+                            {
+                                "name": "datasetLinking",
+                                "value": "yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "headline": "Dataset ({{ index }})",
+                        "repeatable": true,
+                        "repetitionSettings": {
+                            "repeatLabels": true,
+                            "addLabel": "Add dataset",
+                            "deleteLabel": "Delete",
+                            "initialCount": 1,
+                            "maxCount": 2
+                        },
+                        "indent": true,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "linkedDatasetName",
+                                "label": "Name of the dataset to link to",
+                                "placeholder": "Example dataset name",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "linkedDatasetOrigin",
+                                "label": "Origin of the dataset to link to",
+                                "placeholder": "Example origin",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputTextarea",
+                                "name": "linkedDatasetDescription",
+                                "label": "Description of the record to be linked + its variables",
+                                "placeholder": "Type your description here",
+                                "width": "1",
+                                "required": false
+                            }
+                        ],
+                        "conditions": [
+                            {
+                                "name": "datasetLinking",
+                                "value": "yes"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 4\/5 - When is the data needed?",
+                "subHeadline": "Let the data owner know when you need to access the data and for how long.",
+                "blocks": [
+                    {
+                        "type": "formInputText",
+                        "name": "requestedObtainingDate",
+                        "label": "When are the data needed?",
+                        "placeholder": "e.g. specific date, ASAP, etc.",
+                        "width": "1",
+                        "required": false,
+                        "inputType": "text"
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "reasonOfUrgency",
+                        "label": "Is your request urgent? If yes, please give reasons.",
+                        "placeholder": "Type your reason here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "formInputRadio",
+                        "name": "requestedAccessInterval",
+                        "label": "Is data access needed once or multiple times?",
+                        "width": "1",
+                        "required": false,
+                        "options": [
+                            {
+                                "value": "once",
+                                "text": "Once"
+                            },
+                            {
+                                "value": "moreThanOnce",
+                                "text": "More than once"
+                            }
+                        ],
+                        "default": "once"
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "repeatable": false,
+                        "indent": false,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "requestedAccessIntervalText",
+                                "label": "Time interval in case of regularity",
+                                "placeholder": "e.g. every 2 months",
+                                "width": "1",
+                                "required": true,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": [
+                            {
+                                "name": "requestedAccessInterval",
+                                "value": "moreThanOnce"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Step 5\/5 - Who wants to access the data?",
+                "subHeadline": "Let the data owner know about you, and others that you want to share the data access with",
+                "blocks": [
+                    {
+                        "type": "formInputGroup",
+                        "headline": "Main applicant (you)",
+                        "repeatable": false,
+                        "indent": true,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "applicantName",
+                                "label": "Name",
+                                "placeholder": "Max Mustermann",
+                                "width": "1",
+                                "required": true,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantOrganizationName",
+                                "label": "(Scientific) organization",
+                                "placeholder": "Muster Labs",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantOrganizationAddress",
+                                "label": "Address of my organization",
+                                "placeholder": "Musterstr. 1, 12345 Musterstadt",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantRole",
+                                "label": "My function in the organization",
+                                "placeholder": "My role",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantEmail",
+                                "label": "Email address",
+                                "placeholder": "email@address.tld",
+                                "width": "1\/2",
+                                "required": true,
+                                "inputType": "email"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "applicantPhone",
+                                "label": "Phone number",
+                                "placeholder": "+49123456789",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": []
+                    },
+                    {
+                        "type": "formInputGroup",
+                        "headline": "Additional applicant ({{ index }})",
+                        "repeatable": true,
+                        "repetitionSettings": {
+                            "repeatLabels": true,
+                            "addLabel": "Add another applicant",
+                            "deleteLabel": "Delete",
+                            "initialCount": 0,
+                            "maxCount": 2
+                        },
+                        "indent": true,
+                        "blocks": [
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantName",
+                                "label": "Name",
+                                "placeholder": "Max Mustermann",
+                                "width": "1",
+                                "required": true,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantOrganizationName",
+                                "label": "(Scientific) organization",
+                                "placeholder": "Muster Labs",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantOrganizationAddress",
+                                "label": "Address of my organization",
+                                "placeholder": "Musterstr. 1, 12345 Musterstadt",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantRole",
+                                "label": "My function in the organization",
+                                "placeholder": "My role",
+                                "width": "1",
+                                "required": false,
+                                "inputType": "text"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantEmail",
+                                "label": "Email address",
+                                "placeholder": "email@address.tld",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "email"
+                            },
+                            {
+                                "type": "formInputText",
+                                "name": "additionalApplicantPhone",
+                                "label": "Phone number",
+                                "placeholder": "+49123456789",
+                                "width": "1\/2",
+                                "required": false,
+                                "inputType": "text"
+                            }
+                        ],
+                        "conditions": []
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p><a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\">View this project's details in a new tab<\/a><\/p>"
+                    }
+                ]
+            },
+            {
+                "headline": "Confirm and send",
+                "subHeadline": null,
+                "blocks": [
+                    {
+                        "type": "text",
+                        "text": "Any additional information or comment that you would like to share with the data owner about this request, can be added here."
+                    },
+                    {
+                        "type": "formInputTextarea",
+                        "name": "customMessage",
+                        "label": "Type your message here",
+                        "width": "1",
+                        "required": false
+                    },
+                    {
+                        "type": "list",
+                        "text": "<ul><li>You can review and edit your information with the \"back\" button.<\/li><li>When you're done, click Send to send an email to the data owner. A copy of the email will be sent to the address you entered: <strong>{{ form.applicantEmail }}<\/strong><\/li><\/ul>"
+                    },
+                    {
+                        "type": "text",
+                        "text": "<p>By clicking Send you agree to our <a href=\"/pages/privacy-policy\" target=\"_blank\" rel=\"noopener noreferrer\">privacy policy</a>.</p>"
+                    }
+                ]
+            }
+        ],
+        "mailTemplate": "data-access-request"
+    }
+}

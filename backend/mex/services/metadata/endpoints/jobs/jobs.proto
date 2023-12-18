@@ -1,0 +1,108 @@
+syntax = "proto3";
+package d4l.mex.jobs;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/metadata/endpoints/jobs/pb;jobspb";
+
+import "d4l/security.proto";
+import "d4l/jobs.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+
+service Jobs {
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {
+      description: "Service for managing jobs"
+    };
+
+    rpc CreateJob (d4l.mex.jobs.CreateJobRequest) returns (d4l.mex.jobs.CreateJobResponse) {
+      option (google.api.http) = {
+        post: "/api/v0/jobs"
+        body: "*"
+      };
+      option (d4l.api.security.authn_type) = BEARER_TOKEN;
+      option (d4l.api.security.required_privileges) = {
+        resource: "jobs"
+        verb:  "create"
+      };
+      option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+        summary: "Create a new job"
+        description: "Create a new job and return the job ID."
+        tags: [ "job" ]
+        security: {
+          security_requirement: {
+            key: "OAuth2/clientCreds"
+            value: {
+              scope: "jobs:w"
+            }
+          }
+        }
+      };
+    }
+
+    rpc GetLogs (d4l.mex.jobs.GetJobLogsRequest) returns (d4l.mex.jobs.GetJobLogsResponse) {
+      option (google.api.http) = {
+        get: "/api/v0/jobs/{job_id}/logs"
+      };
+      option (d4l.api.security.authn_type) = BEARER_TOKEN;
+      option (d4l.api.security.required_privileges) = {
+        resource: "jobs"
+        verb:  "read"
+      };
+      option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+        summary: "Read the job logs"
+        description: "Retrieve all logs that have been issued during the job run so far."
+        tags: [ "job", "logs" ]
+        security: {
+          security_requirement: {
+            key: "OAuth2/clientCreds"
+            value: {
+              scope: "jobs:r"
+            }
+          }
+        }
+      };
+    };
+
+    rpc GetItems (d4l.mex.jobs.GetJobItemsRequest) returns (d4l.mex.jobs.GetJobItemsResponse) {
+      option (google.api.http) = {
+        get: "/api/v0/jobs/{job_id}/items"
+      };
+      option (d4l.api.security.authn_type) = BEARER_TOKEN;
+      option (d4l.api.security.required_privileges) = {
+        resource: "jobs"
+        verb:  "read"
+      };
+      option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+        summary: "Read the IDs of the metadata items created, updated or deleted during the job run"
+        description: "..."
+        tags: [ "job", "items" ]
+        security: {
+          security_requirement: {
+            key: "OAuth2/clientCreds"
+            value: {
+              scope: "jobs:r"
+            }
+          }
+        }
+      };
+    };
+
+    rpc GetJob (d4l.mex.jobs.GetJobRequest) returns (d4l.mex.jobs.GetJobResponse) {
+      option (google.api.http) = {
+        get: "/api/v0/jobs/{job_id}"
+      };
+      option (d4l.api.security.authn_type) = BEARER_TOKEN;
+      option (d4l.api.security.required_privileges) = {
+        resource: "jobs"
+        verb:  "read"
+      };
+    }
+
+    rpc AddLogs (d4l.mex.jobs.AddJobLogsRequest) returns (d4l.mex.jobs.AddJobLogsResponse) {}
+
+    rpc AddItems (d4l.mex.jobs.AddJobItemsRequest) returns (d4l.mex.jobs.AddJobItemsResponse) {}
+
+    rpc SetStatus(d4l.mex.jobs.SetJobStatusRequest) returns (d4l.mex.jobs.SetJobStatusResponse) {}
+
+    rpc SetError(d4l.mex.jobs.SetJobErrorRequest) returns (d4l.mex.jobs.SetJobErrorResponse) {}
+}

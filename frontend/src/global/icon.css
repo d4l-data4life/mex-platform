@@ -1,0 +1,57 @@
+.icon {
+  --icon-size: var(--icon-size-smedium);
+
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: currentColor;
+}
+
+.icon--medium {
+  --icon-size: var(--icon-size-medium);
+}
+
+.icon--large {
+  --icon-size: var(--icon-size-large);
+}
+
+.icon--small {
+  --icon-size: var(--icon-size-small);
+}
+
+.icon--xsmall {
+  --icon-size: var(--icon-size-xsmall);
+}
+
+.icon--inline:not(svg) {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon--no-vertical-offset:not(svg) {
+  --icon-negative-offset: calc((1em - var(--icon-size)) / 2);
+  margin-top: var(--icon-negative-offset);
+  margin-bottom: var(--icon-negative-offset);
+}
+
+.icon--mirrorable:not(svg) {
+  transition: transform var(--duration-medium);
+  will-change: transform;
+  transform: scaleX(1) scaleY(1);
+  backface-visibility: hidden;
+}
+
+.icon--mirrored-vertical:not(svg) {
+  transform: scaleY(-1);
+}
+
+.icon--mirrored-horizontal:not(svg) {
+  transform: scaleX(-1);
+}
+
+.illustration,
+.illustration svg {
+  display: block;
+  width: var(--illustration-width);
+  height: var(--illustration-height);
+}

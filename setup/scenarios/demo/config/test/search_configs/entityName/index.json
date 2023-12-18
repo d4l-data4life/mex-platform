@@ -1,0 +1,7 @@
+{
+    "name": "entityName",
+    "type": "ordinalAxis",
+    "fields": [
+        "entityName"
+    ]
+}

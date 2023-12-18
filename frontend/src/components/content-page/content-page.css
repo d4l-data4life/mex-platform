@@ -1,0 +1,15 @@
+:root {
+  --content-page-inner-height: calc(100vh - (var(--header-height) + var(--footer-thin-height) + 2 * var(--spacing-small) ) );
+}
+
+.content-page {
+  display: block; 
+}
+
+@media (--media-tablet) {
+  .content-page {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 auto;
+  }
+}

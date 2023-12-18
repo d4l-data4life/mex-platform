@@ -1,0 +1,12 @@
+.checkbox-filter {
+  padding-top: var(--spacing-small);
+}
+
+.checkbox-filter--empty {
+  text-align: center;
+  color: var(--color-gray-2);
+}
+
+.checkbox-filter__item {
+  padding: var(--spacing-xsmall) 0;
+}

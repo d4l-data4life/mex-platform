@@ -1,0 +1,12 @@
+{
+    "name": "contributor",
+    "type": "searchFocus",
+    "fields": [
+        "contributor__label",
+        "contributor__email",
+        "contributor__acronym",
+        "contributor__rorID",
+        "contributor__orcidID",
+        "contributor__isniID"
+    ]
+}

@@ -1,0 +1,81 @@
+syntax = "proto3";
+package d4l.mex.auth;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/auth/endpoints/auth/pb;pbAuth";
+
+import "d4l/security.proto";
+import "google/api/annotations.proto";
+
+message AuthorizeRequest {
+  string response_type         = 1;
+  string client_id             = 2;
+  string redirect_uri          = 3;
+  string scope                 = 4;
+  string code_challenge        = 5;
+  string code_challenge_method = 6;
+  string state                 = 7;
+  string response_mode         = 9;
+}
+
+message AuthorizeResponse {
+}
+
+message TokenRequest {
+  string client_id     =  1;
+  string redirect_uri  =  2;
+  string grant_type    =  3;
+  string code_verifier =  4;
+  string code          =  5;
+  string scope         =  6;
+  string state         =  7;
+  string client_secret =  9;
+  string refresh_token = 10;
+}
+
+message TokenResponse {
+  string access_token  = 1 [json_name="access_token" ];
+  string refresh_token = 2 [json_name="refresh_token"];
+  string token_type    = 3 [json_name="token_type"   ];
+  uint32 expires_in    = 4 [json_name="expires_in"   ];
+}
+
+message KeysRequest {}
+
+message KeysResponse {
+  message Key {
+    string kty = 1;
+    string kid = 2;
+    string use = 3;
+    string alg = 4;
+    string e   = 5;
+    string n   = 6;
+  }
+
+  repeated Key keys = 1;
+}
+
+service Auth {
+
+  rpc Authorize (AuthorizeRequest) returns (AuthorizeResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/oauth/authorize"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+
+  rpc Token (TokenRequest) returns (TokenResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/oauth/token"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+
+  rpc Keys (KeysRequest) returns (KeysResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/oauth/keys"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+
+}

@@ -1,0 +1,10 @@
+{
+  "accessDenied": {
+    "button": "MEx project page",
+    "hint": "We recommend you to visit the MEx project page where you can find all details about the project.",
+    "imprint": "Imprint",
+    "privacyPolicy": "Privacy policy",
+    "text": "Access to MEx is restricted.",
+    "title": "Metadata Exchange – Access denied from your location"
+  }
+}

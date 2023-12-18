@@ -1,0 +1,73 @@
+{
+    "name": "keyword",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Schlagwort",
+                "plural": "Schlagw\u00f6rter"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Keyword",
+                "plural": "Keywords"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Resource",
+                "text": "Schlagw\u00f6rter, die eine Ressource beschreiben"
+            },
+            {
+                "entityType": "Source",
+                "text": "Schlagw\u00f6rter, die ein Projekt beschreiben"
+            },
+            {
+                "entityType": "Datum",
+                "text": "Schlagw\u00f6rter, die ein Daten-Item beschreiben"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Resource",
+                "text": "Keywords describing a resource"
+            },
+            {
+                "entityType": "Source",
+                "text": "Keywords describing a project"
+            },
+            {
+                "entityType": "Datum",
+                "text": "Keywords describing a data item"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "Resource",
+                    "text": "\"Modul Psychische Gesundheit, Bella, Querschnitt\""
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "Resource",
+                    "text": "\"Mental Health module, Bella, Cross-Section\""
+                }
+            ]
+        }
+    }
+}

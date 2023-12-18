@@ -1,0 +1,8 @@
+{
+    "name": "endTime",
+    "kind": "timestamp",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

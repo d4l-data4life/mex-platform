@@ -1,0 +1,43 @@
+{
+  "name": "mex-webapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run build:dev",
+    "start": "npm run build:dev",
+    "cors": "npm --prefix=./cors ci && npm --prefix=./cors start",
+    "build": "stencil build --no-profile",
+    "build:dev": "APP_VERSION=$(git describe --tags) npm run build -- --dev --watch --serve --no-open",
+    "build:static": "node ./scripts/build-static-html.js",
+    "analyze": "stencil build --no-profile",
+    "test": "TZ=utc stencil test --spec --runInBand",
+    "test:watch": "npm run test -- --watchAll",
+    "translations:export": "npm --prefix=./scripts/translations run export",
+    "translations:import": "npm --prefix=./scripts/translations run import",
+    "translations:reorder": "npm run translations:export && npm run translations:import",
+    "code-format": "prettier --write 'src/**/*.{tsx,css,ts}'"
+  },
+  "engines": {
+    "npm": ">7.0.0",
+    "node": ">14.0.0"
+  },
+  "devDependencies": {
+    "@stencil/postcss": "^2.1.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^18.11.9",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "postcss-custom-media": "^8.0.2",
+    "prettier": "^2.8.0",
+    "rollup-plugin-visualizer": "^5.8.3"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.19.3",
+    "@stencil/eslint-plugin": "^0.4.0",
+    "@stencil/store": "^2.0.1",
+    "dotenv": "^16.0.3",
+    "i18next": "^21.10.0",
+    "stencil-router-v2": "^0.6.0",
+    "uuid": "^8.3.2"
+  }
+}

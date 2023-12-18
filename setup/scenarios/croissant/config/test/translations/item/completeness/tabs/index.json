@@ -1,0 +1,12 @@
+{
+    "de": {
+        "mandatory": "Pflicht ({{count}})",
+        "optional": "Optional ({{count}})",
+        "recommended": "Empfohlen ({{count}})"
+    },
+    "en": {
+        "mandatory": "Mandatory ({{count}})",
+        "optional": "Optional ({{count}})",
+        "recommended": "Recommended ({{count}})"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "email",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "E-Mail-Adresse",
+                "plural": "E-Mail-Adressen"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Email address",
+                "plural": "Email addresses"
+            }
+        ]
+    },
+    "documentation": null
+}

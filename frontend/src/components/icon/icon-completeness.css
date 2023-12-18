@@ -1,0 +1,35 @@
+.icon-completeness {
+  position: relative;
+  display: block;
+  width: var(--icon-size-large);
+  height: 28px;
+}
+
+.icon-completeness__bars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  color: var(--color-gray-4);
+}
+
+.icon-completeness__bars--active {
+  z-index: var(--z-index-inline);
+  clip-path: inset(var(--icon-completeness-active-height) 0 0 0);
+  transition: clip-path var(--duration-medium) ease-in-out;
+}
+
+.icon-completeness__bar {
+  display: block;
+  flex: 1 1 auto;
+  width: 100%;
+  border-radius: 2px;
+  background-color: currentColor;
+}
+
+.icon-completeness__bar + .icon-completeness__bar {
+  margin-top: 2px;
+}

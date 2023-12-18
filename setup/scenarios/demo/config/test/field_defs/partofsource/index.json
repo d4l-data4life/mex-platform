@@ -1,0 +1,16 @@
+{
+    "name": "partOfSource",
+    "kind": "link",
+    "indexDef": {
+        "multiValued": true,
+        "ext": [
+            {
+                "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+                "relationType": "relation_partOfSource",
+                "linkedTargetFields": [
+                    "label"
+                ]
+            }
+        ]
+    }
+}

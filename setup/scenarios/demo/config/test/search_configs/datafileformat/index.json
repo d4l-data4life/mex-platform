@@ -1,0 +1,7 @@
+{
+    "name": "dataFileFormat",
+    "type": "ordinalAxis",
+    "fields": [
+        "dataFileFormat"
+    ]
+}

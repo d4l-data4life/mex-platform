@@ -1,0 +1,8 @@
+{
+    "name": "website",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

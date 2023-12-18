@@ -1,0 +1,22 @@
+{
+    "de": {
+        "oauthError": "Autorisierung fehlgeschlagen",
+        "sessionExpired": "Sitzung abgelaufen",
+        "download": {
+            "results": {
+                "error": "Beim Herunterladen der Ergebnisse ist leider ein Fehler aufgetreten",
+                "success": "Ergebnisse erfolgreich heruntergeladen"
+            }
+        }
+    },
+    "en": {
+        "oauthError": "Authorization failed",
+        "sessionExpired": "Session expired",
+        "download": {
+            "results": {
+                "error": "Unfortunately, an error occurred while downloading the results",
+                "success": "Results downloaded successfully"
+            }
+        }
+    }
+}

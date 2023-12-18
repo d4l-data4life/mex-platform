@@ -1,0 +1,26 @@
+{
+    "name": "website",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Website",
+                "plural": "Websites"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Website",
+                "plural": "Websites"
+            }
+        ]
+    },
+    "documentation": null
+}

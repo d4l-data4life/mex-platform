@@ -1,0 +1,19 @@
+{
+    "name": "hasResponsibleUnitCode",
+    "kind": "hierarchy",
+    "indexDef": {
+        "multiValued": false,
+        "ext": [
+            {
+                "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+                "relationType": "relation_hasResponsibleUnitCode"
+            },
+            {
+                "@type": "type.googleapis.com\/mex.v0.IndexDefExtHierarchy",
+                "codeSystemNameOrNodeEntityType": "OrganizationalUnit",
+                "linkFieldName": "parentDepartment",
+                "displayFieldName": "acronym"
+            }
+        ]
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "de": {
+        "button": "Zur Suche gehen",
+        "text": "Der Datensatz kann leider nicht gefunden werden. Bitte beginnen Sie eine neue Suche.",
+        "title": "Daten konnten nicht gefunden werden"
+    },
+    "en": {
+        "button": "Go to search",
+        "text": "Unfortunately, the data record can't be found. Please try starting a new search.",
+        "title": "Data not found"
+    }
+}

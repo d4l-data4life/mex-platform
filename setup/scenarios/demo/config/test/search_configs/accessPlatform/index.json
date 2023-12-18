@@ -1,0 +1,8 @@
+{
+    "name": "accessPlatform",
+    "type": "searchFocus",
+    "fields": [
+        "accessPlatform__label",
+        "accessPlatform__acronym"
+    ]
+}

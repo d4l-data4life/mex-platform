@@ -1,0 +1,23 @@
+syntax = "proto3";
+package d4l.mex.entities;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/entities;entities";
+
+message EntityTypeConfig {
+  string business_id_field_name  = 1;
+  string aggregation_entity_type = 2;
+  string aggregation_algorithm   = 3;
+  bool is_focal                  = 4;
+  string partition_field_name    = 5;
+  string duplicate_strategy      = 6;
+  bool is_aggregatable           = 7;
+}
+
+message EntityType {
+  string name             = 1;
+  EntityTypeConfig config = 2;
+}
+
+message EntityTypeList {
+  repeated EntityType entity_types = 1;
+}

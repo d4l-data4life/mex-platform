@@ -1,0 +1,8 @@
+{
+    "name": "rights",
+    "kind": "text",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

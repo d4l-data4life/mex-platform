@@ -1,0 +1,171 @@
+{
+  "name": "sourceType",
+  "renderer": "plain",
+  "kind": "string",
+  "importance": "mandatory",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": true,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Projektart"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Project type"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Art eines Projekts"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "Type of a project"
+      }
+    ]
+  },
+  "vocabulary": {
+    "de": [
+      {
+        "conceptId": "source-type-1",
+        "label": "Drittmittelprojekt",
+        "description": "Drittmittelprojekte werden durch F\u00f6rdermittelgebende mitfinanziert. Diese finanziellen Mittel (Drittmittel) werden durch die Forschungseinrichtungen neben den laufenden Haushaltsmitteln (vom Bund zur Verf\u00fcgung gestellt) zus\u00e4tzlich von dritter Seite eingeworben. Sie werden f\u00fcr die F\u00f6rderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses f\u00fcr einen befristeten Zeitraum zur Verf\u00fcgung gestellt."
+      },
+      {
+        "conceptId": "source-type-2",
+        "label": "Internationales Projekt",
+        "description": "Projekt, an dem Akteure aus verschiedenen L\u00e4ndern der Welt beteiligt sind"
+      },
+      {
+        "conceptId": "source-type-3",
+        "label": "Internes Projekt",
+        "description": "Von Haushaltsmitteln finanziertes Projekt"
+      },
+      {
+        "conceptId": "source-type-4",
+        "label": "Auftragsforschung",
+        "description": "Ein von Dritten beauftragtes Forschungsvorhaben"
+      },
+      {
+        "conceptId": "source-type-5",
+        "label": "Sonderforschungsprojekt",
+        "description": "Projekt f\u00fcr die Grundlagenforschung"
+      },
+      {
+        "conceptId": "source-type-6",
+        "label": "Studie",
+        "description": "Untersuchungsmethode in Form von Befragungen und\/oder (Labor-)Untersuchungen"
+      },
+      {
+        "conceptId": "source-type-7",
+        "label": "Monitoring-Studie",
+        "description": "\u00dcber einen l\u00e4ngeren Zeitraum angelegte Studie mit dem Ziel, den Zustand und die Entwicklung der Gesundheit der Bev\u00f6lkerung zu ermitteln"
+      },
+      {
+        "conceptId": "source-type-8",
+        "label": "Machbarkeitsstudie",
+        "description": "Untersuchung zur Absch\u00e4tzung der Durchf\u00fchrbarkeit"
+      },
+      {
+        "conceptId": "source-type-9",
+        "label": "Add-on-Studie",
+        "description": "Erg\u00e4nzende Studie zur Hauptuntersuchung"
+      },
+      {
+        "conceptId": "source-type-10",
+        "label": "Ad-hoc-Studie",
+        "description": "Zeitlich begrenzte Kurzzeitstudie, um den aktuellen Stand zu einem Public-Health-Thema zu ermitteln"
+      },
+      {
+        "conceptId": "source-type-11",
+        "label": "Sonstige",
+        "description": "Nicht n\u00e4her definierte oder unbekannte Projektart"
+      }
+    ],
+    "en": [
+      {
+        "conceptId": "source-type-1",
+        "label": "Third party funded project",
+        "description": "Third-party funded projects are co-financed by funding agencies. These financial resources (third-party funds) are raised by the research institutions from third parties in addition to the current budget funds (provided by the federal government). They are made available for a limited period of time to support research and development as well as young scientists."
+      },
+      {
+        "conceptId": "source-type-2",
+        "label": "International project",
+        "description": "Project involving parties from different countries of the world"
+      },
+      {
+        "conceptId": "source-type-3",
+        "label": "internal project",
+        "description": "Project financed with internal budget"
+      },
+      {
+        "conceptId": "source-type-4",
+        "label": "Contract research",
+        "description": "Research project commissioned by a client, e. g. federal mandate"
+      },
+      {
+        "conceptId": "source-type-5",
+        "label": "Special research project",
+        "description": "Special research funds from the institute's budget are available to a limited extent for internal research funding. The aim of the special research funds is to strengthen priority research projects. The allocation is made upon written application after review by the Research Council and approval by the Institute's management."
+      },
+      {
+        "conceptId": "source-type-6",
+        "label": "Study",
+        "description": "Research method in form of surveys and\/or (laboratory) testings"
+      },
+      {
+        "conceptId": "source-type-7",
+        "label": "Monitoring study",
+        "description": "Long-term study to obtain information about the state and development of the public's health"
+      },
+      {
+        "conceptId": "source-type-8",
+        "label": "Feasibility study",
+        "description": "Study to assess the practicability and implementation of the designed procedure"
+      },
+      {
+        "conceptId": "source-type-9",
+        "label": "Add-on study",
+        "description": "Additional study to the main study"
+      },
+      {
+        "conceptId": "source-type-10",
+        "label": "Ad hoc study",
+        "description": "Limited short-time study, conducted to obtain information about a current public health topic"
+      },
+      {
+        "conceptId": "source-type-11",
+        "label": "Other",
+        "description": "Undefined or unknown project type"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "Diese Liste ist erweiterbar."
+        }
+      ]
+    },
+    "en": {
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "This list is expandable."
+        }
+      ]
+    }
+  }
+}

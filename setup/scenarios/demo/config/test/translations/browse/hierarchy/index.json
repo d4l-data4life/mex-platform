@@ -1,0 +1,10 @@
+{
+    "de": {
+        "all": "Alle",
+        "allOf": "{{text}}: Alle"
+    },
+    "en": {
+        "all": "All",
+        "allOf": "{{text}}: All"
+    }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "apiAccessLocation",
+  "renderer": "link",
+  "kind": "string",
+  "importance": "none",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": false,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "API-Zugriffsort",
+        "plural": "API-Zugriffsorte"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "API access location",
+        "plural": "API access locations"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Link zum Application Programming Interface (API) \u00fcber welchen der Zugriff auf die Plattform erfolgen kann"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "URL of the Application Programming Interface (API) for accessing the platform"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "exampleValue": [
+        {
+          "entityType": "all",
+          "text": ""
+        }
+      ]
+    },
+    "en": {
+      "exampleValue": [
+        {
+          "entityType": "all",
+          "text": ""
+        }
+      ]
+    }
+  }
+}

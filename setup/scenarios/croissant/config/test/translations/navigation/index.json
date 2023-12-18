@@ -1,0 +1,44 @@
+{
+  "de": {
+    "back": "Zur\u00fcck",
+    "beta": "Dies ist eine Betaversion, die noch instabil sein kann. Wir nehmen bis zur offiziellen Ver\u00f6ffentlichung noch wesentliche \u00c4nderungen an dieser Software vor.",
+    "disclaimer": "Alle Angaben basieren auf Informationen aus den datenhaltenden Originalsystemen. Es besteht keine Gew\u00e4hr f\u00fcr Richtigkeit, Vollst\u00e4ndigkeit und Aktualit\u00e4t dieser Informationen.",
+    "forward": "Vor",
+    "label": "Seiten",
+    "language": "Sprache: {{language}}",
+    "learningEnvironment": "Mehr erfahren \u00fcber MEx",
+    "logout": "Abmelden",
+    "services": "Services",
+    "title": "MEx",
+    "version": "MEx Metadata Exchange \u2013 {{version}}",
+    "footer": {
+      "label": "Footer"
+    },
+    "pages": {
+      "details": "Details",
+      "home": "Start",
+      "search": "Suche"
+    }
+  },
+  "en": {
+    "back": "Back",
+    "beta": "This is a beta version, which might be unstable. We\u2019re still making substantial changes to this software until the official release.",
+    "disclaimer": "All data is based on information from the original systems holding the data. Accuracy, completeness, and up-to-dateness of this information can't be ensured.",
+    "forward": "Forward",
+    "label": "Pages",
+    "language": "Language: {{language}}",
+    "learningEnvironment": "Learn more about MEx",
+    "logout": "Sign out",
+    "services": "Services",
+    "title": "MEx",
+    "version": "MEx Metadata Exchange \u2013 {{version}}",
+    "footer": {
+      "label": "Footer"
+    },
+    "pages": {
+      "details": "Details",
+      "home": "Home",
+      "search": "Search"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "unitOf",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Einheit von"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Unit of"
+            }
+        ]
+    },
+    "documentation": null
+}

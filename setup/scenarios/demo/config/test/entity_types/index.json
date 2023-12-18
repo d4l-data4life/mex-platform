@@ -1,0 +1,151 @@
+{
+    "entityTypes": [
+        {
+            "name": "dataOriginatesFrom",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": false
+            }
+        },
+        {
+            "name": "Datum",
+            "config": {
+                "isFocal": true,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        },
+        {
+            "name": "ExtractedDatum",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "Datum",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "ExtractedOrganization",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "Organization",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "ExtractedOrganizationalUnit",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "OrganizationalUnit",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "ExtractedPerson",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "Person",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "ExtractedPlatform",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "Platform",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "ExtractedResource",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "Resource",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "ExtractedSource",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": true,
+                "businessIdFieldName": "stableTargetId",
+                "aggregationAlgorithm": "source_partition",
+                "aggregationEntityType": "Source",
+                "partitionFieldName": "wasExtractedFrom",
+                "duplicateStrategy": "removeall"
+            }
+        },
+        {
+            "name": "Organization",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        },
+        {
+            "name": "OrganizationalUnit",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        },
+        {
+            "name": "Person",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        },
+        {
+            "name": "Platform",
+            "config": {
+                "isFocal": false,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        },
+        {
+            "name": "Resource",
+            "config": {
+                "isFocal": true,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        },
+        {
+            "name": "Source",
+            "config": {
+                "isFocal": true,
+                "isAggregatable": false,
+                "businessIdFieldName": "identifier"
+            }
+        }
+    ]
+}

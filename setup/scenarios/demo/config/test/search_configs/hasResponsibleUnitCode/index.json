@@ -1,0 +1,7 @@
+{
+    "name": "hasResponsibleUnitCode",
+    "type": "hierarchyAxis",
+    "fields": [
+        "hasResponsibleUnitCode"
+    ]
+}

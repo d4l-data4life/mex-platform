@@ -1,0 +1,8 @@
+{
+    "name": "dateQualifier",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "isniID",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

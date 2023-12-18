@@ -1,0 +1,567 @@
+{
+  "config": {
+    "search": {
+      "limit": 12,
+      "facetLimit": 15,
+      "paginationRangeCount": 5,
+      "queryMaxEditDistance": 1,
+      "queryUseNGramField": true,
+      "ordinalAxes": [
+        {
+          "name": "accessRestriction",
+          "uiField": "accessRestriction"
+        },
+        {
+          "name": "acronym",
+          "uiField": "acronym"
+        },
+        {
+          "name": "created",
+          "uiField": "created"
+        },
+        {
+          "name": "createdAt",
+          "uiField": "createdAt"
+        },
+        {
+          "name": "createdInContextOf",
+          "uiField": "createdInContextOf"
+        },
+        {
+          "name": "dataFileFormat",
+          "uiField": "dataFileFormat"
+        },
+        {
+          "name": "entityName",
+          "uiField": "entityName"
+        },
+        {
+          "name": "hasResponsibleUnitCode",
+          "uiField": "hasResponsibleUnitCode"
+        },
+        {
+          "name": "keyword",
+          "uiField": "keyword"
+        },
+        {
+          "name": "label",
+          "uiField": "label"
+        },
+        {
+          "name": "partOfResource",
+          "uiField": "partOfResource"
+        },
+        {
+          "name": "resourceType",
+          "uiField": "resourceType"
+        },
+        {
+          "name": "sourceType",
+          "uiField": "sourceType"
+        },
+        {
+          "name": "tag",
+          "uiField": "tag"
+        },
+        {
+          "name": "wasExtractedFrom",
+          "uiField": "wasExtractedFrom"
+        }
+      ],
+      "displayedFields": [
+        {
+          "entityType": "all",
+          "field": "label",
+          "targetField": null
+        },
+        {
+          "entityType": "all",
+          "field": "description",
+          "targetField": null
+        },
+        {
+          "entityType": "Resource",
+          "field": "keyword",
+          "targetField": null
+        },
+        {
+          "entityType": "Resource",
+          "field": "resourceType",
+          "targetField": null
+        },
+        {
+          "entityType": "Source",
+          "field": "acronym",
+          "targetField": null
+        },
+        {
+          "entityType": "Source",
+          "field": "hasResponsibleUnit",
+          "targetField": "acronym"
+        },
+        {
+          "entityType": "Source",
+          "field": "fundedOrCommissionedBy",
+          "targetField": "label"
+        },
+        {
+          "entityType": "Datum",
+          "field": "acronym",
+          "targetField": null
+        },
+        {
+          "entityType": "Datum",
+          "field": "datumType",
+          "targetField": null
+        },
+        {
+          "entityType": "Datum",
+          "field": "keyword",
+          "targetField": null
+        },
+        {
+          "entityType": "unknown",
+          "field": "keyword",
+          "targetField": null
+        },
+        {
+          "entityType": "unknown",
+          "field": "acronym",
+          "targetField": null
+        }
+      ],
+      "sidebarFeatures": [
+        {
+          "entityType": "Resource",
+          "feature": "completeness"
+        },
+        {
+          "entityType": "Resource",
+          "feature": "accessRestriction",
+          "field": "accessRestriction",
+          "iconMap": [
+            {
+              "conceptid": "access-restriction-1",
+              "icon": "unlocked"
+            },
+            {
+              "conceptid": "access-restriction-2",
+              "icon": "locked"
+            }
+          ]
+        },
+        {
+          "entityType": "Resource",
+          "feature": "date",
+          "field": "created"
+        },
+        {
+          "entityType": "Source",
+          "feature": "completeness"
+        },
+        {
+          "entityType": "Source",
+          "feature": "date",
+          "field": "timePeriod"
+        }
+      ],
+      "foci": [
+        null,
+        "title",
+        "contact",
+        "contributor",
+        "accessPlatform"
+      ],
+      "sorting": [
+        {
+          "axis": null,
+          "order": "desc"
+        },
+        {
+          "axis": "label",
+          "order": "asc"
+        },
+        {
+          "axis": "label",
+          "order": "desc"
+        },
+        {
+          "axis": "created",
+          "order": "desc"
+        },
+        {
+          "axis": "created",
+          "order": "asc"
+        }
+      ],
+      "facets": [
+        {
+          "axis": "entityName",
+          "type": "exact"
+        },
+        {
+          "axis": "hasResponsibleUnitCode",
+          "type": "hierarchy",
+          "entityType": "OrganizationalUnit",
+          "linkField": "parentDepartment",
+          "displayField": "label",
+          "minLevel": 1,
+          "maxLevel": 3
+        },
+        {
+          "axis": "created",
+          "type": "yearRange"
+        },
+        {
+          "axis": "keyword",
+          "type": "exact"
+        },
+        {
+          "axis": "accessRestriction",
+          "type": "exact"
+        },
+        {
+          "axis": "sourceType",
+          "type": "exact"
+        },
+        {
+          "axis": "resourceType",
+          "type": "exact"
+        },
+        {
+          "axis": "dataFileFormat",
+          "type": "exact"
+        }
+      ]
+    },
+    "browse": {
+      "tabs": [
+        {
+          "axis": "hasResponsibleUnitCode",
+          "type": "hierarchy",
+          "entityType": "OrganizationalUnit",
+          "linkField": "parentDepartment",
+          "displayField": "label",
+          "minLevel": 1,
+          "maxLevel": 2
+        },
+        {
+          "axis": "sourceType",
+          "type": "facet"
+        }
+      ]
+    },
+    "item": {
+      "displayedFields": [
+        {
+          "entityType": "Resource",
+          "field": "label"
+        },
+        {
+          "entityType": "Resource",
+          "field": "description"
+        },
+        {
+          "entityType": "Resource",
+          "field": "acronym"
+        },
+        {
+          "entityType": "Resource",
+          "field": "keyword"
+        },
+        {
+          "entityType": "Resource",
+          "field": "resourceType"
+        },
+        {
+          "entityType": "Resource",
+          "field": "dataFileFormat"
+        },
+        {
+          "entityType": "Resource",
+          "field": "dataCollectionProcess"
+        },
+        {
+          "entityType": "Resource",
+          "field": "usedInstrumentToolOrApparatus"
+        },
+        {
+          "entityType": "Resource",
+          "field": "accessLocation"
+        },
+        {
+          "entityType": "Resource",
+          "field": "relatedDocumentation"
+        },
+        {
+          "entityType": "Resource",
+          "field": "createdInContextOf"
+        },
+        {
+          "entityType": "Resource",
+          "field": "accessPlatform"
+        },
+        {
+          "entityType": "Source",
+          "field": "labelWithAcronym"
+        },
+        {
+          "entityType": "Source",
+          "field": "description"
+        },
+        {
+          "entityType": "Source",
+          "field": "keyword"
+        },
+        {
+          "entityType": "Source",
+          "field": "contributor"
+        },
+        {
+          "entityType": "Source",
+          "field": "sourceType"
+        },
+        {
+          "entityType": "Source",
+          "field": "hasResponsibleUnit"
+        },
+        {
+          "entityType": "Source",
+          "field": "hasContributingUnit"
+        },
+        {
+          "entityType": "Source",
+          "field": "externalPartner"
+        },
+        {
+          "entityType": "Source",
+          "field": "fundedOrCommissionedBy"
+        },
+        {
+          "entityType": "Source",
+          "field": "contact"
+        },
+        {
+          "entityType": "Source",
+          "field": "timePeriod"
+        },
+        {
+          "entityType": "Source",
+          "field": "relatedDocumentation"
+        },
+        {
+          "entityType": "Person",
+          "field": "label"
+        },
+        {
+          "entityType": "Person",
+          "field": "email"
+        },
+        {
+          "entityType": "Person",
+          "field": "departmentOrUnit"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "field": "label"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "field": "acronym"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "field": "email"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "field": "parentDepartment"
+        },
+        {
+          "entityType": "Platform",
+          "field": "label"
+        },
+        {
+          "entityType": "Platform",
+          "field": "description"
+        },
+        {
+          "entityType": "Platform",
+          "field": "acronym"
+        },
+        {
+          "entityType": "Datum",
+          "field": "label"
+        },
+        {
+          "entityType": "Datum",
+          "field": "description"
+        },
+        {
+          "entityType": "Datum",
+          "field": "acronym"
+        },
+        {
+          "entityType": "Datum",
+          "field": "datumType"
+        },
+        {
+          "entityType": "Datum",
+          "field": "keyword"
+        },
+        {
+          "entityType": "Datum",
+          "field": "sampleEntries"
+        },
+        {
+          "entityType": "Datum",
+          "field": "usedInstrumentToolOrApparatus"
+        },
+        {
+          "entityType": "Datum",
+          "field": "partOfResource"
+        },
+        {
+          "entityType": "Source",
+          "field": "tag"
+        },
+        {
+          "entityType": "Resource",
+          "field": "tag"
+        }
+      ],
+      "dedicatedViewSupportedEntityTypes": [
+        "Source",
+        "Resource",
+        "Datum"
+      ],
+      "sidebarFeatures": [
+        {
+          "entityType": "Source",
+          "feature": "contactForm",
+          "field": "contact",
+          "displayField": "labelWithEmail",
+          "key": "dataOwner",
+          "actions": [
+            {
+              "type": "email",
+              "field": "email"
+            },
+            {
+              "type": "form",
+              "form": "data-access-form"
+            }
+          ]
+        },
+        {
+          "entityType": "Source",
+          "feature": "contactForm",
+          "field": "contact",
+          "key": "dataOwner",
+          "actions": [
+            {
+              "type": "email",
+              "field": "email"
+            }
+          ]
+        },
+        {
+          "entityType": "Source",
+          "feature": "contactForm",
+          "field": "contact",
+          "key": "dataOwner",
+          "actions": [
+            {
+              "type": "form",
+              "form": "data-access-form"
+            }
+          ]
+        },
+        {
+          "entityType": "Resource",
+          "feature": "displayField",
+          "field": "license"
+        },
+        {
+          "entityType": "Resource",
+          "feature": "displayField",
+          "field": "rights"
+        },
+        {
+          "entityType": "Resource",
+          "feature": "displayField",
+          "field": "relatedExternalIdentifier"
+        },
+        {
+          "entityType": "Resource",
+          "feature": "displayField",
+          "field": "version"
+        }
+      ],
+      "relatedSearch": [
+        {
+          "entityType": "Source",
+          "targetEntityType": "Resource",
+          "linkedField": "createdInContextOf",
+          "limit": 3
+        },
+        {
+          "entityType": "Resource",
+          "targetEntityType": "Datum",
+          "linkedField": "partOfResource",
+          "limit": 3
+        }
+      ]
+    },
+    "analytics": null,
+    "languageSwitcher": {
+      "languages": [
+        "de",
+        "en"
+      ]
+    },
+    "home": {
+      "supportEmailAddress": "support@example.com",
+      "chart": null,
+      "dashboardMetrics": [
+        {
+          "entityType": "Platform",
+          "axis": "wasExtractedFrom",
+          "method": "bucketNo"
+        },
+        {
+          "entityType": "Source",
+          "axis": "entityName",
+          "method": "bucket"
+        },
+        {
+          "entityType": "Resource",
+          "axis": "entityName",
+          "method": "bucket"
+        },
+        {
+          "entityType": "Datum",
+          "axis": "entityName",
+          "method": "bucket"
+        }
+      ],
+      "latestUpdateAxis": "createdAt"
+    },
+    "fields": {
+      "entityTypeField": null,
+      "completenessRankingWeights": {
+        "mandatory": 50,
+        "recommended": 40,
+        "optional": 10
+      },
+      "defaultFieldConceptPrefix": "https:\/\/mex.data4life.care\/concept\/",
+      "externalFieldConceptPrefixes": [
+        "https:\/\/www.iana.org\/assignments\/"
+      ],
+      "emptyValueFallback": {
+        "de": "--",
+        "en": "--"
+      }
+    }
+  }
+}

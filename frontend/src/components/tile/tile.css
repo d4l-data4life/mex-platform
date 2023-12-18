@@ -1,0 +1,113 @@
+.tile {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: var(--color-secondary-2);
+  border: 1px solid var(--color-highlight-1);
+  border-radius: var(--spacing-xsmall);
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  font-size: inherit;
+  user-select: none;
+}
+
+.tile--link {
+  background: var(--color-secondary-5);
+  transition: background-color var(--duration-flash) linear, color var(--duration-flash) linear,
+    border-color var(--duration-flash) linear;
+  cursor: pointer;
+}
+
+.tile--link:hover,
+.tile--link:focus-visible {
+  background-color: var(--color-highlight-5);
+}
+
+.tile--link:active {
+  background-color: var(--color-highlight-4);
+}
+
+.tile--button {
+  --tile-icon-space: calc(var(--icon-size-medium) + var(--spacing-small) * 2);
+  position: relative;
+}
+
+.tile:disabled {
+  border-color: var(--color-gray-3);
+  background-color: var(--color-gray-5);
+  color: var(--color-gray-1);
+  cursor: not-allowed;
+}
+
+.tile__text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: var(--spacing-small);
+  color: var(--color-primary-1);
+  text-align: center;
+  min-height: 3em;
+  font-size: var(--font-size-s);
+  transition: color var(--duration-flash) linear;
+}
+
+.tile:disabled .tile__text {
+  color: var(--color-gray-1);
+}
+
+.tile--button .tile__text {
+  min-height: 0;
+  font-weight: 500;
+  font-size: var(--font-size-xs);
+  padding-right: var(--tile-icon-space);
+}
+
+.tile--text-left,
+.tile--text-left .tile__text {
+  text-align: left;
+}
+
+.tile__text span {
+  flex: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tile__footer {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.tile--button .tile__footer {
+  display: block;
+}
+
+.tile__hint {
+  flex: none;
+  padding: var(--spacing-small);
+  margin-right: auto;
+  color: var(--color-gray-1);
+}
+
+.tile--button .tile__hint {
+  display: block;
+  padding-top: 0;
+  padding-right: var(--tile-icon-space);
+}
+
+.tile__icon {
+  flex: none;
+  padding: var(--spacing-small);
+  margin-left: auto;
+}
+
+.tile--button .tile__icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

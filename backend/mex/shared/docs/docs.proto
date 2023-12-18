@@ -1,0 +1,88 @@
+syntax = "proto3";
+package d4l.mex;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/docs;docs";
+
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  swagger: "2.0";
+  info: {
+    title: "MEx Core Service API";
+    version: "0.1";
+    contact: {
+      name: "MEx Development Team";
+      url: "https://data4life.care";
+    };
+  };
+  external_docs: {
+    url: "https://github.com/d4l-data4life/mex";
+    description: "Architecture Concept Defintion";
+  }
+  host: "example.com";
+  base_path: "/api/v0";
+  schemes: [ HTTPS ];
+  consumes: [ "application/json" ];
+  produces: [ "application/json" ];
+  security_definitions: {
+    security: {
+      key: "OAuth2/authCode"
+      value: {
+        type: TYPE_OAUTH2;
+        flow: FLOW_ACCESS_CODE;
+        authorization_url: "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize";
+        token_url: "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token";
+        description: "OAuth 2.0 with Authorization Code Grant type";
+        scopes: {
+          scope: {
+            key: "metadata:r";
+            value: "Read any metadata item (R of CRUD)"
+          }
+          scope: {
+            key: "metadata:w";
+            value: "Full CRUD access to any metadata (includes `metadata:r` scope)"
+          }
+        }
+      }
+    }
+    security: {
+      key: "OAuth2/clientCreds"
+      value: {
+        type: TYPE_OAUTH2;
+        flow: FLOW_APPLICATION;
+        token_url: "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token";
+        description: "OAuth 2.0 with Client Credentias Grant type";
+        scopes: {
+          scope: {
+            key: "jobs:r";
+            value: "Read any job data (errors, logs)"
+          }
+          scope: {
+            key: "jobs:w";
+            value: "Create and manage jobs (includes `jobs:w` scope)"
+          }
+        }
+      }
+    }
+  }
+  responses: {
+    key: "500"
+    value: {
+      description: "Fallback error when no other error code fits or an unexpected error occurred."
+    }
+  }
+  responses: {
+    key: "400"
+    value: {
+      description: "User error. One or more arguments of the request are invalid or incompatible."
+    }
+  }
+  responses: {
+    key: "401"
+    value: {
+      description: "The request did not contain an access token or that token could not be verified."
+    }
+  }
+
+};

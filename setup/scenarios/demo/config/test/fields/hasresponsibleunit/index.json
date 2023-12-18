@@ -1,0 +1,58 @@
+{
+    "name": "hasResponsibleUnit",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Verantwortliche Fachabteilung",
+                "plural": "Verantwortliche Fachabteilungen"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Responsible unit",
+                "plural": "Responsible units"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "F\u00fcr das Projekt verantwortliche Fachabteilung(en)"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Unit(s) responsible for the project"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": {
+        "de": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Akronym des Fachgebiets, z.B. \"FG 23\""
+                }
+            ]
+        },
+        "en": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Acronym of the unit, e.g. \"FG 23\""
+                }
+            ]
+        }
+    }
+}

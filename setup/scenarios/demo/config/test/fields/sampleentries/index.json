@@ -1,0 +1,55 @@
+{
+    "name": "sampleEntries",
+    "renderer": "bullets",
+    "kind": "text",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Auszug"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Sample entries"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Beispieleintr\u00e4ge innerhalb des Daten-Items, wie Spaltennamen, Variablennamen, Schl\u00fcsselw\u00f6rter"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Sample entries within the data item, like column names, variable names, keywords"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "Datum",
+                    "text": "\"Geschlecht, Alter, Gesundheitszustand, Gesundheitsdeterminanten, Gesundheitsversorgung\", \"Keine Angabe, Wei\u00df nicht, Sehr gut, Gut, Mittelm\u00e4\u00dfig, Schlecht, Sehr schlecht\""
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "Datum",
+                    "text": "Gender, age, health status, health determinants, health care,\" \"Not specified, Don't know, Very good, Good, Fair, Poor, Very poor."
+                }
+            ]
+        }
+    }
+}

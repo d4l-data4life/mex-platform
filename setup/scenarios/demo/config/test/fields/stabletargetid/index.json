@@ -1,0 +1,10 @@
+{
+    "name": "stableTargetId",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "documentation": null
+}

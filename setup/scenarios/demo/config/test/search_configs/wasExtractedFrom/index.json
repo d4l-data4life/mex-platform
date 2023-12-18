@@ -1,0 +1,7 @@
+{
+    "name": "wasExtractedFrom",
+    "type": "ordinalAxis",
+    "fields": [
+        "wasExtractedFrom"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "name": "datumType",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

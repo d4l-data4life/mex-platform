@@ -1,0 +1,24 @@
+{
+    "de": {
+        "chartTooltip": "{{value}}: {{count}} Treffer",
+        "empty": "-- keine Eintr\u00e4ge --",
+        "from": "von",
+        "hierarchyDirect": "{{text}} (direkt)",
+        "more": "Mehr anzeigen",
+        "remove": "Filter entfernen: {{name}}",
+        "reset": "Zur\u00fccksetzen",
+        "title": "Filter",
+        "to": "bis"
+    },
+    "en": {
+        "chartTooltip": "{{value}}: {{count}} matches",
+        "empty": "-- no entries --",
+        "from": "from",
+        "hierarchyDirect": "{{text}} (direct)",
+        "more": "Show more",
+        "remove": "Remove filter: {{name}}",
+        "reset": "Reset",
+        "title": "Filters",
+        "to": "to"
+    }
+}

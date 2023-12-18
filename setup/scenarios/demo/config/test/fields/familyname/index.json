@@ -1,0 +1,24 @@
+{
+    "name": "familyName",
+    "renderer": "plain",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Nachname"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Family name"
+            }
+        ]
+    },
+    "documentation": null
+}

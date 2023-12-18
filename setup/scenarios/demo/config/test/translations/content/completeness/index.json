@@ -1,0 +1,14 @@
+{
+    "de": {
+        "entityType": "MEx-Entit\u00e4t",
+        "mandatory": "Pflicht",
+        "optional": "Optional",
+        "recommended": "Empfohlen"
+    },
+    "en": {
+        "entityType": "Entity Type",
+        "mandatory": "Mandatory",
+        "optional": "Optional",
+        "recommended": "Recommended"
+    }
+}

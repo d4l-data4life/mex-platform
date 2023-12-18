@@ -1,0 +1,12 @@
+{
+    "de": {
+        "continue": "Ja, fortfahren",
+        "text": "Wenn Sie das Problem ignorieren, werden einige Abschnitte m\u00f6glicherweise nicht richtig angezeigt. Sie k\u00f6nnen es auch noch einmal versuchen oder zur vorherigen Seite zur\u00fcckgehen.",
+        "title": "Sind Sie sicher?"
+    },
+    "en": {
+        "continue": "Yes, continue",
+        "text": "If you ignore the issue, some sections may not display properly.  You can also try again, or try going back to the previous page. ",
+        "title": "Are you sure?"
+    }
+}

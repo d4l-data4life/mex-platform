@@ -1,0 +1,67 @@
+{
+    "name": "version",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Version"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Version"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "\u00c4nderungen einer Ressource werden in unterschiedlichen Zust\u00e4nden gespeichert und Versionen genannt. Sie geben den spezifischen Zustand einer Ressource zu einer bestimmten Zeit an."
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Changes to a resource are stored in different states and called versions. They indicate the specific state of a resource at a given time."
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2016-04-22\", \"1.0.0\", \"v1"
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Datum, Notation nach semantischer Versionierung (MAJOR.MINOR.PATCH),\nVersion X"
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2016-04-22\", \"1.0.0\", \"v1"
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Date, notation according to semantic versioning (MAJOR.MINOR.PATCH),\nversion X"
+                }
+            ]
+        }
+    }
+}

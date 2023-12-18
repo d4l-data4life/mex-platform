@@ -1,0 +1,905 @@
+- entityType: Platform
+  businessId: PLAT-X
+  values:
+      - fieldName: label
+        fieldValue: Platform X
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-HarveyDickiandMorar
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-HarveyDickiandMorar
+- entityType: Platform
+  businessId: P-ReportServer
+  values:
+      - fieldName: label
+        fieldValue: Report Server
+      - fieldName: description
+        fieldValue: Case reporting server
+      - fieldName: acronym
+        fieldValue: RPTSRV
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-ArmstrongLLC
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-ArmstrongLLC
+- entityType: Platform
+  businessId: P-SynopseDB
+  values:
+      - fieldName: label
+        fieldValue: Synopsis Database
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-PriceFayandSimonis
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-PriceFayandSimonis
+- entityType: Platform
+  businessId: PLAT-Y
+  values:
+      - fieldName: label
+        fieldValue: Platform Y
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-MurrayTowne
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-MurrayTowne
+- entityType: Platform
+  businessId: PLAT-Z
+  values:
+      - fieldName: label
+        fieldValue: Platform Z
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-JohnstonCorkery
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-JohnstonCorkery
+- entityType: ExtractedResource
+  businessId: PART-A
+  values:
+      - fieldName: label
+        fieldValue: Piece 1
+      - fieldName: accessPlatform
+        fieldValue: PLAT-X
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-SporerLLC
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-SporerLLC
+- entityType: ExtractedResource
+  businessId: PART-A
+  values:
+      - fieldName: description
+        fieldValue: Piece 2
+      - fieldName: accessPlatform
+        fieldValue: PLAT-Y
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-CruickshankInc
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-CruickshankInc
+- entityType: ExtractedResource
+  businessId: PART-A
+  values:
+      - fieldName: keyword
+        fieldValue: Piece 3
+      - fieldName: accessPlatform
+        fieldValue: PLAT-Z
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-AbbottWaelchi
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-AbbottWaelchi
+- entityType: Source
+  businessId: SOURCE-1
+  values:
+      - fieldName: label
+        fieldValue: Cancer study
+      - fieldName: label
+        fieldValue: Covid vaccination study
+      - fieldName: description
+        fieldValue: "Many people being treated for\_cancer\_have questions about COVID-19\_vaccines\_and how COVID may affect their\_cancer\_treatment."
+      - fieldName: keyword
+        fieldValue: Health
+      - fieldName: keyword
+        fieldValue: Ministry
+      - fieldName: contact
+        fieldValue: U-SawyerWilliams
+      - fieldName: contributor
+        fieldValue: U-SawyerWilliams
+      - fieldName: contributor
+        fieldValue: U-QuinniBrown
+      - fieldName: relatedDocumentation
+        fieldValue: http://www.source.de
+      - fieldName: sourceType
+        fieldValue: https://mex.data4life.care/concept/source-type-7
+      - fieldName: sourceType
+        fieldValue: https://mex.data4life.care/concept/source-type-1
+      - fieldName: fundedOrCommissionedBy
+        fieldValue: O-MOH
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-SchultzSipes
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-SchultzSipes
+      - fieldName: tag
+        fieldValue: ABCDEF
+      - fieldName: tag
+        fieldValue: WXYZ
+- entityType: Organization
+  businessId: O-MOH
+  values:
+      - fieldName: label
+        fieldValue: Ministry of Health
+      - fieldName: acronym
+        fieldValue: MOH
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-LynchLLC
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-LynchLLC
+- entityType: Person
+  businessId: U-SawyerWilliams
+  values:
+      - fieldName: label
+        fieldValue: Sawyer Williams
+      - fieldName: email
+        fieldValue: s.williams@example.com
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-HaleySchmidtandConroy
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-HaleySchmidtandConroy
+- entityType: Person
+  businessId: U-AliceCorona
+  values:
+      - fieldName: label
+        fieldValue: Alice Corona
+      - fieldName: email
+        fieldValue: a.corona@example.com
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-KutchGroup
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-KutchGroup
+- entityType: Person
+  businessId: U-QuinniBrown
+  values:
+      - fieldName: label
+        fieldValue: Quinni Brown
+      - fieldName: email
+        fieldValue: QuinniBrown@example.com
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-AnkundingFerryandRunolfsdottir
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-AnkundingFerryandRunolfsdottir
+- entityType: Resource
+  businessId: DOC-1
+  values:
+      - fieldName: label
+        fieldValue: What is coronavirus? The different types of coronaviruses
+      - fieldName: keyword
+        fieldValue: Senior people
+      - fieldName: keyword
+        fieldValue: Coronavirus
+      - fieldName: created
+        fieldValue: "2022-07-21"
+      - fieldName: description
+        fieldValue: >-
+            Coronaviruses are a family of viruses that cause illness in humans and
+            animals. Seven different types have been found in people.
+      - fieldName: resourceType
+        fieldValue: Monitoring study
+      - fieldName: acronym
+        fieldValue: "SARS-MERS-HCoV-HKU1 "
+      - fieldName: contributor
+        fieldValue: U-SawyerWilliams
+      - fieldName: contact
+        fieldValue: U-AliceCorona
+      - fieldName: contact
+        fieldValue: U-QuinniBrown
+      - fieldName: accessRestriction
+        fieldValue: https://mex.data4life.care/concept/access-restriction-1
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: SOURCE-1
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: license
+        fieldValue: MIT
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-StromanLLC
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-StromanLLC
+      - fieldName: tag
+        fieldValue: ABCDEF
+      - fieldName: tag
+        fieldValue: WXYZ
+- entityType: Resource
+  businessId: DOC-2
+  values:
+      - fieldName: label
+        fieldValue: Differences in coronavirus genomes. SARS-CoV and MERS-CoV types.
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: keyword
+        fieldValue: Coronavirus
+      - fieldName: keyword
+        fieldValue: Complications
+      - fieldName: description
+        fieldValue: >-
+            SARS-CoV is Severe acute respiratory syndrome (SARS). MERS-CoV is Middle
+            East respiratory syndrome (MERS).
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: contact
+        fieldValue: U-SawyerWilliams
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-JerdeChamplinandMohr
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-JerdeChamplinandMohr
+- entityType: Resource
+  businessId: DOC-2
+  values:
+      - fieldName: label
+        fieldValue: Differences in coronavirus genomes. SARS-CoV and MERS-CoV types.
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: keyword
+        fieldValue: Coronavirus
+      - fieldName: keyword
+        fieldValue: Corona virus
+      - fieldName: keyword
+        fieldValue: Complications
+      - fieldName: description
+        fieldValue: >-
+            SARS-CoV is Severe acute respiratory syndrome (SARS). MERS-CoV is Middle
+            East respiratory syndrome (MERS).
+      - fieldName: contact
+        fieldValue: U-SawyerWilliams
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: license
+        fieldValue: MIT
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-WehnerChristiansenandWisoky
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-WehnerChristiansenandWisoky
+- entityType: Resource
+  businessId: DOC-2
+  values:
+      - fieldName: label
+        fieldValue: Differences in coronavirus genomes. SARS-CoV and MERS-CoV types.
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: keyword
+        fieldValue: Trial
+      - fieldName: keyword
+        fieldValue: Coronavirus
+      - fieldName: keyword
+        fieldValue: Corona virus
+      - fieldName: keyword
+        fieldValue: Complications
+      - fieldName: description
+        fieldValue: >-
+            SARS-CoV is Severe acute respiratory syndrome (SARS). MERS-CoV is Middle
+            East respiratory syndrome (MERS).
+      - fieldName: contact
+        fieldValue: U-SawyerWilliams
+      - fieldName: contributor
+        fieldValue: U-QuinniBrown
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: license
+        fieldValue: MIT
+      - fieldName: acronym
+        fieldValue: corona-genome
+      - fieldName: wasExtractedFrom
+        fieldValue: P-SynopseDB
+      - fieldName: createdInContextOf
+        fieldValue: P-SynopseDB
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-WunschMullerandDonnelly
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-WunschMullerandDonnelly
+- entityType: Resource
+  businessId: DOC-3
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Safety of COVID-19 vaccine for children with congenital heart disease.
+            The most suitable coronavirus vaccines types.
+      - fieldName: description
+        fieldValue: >-
+            New clinical considerations for coadministration of mRNA COVID-19
+            vaccines and orthopoxvirus vaccines.
+      - fieldName: keyword
+        fieldValue: Children
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: COVID-19
+      - fieldName: keyword
+        fieldValue: Cardiovascular morbidity
+      - fieldName: sourceType
+        fieldValue: Study
+      - fieldName: created
+        fieldValue: "2021-05-15"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-WindlerSauerandKoepp
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-WindlerSauerandKoepp
+- entityType: Resource
+  businessId: DOC-4
+  values:
+      - fieldName: label
+        fieldValue: Pertussis vaccine effectiveness for senior people with galactosemia.
+      - fieldName: description
+        fieldValue: >-
+            The pertussis vaccine of new generation is created based on the same
+            technology as Moderna COVID-19 vaccine.
+      - fieldName: keyword
+        fieldValue: Senior people
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Rare diseases
+      - fieldName: sourceType
+        fieldValue: Statistical data
+      - fieldName: created
+        fieldValue: "2020-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-CorwinJones
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-CorwinJones
+- entityType: Resource
+  businessId: DOC-5
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Cases of alpha thalassemia among men of 18 - 30 years old from
+            Mediterranean countries. HbH disease.
+      - fieldName: description
+        fieldValue: >-
+            The research has a severity scale of blood disorder that reduces the
+            production of normal hemoglobin, the protein in red blood cells that
+            carries oxygen to cells throughout the body.
+      - fieldName: keyword
+        fieldValue: Men
+      - fieldName: keyword
+        fieldValue: Rare diseases
+      - fieldName: keyword
+        fieldValue: Complications
+      - fieldName: created
+        fieldValue: "2022-01-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-RauLang
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-RauLang
+- entityType: Resource
+  businessId: DOC-6
+  values:
+      - fieldName: label
+        fieldValue: Frequency of blood disorders cases among children in Central Asia.
+      - fieldName: description
+        fieldValue: >-
+            The rasio of thalassemia cases among other inherited blood disorders.
+            The symptoms associated with thalassemia appear within the first 2 years
+            of life. Symptoms and signs include life-threatening anemia that causes
+            failure to thrive (reduced growth rate and weight gain).
+      - fieldName: keyword
+        fieldValue: Children
+      - fieldName: keyword
+        fieldValue: Rare diseases
+      - fieldName: keyword
+        fieldValue: Complications
+      - fieldName: sourceType
+        fieldValue: Third party data
+      - fieldName: created
+        fieldValue: "2022-02-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-SchusterBlandaandFeil
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-SchusterBlandaandFeil
+- entityType: Resource
+  businessId: DOC-7
+  values:
+      - fieldName: label
+        fieldValue: Covid-19 complications among men from 20 - 30 in Southern America.
+      - fieldName: description
+        fieldValue: >-
+            COVID-19 is a highly pathogenic virus that exerts adverse effects upon
+            the male genitourinary system in myriad ways. The COVID-19 infection can
+            impact serum testosterone, fertility, sexual function, and mental
+            health.
+      - fieldName: keyword
+        fieldValue: Men
+      - fieldName: keyword
+        fieldValue: COVID-19
+      - fieldName: keyword
+        fieldValue: Complications
+      - fieldName: created
+        fieldValue: "2021-03-11"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-ManteLLC
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-ManteLLC
+- entityType: Resource
+  businessId: DOC-8
+  values:
+      - fieldName: label
+        fieldValue: Effectiveness of pertussis vaccination during pregnancy.
+      - fieldName: description
+        fieldValue: >-
+            The best time for the vaccin is between 16 weeks and 32 weeks of
+            pregnancy. Antenatal pertussis vaccination protects newborns before they
+            are able to have their own vaccinations from 6 weeks of age. Studies
+            show that it is more than 90 per cent effective in preventing pertussis
+            in infants.
+      - fieldName: keyword
+        fieldValue: Women
+      - fieldName: keyword
+        fieldValue: Children
+      - fieldName: keyword
+        fieldValue: Pregnancy
+      - fieldName: sourceType
+        fieldValue: Participants data
+      - fieldName: created
+        fieldValue: "2022-02-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-TillmanandSons
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-TillmanandSons
+- entityType: Resource
+  businessId: DOC-9
+  values:
+      - fieldName: label
+        fieldValue: Humeral diseases among women over 60.
+      - fieldName: description
+        fieldValue: >-
+            Consisting of muscles, bones, nerves, veins, number of bonds and other
+            supporting tissues, shoulder joint may cause pain for different
+            conditions affecting these components. If the disorder is not treated in
+            a timely manner, lifelong movement restrictions and weakness and
+            increasing pain may be observed.
+      - fieldName: keyword
+        fieldValue: Women
+      - fieldName: keyword
+        fieldValue: Senior people
+      - fieldName: keyword
+        fieldValue: Rare diseases
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-LefflerHahnandRice
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-LefflerHahnandRice
+- entityType: Resource
+  businessId: DOC-10
+  values:
+      - fieldName: label
+        fieldValue: Efficiency of humoral diseases prevention by diet and physical exercise.
+      - fieldName: description
+        fieldValue: >-
+            Evaluation of the effects of different levels of sweet orange (Citrus
+            sinensis) peel extract (SOPE) on humoral immune system responses.
+            Developing disease resistance and humoral antibody production through
+            high levels of vitamin C.
+      - fieldName: keyword
+        fieldValue: Cardiovascular morbidity
+      - fieldName: keyword
+        fieldValue: Complication
+      - fieldName: keyword
+        fieldValue: Women
+      - fieldName: sourceType
+        fieldValue: Statistical data
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-DonnellyBrown
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-DonnellyBrown
+- entityType: Resource
+  businessId: DOC-11
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Analysis of health outcomes in vaccinated and unvaccinated children with
+            Developmental Delay.
+      - fieldName: description
+        fieldValue: >-
+            Using data from three medical practices in the United States with
+            children born between November 2010 and June 2017, vaccinated children
+            were compared to unvaccinated children during the first year of life for
+            later incidence of developmental delays.
+      - fieldName: keyword
+        fieldValue: Children
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Disability
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-KingVeum
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-KingVeum
+- entityType: Resource
+  businessId: DOC-12
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Efficiency of S/AS01 malaria vaccine among children with Visual
+            Impairment Including Blindness in sub-Saharan Africa and in other
+            regions with moderate to high P. falciparum malaria transmission.
+      - fieldName: description
+        fieldValue: >-
+            The research is made based on the pilot programme in Ghana, Kenya and
+            Malawi that has reached more than 1 million people since 2015.
+      - fieldName: keyword
+        fieldValue: Children
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Disability
+      - fieldName: sourceType
+        fieldValue: Third party data
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-StrackeInc
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-StrackeInc
+- entityType: Resource
+  businessId: DOC-13
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Adult Vaccination as a Protective Factor for Dementia: A Meta-Analysis
+            and Systematic Review of Population-Based Observational Studies.
+      - fieldName: description
+        fieldValue: >-
+            Common vaccinations may have impacts on dementia risk, but current
+            evidence is inconsistent. We therefore investigated the association
+            between vaccinations and dementia risk by systematic review and
+            meta-analysis approach.
+      - fieldName: keyword
+        fieldValue: Senior people
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Mental health
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-MurrayTowne
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-MurrayTowne
+- entityType: Resource
+  businessId: DOC-14
+  values:
+      - fieldName: label
+        fieldValue: Efficiency of pneumonia vaccine for adults age 65 and older.
+      - fieldName: description
+        fieldValue: >-
+            Pneumonia vaccines are particularly important for older adults. Risks to
+            pneumonia is higher for this age group since it can be more difficult to
+            fight off infections as your immune system naturally weakens as you get
+            older.
+      - fieldName: keyword
+        fieldValue: Senior people
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: sourceType
+        fieldValue: Participants data
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-LegrosBrakusandBrekke
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-LegrosBrakusandBrekke
+- entityType: Resource
+  businessId: DOC-15
+  values:
+      - fieldName: label
+        fieldValue: COVID-19 vaccination impacts on menstrual cycle.
+      - fieldName: description
+        fieldValue: >-
+            To see how vaccination impacted periods, the researchers analyse data
+            from three consecutive cycles before vaccination, and from three
+            afterwards – including the cycle or cycles in which vaccination took
+            place. For unvaccinated individuals, data are collected for six
+            consecutive cycles.
+      - fieldName: keyword
+        fieldValue: COVID-19
+      - fieldName: keyword
+        fieldValue: Women
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-MacGyverFraneyandWolf
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-MacGyverFraneyandWolf
+- entityType: Resource
+  businessId: DOC-16
+  values:
+      - fieldName: label
+        fieldValue: Vaccine development for rheumatoid arthritis.
+      - fieldName: description
+        fieldValue: >-
+            A protein-based vaccine has proven a promising option to prevent
+            rheumatoid arthritis, improving bone quality in animal models.
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Senior people
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: sourceType
+        fieldValue: Statistical data
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-BlockOsinskiandCasper
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-BlockOsinskiandCasper
+- entityType: Resource
+  businessId: DOC-17
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Efficacy of vaccination with the HIV immunogen eOD-GT8 60mer, delivered
+            via Moderna’s mRNA platform.
+      - fieldName: description
+        fieldValue: >-
+            An mRNA vaccine works by delivering a piece of genetic material that
+            instructs the body to make a protein fragment of a target pathogen (such
+            as a virus), which the immune system recognizes and remembers, so it can
+            mount a substantial response if later exposed to that pathogen.
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-KirlinPfannerstillandWaters
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-KirlinPfannerstillandWaters
+- entityType: Resource
+  businessId: DOC-18
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Efficiency of pertussis-containing vaccines for children at 2, 4, 6 and
+            18 months.
+      - fieldName: description
+        fieldValue: >-
+            Pertussis-containing vaccines are only available in Australia as
+            combination vaccines that include other antigens such as diphtheria and
+            tetanus.
+      - fieldName: keyword
+        fieldValue: Women
+      - fieldName: keyword
+        fieldValue: Children
+      - fieldName: keyword
+        fieldValue: Pregnancy
+      - fieldName: sourceType
+        fieldValue: Third party data
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-TillmanandSons
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-TillmanandSons
+- entityType: Resource
+  businessId: DOC-19
+  values:
+      - fieldName: label
+        fieldValue: >-
+            Clinical trial of cancer vaccination for advanced esophageal cancer with
+            three peptides derived from novel cancer-testis antigens.
+      - fieldName: description
+        fieldValue: >-
+            ESCC patients were enrolled to evaluate OS, PFS, immunological response
+            employing ELISPOT and pentamer assays.
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: keyword
+        fieldValue: Cancer
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: acronym
+        fieldValue: CANC-OES
+      - fieldName: contributor
+        fieldValue: U-SawyerWilliams
+      - fieldName: contact
+        fieldValue: U-AliceCorona
+      - fieldName: contact
+        fieldValue: U-QuinniBrown
+      - fieldName: accessRestriction
+        fieldValue: https://mex.data4life.care/concept/access-restriction-2
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-SynopseDB
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: dataFileFormat
+        fieldValue: XLS
+      - fieldName: license
+        fieldValue: MIT
+      - fieldName: relatedExternalIdentifier
+        fieldValue: COVID-CANC-555
+      - fieldName: accessLocation
+        fieldValue: https://covid-study.com/vaccination
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-LueilwitzWilkinsonandAufderhar
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-LueilwitzWilkinsonandAufderhar
+      - fieldName: tag
+        fieldValue: ABCDEF
+      - fieldName: tag
+        fieldValue: D004263
+- entityType: Resource
+  businessId: DOC-20
+  values:
+      - fieldName: label
+        fieldValue: COVID-19 Vaccines and People with Cancer.
+      - fieldName: description
+        fieldValue: >-
+            Many people being treated for cancer have questions about COVID-19
+            vaccines and how COVID may affect their cancer treatment.
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: resourceType
+        fieldValue: Participants dataa
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: contributor
+        fieldValue: U-SawyerWilliams
+      - fieldName: contact
+        fieldValue: U-AliceCorona
+      - fieldName: contact
+        fieldValue: U-QuinniBrown
+      - fieldName: accessRestriction
+        fieldValue: https://mex.data4life.care/concept/access-restriction-1
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: SOURCE-1
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: license
+        fieldValue: BSD3
+      - fieldName: relatedExternalIdentifier
+        fieldValue: COVID-CANC-123
+      - fieldName: accessLocation
+        fieldValue: https://covid-study.com/vaccination
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-GoldnerKlingandWisoky
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-GoldnerKlingandWisoky
+- entityType: Resource
+  businessId: DOC-20
+  values:
+      - fieldName: label
+        fieldValue: COVID-19 Vaccines and People with Cancer.
+      - fieldName: description
+        fieldValue: >-
+            Many people being treated for cancer have questions about COVID-19
+            vaccines and how COVID may affect their cancer treatment.
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: keyword
+        fieldValue: COVID-19
+      - fieldName: resourceType
+        fieldValue: Participants dataa
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: acronym
+        fieldValue: "SARS-MERS-HCoV-HKU1 "
+      - fieldName: contributor
+        fieldValue: U-SawyerWilliams
+      - fieldName: contact
+        fieldValue: U-AliceCorona
+      - fieldName: contact
+        fieldValue: U-QuinniBrown
+      - fieldName: accessRestriction
+        fieldValue: https://mex.data4life.care/concept/access-restriction-1
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: SOURCE-1
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: license
+        fieldValue: MIT
+      - fieldName: relatedExternalIdentifier
+        fieldValue: COVID-CANC-123
+      - fieldName: accessLocation
+        fieldValue: https://covid-study.com/vaccination
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-SchultzInc
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-SchultzInc
+- entityType: Resource
+  businessId: DOC-20
+  values:
+      - fieldName: label
+        fieldValue: COVID-19 Vaccines and People with Cancer.
+      - fieldName: description
+        fieldValue: >-
+            Many people being treated for cancer have questions about COVID-19
+            vaccines and how COVID may affect their cancer treatment.
+      - fieldName: keyword
+        fieldValue: Vaccination
+      - fieldName: keyword
+        fieldValue: Clinical trial
+      - fieldName: keyword
+        fieldValue: COVID-19
+      - fieldName: resourceType
+        fieldValue: Participants data
+      - fieldName: created
+        fieldValue: "2022-05-01"
+      - fieldName: acronym
+        fieldValue: "SARS-MERS-HCoV-HKU1 "
+      - fieldName: contributor
+        fieldValue: U-SawyerWilliams
+      - fieldName: contact
+        fieldValue: U-AliceCorona
+      - fieldName: contact
+        fieldValue: U-QuinniBrown
+      - fieldName: accessRestriction
+        fieldValue: https://mex.data4life.care/concept/access-restriction-1
+      - fieldName: wasExtractedFrom
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: P-ReportServer
+      - fieldName: createdInContextOf
+        fieldValue: SOURCE-1
+      - fieldName: rights
+        fieldValue: Data freely available
+      - fieldName: dataFileFormat
+        fieldValue: CSV
+      - fieldName: license
+        fieldValue: MIT
+      - fieldName: relatedExternalIdentifier
+        fieldValue: COVID-CANC-123
+      - fieldName: relatedExternalIdentifier
+        fieldValue: COVID-CANC-666
+      - fieldName: accessLocation
+        fieldValue: https://covid-study.com/vaccination
+      - fieldName: hasResponsibleUnit
+        fieldValue: O-MurrayTowne
+      - fieldName: hasResponsibleUnitCode
+        fieldValue: O-MurrayTowne

@@ -1,0 +1,136 @@
+syntax = "proto3";
+package d4l.mex.blobs;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/metadata/endpoints/blobs/pb;pbBlobs";
+
+import "d4l/security.proto";
+import "shared/blobs/blobs.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+message CreateBlobRequest {
+  string blob_name = 1;
+  string blob_type = 2;
+  bytes  data      = 3;
+  bool   append    = 4;
+}
+
+message CreateBlobResponse {
+  int32 bytes_written = 2;
+}
+
+message ListBlobsRequest {}
+message ListBlobsResponse {
+  repeated d4l.mex.blobs.BlobInfo blob_infos = 1;
+}
+
+message DeleteBlobRequest {
+  string blob_name = 1;
+  string blob_type = 2;
+}
+message DeleteBlobResponse {}
+
+message GetBlobRequest {
+  string blob_name = 1;
+  string blob_type = 2;
+}
+message GetBlobResponse {
+  bytes data       = 1;
+}
+
+
+message MeshTestRequest {
+  enum LoadingMode {
+    LOADING_MODE_IN_MEMORY = 0;
+    LOADING_MODE_TEMP_FILE = 1;
+  }
+
+  int32 bag_size   = 1;
+  int32 iterations = 2;
+  bool show_terms  = 3;
+  string blob_name = 4;
+  string blob_type = 5;
+  LoadingMode loading_mode = 6;
+  bool run_gc = 7;
+}
+
+message MeshTestResponse {
+  int32 distinct_count = 1;
+  map<string, string> info = 2;
+}
+
+service Blobs {
+
+  rpc CreateBlob (CreateBlobRequest) returns (CreateBlobResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/blobs"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "blobs"
+      verb:  "create"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Write data for existing or new blob."
+      description: "If no blob with the specified name and type exists, it is created and the data is written. In that case the append flag has no meaning. If a blob with the specified name and type already exists, the data is overwritten with the request's data (if the append flag is false) or the request's data is appended to the existing blob data (if the append flag is true)."
+      responses: {
+        key: "201"
+        value: {
+          description: "In the success case the response is always a 201."
+          schema: {
+            json_schema: {
+              ref: "#/definitions/blobsCreateBlobResponse"
+            }
+          }
+        }
+      }
+    };
+  }
+
+  rpc ListBlobs (ListBlobsRequest) returns (ListBlobsResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/blobs"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "blobs"
+      verb:  "read"
+    };
+  }
+
+  rpc GetBlob (GetBlobRequest) returns (GetBlobResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/blobs/{blob_name}"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "blobs"
+      verb:  "read"
+    };
+  }
+
+  rpc DeleteBlob (DeleteBlobRequest) returns (DeleteBlobResponse) {
+    option (google.api.http) = {
+      delete: "/api/v0/blobs/{blob_name}"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "blobs"
+      verb:  "delete"
+    };
+  }
+
+  rpc MeshTest (MeshTestRequest) returns (MeshTestResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/blobs/mesh"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "blobs"
+      verb:  "create"
+    };
+  }
+
+}

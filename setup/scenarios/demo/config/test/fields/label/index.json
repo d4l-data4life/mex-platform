@@ -1,0 +1,169 @@
+{
+  "name": "label",
+  "renderer": "title",
+  "kind": "text",
+  "importance": "mandatory",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": false,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Titel"
+      },
+      {
+        "entityType": "Resource",
+        "singular": "Titel der Ressource"
+      },
+      {
+        "entityType": "Source",
+        "singular": "Projekttitel"
+      },
+      {
+        "entityType": "Platform",
+        "singular": "Plattform"
+      },
+      {
+        "entityType": "Datum",
+        "singular": "Daten-Item"
+      },
+      {
+        "entityType": "Person",
+        "singular": "Name",
+        "plural": "Namen"
+      },
+      {
+        "entityType": "OrganizationalUnit",
+        "singular": "Fachabteilung"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Title"
+      },
+      {
+        "entityType": "Resource",
+        "singular": "Resource title"
+      },
+      {
+        "entityType": "Source",
+        "singular": "Project title"
+      },
+      {
+        "entityType": "Platform",
+        "singular": "Platform"
+      },
+      {
+        "entityType": "Datum",
+        "singular": "Data item"
+      },
+      {
+        "entityType": "Person",
+        "singular": "Name",
+        "plural": "Names"
+      },
+      {
+        "entityType": "OrganizationalUnit",
+        "singular": "Unit"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "Resource",
+        "text": "Name(n) oder Titel, unter dem eine Ressource bekannt ist. Dies kann der Titel eines Datensatzes, ein definiertes Objekt, eine Sammlung von Informationen, oder der Name einer Forschungssoftware sein."
+      },
+      {
+        "entityType": "Source",
+        "text": "Name(n) oder Titel eines (Forschungs-)Projekts oder Vorhabens. Dies ist der Entstehungskontext der Ressourcen."
+      },
+      {
+        "entityType": "Platform",
+        "text": "Name(n) einer Plattform"
+      },
+      {
+        "entityType": "Datum",
+        "text": "Bezeichung(en) der Informationseinheit oder des Datenbestandteils innerhalb einer Ressource"
+      },
+      {
+        "entityType": "Person",
+        "text": "Name(n) einer Person"
+      },
+      {
+        "entityType": "OrganizationalUnit",
+        "text": "Name(n) einer Fachabteilung"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "Resource",
+        "text": "Name(s) or title(s) by which a resource is known. May be the title of a dataset, defined piece, collection of information or the name of a piece of research software."
+      },
+      {
+        "entityType": "Source",
+        "text": "Name(s) or title(s) by which a (research) project or planned operation is known by. This is the context of origin of the resources."
+      },
+      {
+        "entityType": "Platform",
+        "text": "Name(s) of a platform"
+      },
+      {
+        "entityType": "Datum",
+        "text": "Name of a single piece of information within a resource"
+      },
+      {
+        "entityType": "Person",
+        "text": "Name of a person"
+      },
+      {
+        "entityType": "OrganizationalUnit",
+        "text": "Name of an organizational unit"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "exampleValue": [
+        {
+          "entityType": "Source",
+          "text": "\"Studie zur Gesundheit von Kindern und Jugendlichen in Deutschland, Welle 2\""
+        },
+        {
+          "entityType": "Resource",
+          "text": "\"KiGGS Welle 2, 2. Datensatz\", \"Aktuell_Deutschland_SarsCov2_Infektionen\""
+        },
+        {
+          "entityType": "Datum",
+          "text": "Allg. Gesundheitszustand"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Reportserver"
+        }
+      ]
+    },
+    "en": {
+      "exampleValue": [
+        {
+          "entityType": "Source",
+          "text": "\"Study on the Health of children and adolescents in Germany, Wave 2\""
+        },
+        {
+          "entityType": "Resource",
+          "text": "\"KiGGS Wave 2, data set 2\", \"Aktuell_Deutschland_SarsCov2_Infektionen\""
+        },
+        {
+          "entityType": "Datum",
+          "text": "State of health"
+        },
+        {
+          "entityType": "Platform",
+          "text": "report server"
+        }
+      ]
+    }
+  }
+}

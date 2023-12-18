@@ -1,0 +1,539 @@
+syntax = "proto3";
+package d4l.mex.items;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/metadata/endpoints/items/pb;itemspb";
+
+import "shared/items/items.proto";
+import "shared/cfg/mexcfg.proto";
+
+import "d4l/security.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "google/protobuf/timestamp.proto";
+
+message CreateItemRequest {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+    example: "{\"item\":{\"entityType\":\"resource\",\"values\":[{\"fieldName\":\"title\",\"fieldValue\":\"On Computable Numbers, with an Application to the Entscheidungsproblem\"},{\"fieldName\":\"author\",\"fieldValue\":\"A.M. Turing\"},{\"fieldName\":\"author\",\"fieldValue\":\"E.L. Brown\"},{\"fieldName\":\"abstract\",\"fieldValue\":\"The 'computable' numbers may be...\"}]}}"
+  };
+
+  d4l.mex.items.Item item =  2;
+  bool prevent_announcement = 3;
+  string hash               = 4;
+}
+
+message CreateItemResponse {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+    example: "{\"itemId\":\"8d9876db-ead9-4b0e-9cc1-d1723eef1988\"}"
+  };
+
+  message PostActionResult {
+    string action = 1;
+
+  }
+
+  string item_id     = 1;
+  string business_id = 2;
+}
+
+message CreateItemsBulkRequest {
+  repeated d4l.mex.items.Item items                           = 1;
+  // This seemingly redundant flag is needed since a request that leaves out the algorithm parameter
+  // would otherwise be interpreted as requested the algorithm corresponding to the default value 0.
+  bool override_duplicate_algorithm                            = 2;
+  d4l.mex.cfg.DuplicateDetectionAlgorithm duplicate_algorithm = 3;
+}
+
+message CreateItemsBulkResponse {
+  string job_id = 1;
+}
+
+message ComputeVersionsRequest {
+  string item_id = 1;
+}
+
+message ComputeVersionsResponse {
+  message Version {
+    string item_id                       = 1;
+    string version_desc                  = 2;
+    google.protobuf.Timestamp created_at = 3;
+  }
+
+  repeated Version versions = 1;
+}
+
+message ComputeVersionsByBusinessIdRequest {
+  string business_id = 1;
+}
+
+message ComputeVersionsByBusinessIdResponse {
+  message Version {
+    string item_id                       = 1;
+    string version_desc                  = 2;
+    google.protobuf.Timestamp created_at = 3;
+  }
+
+  repeated Version versions = 1;
+}
+
+message CreateRelationRequest {
+  string type                              = 1;
+  string source_item_id                    = 2;
+  string target_item_id                    = 3;
+
+  repeated d4l.mex.items.ItemValue values = 4;
+}
+
+message CreateRelationResponse {
+  string relation_id           = 1;
+  optional string info_item_id = 2;
+}
+
+message CreateRelationsFromBusinessIdsRequest {
+  string relation_type          = 1;
+
+  string source_item_id         = 4;
+  string source_item_field_name = 5;
+}
+
+message CreateRelationsFromBusinessIdsResponse {
+  int32 inserted = 1;
+}
+
+message CreateRelationsFromOriginalItemsRequest {
+  string relation_type  = 1;
+  string source_item_id = 2;
+  string business_id    = 3;
+}
+
+message CreateRelationsFromOriginalItemsResponse {
+  int32 inserted = 1;
+}
+
+
+message ListRelationsRequest {
+  // intentionally empty
+}
+
+message ListRelation {
+  string relation_id           = 1;
+  string type                  = 2;
+  string source_item_id        = 3;
+  string target_item_id        = 4;
+  optional string info_item_id = 5;
+}
+
+message ListRelationsResponse {
+  map<string, ListRelation> relations = 1;
+}
+
+message ListItemsRequest {
+  string next        = 1;
+  string entity_type = 2;
+}
+
+message ListItem {
+  string item_id                       = 1;
+  google.protobuf.Timestamp created_at = 2;
+  string entity_type                   = 3;
+  string owner                         = 4;
+  string business_id                   = 5;
+}
+
+message ListItemsResponse {
+  repeated ListItem items = 1;
+  string next             = 2;
+}
+
+message GetItemRequest {
+  string item_id = 1;
+}
+
+message GetItemResponse {
+  message FullItemValue {
+    string item_value_id = 1;
+    string field_name    = 2;
+    string field_value   = 3;
+    string language      = 4;
+    int32  place         = 5;
+    int32  revision      = 6;
+  }
+
+  string item_id                       = 1;
+  string entity_type                   = 2;
+  string owner                         = 3;
+  google.protobuf.Timestamp created_at = 4;
+  optional string business_id          = 5;
+
+  repeated FullItemValue values        = 6;
+}
+
+message DeleteItemRequest {
+  string item_id = 1;
+}
+
+message DeleteItemResponse {
+}
+
+message DeleteItemsRequest {
+  repeated string item_ids     = 1;
+  repeated string business_ids = 2;
+  bool cascade                 = 3;
+}
+
+message DeleteItemsResponse {
+  repeated string delete_item_ids = 1;
+  int32 rows_modified             = 2;
+}
+
+message DeleteAllItemsRequest {}
+
+message DeleteAllItemsResponse {}
+
+message AggregateItemsRequest {
+  string entity_type = 1;
+  string business_id = 2;
+}
+
+message AggregateItemsResponse {
+  string aggregate_item_id            = 1;
+  repeated string aggregated_item_ids = 2;
+  string new_business_id              = 3;
+}
+
+message ListAllVersionsRequest {
+}
+
+message ListAllVersionsResponse {
+  message Versions {
+    string business_id       = 1;
+    repeated string item_ids = 2;
+  }
+
+  repeated Versions versions = 1;
+}
+
+message ComputeItemsTreeRequest {
+  string node_entity_type   = 1;
+  string link_field_name    = 2;
+  string display_field_name = 3;
+}
+
+message ComputeItemsTreeResponse {
+  message Display {
+    optional string language = 1;
+    optional int32 place     = 2;
+    string display           = 3;
+  }
+  message TreeNode {
+    string node_id                 = 1;
+    optional string parent_node_id = 2;
+    int32 depth                    = 3;
+    repeated Display display       = 4;
+  }
+  repeated TreeNode nodes = 1;
+}
+
+
+service Items {
+
+  rpc CreateItem (CreateItemRequest) returns (CreateItemResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/items"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "create"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Create new metadata item"
+      tags: ["items"]
+      security: {
+        security_requirement: {
+          key: "OAuth2/clientCreds"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+      }
+      responses: {
+        key: "200"
+        value: {
+          description: "This response is never returned. It is an artifact of the REST gateway Swagger generator."
+          schema: {}
+        }
+      }
+      responses: {
+        key: "201"
+        value: {
+          description: "Metadata item was created successfully and its ID is returned."
+          examples: {
+            key: "application/json"
+            value: '{"itemId":"8d9876db-ead9-4b0e-9cc1-d1723eef1988"}'
+          }
+        }
+      }
+    };
+  }
+
+  rpc CreateItemsBulk (CreateItemsBulkRequest) returns (CreateItemsBulkResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/items_bulk"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "create"
+    };
+  }
+
+  rpc ListItems (ListItemsRequest) returns (ListItemsResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/metadata/items"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+  rpc GetItem (GetItemRequest) returns (GetItemResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/metadata/items/{item_id}"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+  rpc DeleteItem (DeleteItemRequest) returns (DeleteItemResponse) {
+    option (google.api.http) = {
+      delete: "/api/v0/metadata/items/{item_id}"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "delete"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Delete a metadata item."
+      description: "Delete the metadata item given by the ID. In case the item does not exist, the status code will still be a 204 (and not a 404 or 403)."
+      security: {
+        security_requirement: {
+          key: "OAuth2/clientCreds"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+        security_requirement: {
+          key: "OAuth2/authCode"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+      }
+      responses: {
+        key: "204"
+        value: {
+          description: "Successful deletion of the item or item was absent."
+        }
+      }
+      responses: {
+        key: "401"
+        value: {
+          description: "Request is not authenticated."
+        }
+      }
+    };
+  }
+
+  rpc DeleteItems (DeleteItemsRequest) returns (DeleteItemsResponse) {
+    option (google.api.http) = {
+      delete: "/api/v0/metadata/items"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "delete"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Delete metadata items."
+      description: "Delete the metadata items given by the IDs (item or business), cascading to contributing fragments if requested. A 204 response (empty body) means no item IDs to delete were given or derived from the given business IDs. A 200 response means that deletions were attempted: the returned body indicates which items IDs were submitted for deletion and how many DB rows were changes as a result. In case the items do not exist, the status code will still be a 200/204 (and not a 404 or 403)."
+      security: {
+        security_requirement: {
+          key: "OAuth2/clientCreds"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+        security_requirement: {
+          key: "OAuth2/authCode"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+      }
+      responses: {
+        key: "200"
+        value: {
+          description: "Successful deletion of the items or item was absent."
+        }
+      }
+      responses: {
+        key: "204"
+        value: {
+          description: "No items ID to be deleted submitted or derived from business IDs."
+        }
+      }
+      responses: {
+        key: "401"
+        value: {
+          description: "Request is not authenticated."
+        }
+      }
+    };
+  }
+
+  rpc DeleteAllItems (DeleteAllItemsRequest) returns (DeleteAllItemsResponse) {
+    option (google.api.http) = {
+      delete: "/api/v0/metadata/all_items"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "delete"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      summary: "Delete all metadata items."
+      security: {
+        security_requirement: {
+          key: "OAuth2/clientCreds"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+        security_requirement: {
+          key: "OAuth2/authCode"
+          value: {
+            scope: "metadata:w"
+          }
+        }
+      }
+      responses: {
+        key: "204"
+        value: {
+          description: "Successful deletion of the items or items were absent."
+        }
+      }
+      responses: {
+        key: "401"
+        value: {
+          description: "Request is not authenticated."
+        }
+      }
+    };
+  }
+
+  // Explicitly not called "List*", because we are not just listing existing resources.
+  rpc ComputeVersions (ComputeVersionsRequest) returns (ComputeVersionsResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/items/{item_id}/versions"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+  rpc ComputeVersionsByBusinessID (ComputeVersionsByBusinessIdRequest) returns (ComputeVersionsByBusinessIdResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/metadata/versions/{business_id=**}"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+  rpc CreateRelation (CreateRelationRequest) returns (CreateRelationResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/relations"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "create"
+    };
+  }
+
+  rpc CreateRelationsFromBusinessIds (CreateRelationsFromBusinessIdsRequest) returns (CreateRelationsFromBusinessIdsResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/relations_items"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "create"
+    };
+  }
+
+  rpc CreateRelationsFromOriginalItems (CreateRelationsFromOriginalItemsRequest) returns (CreateRelationsFromOriginalItemsResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/relations_items_originals"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "create"
+    };
+  }
+
+  rpc ListRelations (ListRelationsRequest) returns (ListRelationsResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/metadata/relations"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+  rpc AggregateItems (AggregateItemsRequest) returns (AggregateItemsResponse) {
+  }
+
+  rpc ListAllVersions (ListAllVersionsRequest) returns (ListAllVersionsResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/metadata/versions"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+  rpc ComputeItemsTree (ComputeItemsTreeRequest) returns (ComputeItemsTreeResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/tree"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "items"
+      verb:  "read"
+    };
+  }
+
+}

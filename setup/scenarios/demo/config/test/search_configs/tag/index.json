@@ -1,0 +1,7 @@
+{
+    "name": "tag",
+    "type": "ordinalAxis",
+    "fields": [
+        "tag"
+    ]
+}

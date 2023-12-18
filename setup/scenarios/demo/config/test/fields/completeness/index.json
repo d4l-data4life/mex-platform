@@ -1,0 +1,24 @@
+{
+    "name": "completeness",
+    "renderer": "none",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Vollst\u00e4ndige Metadaten"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Complete meta data"
+            }
+        ]
+    },
+    "resolvesTo": []
+}

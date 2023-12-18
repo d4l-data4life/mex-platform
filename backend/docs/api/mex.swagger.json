@@ -1,0 +1,3344 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MEx Core Service API",
+    "version": "0.1",
+    "contact": {
+      "name": "MEx Development Team",
+      "url": "https://data4life.care"
+    }
+  },
+  "tags": [
+    {
+      "name": "Telemetry"
+    },
+    {
+      "name": "Search"
+    },
+    {
+      "name": "Auth"
+    },
+    {
+      "name": "Index"
+    },
+    {
+      "name": "Items"
+    },
+    {
+      "name": "Jobs",
+      "description": "Service for managing jobs"
+    },
+    {
+      "name": "Blobs"
+    },
+    {
+      "name": "Notify"
+    },
+    {
+      "name": "Config"
+    }
+  ],
+  "host": "example.com",
+  "basePath": "/api/v0",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/v0/blobs": {
+      "get": {
+        "operationId": "Blobs_ListBlobs",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/blobsListBlobsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Blobs"
+        ]
+      },
+      "post": {
+        "summary": "Write data for existing or new blob.",
+        "description": "If no blob with the specified name and type exists, it is created and the data is written. In that case the append flag has no meaning. If a blob with the specified name and type already exists, the data is overwritten with the request's data (if the append flag is false) or the request's data is appended to the existing blob data (if the append flag is true).",
+        "operationId": "Blobs_CreateBlob",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/blobsCreateBlobResponse"
+            }
+          },
+          "201": {
+            "description": "In the success case the response is always a 201.",
+            "schema": {
+              "$ref": "#/definitions/blobsCreateBlobResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/blobsCreateBlobRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Blobs"
+        ]
+      }
+    },
+    "/api/v0/blobs/mesh": {
+      "post": {
+        "operationId": "Blobs_MeshTest",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/blobsMeshTestResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/blobsMeshTestRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Blobs"
+        ]
+      }
+    },
+    "/api/v0/blobs/{blobName}": {
+      "get": {
+        "operationId": "Blobs_GetBlob",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/blobsGetBlobResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "blobName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "blobType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Blobs"
+        ]
+      },
+      "delete": {
+        "operationId": "Blobs_DeleteBlob",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/blobsDeleteBlobResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "blobName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "blobType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Blobs"
+        ]
+      }
+    },
+    "/api/v0/config/files/{name}": {
+      "get": {
+        "summary": "Get a file from the current checked-out config working tree.",
+        "operationId": "Config_GetFile",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/configGetFileResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "pattern": ".+"
+          }
+        ],
+        "tags": [
+          "Config"
+        ]
+      }
+    },
+    "/api/v0/config/list": {
+      "get": {
+        "summary": "Get a list of all current config files names.",
+        "operationId": "Config_ListConfig",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/configListConfigResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Config"
+        ]
+      }
+    },
+    "/api/v0/config/status": {
+      "get": {
+        "operationId": "Config_GetStatus",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/configGetStatusResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Config"
+        ]
+      }
+    },
+    "/api/v0/config/update": {
+      "post": {
+        "summary": "Instruct the service to pull/checkout a new config and inform other services about it.",
+        "operationId": "Config_UpdateConfig",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/configUpdateConfigResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/configUpdateConfigRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Config"
+        ]
+      }
+    },
+    "/api/v0/jobs": {
+      "post": {
+        "summary": "Create a new job",
+        "description": "Create a new job and return the job ID.",
+        "operationId": "Jobs_CreateJob",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/jobsCreateJobResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/jobsCreateJobRequest"
+            }
+          }
+        ],
+        "tags": [
+          "job"
+        ],
+        "security": [
+          {
+            "OAuth2/clientCreds": [
+              "jobs:w"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/v0/jobs/{jobId}": {
+      "get": {
+        "operationId": "Jobs_GetJob",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/jobsGetJobResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Jobs"
+        ]
+      }
+    },
+    "/api/v0/jobs/{jobId}/items": {
+      "get": {
+        "summary": "Read the IDs of the metadata items created, updated or deleted during the job run",
+        "description": "...",
+        "operationId": "Jobs_GetItems",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/jobsGetJobItemsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "job",
+          "items"
+        ],
+        "security": [
+          {
+            "OAuth2/clientCreds": [
+              "jobs:r"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/v0/jobs/{jobId}/logs": {
+      "get": {
+        "summary": "Read the job logs",
+        "description": "Retrieve all logs that have been issued during the job run so far.",
+        "operationId": "Jobs_GetLogs",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/jobsGetJobLogsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "job",
+          "logs"
+        ],
+        "security": [
+          {
+            "OAuth2/clientCreds": [
+              "jobs:r"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/v0/metadata/all_items": {
+      "delete": {
+        "summary": "Delete all metadata items.",
+        "operationId": "Items_DeleteAllItems",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsDeleteAllItemsResponse"
+            }
+          },
+          "204": {
+            "description": "Successful deletion of the items or items were absent.",
+            "schema": {}
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "Request is not authenticated.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Items"
+        ],
+        "security": [
+          {
+            "OAuth2/authCode": [
+              "metadata:w"
+            ],
+            "OAuth2/clientCreds": [
+              "metadata:w"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/v0/metadata/index": {
+      "get": {
+        "operationId": "Index_IndexStatus",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/indexIndexStatusResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Index"
+        ]
+      },
+      "delete": {
+        "operationId": "Index_DeleteIndex",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/indexDeleteIndexResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Index"
+        ]
+      },
+      "post": {
+        "operationId": "Index_CreateIndex",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/indexCreateIndexResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/indexCreateIndexRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Index"
+        ]
+      },
+      "put": {
+        "operationId": "Index_UpdateIndex",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/indexUpdateIndexResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Index"
+        ]
+      }
+    },
+    "/api/v0/metadata/index/{businessId}": {
+      "put": {
+        "operationId": "Index_IndexLatestItem",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/indexIndexLatestItemResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "businessId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Index"
+        ]
+      }
+    },
+    "/api/v0/metadata/items": {
+      "get": {
+        "operationId": "Items_ListItems",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsListItemsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "next",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "entityType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      },
+      "delete": {
+        "summary": "Delete metadata items.",
+        "description": "Delete the metadata items given by the IDs (item or business), cascading to contributing fragments if requested. A 204 response (empty body) means no item IDs to delete were given or derived from the given business IDs. A 200 response means that deletions were attempted: the returned body indicates which items IDs were submitted for deletion and how many DB rows were changes as a result. In case the items do not exist, the status code will still be a 200/204 (and not a 404 or 403).",
+        "operationId": "Items_DeleteItems",
+        "responses": {
+          "200": {
+            "description": "Successful deletion of the items or item was absent.",
+            "schema": {
+              "$ref": "#/definitions/itemsDeleteItemsResponse"
+            }
+          },
+          "204": {
+            "description": "No items ID to be deleted submitted or derived from business IDs.",
+            "schema": {}
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "Request is not authenticated.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsDeleteItemsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Items"
+        ],
+        "security": [
+          {
+            "OAuth2/authCode": [
+              "metadata:w"
+            ],
+            "OAuth2/clientCreds": [
+              "metadata:w"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "summary": "Create new metadata item",
+        "operationId": "Items_CreateItem",
+        "responses": {
+          "200": {
+            "description": "This response is never returned. It is an artifact of the REST gateway Swagger generator.",
+            "schema": {}
+          },
+          "201": {
+            "description": "Metadata item was created successfully and its ID is returned.",
+            "schema": {},
+            "examples": {
+              "application/json": {
+                "itemId": "8d9876db-ead9-4b0e-9cc1-d1723eef1988"
+              }
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsCreateItemRequest"
+            }
+          }
+        ],
+        "tags": [
+          "items"
+        ],
+        "security": [
+          {
+            "OAuth2/clientCreds": [
+              "metadata:w"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/v0/metadata/items/{itemId}": {
+      "get": {
+        "operationId": "Items_GetItem",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsGetItemResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      },
+      "delete": {
+        "summary": "Delete a metadata item.",
+        "description": "Delete the metadata item given by the ID. In case the item does not exist, the status code will still be a 204 (and not a 404 or 403).",
+        "operationId": "Items_DeleteItem",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsDeleteItemResponse"
+            }
+          },
+          "204": {
+            "description": "Successful deletion of the item or item was absent.",
+            "schema": {}
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "Request is not authenticated.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Items"
+        ],
+        "security": [
+          {
+            "OAuth2/authCode": [
+              "metadata:w"
+            ],
+            "OAuth2/clientCreds": [
+              "metadata:w"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/v0/metadata/items/{itemId}/versions": {
+      "post": {
+        "summary": "Explicitly not called \"List*\", because we are not just listing existing resources.",
+        "operationId": "Items_ComputeVersions",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsComputeVersionsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "itemId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/items_bulk": {
+      "post": {
+        "operationId": "Items_CreateItemsBulk",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsCreateItemsBulkResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsCreateItemsBulkRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/relations": {
+      "get": {
+        "operationId": "Items_ListRelations",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsListRelationsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Items"
+        ]
+      },
+      "post": {
+        "operationId": "Items_CreateRelation",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsCreateRelationResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsCreateRelationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/relations_items": {
+      "post": {
+        "operationId": "Items_CreateRelationsFromBusinessIds",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsCreateRelationsFromBusinessIdsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsCreateRelationsFromBusinessIdsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/relations_items_originals": {
+      "post": {
+        "operationId": "Items_CreateRelationsFromOriginalItems",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsCreateRelationsFromOriginalItemsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsCreateRelationsFromOriginalItemsRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/tree": {
+      "post": {
+        "operationId": "Items_ComputeItemsTree",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsComputeItemsTreeResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/itemsComputeItemsTreeRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/versions": {
+      "get": {
+        "operationId": "Items_ListAllVersions",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsListAllVersionsResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/metadata/versions/{businessId}": {
+      "get": {
+        "operationId": "Items_ComputeVersionsByBusinessID",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/itemsComputeVersionsByBusinessIdResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "businessId",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "pattern": ".+"
+          }
+        ],
+        "tags": [
+          "Items"
+        ]
+      }
+    },
+    "/api/v0/notify": {
+      "post": {
+        "operationId": "Notify_SendNotification",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/notifySendNotificationResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/notifySendNotificationRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Notify"
+        ]
+      }
+    },
+    "/api/v0/oauth/authorize": {
+      "get": {
+        "operationId": "Auth_Authorize",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authAuthorizeResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "responseType",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "clientId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "redirectUri",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "scope",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "codeChallenge",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "codeChallengeMethod",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "responseMode",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/api/v0/oauth/keys": {
+      "get": {
+        "operationId": "Auth_Keys",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authKeysResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/api/v0/oauth/token": {
+      "post": {
+        "operationId": "Auth_Token",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/authTokenResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/authTokenRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Auth"
+        ]
+      }
+    },
+    "/api/v0/query/search": {
+      "post": {
+        "description": "Perform a search for matching items",
+        "operationId": "Search_Search",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/searchSearchResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/searchSearchRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Search"
+        ]
+      }
+    },
+    "/probes/liveness": {
+      "get": {
+        "operationId": "Telemetry_LivenessProbe",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/telemetryLivenessResponse"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Telemetry"
+        ]
+      }
+    },
+    "/probes/readiness": {
+      "get": {
+        "operationId": "Telemetry_ReadinessProbe",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/mexstatusStatus"
+            }
+          },
+          "400": {
+            "description": "User error. One or more arguments of the request are invalid or incompatible.",
+            "schema": {}
+          },
+          "401": {
+            "description": "The request did not contain an access token or that token could not be verified.",
+            "schema": {}
+          },
+          "500": {
+            "description": "Fallback error when no other error code fits or an unexpected error occurred.",
+            "schema": {}
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/googlerpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "Telemetry"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "ComputeItemsTreeResponseDisplay": {
+      "type": "object",
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "place": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "display": {
+          "type": "string"
+        }
+      }
+    },
+    "ComputeItemsTreeResponseTreeNode": {
+      "type": "object",
+      "properties": {
+        "nodeId": {
+          "type": "string"
+        },
+        "parentNodeId": {
+          "type": "string"
+        },
+        "depth": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "display": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/ComputeItemsTreeResponseDisplay"
+          }
+        }
+      }
+    },
+    "GetItemResponseFullItemValue": {
+      "type": "object",
+      "properties": {
+        "itemValueId": {
+          "type": "string"
+        },
+        "fieldName": {
+          "type": "string"
+        },
+        "fieldValue": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "place": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "revision": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "KeysResponseKey": {
+      "type": "object",
+      "properties": {
+        "kty": {
+          "type": "string"
+        },
+        "kid": {
+          "type": "string"
+        },
+        "use": {
+          "type": "string"
+        },
+        "alg": {
+          "type": "string"
+        },
+        "e": {
+          "type": "string"
+        },
+        "n": {
+          "type": "string"
+        }
+      }
+    },
+    "ListAllVersionsResponseVersions": {
+      "type": "object",
+      "properties": {
+        "businessId": {
+          "type": "string"
+        },
+        "itemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "MeshTestRequestLoadingMode": {
+      "type": "string",
+      "enum": [
+        "LOADING_MODE_IN_MEMORY",
+        "LOADING_MODE_TEMP_FILE"
+      ],
+      "default": "LOADING_MODE_IN_MEMORY"
+    },
+    "authAuthorizeResponse": {
+      "type": "object"
+    },
+    "authKeysResponse": {
+      "type": "object",
+      "properties": {
+        "keys": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/KeysResponseKey"
+          }
+        }
+      }
+    },
+    "authTokenRequest": {
+      "type": "object",
+      "properties": {
+        "clientId": {
+          "type": "string"
+        },
+        "redirectUri": {
+          "type": "string"
+        },
+        "grantType": {
+          "type": "string"
+        },
+        "codeVerifier": {
+          "type": "string"
+        },
+        "code": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "clientSecret": {
+          "type": "string"
+        },
+        "refreshToken": {
+          "type": "string"
+        }
+      }
+    },
+    "authTokenResponse": {
+      "type": "object",
+      "properties": {
+        "access_token": {
+          "type": "string"
+        },
+        "refresh_token": {
+          "type": "string"
+        },
+        "token_type": {
+          "type": "string"
+        },
+        "expires_in": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    },
+    "blobsBlobInfo": {
+      "type": "object",
+      "properties": {
+        "blobName": {
+          "type": "string"
+        },
+        "blobType": {
+          "type": "string"
+        }
+      }
+    },
+    "blobsCreateBlobRequest": {
+      "type": "object",
+      "properties": {
+        "blobName": {
+          "type": "string"
+        },
+        "blobType": {
+          "type": "string"
+        },
+        "data": {
+          "type": "string",
+          "format": "byte"
+        },
+        "append": {
+          "type": "boolean"
+        }
+      }
+    },
+    "blobsCreateBlobResponse": {
+      "type": "object",
+      "properties": {
+        "bytesWritten": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "blobsDeleteBlobResponse": {
+      "type": "object"
+    },
+    "blobsGetBlobResponse": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "blobsListBlobsResponse": {
+      "type": "object",
+      "properties": {
+        "blobInfos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/blobsBlobInfo"
+          }
+        }
+      }
+    },
+    "blobsMeshTestRequest": {
+      "type": "object",
+      "properties": {
+        "bagSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "iterations": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "showTerms": {
+          "type": "boolean"
+        },
+        "blobName": {
+          "type": "string"
+        },
+        "blobType": {
+          "type": "string"
+        },
+        "loadingMode": {
+          "$ref": "#/definitions/MeshTestRequestLoadingMode"
+        },
+        "runGc": {
+          "type": "boolean"
+        }
+      }
+    },
+    "blobsMeshTestResponse": {
+      "type": "object",
+      "properties": {
+        "distinctCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "info": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cfgDuplicateDetectionAlgorithm": {
+      "type": "string",
+      "enum": [
+        "SIMPLE",
+        "LATEST_ONLY"
+      ],
+      "default": "SIMPLE",
+      "description": " - SIMPLE: SIMPLE classifies an item as duplicate if its hash is identical to that of an existing item,\neven if the latter is a non-current item (i.e., not the latest version).\nThis means that an item that changes back to a previous state after having been in another\nstate is classified as duplicate, meaning that the change will not be stored.\n - LATEST_ONLY: LATEST_ONLY classifies an item as duplicate only if its hash is equal to the hash of the\nnewest version of an existing item. This means that items can return to a previous states (after being in\nanother state) without being classified as duplicates."
+    },
+    "configCannedConfig": {
+      "type": "object",
+      "properties": {
+        "tarData": {
+          "type": "string",
+          "format": "byte"
+        },
+        "configHash": {
+          "type": "string"
+        }
+      }
+    },
+    "configGetFileResponse": {
+      "type": "object",
+      "properties": {
+        "mimeType": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string",
+          "format": "byte"
+        }
+      }
+    },
+    "configGetStatusResponse": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "$ref": "#/definitions/statusColor"
+        },
+        "configHashes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "This field is repeated so we may also return inconsistent states\nwhere some replicas have run using different configs."
+        },
+        "statuses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/mexstatusStatus"
+          }
+        }
+      }
+    },
+    "configListConfigResponse": {
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "configUpdateConfigRequest": {
+      "type": "object",
+      "properties": {
+        "refName": {
+          "type": "string"
+        },
+        "cannedConfig": {
+          "$ref": "#/definitions/configCannedConfig"
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "configUpdateConfigResponse": {
+      "type": "object",
+      "properties": {
+        "commit": {
+          "type": "string"
+        },
+        "jobId": {
+          "type": "string"
+        }
+      }
+    },
+    "googlerpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "indexCreateIndexRequest": {
+      "type": "object",
+      "title": "intentionally empty"
+    },
+    "indexCreateIndexResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        }
+      }
+    },
+    "indexDeleteIndexResponse": {
+      "type": "object",
+      "title": "intentionally empty"
+    },
+    "indexIndexLatestItemResponse": {
+      "type": "object"
+    },
+    "indexIndexStatusResponse": {
+      "type": "object",
+      "properties": {
+        "clusterStatus": {
+          "$ref": "#/definitions/indexSolrClusterStatus"
+        },
+        "itemCount": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    },
+    "indexReplicaStatus": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "leader": {
+          "type": "boolean"
+        }
+      }
+    },
+    "indexShardStatus": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "health": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        },
+        "replicas": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/indexReplicaStatus"
+          }
+        }
+      }
+    },
+    "indexSolrClusterStatus": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "type": "string"
+        },
+        "health": {
+          "type": "string"
+        },
+        "shards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/indexShardStatus"
+          }
+        }
+      }
+    },
+    "indexUpdateIndexResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsAggregateItemsResponse": {
+      "type": "object",
+      "properties": {
+        "aggregateItemId": {
+          "type": "string"
+        },
+        "aggregatedItemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "newBusinessId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsComputeItemsTreeRequest": {
+      "type": "object",
+      "properties": {
+        "nodeEntityType": {
+          "type": "string"
+        },
+        "linkFieldName": {
+          "type": "string"
+        },
+        "displayFieldName": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsComputeItemsTreeResponse": {
+      "type": "object",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/ComputeItemsTreeResponseTreeNode"
+          }
+        }
+      }
+    },
+    "itemsComputeVersionsByBusinessIdResponse": {
+      "type": "object",
+      "properties": {
+        "versions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/itemsComputeVersionsByBusinessIdResponseVersion"
+          }
+        }
+      }
+    },
+    "itemsComputeVersionsByBusinessIdResponseVersion": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "versionDesc": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "itemsComputeVersionsResponse": {
+      "type": "object",
+      "properties": {
+        "versions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/itemsComputeVersionsResponseVersion"
+          }
+        }
+      }
+    },
+    "itemsComputeVersionsResponseVersion": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "versionDesc": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "itemsCreateItemRequest": {
+      "type": "object",
+      "example": {
+        "item": {
+          "entityType": "resource",
+          "values": [
+            {
+              "fieldName": "title",
+              "fieldValue": "On Computable Numbers, with an Application to the Entscheidungsproblem"
+            },
+            {
+              "fieldName": "author",
+              "fieldValue": "A.M. Turing"
+            },
+            {
+              "fieldName": "author",
+              "fieldValue": "E.L. Brown"
+            },
+            {
+              "fieldName": "abstract",
+              "fieldValue": "The 'computable' numbers may be..."
+            }
+          ]
+        }
+      },
+      "properties": {
+        "item": {
+          "$ref": "#/definitions/itemsItem"
+        },
+        "preventAnnouncement": {
+          "type": "boolean"
+        },
+        "hash": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsCreateItemResponse": {
+      "type": "object",
+      "example": {
+        "itemId": "8d9876db-ead9-4b0e-9cc1-d1723eef1988"
+      },
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "businessId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsCreateItemsBulkRequest": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/itemsItem"
+          }
+        },
+        "overrideDuplicateAlgorithm": {
+          "type": "boolean",
+          "description": "This seemingly redundant flag is needed since a request that leaves out the algorithm parameter\nwould otherwise be interpreted as requested the algorithm corresponding to the default value 0."
+        },
+        "duplicateAlgorithm": {
+          "$ref": "#/definitions/cfgDuplicateDetectionAlgorithm"
+        }
+      }
+    },
+    "itemsCreateItemsBulkResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsCreateRelationRequest": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "sourceItemId": {
+          "type": "string"
+        },
+        "targetItemId": {
+          "type": "string"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/itemsItemValue"
+          }
+        }
+      }
+    },
+    "itemsCreateRelationResponse": {
+      "type": "object",
+      "properties": {
+        "relationId": {
+          "type": "string"
+        },
+        "infoItemId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsCreateRelationsFromBusinessIdsRequest": {
+      "type": "object",
+      "properties": {
+        "relationType": {
+          "type": "string"
+        },
+        "sourceItemId": {
+          "type": "string"
+        },
+        "sourceItemFieldName": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsCreateRelationsFromBusinessIdsResponse": {
+      "type": "object",
+      "properties": {
+        "inserted": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "itemsCreateRelationsFromOriginalItemsRequest": {
+      "type": "object",
+      "properties": {
+        "relationType": {
+          "type": "string"
+        },
+        "sourceItemId": {
+          "type": "string"
+        },
+        "businessId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsCreateRelationsFromOriginalItemsResponse": {
+      "type": "object",
+      "properties": {
+        "inserted": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "itemsDeleteAllItemsResponse": {
+      "type": "object"
+    },
+    "itemsDeleteItemResponse": {
+      "type": "object"
+    },
+    "itemsDeleteItemsRequest": {
+      "type": "object",
+      "properties": {
+        "itemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "businessIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cascade": {
+          "type": "boolean"
+        }
+      }
+    },
+    "itemsDeleteItemsResponse": {
+      "type": "object",
+      "properties": {
+        "deleteItemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rowsModified": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "itemsGetItemResponse": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "entityType": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "businessId": {
+          "type": "string"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/GetItemResponseFullItemValue"
+          }
+        }
+      }
+    },
+    "itemsItem": {
+      "type": "object",
+      "properties": {
+        "entityType": {
+          "type": "string"
+        },
+        "businessId": {
+          "type": "string"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/itemsItemValue"
+          }
+        }
+      }
+    },
+    "itemsItemValue": {
+      "type": "object",
+      "properties": {
+        "fieldName": {
+          "type": "string"
+        },
+        "fieldValue": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsListAllVersionsResponse": {
+      "type": "object",
+      "properties": {
+        "versions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/ListAllVersionsResponseVersions"
+          }
+        }
+      }
+    },
+    "itemsListItem": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "entityType": {
+          "type": "string"
+        },
+        "owner": {
+          "type": "string"
+        },
+        "businessId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsListItemsResponse": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/itemsListItem"
+          }
+        },
+        "next": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsListRelation": {
+      "type": "object",
+      "properties": {
+        "relationId": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "sourceItemId": {
+          "type": "string"
+        },
+        "targetItemId": {
+          "type": "string"
+        },
+        "infoItemId": {
+          "type": "string"
+        }
+      }
+    },
+    "itemsListRelationsResponse": {
+      "type": "object",
+      "properties": {
+        "relations": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/itemsListRelation"
+          }
+        }
+      }
+    },
+    "jobsAddJobItemsResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "itemCount": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "jobsAddJobLogsResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "logCount": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "jobsCreateJobRequest": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        }
+      }
+    },
+    "jobsCreateJobResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        }
+      }
+    },
+    "jobsGetJobItemsResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "itemIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "jobsGetJobLogsResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "logs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "jobsGetJobResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "error": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "logCount": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "itemCount": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "jobsSetJobErrorResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        }
+      }
+    },
+    "jobsSetJobStatusResponse": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "mexstatusStatus": {
+      "type": "object",
+      "properties": {
+        "serviceTag": {
+          "type": "string"
+        },
+        "replica": {
+          "type": "string"
+        },
+        "color": {
+          "$ref": "#/definitions/statusColor"
+        },
+        "configHash": {
+          "type": "string"
+        },
+        "lastReported": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "progress": {
+          "$ref": "#/definitions/statusProgress"
+        }
+      }
+    },
+    "notifySendNotificationRequest": {
+      "type": "object",
+      "example": {
+        "templateInfo": {
+          "contextItemId": "d504524c-fb26-40c7-be70-cb0c2bdf3434",
+          "recipientItemId": "1fd622ae-b7b1-458a-8437-561e61299c17",
+          "templateName": "data-access-request"
+        },
+        "formData": {
+          "datasetLinking": "yes",
+          "linkedDatasetName": [
+            "Dataset 1",
+            "Dataset 2"
+          ],
+          "linkedDatasetOrigin": [
+            "Origin 1",
+            "Origin 2"
+          ],
+          "linkedDatasetDescription": [
+            "Description 1",
+            "Description 2"
+          ],
+          "requestedAccessInterval": "once",
+          "applicantName": "Max Mustermann",
+          "applicantOrganizationName": "Acme",
+          "applicantRole": "Developer",
+          "applicantEmail": "max.mustermann@acme.com",
+          "applicantPhone": "12345",
+          "additionalApplicantName": [
+            "Moritz Mustermann",
+            "Klaus Mueller"
+          ],
+          "additionalApplicantOrganizationName": [
+            "ABC Inc.",
+            "Klaus Inc."
+          ],
+          "additionalApplicantRole": [
+            "Architect",
+            "CEO"
+          ],
+          "additionalApplicantEmail": [
+            "moritz@foo.de",
+            "klaus@klaus.de"
+          ],
+          "additionalApplicantPhone": [
+            "666",
+            "99999"
+          ]
+        }
+      },
+      "properties": {
+        "templateInfo": {
+          "$ref": "#/definitions/notifyTemplateInfo"
+        },
+        "formData": {
+          "type": "string",
+          "description": "This data is used for template interpolation.\nIf you set a string it must be parsable into a JSON object (that is, it is the output of, e.g., 'JSON.stringify')\nYou can also set `formData` in the request to a JSON object. Even though a generic JSON object could not be parsed into a Protobuf message, we use a dedicated middleware that intercepts such a request and stringifies the object to a string so that it fits this message's schema. See message examples.",
+          "title": "User-entered questionnaire/form data"
+        }
+      }
+    },
+    "notifySendNotificationResponse": {
+      "type": "object",
+      "properties": {
+        "orderId": {
+          "type": "string",
+          "description": "We generate for each incoming notification request a random order ID which will be used to link the message IDs to that request. A successful notification leads to a BI event log of this message. Also, the order ID is set as the 'Order-Id' header of each submitted email."
+        },
+        "messageIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "A single notification request can lead to multiple emails being sent (depending on the template definition). Each email that is sent by Flowmailer gets its own ID. This field collects the IDs or all messages that could be successfully submitted to Flowmailer. It does not mean that the email has been successfully delivered, though. The status of an email can be requested by the Flowmailer API using the message ID."
+        }
+      }
+    },
+    "notifyTemplateInfo": {
+      "type": "object",
+      "properties": {
+        "templateName": {
+          "type": "string"
+        },
+        "contextItemId": {
+          "type": "string"
+        },
+        "recipientItemId": {
+          "type": "string"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string",
+          "description": "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
+        }
+      },
+      "additionalProperties": {},
+      "description": "`Any` contains an arbitrary serialized protocol buffer message along with a\nURL that describes the type of the serialized message.\n\nProtobuf library provides support to pack/unpack Any values in the form\nof utility functions or additional generated methods of the Any type.\n\nExample 1: Pack and unpack a message in C++.\n\n    Foo foo = ...;\n    Any any;\n    any.PackFrom(foo);\n    ...\n    if (any.UnpackTo(\u0026foo)) {\n      ...\n    }\n\nExample 2: Pack and unpack a message in Java.\n\n    Foo foo = ...;\n    Any any = Any.pack(foo);\n    ...\n    if (any.is(Foo.class)) {\n      foo = any.unpack(Foo.class);\n    }\n    // or ...\n    if (any.isSameTypeAs(Foo.getDefaultInstance())) {\n      foo = any.unpack(Foo.getDefaultInstance());\n    }\n\nExample 3: Pack and unpack a message in Python.\n\n    foo = Foo(...)\n    any = Any()\n    any.Pack(foo)\n    ...\n    if any.Is(Foo.DESCRIPTOR):\n      any.Unpack(foo)\n      ...\n\nExample 4: Pack and unpack a message in Go\n\n     foo := \u0026pb.Foo{...}\n     any, err := anypb.New(foo)\n     if err != nil {\n       ...\n     }\n     ...\n     foo := \u0026pb.Foo{}\n     if err := any.UnmarshalTo(foo); err != nil {\n       ...\n     }\n\nThe pack methods provided by protobuf library will by default use\n'type.googleapis.com/full.type.name' as the type URL and the unpack\nmethods only use the fully qualified type name after the last '/'\nin the type URL, for example \"foo.bar.com/x/y.z\" will yield type\nname \"y.z\".\n\nJSON\n\nThe JSON representation of an `Any` value uses the regular\nrepresentation of the deserialized, embedded message, with an\nadditional field `@type` which contains the type URL. Example:\n\n    package google.profile;\n    message Person {\n      string first_name = 1;\n      string last_name = 2;\n    }\n\n    {\n      \"@type\": \"type.googleapis.com/google.profile.Person\",\n      \"firstName\": \u003cstring\u003e,\n      \"lastName\": \u003cstring\u003e\n    }\n\nIf the embedded message type is well-known and has a custom JSON\nrepresentation, that representation will be embedded adding a field\n`value` which holds the custom JSON in addition to the `@type`\nfield. Example (for message [google.protobuf.Duration][]):\n\n    {\n      \"@type\": \"type.googleapis.com/google.protobuf.Duration\",\n      \"value\": \"1.212s\"\n    }"
+    },
+    "searchSearchRequest": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Solr search query"
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sorting": {
+          "$ref": "#/definitions/v0Sorting"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "offset": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "searchFocus": {
+          "type": "string"
+        },
+        "highlightFields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "autoHighlight": {
+          "type": "boolean"
+        },
+        "facets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0Facet"
+          }
+        },
+        "axisConstraints": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0AxisConstraint"
+          }
+        },
+        "maxEditDistance": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "useNgramField": {
+          "type": "boolean"
+        }
+      }
+    },
+    "searchSearchResponse": {
+      "type": "object",
+      "properties": {
+        "numFound": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "numFoundExact": {
+          "type": "boolean"
+        },
+        "start": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "maxScore": {
+          "type": "number",
+          "format": "double"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0DocItem"
+          }
+        },
+        "facets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0FacetResult"
+          }
+        },
+        "highlights": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0Highlight"
+          }
+        },
+        "diagnostics": {
+          "$ref": "#/definitions/v0Diagnostics"
+        }
+      }
+    },
+    "statusColor": {
+      "type": "string",
+      "enum": [
+        "RED",
+        "AMBER",
+        "GREEN"
+      ],
+      "default": "RED",
+      "title": "- RED: errored out\n - AMBER: in progress\n - GREEN: all good"
+    },
+    "statusProgress": {
+      "type": "object",
+      "properties": {
+        "step": {
+          "type": "string"
+        },
+        "details": {
+          "type": "string"
+        }
+      }
+    },
+    "telemetryLivenessResponse": {
+      "type": "object"
+    },
+    "v0AxisConstraint": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "axis": {
+          "type": "string"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "singleNodeValues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stringRanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0StringRange"
+          }
+        },
+        "combineOperator": {
+          "type": "string"
+        }
+      }
+    },
+    "v0Diagnostics": {
+      "type": "object",
+      "properties": {
+        "parsingSucceeded": {
+          "type": "boolean"
+        },
+        "parsingErrors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cleanedQuery": {
+          "type": "string"
+        },
+        "queryWasCleaned": {
+          "type": "boolean"
+        },
+        "ignoredErrors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "v0DocItem": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "entityType": {
+          "type": "string"
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0DocValue"
+          }
+        }
+      }
+    },
+    "v0DocValue": {
+      "type": "object",
+      "properties": {
+        "fieldName": {
+          "type": "string"
+        },
+        "fieldValue": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        }
+      }
+    },
+    "v0Facet": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "axis": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "offset": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "statName": {
+          "type": "string"
+        },
+        "statOp": {
+          "type": "string"
+        }
+      }
+    },
+    "v0FacetBucket": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "count": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "hierarchyInfo": {
+          "$ref": "#/definitions/protobufAny"
+        }
+      }
+    },
+    "v0FacetResult": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "axis": {
+          "type": "string"
+        },
+        "bucketNo": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "buckets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0FacetBucket"
+          }
+        },
+        "statName": {
+          "type": "string"
+        },
+        "stringStatResult": {
+          "type": "string"
+        }
+      }
+    },
+    "v0FieldHighlight": {
+      "type": "object",
+      "properties": {
+        "fieldName": {
+          "type": "string"
+        },
+        "snippets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "language": {
+          "type": "string"
+        }
+      }
+    },
+    "v0Highlight": {
+      "type": "object",
+      "properties": {
+        "itemId": {
+          "type": "string"
+        },
+        "matches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/v0FieldHighlight"
+          }
+        }
+      }
+    },
+    "v0Sorting": {
+      "type": "object",
+      "properties": {
+        "axis": {
+          "type": "string"
+        },
+        "order": {
+          "type": "string"
+        }
+      }
+    },
+    "v0StringRange": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "type": "string"
+        },
+        "max": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "OAuth2/authCode": {
+      "type": "oauth2",
+      "description": "OAuth 2.0 with Authorization Code Grant type",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/authorize",
+      "tokenUrl": "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token",
+      "scopes": {
+        "metadata:r": "Read any metadata item (R of CRUD)",
+        "metadata:w": "Full CRUD access to any metadata (includes `metadata:r` scope)"
+      }
+    },
+    "OAuth2/clientCreds": {
+      "type": "oauth2",
+      "description": "OAuth 2.0 with Client Credentias Grant type",
+      "flow": "application",
+      "tokenUrl": "https://login.microsoftonline.com/{TENANT_ID}/oauth2/v2.0/token",
+      "scopes": {
+        "jobs:r": "Read any job data (errors, logs)",
+        "jobs:w": "Create and manage jobs (includes `jobs:w` scope)"
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Architecture Concept Defintion",
+    "url": "https://github.com/d4l-data4life/mex"
+  }
+}

@@ -1,0 +1,67 @@
+{
+    "name": "license",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Lizenz"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "License"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Nutzungslizenz der Ressource"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Reuse license of the resource"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "CC-BY-4.0"
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "Resource",
+                    "text": "Wird angezeigt, sofern die Ressource eine Nutzungslizenz aufweist. Sollte dies nicht der Fall sein, wird empfohlen, das Feld \"Rechte\" auszuf\u00fcllen."
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "CC-BY-4.0"
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "Resource",
+                    "text": "Displayed if the resource has a usage license. If this is not the case, it is recommended to fill in the \"rights\" field."
+                }
+            ]
+        }
+    }
+}

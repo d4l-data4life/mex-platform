@@ -1,0 +1,74 @@
+syntax = "proto3";
+package d4l.mex.mail;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/mail;mail";
+
+import "d4l/security.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/any.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+message StaticContact {
+  string name = 1;
+  string email = 2;
+}
+
+message FieldNamesContact {
+  string name_field = 1;
+  string email_field = 2;
+}
+
+message Sender {
+  oneof contact_type {
+    StaticContact static = 1;
+    FieldNamesContact form_data = 2;
+  }
+}
+
+enum RecipientType {
+  TO = 0;
+  CC = 1;
+  BCC = 2;
+}
+
+message Recipient {
+  RecipientType type = 1;
+
+  oneof contact_type {
+    StaticContact static = 2;
+    FieldNamesContact form_data = 3;
+    FieldNamesContact context_item = 4;
+    FieldNamesContact contact_item = 5;
+  }
+}
+
+message MailTemplate {
+  string name      = 1;
+
+  Sender sender = 2;
+  repeated Recipient recipients = 3;
+
+  string template_engine = 4;
+
+  string subject   = 5;
+
+  string text_body  = 6;
+  string html_body  = 7;
+}
+
+
+message MailOrder {
+  string order_id  = 1;
+  string subject   = 2;
+
+  string text_body  = 3;
+  string html_body  = 4;
+
+  StaticContact sender = 5;
+
+  repeated StaticContact recipients_to  = 6;
+  repeated StaticContact recipients_cc  = 7;
+  repeated StaticContact recipients_bcc = 8;
+
+  string template_engine = 9;
+}

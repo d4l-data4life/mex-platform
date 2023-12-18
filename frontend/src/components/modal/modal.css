@@ -1,0 +1,63 @@
+@keyframes modalBackdropFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modalFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal {
+  position: relative;
+  flex: 1 1 auto;
+  background: var(--color-white);
+  padding: var(--spacing-large) var(--spacing-xlarge);
+  margin: auto var(--spacing-xlarge);
+  max-width: var(--modal-max-width);
+  text-align: center;
+  border: 1px solid var(--color-divider);
+  border-radius: var(--spacing-small);
+  box-shadow: var(--shadow-primary);
+  box-sizing: border-box;
+  animation: modalFadeIn var(--duration-quick) ease-out;
+  will-change: transform;
+  overflow-x: hidden;
+}
+
+.modal__backdrop {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: var(--header-height);
+  box-sizing: border-box;
+  background: var(--color-primary-5-translucent);
+  z-index: var(--z-index-modal);
+  animation: modalBackdropFadeIn var(--duration-quick) ease-out;
+  overflow-y: auto;
+}
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: var(--spacing-medium);
+  border: 0 none;
+  background: transparent;
+  cursor: pointer;
+}

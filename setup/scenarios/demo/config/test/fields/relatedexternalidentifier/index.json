@@ -1,0 +1,81 @@
+{
+    "name": "relatedExternalIdentifier",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Externer Identifier",
+                "plural": "Externe Identifier"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "External identifier",
+                "plural": "External identifiers"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Persistente externe Identifier (ID), die global eindeutig sind, z. B. DOI"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Persistent external identifier (ID), which are globally unique, e.g. DOI"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "\"https:\/\/doi.org\/10.1007\/s00103-012-1486-3\""
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "Resource",
+                    "text": "Zum Beispiel DOI der bereits publizierten Ressource"
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "URL (Permalink), URI, URN, DOI"
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "\"https:\/\/doi.org\/10.1007\/s00103-012-1486-3\""
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "Resource",
+                    "text": "For example DOI of the already published resource"
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "URL (permalink), URI, URN, DOI"
+                }
+            ]
+        }
+    }
+}

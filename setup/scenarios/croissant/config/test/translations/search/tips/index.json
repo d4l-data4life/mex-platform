@@ -1,0 +1,10 @@
+{
+    "de": {
+        "text": "`*` Suche mit Platzhalter (Wildcard)\nSternchen (*) steht f\u00fcr ein oder mehrere Zeichen\nBeispiel: Impf*\n--\n`\"\"` Genaue Suche\nAnf\u00fchrungszeichen (\") auf beiden Seiten eines Begriffs oder einer Phrase\nBeispiel: \"Finde genau diesen Satz\"\n--\n`+` UND-Verkn\u00fcpfung\nPluszeichen (+) mit umgebenden Leerzeichen kombiniert Suchbegriffe (Standard)\nBeispiel: Mumps + Masern\n--\n`|` ODER-Verkn\u00fcpfung\nSenkrechter Strich (|) mit umgebenden Leerzeichen kombiniert Suchbegriffe\nBeispiel: Schnupfen | Erk\u00e4ltung\n--\n`-` Ausschlie\u00dfen (NOT)\nBindestrich (-) schlie\u00dft den nachfolgend angegebenen Begriff aus\nBeispiel: Kidney -Bohne\n--\n`()` Gruppierte Suche\nKlammern gruppieren mehrere Suchbedingungen\nBeispiel: (Mumps + Masern) | (Virusinfektion + Kinder)",
+        "title": "Suchtipps"
+    },
+    "en": {
+        "text": "`*` Placeholder search (wildcard)\nAsterisk (*) substitutes one or more characters\nExample: vacc*\n--\n`\"\"` Exact match search\nQuotes (\") on both sides of a term or phrase\nExample: \"Find exactly this sentence\"\n--\n`+` AND operator\nPlus character (+) with surrounding empty space combines search (default)\nExample: rubella + measles\n--\n`|` OR operator\nPipe character (|) with surrounding empty space combines search\nExample: cold | flu\n--\n`-` Exclude words (NOT)\nHyphen (-) excludes the term that follows\nExample: kidney -bean\n--\n`()` Grouped search\nParentheses group several search conditions\nExample: (rubella + measles) | (viral infection + children)",
+        "title": "Search tips"
+    }
+}

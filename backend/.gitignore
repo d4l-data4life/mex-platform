@@ -1,0 +1,48 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Editor
+.idea
+.vscode/*
+!*/launch.example.json
+**/.DS_Store
+
+# Coverage report
+coverage.txt
+
+# Chart.yaml is templated via Chart.template.yaml
+Chart.yaml
+
+# Go vendor folder
+vendor
+
+svc
+temp/
+.cache/
+
+local/pairgen
+local/pg
+local/solr
+local/solr-playground
+
+private/
+node_modules/
+private.Makefile
+my.Makefile
+
+.tmuxinator.yml
+tmux-*.log
+
+tf
+*.pem
+

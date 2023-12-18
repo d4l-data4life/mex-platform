@@ -1,0 +1,588 @@
+syntax = "proto3";
+
+package d4l.mex.cfg;
+
+import "d4l/config.proto";
+import "google/protobuf/duration.proto";
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/cfg";
+
+/*
+  This file contains the configuration definition for all backend services (metadata, query, index, config and auth).
+  At runtime a service can ask the config loading function to initialize an instance of the MexConfig message
+  with all relevant values for that service. Relevancy is determined using tags.
+
+  These are the config rules:
+  - The scalar fields of the Go structure corresponding to the message given by the file option `d4l.cfg.main_message`
+    constitute the configuration fields that need to be initialized.
+    (That message is `MexConfig` in this file.)
+  - When calling the `InitConfig` function, a tag T must be specified (which is typically an abbreviation of the service name).
+  - Only fields tagged with T are initialized.
+  - Each field's value is specified by a corresponding environment variable.
+  - The name of that environment variable is derived from the field name or can be overridden manually.
+  - Fields can have default values.
+  - There is no other source of values! No env file, no command line argument!
+  - An unspecified environment variable is equal to the empty string.
+  - An empty string is not a valid field value and will lead to an error unless a default value is specified.
+  - Each field can have an associated set of tags which tells which service this field is relevant for.
+  - Each message can have an associated set of tags which tells which service its fields are relevant for.
+  - Field tags trump message tags. See tag rules below.
+
+  Tag rules:
+  - Messages and fields have an associated list of tags.
+  - Per default each such list is empty.
+  - The effective tag list for a field is either its tag list, or, if absent, its message's tag list.
+  - No "inheritance" of tags is taking place.
+  - There is a special tag "*" which matches all other tags.
+
+  Example:
+  (This is not official proto3 syntax. We abbreviated the tags (square brackets) to improve readability.)
+
+  ```
+  message MexConfig {
+
+    string wom;  ---------------------------> []
+
+    message A ["*"] {
+
+      string zor;  -------------------------> ["*"]
+      string dim ["six"];  -----------------> ["six"]
+
+      message B ["one", "two"] {
+
+        string bar;  -----------------------> ["one", "two"]
+
+        message C {
+          string baz;  ---------------------> []
+          string foo ["two", "three"];  ----> ["two", "three"]
+        }
+
+        C c;
+      }
+
+      B b;
+    }
+
+    A a;
+  }
+  ```
+
+  - The `MexConfig` in this example does not have tags, so it is equivalent to [].
+  - The field `wom` also does not have own tags, hence it effective tag set is [].
+  - Message A has the all tag "*" set, so untagged fields will get this tag. This happens for `zor`.
+  - Field `dim` overwrites the message tag set with its own: ["six"].
+  - Similar with field `bar`: It uses the message tags ["one", "two"].
+  - Field `baz` gets the empty tags set [] as it is untagged itself and its parent message `C` is also untagged.
+    Note, no inheritance takes place, so the tags of message `A` are not relevant.
+  - Finally, `foo` sets tags ["two", "three"] which are its effective tags.
+
+
+  The contents of this file are used for the following tasks:
+    - Generate the Go protobuf structure definitions.
+    - Generate the configuration overview markdown file.
+    - Generate the K8s config map and secret files.
+*/
+
+option(d4l.cfg.main_message) = "MexConfig";
+
+// Main configuration message for MEx.
+message MexConfig {
+  Version          version           =   1;
+  string           tenant_id         =   2 [(d4l.cfg.tags) = "*"];
+
+  Web              web               =  10;
+  Postgres         db                =  20;
+  Solr             solr              =  30;
+  Redis            redis             =  40;
+  OAuth            oauth             =  50;
+
+  Codings          codings           =  60;
+  EntityTypes      entity_types      =  70;
+  FieldDefs        field_defs        =  80;
+  SearchConfig     search_config     =  90;
+  Jwks             jwks              = 100;
+  Jobs             jobs              = 110;
+  AutoIndexer      auto_indexer      = 120;
+  Indexing         indexing          = 130;
+  Logging          logging           = 140;
+  Telemetry        telemetry         = 150;
+  Auth             auth              = 160;
+  Services         services          = 170;
+  Strictness       strictness        = 180;
+  Notify           notify            = 190;
+
+  // Message definitions of the above fields.
+
+  message Web {
+    option (d4l.cfg.mtags) = "*";
+
+    google.protobuf.Duration read_timeout = 1 [
+      (d4l.cfg.opts) = { default: "5s" },
+      (d4l.cfg.desc) = {
+        title: "HTTP service read timeout"
+        summary: "This value is the maximum duration for reading the entire request, including the body"
+      }
+    ];
+
+    google.protobuf.Duration write_timeout = 2 [
+      (d4l.cfg.opts) = { default: "5s" },
+      (d4l.cfg.desc) = {
+        title: "HTTP service write timeout"
+        summary: "This value is the maximum duration before timing out writes of the response"
+      }
+    ];
+
+    google.protobuf.Duration idle_timeout = 3 [
+      (d4l.cfg.opts) = { default: "5s" },
+      (d4l.cfg.desc) = {
+        title: "HTTP service idle timeout"
+        summary: "This value is the maximum amount of time to wait for the next request when keep-alives are enabled"
+      }
+    ];
+
+    int32 max_header_bytes = 4 [(d4l.cfg.opts) = { default: "2097152" }];
+    int64 max_body_bytes   = 5 [(d4l.cfg.opts) = { default: "2097152" }];
+
+    string api_host = 6 [
+      (d4l.cfg.opts) = { default: "0.0.0.0:3000" },
+      (d4l.cfg.desc) = { summary: "Host and port for the exposed HTTP service" }
+    ];
+
+    string grpc_host = 8 [
+      (d4l.cfg.opts) = { default: "0.0.0.0:9000" },
+      (d4l.cfg.desc) = { summary: "Host and port for the gRPC service whose methods are exposed via an HTTP-gRPC gateway under `Web.APIHost`" }
+    ];
+
+    // only used my metadata service right now, but this will change to all services
+    string metrics_path = 9 [(d4l.cfg.opts) = { default: "/metrics" }];
+
+    CACerts      ca_certs                     = 10;
+    IPFilter     ip_filter                    = 12;
+    RateLimiting rate_limiting                = 13;
+
+    message CACerts {
+      option (d4l.cfg.mtags) = "*";
+
+      repeated string additional_ca_certs_files = 10 [
+        (d4l.cfg.opts) = { default: "∅" },
+        (d4l.cfg.desc) = {
+          summary:     "Additional CA certificates to consider when making HTTPS or other TLS-protected requests"
+          description: "The files must be PEM files and the single string parameter must be a set of base64-encoded PEM blocks."
+          description: "All certificates of all such PEM blocks are then added to the trusted certificates for TLS."
+        }
+      ];
+
+      bytes additional_ca_certs_pem = 11 [
+        (d4l.cfg.opts) = { secret: true },
+        (d4l.cfg.desc) = {
+          summary:     "Additional certificates specified in PEM format"
+          description: "This field can be set to a string that is the content of a PEM file."
+          description: "Multiple PEM blocks are possible so that multiple certificates can be specified."
+        }
+      ];
+
+      uint32 access_attempts = 2 [(d4l.cfg.opts) = { default: "20" }];
+
+      google.protobuf.Duration access_pause = 3 [(d4l.cfg.opts) = { default: "2s" }];
+    }
+
+    message IPFilter {
+      option (d4l.cfg.mtags) = "*";
+
+      bool enabled = 1 [(d4l.cfg.opts) = { default: "false" }];
+      repeated string allowed_ips = 2 [(d4l.cfg.opts) = { default: "∅" }];
+    }
+
+    message RateLimiting {
+      option (d4l.cfg.mtags) = "*";
+
+      bool             enabled          = 1 [(d4l.cfg.opts) = { default: "false"     }];
+      google.protobuf.Duration period   = 2 [(d4l.cfg.opts) = { default: "1s"        }];
+      int64            limit            = 3 [(d4l.cfg.opts) = { default: "100"       }];
+      string           client_ip_header = 4 [(d4l.cfg.opts) = { default: "X-Real-Ip" }];
+    }
+  }
+
+  message Postgres {
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "query";
+
+    string user                        =  1 [(d4l.cfg.opts) = { default: "postgres"               }];
+    string password                    =  2 [(d4l.cfg.opts) = {                      secret: true }];
+    string hostname                    =  3 [(d4l.cfg.opts) = { default: "localhost"              }];
+    uint32 port                        =  4 [(d4l.cfg.opts) = { default: "5432"                   }];
+    string name                        =  5 [(d4l.cfg.opts) = { default: "postgres"               }];
+    repeated string search_path        =  6 [(d4l.cfg.opts) = { default: "mex,public"             }];
+    string ssl_mode                    =  7 [(d4l.cfg.opts) = { default: "verify-full"            }];
+    uint32 connection_attempts         =  8 [(d4l.cfg.opts) = { default: "10"                     }];
+    google.protobuf.Duration connection_pause  =  9 [(d4l.cfg.opts) = { default: "2s"                     }];
+    google.protobuf.Duration slow_threshold    = 10 [(d4l.cfg.opts) = { default: "200ms"                  }];
+  }
+
+  message Solr {
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "query";
+
+    string origin                     = 1 [(d4l.cfg.opts) = { default: "http://localhost:8983" }];
+
+    string collection                 = 2 [(d4l.cfg.opts) = { default: "mex" }];
+
+    string configset_name             = 3 [(d4l.cfg.opts) = { default: "mex_rki" }];
+
+    uint32 connection_attempts        = 4 [(d4l.cfg.opts) = { default: "10" }];
+
+    google.protobuf.Duration connection_pause = 5 [(d4l.cfg.opts) = { default: "2s" }];
+
+    string basicauth_user = 6;
+
+    string basicauth_password = 7 [
+      (d4l.cfg.opts) = { secret: true },
+      (d4l.cfg.k8s) = { ignore: true }
+    ];
+
+    uint32 index_batch_size = 8 [(d4l.cfg.opts) = { default: "100" }];
+
+    google.protobuf.Duration commit_within = 9 [(d4l.cfg.opts) = { default: "1000ms" }];
+
+    uint32 replication_factor = 10;
+  }
+
+  message Redis {
+    option (d4l.cfg.mtags) = "*";
+
+    string hostname = 1 [(d4l.cfg.opts) = { default: "localhost" }];
+
+    uint32 port  = 2 [(d4l.cfg.opts) = { default: "6379" }];
+
+    string password = 3 [(d4l.cfg.opts) = { secret: true  }];
+
+    uint32 db = 4 [(d4l.cfg.opts) = { default: "1" }];
+
+    uint32 connection_attempts = 5 [(d4l.cfg.opts) = { default: "10" }];
+
+    google.protobuf.Duration connection_pause = 6 [(d4l.cfg.opts) = { default: "2s" }];
+
+    google.protobuf.Duration shutdown_grace_period = 7 [(d4l.cfg.opts) = { default: "200ms" }];
+
+    bool use_tls = 8 [(d4l.cfg.opts) = { default: "false" }];
+
+    string pub_sub_prefix = 9 [(d4l.cfg.opts) = { default: "mex" }];
+  }
+
+  message OAuth {
+    option (d4l.cfg.mtags) = "auth";
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "query";
+
+    string client_id = 1;
+
+    string producer_group_id = 2;
+    string consumer_group_id = 3;
+
+    string internal_auth_service_hostname = 4 [
+      (d4l.cfg.tags) = "metadata", (d4l.cfg.tags) = "index", (d4l.cfg.tags) = "query"
+    ];
+
+    Server server = 5;
+
+    message Server {
+      option (d4l.cfg.mtags) = "auth";
+
+      bool enabled = 1 [(d4l.cfg.opts) = { default: "false" }];
+
+      repeated string client_secrets = 2 [(d4l.cfg.opts) = { secret: true }];
+      repeated string redirect_uris  = 3 [(d4l.cfg.opts) = {  }];
+      repeated string grant_flows    = 4 [(d4l.cfg.opts) = { default: "client_credentials,authorization_code,refresh_token" }];
+
+      string signing_private_key_file = 5;
+      uint32 key_file_access_attempts = 6 [(d4l.cfg.opts) = { default: "20" }];
+      google.protobuf.Duration key_file_access_pause = 7 [(d4l.cfg.opts) = { default: "2s" }];
+
+
+      bytes signing_private_key_pem = 8 [
+        (d4l.cfg.opts) = { secret: true },
+        (d4l.cfg.desc) = { summary: "Private key in PEM format that will be used for signing JWTs" }
+      ];
+      string signature_alg = 9 [(d4l.cfg.opts) = { default: "RS256" }];
+
+      google.protobuf.Duration auth_code_validity = 10 [(d4l.cfg.opts) = { default: "1m" }];
+      google.protobuf.Duration access_token_validity = 11[(d4l.cfg.opts) = { default: "1h" }];
+      google.protobuf.Duration refresh_token_validity = 12 [(d4l.cfg.opts) = { default: "12h" }];
+    }
+  }
+
+
+  message Codings {
+    string bundle_uri = 1;
+  }
+
+  message EntityTypes {
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "query";
+
+    RepoType repo_type = 1 [(d4l.cfg.opts) = { default: "CACHED" }];
+  }
+
+  message FieldDefs {
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "query";
+
+    RepoType repo_type = 1 [(d4l.cfg.opts) = { default: "CACHED" }];
+  }
+
+  message SearchConfig {
+    option (d4l.cfg.mtags) = "query";
+
+    RepoType repo_type = 1 [(d4l.cfg.opts) = { default: "CACHED" }];
+  }
+
+  message Jwks {
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "query";
+
+    string remote_keys_uri = 1;
+
+    uint32 connection_attempts = 2 [(d4l.cfg.opts) = { default: "20" }];
+
+    google.protobuf.Duration connection_pause = 3 [(d4l.cfg.opts) = { default: "2s" }];
+  }
+
+  message Jobs {
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+    option (d4l.cfg.mtags) = "config";
+
+    google.protobuf.Duration expiration  = 1 [(d4l.cfg.opts) = { default: "5m" }];
+  }
+
+  message AutoIndexer {
+    option (d4l.cfg.mtags) = "metadata";
+    option (d4l.cfg.mtags) = "index";
+
+    google.protobuf.Duration set_expiration  = 1 [(d4l.cfg.opts) = { default: "5m" }];
+  }
+
+  message Indexing {
+    option (d4l.cfg.mtags) = "metadata";
+
+    DuplicateDetectionAlgorithm duplication_detection_algorithm = 1 [
+      (d4l.cfg.opts) = {
+        default: "LATEST_ONLY"
+        env: "SERVICES_DUPLICATE_DETECTION_ALGORITHM"
+      }
+    ];
+  }
+
+  message Logging {
+    option (d4l.cfg.mtags) = "*";
+
+    string          log_level_grpc         = 1 [(d4l.cfg.opts) = { default: "warn" }];
+    bool            redact_personal_fields = 2 [(d4l.cfg.opts) = { default: "true" }];
+    repeated string redact_query_params    = 3 [(d4l.cfg.opts) = { default: "code_challenge,state" }];
+    bool            trace_enabled          = 4 [(d4l.cfg.opts) = { default: "false" }];
+    string          trace_secret           = 5 [(d4l.cfg.opts) = { secret: true  }];
+  }
+
+  message Telemetry {
+    option (d4l.cfg.mtags) = "*";
+
+    google.protobuf.Duration pinger_update_interval = 1 [(d4l.cfg.opts) = { default: "15s" }];
+    google.protobuf.Duration status_update_interval = 2 [(d4l.cfg.opts) = { default: "3s" }];
+  }
+
+  message Auth {
+    option (d4l.cfg.mtags) = "config";
+
+    bytes api_keys_roles = 1 [
+      (d4l.cfg.opts) = { secret: true }
+    ];
+  }
+
+  message Strictness {
+    Search search                         = 1;
+    StrictJSONParsing strict_json_parsing = 2;
+
+    message Search {
+      option (d4l.cfg.mtags) = "*";
+
+      bool tolerate_partial_failures = 1 [
+        (d4l.cfg.opts) = {default: "true"},
+        (d4l.cfg.desc) = {summary: "If true, certain partial failures of Solr search do not cause a 500 response"}
+      ];
+    }
+
+    message StrictJSONParsing {
+      option (d4l.cfg.mtags) = "*";
+
+      bool auth = 1 [
+        (d4l.cfg.opts) = { default: "false" },
+        (d4l.cfg.desc) = { summary:  "If true, unknown properties in data handled by auth service will cause an error" }
+      ];
+      bool config = 2 [
+        (d4l.cfg.opts) = { default: "false" },
+        (d4l.cfg.desc) = { summary:  "If true, unknown properties in data handled by config service will cause an error" }
+      ];
+      bool index = 3 [
+        (d4l.cfg.opts) = { default: "true" },
+        (d4l.cfg.desc) = { summary:  "If true, unknown properties in data handled by index service will cause an error" }
+      ];
+      bool metadata = 4 [
+        (d4l.cfg.opts) = { default: "true" },
+        (d4l.cfg.desc) = { summary:  "If true, unknown properties in data handled by metadata service will cause an error" }
+      ];
+      bool query = 5 [
+        (d4l.cfg.opts) = { default: "true" },
+        (d4l.cfg.desc) = { summary:  "If true, unknown properties in data handled by query service will cause an error" }
+      ];
+    }
+  }
+
+  message Notify {
+    option (d4l.cfg.mtags) = "metadata";
+
+    EmailerType emailer_type = 3 [(d4l.cfg.opts) = { default: "MOCKMAILER" }];
+    Flowmailer flowmailer    = 4;
+
+    message Flowmailer {
+      option (d4l.cfg.mtags) = "metadata";
+
+      string origin_oauth = 1 [
+        (d4l.cfg.opts) = { default: "https://login.flowmailer.net" }
+      ];
+
+      string origin_api = 2 [
+        (d4l.cfg.opts) = { default: "https://api.flowmailer.net" }
+      ];
+
+      string client_id = 3;
+
+      string client_secret = 4 [
+        (d4l.cfg.opts) = { secret: true }
+      ];
+
+      string account_id = 5;
+
+      string noreply_email_address = 6 [
+        (d4l.cfg.opts) = { default: "noreply@data4life.care" }
+      ];
+    }
+  }
+
+  message Services {
+    BIEventsFilter bi_events_filter = 1;
+    Blobs          blobs            = 2;
+    Config         config           = 3;
+
+    message BIEventsFilter {
+      option (d4l.cfg.mtags) = "*";
+
+      string origin = 1;
+
+      string path   = 2 [
+        (d4l.cfg.opts) = { default: "/api/v1/events" }
+      ];
+
+      string secret = 3 [
+        (d4l.cfg.opts) = {
+          secret: true
+        },
+        (d4l.cfg.desc) = {
+          title: "BI events filter API secret"
+          description: "Note: The source is a value coming from a Vault common secret `apps/<ENV>/phdp/common`."
+        },
+        (d4l.cfg.k8s) = {
+          source: "BI_EVENTS_FILTER_SECRET"
+        }
+      ];
+    }
+
+    message Blobs {
+      option (d4l.cfg.mtags) = "metadata";
+      option (d4l.cfg.mtags) = "index";
+
+      string master_table_name = 1 [
+        (d4l.cfg.opts) = { default: "blob_store" },
+        (d4l.cfg.desc) = { summary: "The blob store uses the same database as configured under `DB` above" }
+      ];
+    }
+
+    message Config {
+      option (d4l.cfg.mtags) = "config";
+
+      string origin = 1 [
+        (d4l.cfg.tags) = "metadata",
+        (d4l.cfg.tags) = "query",
+        (d4l.cfg.tags) = "index"
+      ];
+
+      string env_path = 2 [
+        (d4l.cfg.opts) = { default: "/" }
+      ];
+
+      repeated string api_keys = 3 [
+        (d4l.cfg.opts) = { secret: true }
+      ];
+
+      Github github = 5;
+
+      message Github {
+        option (d4l.cfg.mtags) = "config";
+
+        string repo_name = 1;
+
+        string default_branch_name = 2 [
+          (d4l.cfg.opts) = { default: "main" }
+        ];
+
+        bytes deploy_key_pem = 3 [
+          (d4l.cfg.opts) = {
+            secret: true
+          }
+        ];
+      }
+
+      google.protobuf.Duration update_timeout = 6 [
+        (d4l.cfg.opts) = { default: "180s" },
+        (d4l.cfg.desc) = {
+          title: "Maximum duration a config update may take"
+          summary: "If not all services report GREEN with the corresponding config hash after this time, a config updae is considered failed."
+        }
+      ];
+
+    }
+  }
+}
+
+message Version {
+  string build      = 1 [(d4l.cfg.opts) = { ignore: true }];
+  string desc       = 2 [(d4l.cfg.opts) = { ignore: true }];
+  string build_date = 3 [(d4l.cfg.opts) = { ignore: true }];
+}
+
+enum DuplicateDetectionAlgorithm {
+  // SIMPLE classifies an item as duplicate if its hash is identical to that of an existing item,
+  // even if the latter is a non-current item (i.e., not the latest version).
+  // This means that an item that changes back to a previous state after having been in another
+  // state is classified as duplicate, meaning that the change will not be stored.
+  SIMPLE = 0;
+
+  // LATEST_ONLY classifies an item as duplicate only if its hash is equal to the hash of the
+  // newest version of an existing item. This means that items can return to a previous states (after being in
+  // another state) without being classified as duplicates.
+  LATEST_ONLY = 1;
+}
+
+enum RepoType {
+  DIRECT = 0;
+  CACHED = 1;
+}
+
+enum EmailerType {
+  MOCKMAILER = 0;
+  FLOWMAILER = 1;
+}

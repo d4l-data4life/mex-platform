@@ -1,0 +1,12 @@
+{
+    "de": {
+        "datum": "Verwandte Daten-Items ({{count}})",
+        "more": "Alle Ergebnisse",
+        "resource": "Verwandte Ressourcen"
+    },
+    "en": {
+        "datum": "Related data items ({{count}})",
+        "more": "All results",
+        "resource": "Related resources"
+    }
+}

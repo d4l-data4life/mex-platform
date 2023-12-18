@@ -1,0 +1,11 @@
+.filters-summary {
+  display: block;
+}
+
+.filters-summary mex-tag {
+  margin: var(--spacing-xsmall) var(--spacing-small);
+}
+
+.filters-summary mex-tag + mex-tag {
+  margin-left: 0;
+}

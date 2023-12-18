@@ -1,0 +1,21 @@
+{
+    "de": {
+        "loginFailed": "Anmeldung ist fehlgeschlagen",
+        "redirect": "Sie werden zur Anmeldung weitergeleitet \u2026",
+        "retryLogin": "Erneut versuchen",
+        "Testing": "Test value",
+        "loggedOut": {
+            "login": "Erneut anmelden",
+            "title": "Sie sind nun abgemeldet"
+        }
+    },
+    "en": {
+        "loginFailed": "Sign-in failed",
+        "redirect": "You're being redirected to the sign-in \u2026",
+        "retryLogin": "Retry",
+        "loggedOut": {
+            "login": "Sign in again",
+            "title": "You are now signed out"
+        }
+    }
+}

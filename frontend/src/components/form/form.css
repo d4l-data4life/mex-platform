@@ -1,0 +1,179 @@
+.form {
+  display: block;
+}
+
+.form__title {
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  margin: 0 0 var(--spacing-small);
+  color: var(--color-primary-1);
+}
+
+.form__headline {
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  margin: 0 0 var(--spacing-small);
+  color: var(--color-primary-1);
+}
+
+.form__sub-headline {
+  font-size: var(--font-size-s);
+  font-weight: 400;
+  margin: 0 0 var(--spacing-smedium);
+  color: var(--color-primary-2);
+  text-align: left;
+}
+
+.form__container {
+  text-align: left;
+  padding: var(--spacing-smedium) 0;
+}
+
+.form__container a {
+  color: var(--color-secondary-1);
+}
+
+.form__container p {
+  margin: var(--spacing-smedium) 0;
+}
+
+.form__container > .form__blocks:first-child > p:first-child,
+.form__container > .form__blocks:first-child > div:first-child > p:first-child,
+.form__container > .form__blocks:first-child > div:first-child > ul:first-child,
+.form__blocks--group:first-child > .form__blocks:first-child > p:first-child,
+.form__blocks--group:first-child > .form__blocks:first-child > div:first-child > p:first-child,
+.form__blocks--group:first-child > .form__blocks:first-child > div:first-child > ul:first-child,
+.form__blocks--input:first-child {
+  margin-top: 0;
+}
+
+.form__container > .form__blocks:first-child > .content-blocks__infobox-container:first-child {
+  margin-top: var(--spacing-smedium);
+}
+
+.form__container > .form__blocks:last-child > p:last-child,
+.form__container > .form__blocks:last-child > div:last-child > p:last-child,
+.form__container > .form__blocks:last-child > div:last-child > ul:last-child,
+.form__container > .form__blocks:last-child > .content-blocks__infobox-container:last-child,
+.form__blocks--group:last-child > .form__blocks:last-child > p:last-child,
+.form__blocks--group:last-child > .form__blocks:last-child > div:last-child > p:last-child,
+.form__blocks--group:last-child > .form__blocks:last-child > div:last-child > ul:last-child,
+.form__blocks--input:last-child {
+  margin-bottom: 0;
+}
+
+.form__container > .form__blocks + .form__blocks,
+.form__blocks + .form__group,
+.form__group + .form__blocks,
+.form__add + .form__group {
+  margin-top: var(--spacing-medium);
+}
+
+.form__group + .form__group {
+  margin-top: var(--spacing-medium);
+}
+
+.form__blocks--input,
+.form__group {
+  display: flex;
+  flex-flow: row wrap;
+  column-gap: var(--spacing-medium);
+  row-gap: var(--spacing-medium);
+}
+
+.form__blocks:empty {
+  display: none;
+}
+
+.form__group {
+  align-items: flex-start;
+}
+
+.form__add {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: var(--spacing-medium);
+}
+
+.form__group-actions {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  flex: none;
+  align-self: flex-end;
+}
+
+.form__group--multiline .form__group-actions {
+  order: -1;
+  width: 100%;
+}
+
+.form__group:not(.form__group--multiline) .form__group-actions .button--tertiary {
+  margin-bottom: 0;
+}
+
+.form__group--indent .form__blocks {
+  border-left: 1px solid var(--color-divider);
+  padding-left: var(--spacing-smedium);
+}
+
+.form__group:not(.form__group--multiline) .form__blocks {
+  flex: 1 1 auto;
+}
+
+.form__group-headline {
+  flex: 1 1 auto;
+  font-weight: bold;
+  margin: 0 var(--spacing-smedium) 0 0;
+  font-size: var(--font-size-s);
+}
+
+.form__group:not(.form__group--multiline) .form__group-headline {
+  flex: none;
+  width: 100%;
+  margin: 0;
+}
+
+.form__blocks > .form__group-headline {
+  margin-bottom: var(--spacing-medium);
+}
+
+.form__group .content-blocks__infobox-container {
+  margin: var(--spacing-smedium) 0;
+}
+
+.form__group-actions .button span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: var(--spacing-small);
+}
+
+.form__group-actions .button span:empty {
+  display: none;
+}
+
+.form__actions {
+  padding: var(--spacing-smedium) 0 0;
+}
+
+.form__actions .button + .button {
+  margin-left: var(--spacing-small);
+}
+
+.form__actions .button span {
+  vertical-align: middle;
+}
+
+.form__actions .button span + .icon,
+.form__actions .button .icon + span {
+  margin-left: var(--spacing-small);
+}
+
+.form__busy {
+  display: flex;
+  justify-content: center;
+  height: var(--form-loader-height);
+  color: var(--color-secondary-1);
+  margin: var(--spacing-large);
+}

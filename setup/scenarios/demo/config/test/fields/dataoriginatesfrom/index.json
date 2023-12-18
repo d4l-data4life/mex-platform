@@ -1,0 +1,24 @@
+{
+    "name": "dataOriginatesFrom",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Datenursprung"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Data origin"
+            }
+        ]
+    },
+    "documentation": null
+}

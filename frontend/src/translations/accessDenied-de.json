@@ -1,0 +1,12 @@
+{
+  "accessDenied": {
+    "button": "MEx-Projektseite",
+    "hint": "Wir empfehlen Ihnen, die MEx-Projektseite aufzurufen, wo Sie alle Einzelheiten über das Projekt erfahren können.",
+    "imprint": "Impressum",
+    "imprintText": "",
+    "privacyPolicy": "Datenschutzerklärung",
+    "privacyPolicyText": "",
+    "text": "Der Zugriff auf MEx ist beschränkt.",
+    "title": "Metadata Exchange – Kein Zugriff von Ihrem Standort aus möglich"
+  }
+}

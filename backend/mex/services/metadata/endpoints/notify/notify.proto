@@ -1,0 +1,61 @@
+syntax = "proto3";
+package d4l.mex.notify;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/metadata/endpoints/notify/pb;pbNotify";
+
+import "d4l/security.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+
+message TemplateInfo {
+  string template_name     = 1;
+  string context_item_id   = 2;
+  string recipient_item_id = 3;
+}
+
+message SendNotificationRequest {
+  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
+    example: "{\"templateInfo\":{\"contextItemId\":\"d504524c-fb26-40c7-be70-cb0c2bdf3434\",\"recipientItemId\":\"1fd622ae-b7b1-458a-8437-561e61299c17\",\"templateName\":\"data-access-request\"},\"formData\":{\"datasetLinking\":\"yes\",\"linkedDatasetName\":[\"Dataset 1\",\"Dataset 2\"],\"linkedDatasetOrigin\":[\"Origin 1\",\"Origin 2\"],\"linkedDatasetDescription\":[\"Description 1\",\"Description 2\"],\"requestedAccessInterval\":\"once\",\"applicantName\":\"Max Mustermann\",\"applicantOrganizationName\":\"Acme\",\"applicantRole\":\"Developer\",\"applicantEmail\":\"max.mustermann@acme.com\",\"applicantPhone\":\"12345\",\"additionalApplicantName\":[\"Moritz Mustermann\",\"Klaus Mueller\"],\"additionalApplicantOrganizationName\":[\"ABC Inc.\",\"Klaus Inc.\"],\"additionalApplicantRole\":[\"Architect\",\"CEO\"],\"additionalApplicantEmail\":[\"moritz@foo.de\",\"klaus@klaus.de\"],\"additionalApplicantPhone\":[\"666\",\"99999\"]}}"
+  };
+
+  TemplateInfo template_info = 1;
+
+  string form_data = 2 [
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      title: "User-entered questionnaire/form data",
+      description: "This data is used for template interpolation.\nIf you set a string it must be parsable into a JSON object (that is, it is the output of, e.g., 'JSON.stringify')\nYou can also set `formData` in the request to a JSON object. Even though a generic JSON object could not be parsed into a Protobuf message, we use a dedicated middleware that intercepts such a request and stringifies the object to a string so that it fits this message's schema. See message examples."
+    }
+
+  ];
+}
+
+message SendNotificationResponse {
+  string order_id = 1 [
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "We generate for each incoming notification request a random order ID which will be used to link the message IDs to that request. A successful notification leads to a BI event log of this message. Also, the order ID is set as the 'Order-Id' header of each submitted email."
+    }
+  ];
+
+  repeated string message_ids = 2 [
+    (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
+      description: "A single notification request can lead to multiple emails being sent (depending on the template definition). Each email that is sent by Flowmailer gets its own ID. This field collects the IDs or all messages that could be successfully submitted to Flowmailer. It does not mean that the email has been successfully delivered, though. The status of an email can be requested by the Flowmailer API using the message ID."
+    }
+  ];
+}
+
+service Notify {
+
+  rpc SendNotification (SendNotificationRequest) returns (SendNotificationResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/notify"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "notify"
+      verb:  "send"
+    };
+  }
+
+}

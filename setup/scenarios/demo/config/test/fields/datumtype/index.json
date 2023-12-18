@@ -1,0 +1,73 @@
+{
+  "name": "datumType",
+  "renderer": "plain",
+  "kind": "string",
+  "importance": "none",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": true,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Daten-Item-Typ",
+        "plural": "Daten-Item-Typen"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Data item type",
+        "plural": "Data item types"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Allgemeiner Typ des Daten-Items"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "General type of the data item"
+      }
+    ]
+  },
+  "vocabulary": {
+    "de": [
+      {
+        "conceptId": "datum-type-1",
+        "label": "Studienvariable",
+        "description": "Untersuchungsmerkmal einer Studie"
+      }
+    ],
+    "en": [
+      {
+        "conceptId": "datum-type-1",
+        "label": "Study variable",
+        "description": "Variable of a study"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "furtherInformation": [
+        {
+          "entityType": "Datum",
+          "text": "Diese Liste ist erweiterbar."
+        }
+      ]
+    },
+    "en": {
+      "furtherInformation": [
+        {
+          "entityType": "Datum",
+          "text": "This list is extensible."
+        }
+      ]
+    }
+  }
+}

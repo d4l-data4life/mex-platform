@@ -1,0 +1,41 @@
+{
+    "name": "partOfResource",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Ressource"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Resource"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "descriptionText": [
+                {
+                    "entityType": "Datum",
+                    "text": "Die Ressource, zu der das Daten-Item geh\u00f6rt"
+                }
+            ]
+        },
+        "en": {
+            "descriptionText": [
+                {
+                    "entityType": "Datum",
+                    "text": "The resource to which the data item belongs"
+                }
+            ]
+        }
+    }
+}

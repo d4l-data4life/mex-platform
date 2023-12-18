@@ -1,0 +1,16 @@
+.github
+.git
+.vscode
+api
+deploy
+docs
+jenkinsfile
+svc
+temp
+./**/node_modules
+private
+
+# Force to make all parameters explicit during deployment.
+.env.yaml
+subs
+tf

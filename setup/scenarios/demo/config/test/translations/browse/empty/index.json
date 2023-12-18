@@ -1,0 +1,10 @@
+{
+    "de": {
+        "text": "Durchst\u00f6bern nach \u201e{{name}}\u201c ist derzeit nicht verf\u00fcgbar.\nVersuchen Sie, eine andere Option zu w\u00e4hlen, oder nutzen Sie stattdessen die Suche.",
+        "title": "Diese Option ist derzeit nicht verf\u00fcgbar"
+    },
+    "en": {
+        "text": "Browsing by \u201c{{name}}\u201d is currently unavailable.\nTry choosing another option or use the search instead.",
+        "title": "This option is currently unavailable"
+    }
+}

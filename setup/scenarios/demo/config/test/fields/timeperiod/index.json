@@ -1,0 +1,42 @@
+{
+    "name": "timePeriod",
+    "renderer": "time",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Zeitraum"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Date range"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Source",
+                "text": "Laufzeit(en) oder Start eines Projektes"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Source",
+                "text": "Duration(s) or start of a project"
+            }
+        ]
+    },
+    "resolvesTo": [
+        "startTime",
+        "endTime",
+        "dateQualifier"
+    ]
+}

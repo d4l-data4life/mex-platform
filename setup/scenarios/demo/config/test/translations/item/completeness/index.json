@@ -1,0 +1,26 @@
+{
+    "de": {
+        "close": "OK",
+        "intro": "Bei der Berechnung der Metadaten-Vollst\u00e4ndigkeit wird ber\u00fccksichtigt, welche Metadaten-Felder bereits ausgef\u00fcllt sind. F\u00fcr die einzelnen Felder wird dabei eine unterschiedliche Gewichtung vorgenommen.\n\n<strong>Pflichtfelder<\/strong> flie\u00dfen zu <strong>{{mandatory}} %<\/strong> in die Gewichtung ein\n<strong>Empfohlene Felder<\/strong> flie\u00dfen zu <strong>{{recommended}} %<\/strong> in die Gewichtung ein\n<strong>Optionale Felder<\/strong> flie\u00dfen zu <strong>{{optional}} %<\/strong> in die Gewichtung ein",
+        "missing": "Fehlende Metadaten-Felder:",
+        "more": "Erfahren Sie mehr zum Thema Metadaten-Vollst\u00e4ndigkeit",
+        "score": "{{score}}%",
+        "tabs": {
+            "mandatory": "Pflicht ({{count}})",
+            "optional": "Optional ({{count}})",
+            "recommended": "Empfohlen ({{count}})"
+        }
+    },
+    "en": {
+        "close": "OK",
+        "intro": "The metadata completeness calculation takes into account which metadata fields are already filled in. A different weighting is applied to the individual fields.\n\n<strong>Mandatory<\/strong> fields account for <strong>{{mandatory}}%<\/strong> of the weighting\n<strong>Recommended<\/strong> fields account for <strong>{{recommended}}%<\/strong> of the weighting\n<strong>Optional<\/strong> fields account for <strong>{{optional}}%<\/strong> of the weighting",
+        "missing": "Missing metadata fields:",
+        "more": "Learn more about metadata completeness",
+        "score": "{{score}}%",
+        "tabs": {
+            "mandatory": "Mandatory ({{count}})",
+            "optional": "Optional ({{count}})",
+            "recommended": "Recommended ({{count}})"
+        }
+    }
+}

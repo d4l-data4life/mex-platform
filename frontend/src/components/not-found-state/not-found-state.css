@@ -1,0 +1,22 @@
+.not-found-state {
+  display: block;
+  text-align: center;
+}
+
+.not-found-state__illustration {
+  margin: 0 auto var(--spacing-smedium);
+}
+
+.not-found-state__title {
+  margin: var(--spacing-smedium) 0 var(--spacing-small);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  color: var(--color-primary-1);
+}
+
+.not-found-state__text {
+  margin: var(--spacing-small) 0 var(--spacing-smedium);
+  font-size: var(--font-size-s);
+  color: var(--color-base);
+  white-space: pre-line;
+}

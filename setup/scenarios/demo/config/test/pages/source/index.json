@@ -1,0 +1,699 @@
+{
+    "de": {
+        "title": "Projekt",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Projekt",
+                    "pages\/source"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Pflichtfelder",
+                            "#pflichtfelder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Projekttitel",
+                                    "#projekttitel"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Projektart",
+                                    "#projektart"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Kontakt",
+                                    "#kontakt"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Verantwortliche Fachabteilung",
+                                    "#verantwortliche-fachabteilung"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Empfohlene Felder",
+                            "#empfohlene-felder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Beschreibung",
+                                    "#beschreibung"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Laufzeitbeginn",
+                                    "#laufzeitbeginn"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Laufzeitende",
+                                    "#laufzeitende"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Mitwirkende*r",
+                                    "#mitwirkende-r"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Mitwirkende Fachabteilung",
+                                    "#mitwirkende-fachabteilung"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Dokumentation",
+                                    "#dokumentation"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Optionale Felder",
+                            "#optionale-felder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Kurztitel",
+                                    "#kurztitel"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Weitere Beteiligte",
+                                    "#weitere-beteiligte"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Gef\u00f6rdert \/ in Auftrag gegeben durch",
+                                    "#gefordert-in-auftrag-gegeben-durch"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Geplante \u00c4nderungen \/ Neue Felder",
+                            "#geplante-anderungen-neue-felder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Source",
+                                    "#source"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Nachfolger von",
+                                    "#nachfolger-von"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "value": [
+                    "Ressource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Daten-Item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Plattform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Source",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "",
+                    "id": "source"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Pflichtfelder",
+                    "id": "pflichtfelder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "projekttitel"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "sourceType",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "projektart"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "contact",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "kontakt"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "hasResponsibleUnit",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "verantwortliche-fachabteilung"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Empfohlene Felder",
+                    "id": "empfohlene-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "beschreibung"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "startTime",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "laufzeitbeginn"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "endTime",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "laufzeitende"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "contributor",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "mitwirkende-r"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "hasContributingUnit",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "mitwirkende-fachabteilung"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedDocumentation",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "dokumentation"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optionale Felder",
+                    "id": "optionale-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "acronym",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "kurztitel"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "externalPartner",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "weitere-beteiligte"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "fundedOrCommissionedBy",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "gefordert-in-auftrag-gegeben-durch"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Geplante \u00c4nderungen \/ Neue Felder",
+                    "id": "geplante-anderungen-neue-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "partOfSource",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "source"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "succeeds",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "nachfolger-von"
+                }
+            }
+        ]
+    },
+    "en": {
+        "title": "Project",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Project",
+                    "pages\/source"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Mandatory fields",
+                            "#mandatory-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Project title",
+                                    "#project-title"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Project type",
+                                    "#project-type"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Contact",
+                                    "#contact"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Responsible unit",
+                                    "#responsible-unit"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Recommended fields",
+                            "#recommended-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Description",
+                                    "#description"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Start time",
+                                    "#start-time"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "End time",
+                                    "#end-time"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Contributor",
+                                    "#contributor"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Contributing Unit",
+                                    "#contributing-unit"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Documentation",
+                                    "#documentation"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Optional fields",
+                            "#optional-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Short title",
+                                    "#short-title"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "External Contributors",
+                                    "#external-contributors"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Funded \/ commissioned by",
+                                    "#funded-commissioned-by"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Planned changes \/ new fields",
+                            "#planned-changes-new-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Source",
+                                    "#source"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Succeeds",
+                                    "#succeeds"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "value": [
+                    "Resource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Data item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Platform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Source",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "id": "source"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Mandatory fields",
+                    "id": "mandatory-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "project-title"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "sourceType",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "project-type"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "contact",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "contact"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "hasResponsibleUnit",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "responsible-unit"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Recommended fields",
+                    "id": "recommended-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "description"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "startTime",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "start-time"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "endTime",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "end-time"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "contributor",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "contributor"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "hasContributingUnit",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "contributing-unit"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedDocumentation",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "documentation"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optional fields",
+                    "id": "optional-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "acronym",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "short-title"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "externalPartner",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "external-contributors"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "fundedOrCommissionedBy",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "funded-commissioned-by"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Planned changes \/ new fields",
+                    "id": "planned-changes-new-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "partOfSource",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "source"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "succeeds",
+                    "entitytype": "Source",
+                    "level": "h4",
+                    "id": "succeeds"
+                }
+            }
+        ]
+    }
+}

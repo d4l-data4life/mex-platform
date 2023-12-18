@@ -1,0 +1,14 @@
+{
+    "de": {
+        "end": "Ende des Bereichs",
+        "many": "Schieberegler {{index}} von {{count}}",
+        "one": "Schieberegler",
+        "start": "Anfang des Bereichs"
+    },
+    "en": {
+        "end": "Range end",
+        "many": "Slider {{index}} of {{count}}",
+        "one": "Slider",
+        "start": "Range start"
+    }
+}

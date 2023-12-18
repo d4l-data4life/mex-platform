@@ -1,0 +1,8 @@
+{
+    "name": "acronym",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

@@ -1,0 +1,29 @@
+.linklist__title {
+  margin: 0 0 var(--spacing-small);
+  font-size: var(--font-size-m);
+  color: var(--color-primary-1);
+  font-weight: 400;
+}
+
+.linklist__label {
+  margin: 0 0 var(--spacing-medium);
+  font-size: var(--font-size-s);
+  color: var(--color-gray-2);
+  font-weight: 600;
+}
+
+.linklist__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-smedium) 0 var(--spacing-large);
+  font-size: var(--font-size-xs);
+  color: var(--color-secondary-1);
+}
+
+.linklist__list li a {
+  color: var(--color-secondary-1);
+}
+
+.linklist__item {
+  padding-bottom: var(--spacing-medium);
+}

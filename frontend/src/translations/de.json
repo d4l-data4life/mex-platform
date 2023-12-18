@@ -1,0 +1,35 @@
+{
+  "auth": {
+    "loginFailed": "Anmeldung ist fehlgeschlagen",
+    "redirect": "Sie werden zur Anmeldung weitergeleitet …",
+    "retryLogin": "Erneut versuchen"
+  },
+  "error": {
+    "client": "Leider ist etwas schiefgelaufen. Bitte versuchen Sie es später erneut.",
+    "ignoreIssue": "Problem ignorieren",
+    "network": "Der Dienst kann nicht erreicht werden. Bitte überprüfen Sie, ob Sie mit einem Netzwerk verbunden sind, und versuchen Sie es dann erneut.",
+    "retry": "Nochmal versuchen",
+    "server": "Es liegt eine vorübergehende Störung des Dienstes vor. Bitte versuchen Sie es später erneut.",
+    "title": "Etwas ist schiefgelaufen",
+    "closeConfirm": {
+      "continue": "Ja, fortfahren",
+      "text": "Wenn Sie das Problem ignorieren, werden einige Abschnitte möglicherweise nicht richtig angezeigt. Sie können es auch noch einmal versuchen oder zur vorherigen Seite zurückgehen.",
+      "title": "Sind Sie sicher?"
+    }
+  },
+  "navigation": {
+    "beta": "Dies ist eine Betaversion, die noch instabil sein kann. Wir nehmen bis zur offiziellen Veröffentlichung noch wesentliche Änderungen an dieser Software vor.",
+    "language": "Sprache: {{language}}",
+    "logout": "Abmelden",
+    "pages": {
+      "home": "Start"
+    }
+  },
+  "notifications": {
+    "oauthError": "Autorisierung fehlgeschlagen",
+    "sessionExpired": "Sitzung abgelaufen"
+  },
+  "tooltip": {
+    "label": "Hinweis"
+  }
+}

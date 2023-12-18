@@ -1,0 +1,115 @@
+.content-blocks__illustration {
+  text-align: center;
+  margin: var(--spacing-smedium) auto;
+  max-width: 100%;
+}
+
+.content-blocks__illustration img {
+  max-width: 100%;
+}
+
+.content-blocks__table {
+  display: table;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: var(--spacing-small) 0 var(--spacing-large);
+  min-width: 100%;
+}
+
+.content-blocks__table:empty {
+  display: none;
+}
+
+.content-blocks__table-cell {
+  border: 1px solid var(--color-primary-4);
+  padding: var(--spacing-small);
+  vertical-align: top;
+}
+
+.content-blocks__table-cell p {
+  margin: 0;
+}
+
+.content-blocks__table-cell--header {
+  background-color: var(--color-gray-5);
+}
+
+.content-blocks__table-cell:first-child {
+  border-left: 0;
+}
+
+.content-blocks__table-cell:last-child {
+  border-right: 0;
+}
+
+tr:first-child > .content-blocks__table-cell {
+  border-top: 0;
+}
+
+tr:last-child > .content-blocks__table-cell {
+  border-bottom: 0;
+}
+
+.content-blocks__table mex-tag {
+  text-transform: uppercase;
+  font-size: var(--font-size-xxs);
+  margin-right: var(--spacing-small);
+}
+
+.content-blocks__infobox-container {
+  position: relative;
+  margin: var(--spacing-large) 0 var(--spacing-smedium) 0;
+  padding: var(--spacing-medium) var(--spacing-smedium) var(--spacing-medium);
+  border-radius: var(--spacing-xsmall);
+}
+
+.content-blocks__infobox-container > p:first-of-type {
+  margin-top: 0;
+}
+
+.content-blocks__infobox-container > p:last-of-type {
+  margin-bottom: 0;
+}
+
+.content-blocks__infobox-container--info {
+  background-color: var(--color-primary-5);
+}
+
+.content-blocks__infobox-container--icon-info {
+  position: absolute;
+  top: calc(var(--spacing-smedium) * -1);
+  left: var(--spacing-xsmall);
+  color: var(--color-primary-2);
+}
+
+.content-blocks__entity-type-headline {
+  display: block;
+  margin: var(--spacing-medium) 0;
+}
+
+.content-blocks__field-description .content-blocks__table-cell {
+  vertical-align: top;
+}
+
+.content-blocks__field-description .content-blocks__table-cell--header:first-child {
+  width: 0;
+}
+
+.content-blocks__field-description ul {
+  margin: 0;
+  padding: 0 0 0 var(--spacing-smedium);
+}
+
+.content-blocks__completeness-documentation-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.content-blocks__completeness-documentation-table .content-blocks__table-first-col {
+  width: var(--content-completeness-documentation-table-width);
+}
+
+.content-blocks__completeness-documentation-table ul {
+  margin: 0;
+  padding: 0 0 0 var(--spacing-smedium);
+}

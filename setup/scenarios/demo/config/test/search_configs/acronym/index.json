@@ -1,0 +1,7 @@
+{
+    "name": "acronym",
+    "type": "ordinalAxis",
+    "fields": [
+        "acronym"
+    ]
+}

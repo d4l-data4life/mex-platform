@@ -1,0 +1,117 @@
+{
+    "de": {
+        "entityError": "Fehler beim Abrufen von Informationen zur Entit\u00e4t \u201e{{- identifier}}\u201c",
+        "referenceError": "Beim Abrufen von Informationen zu folgenden Entit\u00e4ten im Feld \u201e{{field}}\u201c ist leider ein Fehler aufgetreten: {{- identifiers}}",
+        "completeness": {
+            "close": "OK",
+            "intro": "Bei der Berechnung der Metadaten-Vollst\u00e4ndigkeit wird ber\u00fccksichtigt, welche Metadaten-Felder bereits ausgef\u00fcllt sind. F\u00fcr die einzelnen Felder wird dabei eine unterschiedliche Gewichtung vorgenommen.\n\n<strong>Pflichtfelder<\/strong> flie\u00dfen zu <strong>{{mandatory}} %<\/strong> in die Gewichtung ein\n<strong>Empfohlene Felder<\/strong> flie\u00dfen zu <strong>{{recommended}} %<\/strong> in die Gewichtung ein\n<strong>Optionale Felder<\/strong> flie\u00dfen zu <strong>{{optional}} %<\/strong> in die Gewichtung ein",
+            "missing": "Fehlende Metadaten-Felder:",
+            "more": "Erfahren Sie mehr zum Thema Metadaten-Vollst\u00e4ndigkeit",
+            "score": "{{score}}%",
+            "tabs": {
+                "mandatory": "Pflicht ({{count}})",
+                "optional": "Optional ({{count}})",
+                "recommended": "Empfohlen ({{count}})"
+            }
+        },
+        "contact": {
+            "dataOwner": {
+                "cancel": "Abbrechen",
+                "choiceText": "Was m\u00f6chten Sie tun?",
+                "choiceTitle": "Eigent\u00fcmer der Daten kontaktieren",
+                "start": "Kontaktieren",
+                "email": {
+                    "label": "E-Mail schreiben",
+                    "subject": "Frage zu MEx-Daten",
+                    "text": "Senden Sie eine E-Mail an die Dateninhaber*in und stellen Sie Fragen (\u00f6ffnet Ihr E-Mail-Programm)."
+                },
+                "form": {
+                    "label": "Anfrage zum Zugriff auf die Daten senden",
+                    "text": "F\u00fcllen Sie ein Formular aus und beantworten Sie einige Fragen dar\u00fcber, warum und wie Sie auf die Daten zugreifen m\u00f6chten."
+                }
+            }
+        },
+        "navigation": {
+            "metadata": "Metadaten: {{entityType}}",
+            "pagination": "Durch Suchergebnisse bl\u00e4ttern",
+            "resultIndex": "Suchergebnis {{index}}\/{{count}}",
+            "resultIndexAria": "Suchergebnis {{index}} von {{count}}",
+            "search": "Suchergebnisse",
+            "versions": {
+                "dropdown": "Version",
+                "highlight": "Hervorhebung",
+                "latest": "Letzte \u00c4nderung: {{date}}",
+                "legend": "\u00c4nderungen an Metadaten in dieser Version",
+                "toggle": "Versionen"
+            }
+        },
+        "notFound": {
+            "button": "Zur Suche gehen",
+            "text": "Der Datensatz kann leider nicht gefunden werden. Bitte beginnen Sie eine neue Suche.",
+            "title": "Daten konnten nicht gefunden werden"
+        },
+        "relatedResults": {
+            "datum": "Verwandte Daten-Items ({{count}})",
+            "more": "Alle Ergebnisse",
+            "resource": "Verwandte Ressourcen"
+        }
+    },
+    "en": {
+        "contact": {
+            "dataOwner": {
+                "cancel": "Cancel",
+                "choiceText": "What would you like to do?",
+                "choiceTitle": "Contact data owner",
+                "start": "Contact",
+                "email": {
+                    "label": "Write email",
+                    "subject": "Question about MEx data",
+                    "text": "Send an email to data owner and ask questions (opens your email client)."
+                },
+                "form": {
+                    "label": "Send request to access the data",
+                    "text": "Fill out a form and answer some questions to describe why and how you want to access the data."
+                }
+            }
+        },
+        "contactSubject": "Question about MEx data",
+        "entityError": "Error trying to fetch information about entity \u201c{{- identifier}}\u201d",
+        "referenceError": "An error happened while fetching information for field \u201c{{field}}\u201d about the following entities: {{- identifiers}}",
+        "completeness": {
+            "close": "OK",
+            "intro": "The metadata completeness calculation takes into account which metadata fields are already filled in. A different weighting is applied to the individual fields.\n\n<strong>Mandatory<\/strong> fields account for <strong>{{mandatory}}%<\/strong> of the weighting\n<strong>Recommended<\/strong> fields account for <strong>{{recommended}}%<\/strong> of the weighting\n<strong>Optional<\/strong> fields account for <strong>{{optional}}%<\/strong> of the weighting",
+            "missing": "Missing metadata fields:",
+            "more": "Learn more about metadata completeness",
+            "score": "{{score}}%",
+            "tabs": {
+                "mandatory": "Mandatory ({{count}})",
+                "optional": "Optional ({{count}})",
+                "recommended": "Recommended ({{count}})"
+            }
+        },
+        "navigation": {
+            "metadata": "Metadata: {{entityType}}",
+            "pagination": "Search results pagination",
+            "resultIndex": "Search result {{index}}\/{{count}}",
+            "resultIndexAria": "Search result {{index}} of {{count}}",
+            "search": "Search results",
+            "versions": {
+                "dropdown": "Version",
+                "highlight": "Highlight",
+                "latest": "Last update: {{date}}",
+                "legend": "changes in metadata in this version",
+                "toggle": "Versions"
+            }
+        },
+        "notFound": {
+            "button": "Go to search",
+            "text": "Unfortunately, the data record can't be found. Please try starting a new search.",
+            "title": "Data not found"
+        },
+        "relatedResults": {
+            "datum": "Related data items ({{count}})",
+            "more": "All results",
+            "resource": "Related resources"
+        }
+    }
+}

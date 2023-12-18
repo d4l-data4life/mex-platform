@@ -1,0 +1,24 @@
+{
+    "name": "givenName",
+    "renderer": "plain",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Vorname"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Given name"
+            }
+        ]
+    },
+    "documentation": null
+}

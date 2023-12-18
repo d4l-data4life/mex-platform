@@ -1,0 +1,26 @@
+{
+    "name": "address",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Adresse",
+                "plural": "Adressen"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Address",
+                "plural": "Addresses"
+            }
+        ]
+    },
+    "documentation": null
+}

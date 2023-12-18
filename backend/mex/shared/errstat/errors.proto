@@ -1,0 +1,26 @@
+syntax = "proto3";
+package d4l.mex.errors;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/errstat;errstat";
+
+import "google/protobuf/any.proto";
+
+message ErrorDetailCode {
+    string code = 1;
+}
+
+message ErrorDetailCause {
+  google.protobuf.Any cause = 1;
+}
+
+message ErrorDetailReason {
+  string reason = 1;
+}
+
+message ErrorDetailDevMessage {
+  string dev_message = 1;
+}
+
+message ErrorDetailTraceId {
+  string trace_id = 1;
+}

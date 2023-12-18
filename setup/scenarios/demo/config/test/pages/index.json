@@ -1,0 +1,48 @@
+{
+  "de": {
+    "footer": [
+      {
+        "label": "Impressum",
+        "url": "\/pages\/imprint",
+        "testAttr": "footer:navigation:imprint"
+      }
+    ],
+    "learningEnvironment": [
+      {
+        "label": "Datenfeldkatalog",
+        "url": "\/pages\/data-field-catalog"
+      }
+    ],
+    "services": [
+      {
+        "label": "MEx GitHub",
+        "url": "https:\/\/github.com\/d4l-data4life\/mex"
+      }
+    ]
+  },
+  "en": {
+    "footer": [
+      {
+        "label": "Imprint",
+        "url": "\/pages\/imprint",
+        "testAttr": "footer:navigation:imprint"
+      }
+    ],
+    "learningEnvironment": [
+      {
+        "label": "About MEx",
+        "url": "https:\/\/www.data4life.care"
+      },
+      {
+        "label": "Data field catalog",
+        "url": "\/pages\/data-field-catalog"
+      }
+    ],
+    "services": [
+      {
+        "label": "MEx GitHub",
+        "url": "https:\/\/github.com\/d4l-data4life\/mex"
+      }
+    ]
+  }
+}

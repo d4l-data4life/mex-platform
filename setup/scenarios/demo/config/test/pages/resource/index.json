@@ -1,0 +1,763 @@
+{
+    "de": {
+        "title": "Ressource",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Projekt",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Ressource",
+                    "pages\/resource"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Pflichtfelder",
+                            "#pflichtfelder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Titel der Ressource",
+                                    "#titel-der-ressource"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Ressourcentyp",
+                                    "#ressourcentyp"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Erstellt",
+                                    "#erstellt"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Zugriffsplattform",
+                                    "#zugriffsplattform"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Zugriffsort",
+                                    "#zugriffsort"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Zugriffsbeschr\u00e4nkung",
+                                    "#zugriffsbeschrankung"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Projekt",
+                                    "#projekt"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Empfohlene Felder",
+                            "#empfohlene-felder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Beschreibung",
+                                    "#beschreibung"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Schlagwort",
+                                    "#schlagwort"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Dateiformat",
+                                    "#dateiformat"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Dokumentation",
+                                    "#dokumentation"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Rechte",
+                                    "#rechte"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Optionale Felder",
+                            "#optionale-felder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Lizenz",
+                                    "#lizenz"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Externer Identifier",
+                                    "#externer-identifier"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Version",
+                                    "#version"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Geplante \u00c4nderungen \/ Neue Felder",
+                            "#geplante-anderungen-neue-felder"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "MeSH-Begriff",
+                                    "#mesh-begriff"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Tool",
+                                    "#tool"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "value": [
+                    "Daten-Item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Plattform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Resource",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "",
+                    "id": "resource"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Pflichtfelder",
+                    "id": "pflichtfelder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "titel-der-ressource"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "resourceType",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "ressourcentyp"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "created",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "erstellt"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessPlatform",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "zugriffsplattform"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessLocation",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "zugriffsort"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessRestriction",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "zugriffsbeschrankung"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "createdInContextOf",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "projekt"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Empfohlene Felder",
+                    "id": "empfohlene-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "beschreibung"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "keyword",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "schlagwort"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "dataFileFormat",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "dateiformat"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedDocumentation",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "dokumentation"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "rights",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "rechte"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optionale Felder",
+                    "id": "optionale-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "license",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "lizenz"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedExternalIdentifier",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "externer-identifier"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "version",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "version"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Geplante \u00c4nderungen \/ Neue Felder",
+                    "id": "geplante-anderungen-neue-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "meshTerm",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "mesh-begriff"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "usedInstrumentToolOrApparatus",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "tool"
+                }
+            }
+        ]
+    },
+    "en": {
+        "title": "Resource",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Project",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Resource",
+                    "pages\/resource"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Mandatory fields",
+                            "#mandatory-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Resource title",
+                                    "#resource-title"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Resource type",
+                                    "#resource-type"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Created",
+                                    "#created"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Access platform",
+                                    "#access-platform"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Access location",
+                                    "#access-location"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Access restriction",
+                                    "#access-restriction"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Project",
+                                    "#project"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Recommended fields",
+                            "#recommended-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Description",
+                                    "#description"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Keyword",
+                                    "#keyword"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "File format",
+                                    "#file-format"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Documentation",
+                                    "#documentation"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Rights",
+                                    "#rights"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Optional fields",
+                            "#optional-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "License",
+                                    "#license"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "External identifier",
+                                    "#external-identifier"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Version",
+                                    "#version"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "value": [
+                            "Planned changes \/ new fields",
+                            "#planned-changes-new-fields"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "MeSH term",
+                                    "#mesh-term"
+                                ],
+                                "children": []
+                            },
+                            {
+                                "value": [
+                                    "Tool",
+                                    "#tool"
+                                ],
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "value": [
+                    "Data item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Platform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Resource",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "id": "resource"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Mandatory fields",
+                    "id": "mandatory-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "resource-title"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "resourceType",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "resource-type"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "created",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "created"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessPlatform",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "access-platform"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessLocation",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "access-location"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessRestriction",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "access-restriction"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "createdInContextOf",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "project"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Recommended fields",
+                    "id": "recommended-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "description"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "keyword",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "keyword"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "dataFileFormat",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "file-format"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedDocumentation",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "documentation"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "rights",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "rights"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optional fields",
+                    "id": "optional-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "license",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "license"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedExternalIdentifier",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "external-identifier"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "version",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "version"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Planned changes \/ new fields",
+                    "id": "planned-changes-new-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "meshTerm",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "mesh-term"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "usedInstrumentToolOrApparatus",
+                    "entitytype": "Resource",
+                    "level": "h4",
+                    "id": "tool"
+                }
+            }
+        ]
+    }
+}

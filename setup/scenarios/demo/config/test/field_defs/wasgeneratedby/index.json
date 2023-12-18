@@ -1,0 +1,8 @@
+{
+    "name": "wasGeneratedBy",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

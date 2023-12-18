@@ -1,0 +1,33 @@
+{
+  "name": "mexctl",
+  "description": "mexctl - MEx command line tool",
+  "version": "1.2.0",
+  "scripts": {
+    "lint": "eslint src --ext .ts",
+    "build": "tsc",
+    "build:w": "tsc --watch",
+    "start": "node build/mexctl.js",
+    "mexctl": "node build/mexctl.js",
+    "clean": "rm -rf .tscache/ generated_content/gendocs/ build/ coverage/ npm-debug.log .baseDir.ts *.tmp.txt .nyc_output"
+  },
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.0",
+    "@types/js-yaml": "^4.0.5",
+    "@types/node": "^18.11.18",
+    "@types/node-notifier": "^8.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "cli-progress": "^3.11.2",
+    "commander": "^10.0.0",
+    "dotenv": "^16.0.3",
+    "fp-ts": "^2.12.2",
+    "glob": "^10.3.10",
+    "io-ts": "^2.2.17",
+    "js-yaml": "^4.1.0",
+    "node-notifier": "^10.0.1",
+    "tar-fs": "^3.0.0",
+    "typescript": "^4.5.0"
+  }
+}

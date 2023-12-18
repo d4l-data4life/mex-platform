@@ -1,0 +1,8 @@
+{
+  "name": "mesh-de-2022",
+  "config": {
+    "@type": "type.googleapis.com\/d4l.mex.codings.BlobStoreCodingsetSourceConfig",
+    "blobName": "mesh-blob",
+    "blobType": "sqlitez"
+  }
+}

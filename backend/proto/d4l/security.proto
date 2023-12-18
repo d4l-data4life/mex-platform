@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package d4l.api.security;
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/known/securitypb";
+
+
+enum AuthenticationType {
+  NONE         = 0;
+  API_KEY      = 1;
+  BEARER_TOKEN = 2;
+}
+
+message Privilege {
+  string resource = 1;
+  string verb     = 2;
+  uint64 mask     = 3;
+}
+
+message Role {
+  string name        = 1;
+  string description = 2;
+  uint64 mask        = 3;
+}
+
+message UserWithRoles  {
+  string tenant_id      = 1;
+  string user_id        = 2;
+  string app_id         = 3;
+
+  repeated string roles = 4;
+}
+
+// Extending this message enables the fields to be used
+// in option(...) directives for service methods.
+extend google.protobuf.MethodOptions {
+  AuthenticationType authn_type          = 10003;
+  repeated Privilege required_privileges = 10005;
+}

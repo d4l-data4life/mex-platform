@@ -1,0 +1,129 @@
+.content-page__content {
+  display: block;
+  position: relative;
+}
+
+.content-page__content--left {
+  text-align: left;
+}
+.content-page__content--center {
+  text-align: center;
+}
+
+.content-page__content #top-of-the-page + h1,
+.content-page__content #top-of-the-page + h2,
+.content-page__content #top-of-the-page + h3,
+.content-page__content #top-of-the-page + h4,
+.content-page__content #top-of-the-page + h5,
+.content-page__content #top-of-the-page + h6 {
+  margin-top: var(--spacing-medium);
+}
+
+.content-page__content h1,
+.content-page__content h2,
+.content-page__content h3,
+.content-page__content h4,
+.content-page__content h5,
+.content-page__content h6 {
+  margin-top: var(--spacing-xlarge);
+  margin-bottom: var(--spacing-medium);
+}
+
+.content-page__content h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--color-primary-1);
+}
+
+.content-page__content h2 {
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  color: var(--color-primary-1);
+}
+
+.content-page__content h3 {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+  color: var(--color-primary-2);
+}
+
+.content-page__content h4 {
+  font-size: var(--font-size-m);
+  font-weight: normal;
+  color: var(--color-primary-2);
+}
+
+.content-page__content h5 {
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  color: var(--color-gray-2);
+}
+
+.content-page__content h6 {
+  font-size: var(--font-size-s);
+  font-weight: normal;
+  color: var(--color-gray-2);
+}
+
+.content-page__content a {
+  color: var(--color-secondary-1);
+}
+
+.content-page__content li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.content-page__content .mex-text-tag {
+  padding: 2px 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.content-page__content .mex-text-tag--color-red {
+  background-color: var(--color-red-lighter);
+}
+
+.content-page__content .mex-text-tag--color-yellow {
+  background-color: var(--color-yellow-lighter);
+}
+
+.content-page__content .mex-text-tag--color-green {
+  background-color: var(--color-green-lighter);
+}
+
+.content-page__content .mex-text-tag--color-blue-gray {
+  background-color: var(--color-primary-5);
+}
+
+.content-page__content .mex-text-tag--color-blue-light {
+  background-color: var(--color-highlight-4);
+}
+
+@media (--media-tablet) {
+  .content-page__content {
+    flex: 1 1 auto;
+    padding: var(--spacing-small) var(--spacing-medium);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: var(--content-page-inner-height);
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      calc(var(--content-page-inner-height) - var(--spacing-xsmall)),
+      rgba(0, 0, 0, 0)
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      calc(var(--content-page-inner-height) - var(--spacing-xsmall)),
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .content-page__content::after {
+    display: block;
+    content: '';
+    padding-bottom: var(--content-page-inner-height);
+  }
+}

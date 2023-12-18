@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package d4l.mex.proxy.cfg;
+
+import "d4l/config.proto";
+import "google/protobuf/duration.proto";
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/proxy/proxycfg;proxycfg";
+
+option (d4l.cfg.main_message) = "ProxyConfig";
+
+message ProxyConfig {
+  option (d4l.cfg.mtags) = "proxy";
+
+  string addr = 1 [(d4l.cfg.opts) = { default: "127.0.0.1:3000" }];
+  google.protobuf.Duration timeout = 2 [(d4l.cfg.opts) = { default: "15s" }];
+
+  message Origin {
+    option (d4l.cfg.mtags) = "proxy";
+
+    string metadata = 1 [(d4l.cfg.opts) = { default: "http://127.0.0.1:3001" }];
+    string query    = 2 [(d4l.cfg.opts) = { default: "http://127.0.0.1:3002" }];
+    string index    = 3 [(d4l.cfg.opts) = { default: "http://127.0.0.1:3003" }];
+    string auth     = 4 [(d4l.cfg.opts) = { default: "http://127.0.0.1:3004" }];
+    string cms      = 5 [(d4l.cfg.opts) = { default: "http://127.0.0.1:3005" }];
+    string config   = 6 [(d4l.cfg.opts) = { default: "http://127.0.0.1:3006" }];
+    string webapp   = 7 [(d4l.cfg.opts) = { default: "http://127.0.0.1:4000" }];
+  }
+  Origin origin = 3;
+}

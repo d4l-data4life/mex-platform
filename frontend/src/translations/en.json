@@ -1,0 +1,35 @@
+{
+  "auth": {
+    "loginFailed": "Sign-in failed",
+    "redirect": "You're being redirected to the sign-in …",
+    "retryLogin": "Retry"
+  },
+  "error": {
+    "client": "Unfortunately something went wrong. Please try again later.",
+    "ignoreIssue": "Ignore this issue",
+    "network": "The service can’t be reached and we can’t show you anything here. Please check if you’re connected to a network and try again.",
+    "retry": "Try again",
+    "server": "There is a temporary disruption of service. Please try again later.",
+    "title": "Something went wrong",
+    "closeConfirm": {
+      "continue": "Yes, continue",
+      "text": "If you ignore the issue, some sections may not display properly.  You can also try again, or try going back to the previous page. ",
+      "title": "Are you sure?"
+    }
+  },
+  "navigation": {
+    "beta": "This is a beta version, which might be unstable. We’re still making substantial changes to this software until the official release.",
+    "language": "Language: {{language}}",
+    "logout": "Sign out",
+    "pages": {
+      "home": "Home"
+    }
+  },
+  "notifications": {
+    "oauthError": "Authorization failed",
+    "sessionExpired": "Session expired"
+  },
+  "tooltip": {
+    "label": "Hint"
+  }
+}

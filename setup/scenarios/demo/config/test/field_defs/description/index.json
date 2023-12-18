@@ -1,0 +1,8 @@
+{
+    "name": "description",
+    "kind": "text",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

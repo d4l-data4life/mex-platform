@@ -1,0 +1,11 @@
+{
+    "name": "title",
+    "type": "searchFocus",
+    "fields": [
+        "label",
+        "acronym",
+        "createdInContextOf__label",
+        "createdInContextOf__acronym",
+        "partOfSource__label"
+    ]
+}

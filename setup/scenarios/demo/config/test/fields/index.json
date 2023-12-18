@@ -1,0 +1,3361 @@
+[
+  {
+    "name": "accessLocation",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Zugriffsort",
+          "plural": "Zugriffsorte"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Access location",
+          "plural": "Access locations"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Zugriffsort (Speicherpfad oder  URL)"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Zugriffsort (Speicherpfad oder  URL) der Plattform"
+        },
+        {
+          "entityType": "Resource",
+          "text": "Zugriffsort (Speicherpfad oder  URL) der Ressource"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Access location (storage path or URL)"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Access location (storage path or URL) of the platform"
+        },
+        {
+          "entityType": "Resource",
+          "text": "Access location (storage path or URL) of the resource"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": ""
+          },
+          {
+            "entityType": "Platform",
+            "text": ""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Angabe des Speicher-\/Zugriffsorts, an dem die Ressource hinterlegt ist. Sofern\nsich dieser in einer Datenbank befindet, ist der Speicher-\/Zugriffsort der\nDatenbank angegeben."
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": ""
+          },
+          {
+            "entityType": "Platform",
+            "text": ""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Specification of the storage\/access location where the resource is stored. If\ncontains a database, the storage\/access location of the database is specified."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "accessPlatform",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Zugriffsplattform",
+          "plural": "Zugriffsplattformen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Access platform",
+          "plural": "Access platforms"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Zugriffsplattform der Ressource"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Access platform of the resource"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Name der Zugriffsplattform. Es ist die Plattform gemeint, auf der die Ressourcen gespeichert sind und wor\u00fcber sie erreichbar sind. Es ist an dieser Stelle nicht vorrangig, ob die Plattform f\u00fcr andere zug\u00e4nglich ist oder nicht."
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Name of the access platform. It means the platform on which the resources are stored and through which they can be accessed. It is not a priority at this point whether the platform is accessible to others or not."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "accessRestriction",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Zugriffsbeschr\u00e4nkung"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Access restriction"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Beschreibung, ob die Ressource f\u00fcr alle zug\u00e4nglich ist (offen) oder einen eingeschr\u00e4nkten Zugang hat (restriktiv)"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Description if resource is available for everyone (open) or has got any restricted access (restricted)"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "access-restriction-1",
+          "label": "offen",
+          "description": "Die Ressource ist offen zug\u00e4nglich."
+        },
+        {
+          "conceptId": "access-restriction-2",
+          "label": "restriktiv",
+          "description": "Ressource ist eingeschr\u00e4nkt zug\u00e4nglich. Beispielsweise enthalten die Daten vertrauliche Informationen oder personenbezogene Daten. Dies bedeutet, dass Einschr\u00e4nkungen bei der Nachnutzung der Daten vorliegen und die Daten entweder \u00f6ffentlich gar nicht oder nur unter bestimmten Voraussetzungen verf\u00fcgbar sind, z. B. aggregierte Daten."
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "access-restriction-1",
+          "label": "open",
+          "description": "The resource is openly available to the public."
+        },
+        {
+          "conceptId": "access-restriction-2",
+          "label": "restricted",
+          "description": "Resource has restricted access. For example, the data contains classified information or personal data. This means that there are restrictions on the subsequent use of the data and the data is either not available to the public at all or only available under certain conditions, e.g. aggregated data."
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Ressource ist f\u00fcr alle zug\u00e4nglich (offen) oder hat einen\neingeschr\u00e4nkten Zugang (restriktiv)."
+          }
+        ]
+      },
+      "en": {
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Resource is accessible to all (open) or has restricted access (restrictive)."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "acronym",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Kurztitel",
+          "plural": "Kurztitel"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "singular": "Akronym",
+          "plural": "Akronyme"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Short title",
+          "plural": "Short titles"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "singular": "Acronym",
+          "plural": "Acronyms"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Kurztitel oder Akronym"
+        },
+        {
+          "entityType": "Source",
+          "text": "Kurztitel oder Akronym f\u00fcr den Titel eines Projekts"
+        },
+        {
+          "entityType": "Resource",
+          "text": "Kurztitel oder Akronym f\u00fcr den Titel einer Ressource"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Kurztitel oder Akronym f\u00fcr den Titel einer Plattform"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Kurztitel oder Akronym f\u00fcr den Titel eines Daten-Items"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Short title or acronym"
+        },
+        {
+          "entityType": "Source",
+          "text": "Short title or acronym for the title of a project"
+        },
+        {
+          "entityType": "Resource",
+          "text": "Short title or acronym for the title of a resource"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Short title or acronym for the title of a platform"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Short title or acronym for the title of a data item"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "KiGGS Welle 2"
+          },
+          {
+            "entityType": "Datum",
+            "text": "GZEmehm1"
+          },
+          {
+            "entityType": "Platform",
+            "text": "Reportserver"
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "KiGGS Wave 2"
+          },
+          {
+            "entityType": "Datum",
+            "text": "GZEmehm1"
+          },
+          {
+            "entityType": "Platform",
+            "text": "Reportserver"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "address",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Adresse",
+          "plural": "Adressen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Address",
+          "plural": "Addresses"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "apiAccessLocation",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "API-Zugriffsort",
+          "plural": "API-Zugriffsorte"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "API access location",
+          "plural": "API access locations"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Link zum Application Programming Interface (API) \u00fcber welchen der Zugriff auf die Plattform erfolgen kann"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "URL of the Application Programming Interface (API) for accessing the platform"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "apiDescription",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "API-Dokumentation"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "API documentation"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Dokumentation des Application Programming Interface (API)"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Documentation of the Application Programming Interface (API)"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "Platform",
+            "text": "\"https:\/\/app.swaggerhub.com\/apis\/microsoft-rs\/PBIRS\/2.0\""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "Platform",
+            "text": "\"https:\/\/app.swaggerhub.com\/apis\/microsoft-rs\/PBIRS\/2.0\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "apiType",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "API-Typ",
+          "plural": "API-Typen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "API type",
+          "plural": "API types"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Typ eines Application Programming Interface (API), z. B. REST oder SOAP"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Type of an Application Programming Interface (API), e.g. REST or SOAP"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "api-type-1",
+          "label": "REST",
+          "description": "Representational State Transfer: Softwarearchitektur verteilter Systeme, insbesondere f\u00fcr Webservices"
+        },
+        {
+          "conceptId": "api-type-2",
+          "label": "SOAP",
+          "description": "Simple Object Access Protocol: Netzwerkprotokoll, mit dessen Hilfe Daten zwischen Systemen ausgetauscht werden k\u00f6nnen"
+        },
+        {
+          "conceptId": "api-type-3",
+          "label": "SPARQL endpoint",
+          "description": "Schnittstelle f\u00fcr SPARQL zur Abfrage und Manipulation von Daten im RDF-Format"
+        },
+        {
+          "conceptId": "api-type-4",
+          "label": "propriet\u00e4r",
+          "description": "Nicht-standardisierte Schnittstelle"
+        },
+        {
+          "conceptId": "api-type-5",
+          "label": "RPC",
+          "description": "Remote Procedure Call: Client-Server-Interaktionstechnik zur Realisierung von Interprozesskommunikation"
+        },
+        {
+          "conceptId": "api-type-6",
+          "label": "GraphQL",
+          "description": "Open-Source-Datenabfrage- und Manipulationssprache und Laufzeitsystem zum Beantworten von Abfragen mit vorhandenen Daten"
+        },
+        {
+          "conceptId": "api-type-7",
+          "label": "Sonstige",
+          "description": "Nicht n\u00e4her definierter oder unbekannter API-Typ"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "api-type-1",
+          "label": "REST",
+          "description": "Representational State Transfer: Software architectural style for decoupled components, especially web services"
+        },
+        {
+          "conceptId": "api-type-2",
+          "label": "SOAP",
+          "description": "Simple Object Access Protocol: Messaging protocol specification for exchanging data in the implementation of web services in computer networks"
+        },
+        {
+          "conceptId": "api-type-3",
+          "label": "SPARQL endpoint",
+          "description": "Interface for SPARQL to retrieve and manipulate data in RDF format"
+        },
+        {
+          "conceptId": "api-type-4",
+          "label": "proprietary",
+          "description": "Non-standardized interface"
+        },
+        {
+          "conceptId": "api-type-5",
+          "label": "RPC",
+          "description": "Remote Procedure Call: Form of client-server interaction, typically implemented via a request-response message-passing system"
+        },
+        {
+          "conceptId": "api-type-6",
+          "label": "GraphQL",
+          "description": "Open-source data query and manipulation language for APIs, and runtime for fulfilling queries with existing data"
+        },
+        {
+          "conceptId": "api-type-7",
+          "label": "Other",
+          "description": "Undefined or unknown API type"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "completeness",
+    "renderer": "none",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Vollst\u00e4ndige Metadaten"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Complete meta data"
+        }
+      ]
+    },
+    "resolvesTo": []
+  },
+  {
+    "name": "contact",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Kontakt",
+          "plural": "Kontakte"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Contact",
+          "plural": "Contacts"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Source",
+          "text": "Person oder Fachgruppe, die wei\u00df, wie man auf die Ressource zugreift, Probleme behebt oder anderweitig Probleme im Zusammenhang mit der Ressource l\u00f6st"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Person oder Fachgruppe, die wei\u00df, wie man auf die Plattform zugreift, Probleme behebt oder anderweitig Probleme im Zusammenhang mit der Plattform l\u00f6st"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Source",
+          "text": "Person or unit that can help with accessing, troubleshooting, or otherwise field issues related to the resource."
+        },
+        {
+          "entityType": "Platform",
+          "text": "Person or unit that can help with accessing, troubleshooting, or otherwise field issues related to the platform."
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": {
+      "de": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Bei Personen werden Vor- und Nachname und zugeh\u00f6riges Fachgebiet angezeigt, bei Fachgruppen das K\u00fcrzel. Beispiel: \"FG 21\", \"Maxi Musterfrau, FG 21\""
+          }
+        ]
+      },
+      "en": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "For persons, the first and last name and the associated field are displayed, for units their acronym. Example: \"FG 21\", \"Maxi Musterfrau, FG 21\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "contributor",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Mitwirkende*r",
+          "plural": "Mitwirkende"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Contributor",
+          "plural": "Contributors"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Am Projekt mitwirkende Person(en)"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Person(s) contributing to the project"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": {
+      "de": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Vor- und Nachname der Person, z.B. \"Maxi Musterfrau\""
+          }
+        ]
+      },
+      "en": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "First and last name of the person, e.g. \"Maxi Musterfrau\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "created",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Erstellt"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Created"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Resource",
+          "text": "Datum, an dem die Ressource erstellt wurde; dies kann sich auf einen Zeitraum in der Vergangenheit, einen Datumsbereich oder ein einzelnes Datum f\u00fcr eine endg\u00fcltige Komponente beziehen, z. B. die fertiggestellte Datei mit allen Daten."
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Resource",
+          "text": "Date the resource itself was created; this could refer to a timeframe in history, a date range, or a single date for a final component, e.g., the finalised file with all the data."
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2016-04-22T02:35:03"
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "Resource",
+            "text": "Gemeint ist das Datum der Erstellung der Ressource (dem Datensatz, der Datei). Das Datum soll so genau wie m\u00f6glich angegeben werden. Wenn vorhanden, mit Zeitstempel."
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2016-04-22T02:35:03"
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "Resource",
+            "text": "Meant is the date of creation of the resource (the record, the file). The date should be specified as accurately as possible. If available, with timestamp."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "createdAt",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "createdInContextOf",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Projekt",
+          "plural": "Projekte"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Project",
+          "plural": "Projects"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "descriptionText": [
+          {
+            "entityType": "Resource",
+            "text": "Projekt \/ Vorhaben in dessen Zusammenhang die Ressource erstellt\nwurde"
+          }
+        ]
+      },
+      "en": {
+        "descriptionText": [
+          {
+            "entityType": "Resource",
+            "text": "Project in connection with which the resource was created"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "dataCollectionProcess",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Methode",
+          "plural": "Methoden"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Method",
+          "plural": "Methods"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "F\u00fcr die Studie oder Forschung oder Ressource verwendete Methodik"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Methodology employed for the study or research or resource"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "dataFileFormat",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Dateiformat"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "File format"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Technisches Format der Ressource"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Technical format of the resource"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/atom+xml",
+          "label": "atom",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/pdf",
+          "label": "pdf",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.presentationml.presentation",
+          "label": "pptx",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "label": "xlsx",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "label": "docx",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x-mimearchive",
+          "label": "mhtml",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.sas",
+          "label": "sas",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.stata",
+          "label": "stata",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/xml",
+          "label": "xml",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/image\/tiff",
+          "label": "tiff",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/text\/csv",
+          "label": "csv",
+          "description": ""
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/atom+xml",
+          "label": "atom",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/pdf",
+          "label": "pdf",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.presentationml.presentation",
+          "label": "pptx",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "label": "xlsx",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "label": "docx",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x-mimearchive",
+          "label": "mhtml",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.sas",
+          "label": "sas",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.stata",
+          "label": "stata",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/xml",
+          "label": "xml",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/image\/tiff",
+          "label": "tiff",
+          "description": ""
+        },
+        {
+          "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/text\/csv",
+          "label": "csv",
+          "description": ""
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "furtherInformation": [
+          {
+            "entityType": "Resource",
+            "text": "Es wird empfohlen keine propriet\u00e4ren Formate zu verwenden. Dies bedeutet,\noffene Formate zu nutzen, die unabh\u00e4ngig vom Hersteller und Lizenzen durch andere Personen nachgenutzt werden k\u00f6nnen. Beispielweise ist eine csv-Datei einer xls-Datei vorzuziehen."
+          }
+        ]
+      },
+      "en": {
+        "furtherInformation": [
+          {
+            "entityType": "Resource",
+            "text": "It is recommended not to use proprietary formats. This means\nto use open formats that can be reused by others, regardless of the manufacturer and licenses. For example, a csv file is preferable to an xls file."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "dataOriginatesFrom",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Datenursprung"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Data origin"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "dataType",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "vocabulary": {
+      "de": [],
+      "en": []
+    },
+    "documentation": null
+  },
+  {
+    "name": "dateQualifier",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "date-qualifier-1",
+          "label": "unbekannt",
+          "description": "Datum ist nicht bekannt"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "date-qualifier-1",
+          "label": "unknown",
+          "description": "Date is not known"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "datumType",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Daten-Item-Typ",
+          "plural": "Daten-Item-Typen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Data item type",
+          "plural": "Data item types"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Allgemeiner Typ des Daten-Items"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "General type of the data item"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "datum-type-1",
+          "label": "Studienvariable",
+          "description": "Untersuchungsmerkmal einer Studie"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "datum-type-1",
+          "label": "Study variable",
+          "description": "Variable of a study"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "furtherInformation": [
+          {
+            "entityType": "Datum",
+            "text": ""
+          }
+        ]
+      },
+      "en": {
+        "furtherInformation": [
+          {
+            "entityType": "Datum",
+            "text": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "departmentOrUnit",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Fachabteilung",
+          "plural": "Fachabteilungen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Unit",
+          "plural": "Units"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": null
+  },
+  {
+    "name": "description",
+    "renderer": "description",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Beschreibung"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Description"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Resource",
+          "text": "Kurze Beschreibung der Ressource, der Komponenten und des Kontextes, wie die Ressource erstellt wurde"
+        },
+        {
+          "entityType": "Source",
+          "text": "Kurze Beschreibung des Projekts oder des Forschungskontexts, in dem die Ressource erstellt wurde"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Kurze Beschreibung der Plattform"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Kurze Beschreibung des Daten-Items"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Resource",
+          "text": "Brief description of the resource, its components, and the context of how the resource was created"
+        },
+        {
+          "entityType": "Source",
+          "text": "Brief description of the project or the research context in which the resource was created"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Brief description of the platform"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Brief description of the data item"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "Source",
+            "text": "\"Mit KiGGS Welle 2 wurden die Datenerhebungen der „Studie zu Gesundheit von Kindern und Jugendlichen in Deutschland“ fortgesetzt.\""
+          },
+          {
+            "entityType": "Resource",
+            "text": "\"Mit KiGGS Welle 2 wurden die Datenerhebungen der „Studie zu Gesundheit von Kindern und Jugendlichen in Deutschland“ fortgesetzt.\""
+          },
+          {
+            "entityType": "Datum",
+            "text": "\"Gesundheitszustand des Kindes im Allgemeinen\""
+          },
+          {
+            "entityType": "Platform",
+            "text": "\"Der Data Server ist eine serverbasierte Berichtsplattform.\""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "Source",
+            "text": "\"New information about the KIGGS study.\""
+          },
+          {
+            "entityType": "Resource",
+            "text": "\"New information about the KIGGS study.\""
+          },
+          {
+            "entityType": "Datum",
+            "text": "General state of health of the child"
+          },
+          {
+            "entityType": "Platform",
+            "text": "\"The Data Server is a server-based reporting platform.\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "email",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "E-Mail-Adresse",
+          "plural": "E-Mail-Adressen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Email address",
+          "plural": "Email addresses"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "endTime",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Laufzeitende"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "End time"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Source",
+          "text": "(Geplantes) Ende eines Projektes"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Source",
+          "text": "(Planned) end of a project"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2017"
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2017"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "entityName",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Art"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Type"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "Datum",
+          "label": "Daten-Item",
+          "description": "Eine einzelne Information oder ein Daten-Item innerhalb einer Ressource"
+        },
+        {
+          "conceptId": "OrganizationalUnit",
+          "label": "Fachabteilung",
+          "description": ""
+        },
+        {
+          "conceptId": "Person",
+          "label": "Person",
+          "description": ""
+        },
+        {
+          "conceptId": "Platform",
+          "label": "Plattform",
+          "description": "Ein technisches Datenverarbeitungssystem mit der M\u00f6glichkeit des physischen Zugriffs auf die Ressource zur Wiederverwendung"
+        },
+        {
+          "conceptId": "Resource",
+          "label": "Ressource",
+          "description": "Datensatz, ein definiertes Objekt, eine Sammlung von Informationen oder der Name einer Forschungssoftware"
+        },
+        {
+          "conceptId": "Source",
+          "label": "Projekt",
+          "description": "Ein (Forschungs-)Projekt, ein System, ein Arbeitsbereich, in dem die Ressourcen erzeugt wurden"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "Datum",
+          "label": "Data item",
+          "description": "A single piece of information or an item of data within a resource"
+        },
+        {
+          "conceptId": "OrganizationalUnit",
+          "label": "Unit",
+          "description": ""
+        },
+        {
+          "conceptId": "Person",
+          "label": "Person",
+          "description": ""
+        },
+        {
+          "conceptId": "Platform",
+          "label": "Platform",
+          "description": "A technical data processing system with the possibility of physical access to the resource for reuse"
+        },
+        {
+          "conceptId": "Resource",
+          "label": "Resource",
+          "description": "Data set, a defined object, a collection of information, or the name of a piece of research software"
+        },
+        {
+          "conceptId": "Source",
+          "label": "Project",
+          "description": "A (research) project, a system, a workspace in which the resources were generated"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "externalPartner",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Weitere Beteiligte"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "External Contributors"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Externe Organisationen oder Institutionen, die zum Projekt beitragen wie z. B. Forschungskooperationspartner oder Dienstleistende"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "External organisations or institutions, which contribute to the project, e. g. research cooperation partner or service provider"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": {
+      "de": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Der offizielle Name der Organisation, kein Akronym oder Abk\u00fcrzung, z. B. \"Bundesinstitut f\u00fcr Risikobewertung\" und nicht \"BfR\""
+          }
+        ]
+      },
+      "en": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "The official name of the organization, not an acronym or abbreviation, e.g. \"Bundesinstitut f\u00fcr Risikobewertung\" and not \"BfR\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "familyName",
+    "renderer": "plain",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Nachname"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Family name"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "fundedOrCommissionedBy",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Gef\u00f6rdert \/ in Auftrag gegeben durch"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Funded \/ commissioned by"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Name der F\u00f6rdermittelgebenden (z. B. eingeworbene Forschungsmittel) oder Aufraggebenden (z. B. gesetzlicher Erlass)"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Name of the funder (e.g. research funds) or commissioner (e.g. federal mandate)"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": {
+      "de": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Der offizielle Name der Organisation, kein Akronym oder Abk\u00fcrzung, z. B. \"Bundesministerium f\u00fcr Gesundheit\" und nicht \"BMG\""
+          }
+        ]
+      },
+      "en": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "The official name of the organization, not an acronym or abbreviation, e.g. \"Bundesministerium f\u00fcr Gesundheit\" and not \"BMG\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "givenName",
+    "renderer": "plain",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Vorname"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Given name"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "hasContributingUnit",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Mitwirkende Fachabteilung",
+          "plural": "Mitwirkende Fachabteilungen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Contributing Unit",
+          "plural": "Contributing Units"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Am Projekt mitwirkende Fachabteilung(en)"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Unit(s) contributing to the project"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": {
+      "de": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Akronym der Fachabteilung, z.B. \"FG 21\", \"FG 22\""
+          }
+        ]
+      },
+      "en": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Acronym of the unit, e.g. \"FG 21\", \"FG 22\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "hasResponsibleUnit",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Verantwortliche Fachabteilung",
+          "plural": "Verantwortliche Fachabteilungen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Responsible unit",
+          "plural": "Responsible units"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "F\u00fcr das Projekt verantwortliche Fachabteilung(en)"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Unit(s) responsible for the project"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": {
+      "de": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Akronym des Fachgebiets, z.B. \"FG 23\""
+          }
+        ]
+      },
+      "en": {
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Acronym of the unit, e.g. \"FG 23\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "hasResponsibleUnitCode",
+    "renderer": "none",
+    "kind": "hierarchy",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "useTranslationsFrom": "hasResponsibleUnit",
+    "documentation": null
+  },
+  {
+    "name": "identifier",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "identifierInPlatform",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "isDerivationOf",
+    "renderer": "none",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "isniID",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "keyword",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Schlagwort",
+          "plural": "Schlagw\u00f6rter"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Keyword",
+          "plural": "Keywords"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Resource",
+          "text": "Schlagw\u00f6rter, die eine Ressource beschreiben"
+        },
+        {
+          "entityType": "Source",
+          "text": "Schlagw\u00f6rter, die ein Projekt beschreiben"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Schlagw\u00f6rter, die ein Daten-Item beschreiben"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Resource",
+          "text": "Keywords describing a resource"
+        },
+        {
+          "entityType": "Source",
+          "text": "Keywords describing a project"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Keywords describing a data item"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "Resource",
+            "text": "\"Modul Psychische Gesundheit, Bella, Querschnitt\""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "Resource",
+            "text": "\"Mental Health module, Bella, Cross-Section\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "label",
+    "renderer": "title",
+    "kind": "text",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Titel"
+        },
+        {
+          "entityType": "Resource",
+          "singular": "Titel der Ressource"
+        },
+        {
+          "entityType": "Source",
+          "singular": "Projekttitel"
+        },
+        {
+          "entityType": "Platform",
+          "singular": "Plattform"
+        },
+        {
+          "entityType": "Datum",
+          "singular": "Daten-Item"
+        },
+        {
+          "entityType": "Person",
+          "singular": "Name",
+          "plural": "Namen"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "singular": "Fachabteilung"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Title"
+        },
+        {
+          "entityType": "Resource",
+          "singular": "Resource title"
+        },
+        {
+          "entityType": "Source",
+          "singular": "Project title"
+        },
+        {
+          "entityType": "Platform",
+          "singular": "Platform"
+        },
+        {
+          "entityType": "Datum",
+          "singular": "Data item"
+        },
+        {
+          "entityType": "Person",
+          "singular": "Name",
+          "plural": "Names"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "singular": "Unit"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Resource",
+          "text": "Name(n) oder Titel, unter dem eine Ressource bekannt ist. Dies kann der Titel eines Datensatzes, ein definiertes Objekt, eine Sammlung von Informationen, oder der Name einer Forschungssoftware sein."
+        },
+        {
+          "entityType": "Source",
+          "text": "Name(n) oder Titel eines (Forschungs-)Projekts oder Vorhabens. Dies ist der Entstehungskontext der Ressourcen."
+        },
+        {
+          "entityType": "Platform",
+          "text": "Name(n) einer Plattform"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Bezeichung(en) der Informationseinheit oder des Datenbestandteils innerhalb einer Ressource"
+        },
+        {
+          "entityType": "Person",
+          "text": "Name(n) einer Person"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "text": "Name(n) einer Fachabteilung"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Resource",
+          "text": "Name(s) or title(s) by which a resource is known. May be the title of a dataset, defined piece, collection of information or the name of a piece of research software."
+        },
+        {
+          "entityType": "Source",
+          "text": "Name(s) or title(s) by which a (research) project or planned operation is known by. This is the context of origin of the resources."
+        },
+        {
+          "entityType": "Platform",
+          "text": "Name(s) of a platform"
+        },
+        {
+          "entityType": "Datum",
+          "text": "Name of a single piece of information within a resource"
+        },
+        {
+          "entityType": "Person",
+          "text": "Name of a person"
+        },
+        {
+          "entityType": "OrganizationalUnit",
+          "text": "Name of an organizational unit"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "Source",
+            "text": "\"Studie zur Gesundheit von Kindern und Jugendlichen in Deutschland, Welle 2\""
+          },
+          {
+            "entityType": "Resource",
+            "text": "\"KiGGS Welle 2, 2. Datensatz\", \"Aktuell_Deutschland_SarsCov2_Infektionen\""
+          },
+          {
+            "entityType": "Datum",
+            "text": "Allg. Gesundheitszustand"
+          },
+          {
+            "entityType": "Platform",
+            "text": ""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "Source",
+            "text": "\"Study on the Health of children and adolescents in Germany, Wave 2\""
+          },
+          {
+            "entityType": "Resource",
+            "text": "\"KiGGS Wave 2, data set 2\", \"Aktuell_Deutschland_SarsCov2_Infektionen\""
+          },
+          {
+            "entityType": "Datum",
+            "text": "State of health"
+          },
+          {
+            "entityType": "Platform",
+            "text": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "labelWithAcronym",
+    "renderer": "title",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "useTranslationsFrom": "label",
+    "resolvesTo": [
+      "label",
+      "acronym"
+    ]
+  },
+  {
+    "name": "labelWithEmail",
+    "renderer": "plain",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "resolvesTo": [
+      "label",
+      "email"
+    ]
+  },
+  {
+    "name": "license",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Lizenz"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "License"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Nutzungslizenz der Ressource"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Reuse license of the resource"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "CC-BY-4.0"
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "Resource",
+            "text": "Wird angezeigt, sofern die Ressource eine Nutzungslizenz aufweist. Sollte dies nicht der Fall sein, wird empfohlen, das Feld \"Rechte\" auszuf\u00fcllen."
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "CC-BY-4.0"
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "Resource",
+            "text": "Displayed if the resource has a usage license. If this is not the case, it is recommended to fill in the \"rights\" field."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "meshTerm",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "MeSH-Begriff",
+          "plural": "MeSH-Begriffe"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "MeSH term",
+          "plural": "MeSH terms"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Medical Subject Headings (MeSH) Thesaurus ist ein kontrolliertes und hierarchisch organisiertes Vokabular, das von der National Library of Medicine erstellt wurde."
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine."
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "orcidID",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "parentDepartment",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "\u00dcbergeordnete Abteilung"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Parent Department"
+        }
+      ]
+    },
+    "linkedField": "label",
+    "documentation": null
+  },
+  {
+    "name": "partOfResource",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Ressource"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Resource"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "descriptionText": [
+          {
+            "entityType": "Datum",
+            "text": "Die Ressource, zu der das Daten-Item geh\u00f6rt"
+          }
+        ]
+      },
+      "en": {
+        "descriptionText": [
+          {
+            "entityType": "Datum",
+            "text": "The resource to which the data item belongs"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "partOfSource",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Source"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Source"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "relatedDocumentation",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Dokumentation"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Documentation"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Resource",
+          "text": "Link auf die Dokumentation der Ressource"
+        },
+        {
+          "entityType": "Source",
+          "text": "Link auf die Dokumentation des Projekts oder projektverwandte Dokumentationen"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Link auf die Dokumentation der Plattform"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Resource",
+          "text": "Link to the documentation of the resource"
+        },
+        {
+          "entityType": "Source",
+          "text": "Link to the documentation of the project or project related documentation"
+        },
+        {
+          "entityType": "Platform",
+          "text": "Link to the documentation of the platform"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "\"S:\\path\\to\\data\""
+          },
+          {
+            "entityType": "Platform",
+            "text": "\"https:\/\/docs.microsoft.com\/de-de\/power-bi\""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Verweis auf den Speicher-\/Zugriffsort, an dem die Dokumentation hinterlegt ist. Nicht das Dokument selbst, auch nicht Titel des Dokuments."
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "URL oder Netzwerkordner-Dateipfad"
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "\"S:\\path\\to\\data\""
+          },
+          {
+            "entityType": "Platform",
+            "text": "\"https:\/\/docs.microsoft.com\/de-de\/power-bi\""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Reference to the storage\/access location where the documentation is stored. Not the document itself, nor the title of the document."
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "URL or network folder file path"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "relatedExternalIdentifier",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Externer Identifier",
+          "plural": "Externe Identifier"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "External identifier",
+          "plural": "External identifiers"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Persistente externe Identifier (ID), die global eindeutig sind, z. B. DOI"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Persistent external identifier (ID), which are globally unique, e.g. DOI"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "\"https:\/\/doi.org\/10.1007\/s00103-012-1486-3\""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "Resource",
+            "text": "Zum Beispiel DOI der bereits publizierten Ressource"
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "URL (Permalink), URI, URN, DOI"
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "\"https:\/\/doi.org\/10.1007\/s00103-012-1486-3\""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "Resource",
+            "text": "For example DOI of the already published resource"
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "URL (permalink), URI, URN, DOI"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "resourceType",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Ressourcentyp",
+          "plural": "Ressourcentypen"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Resource type",
+          "plural": "Resource types"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Typ(en) der Ressource. Dies kann die Art eines Datensatzes,  Forschungssoftware oder verwendete Datenbank sein."
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Type(s) of the resource. Like type of dataset, research software, and used database."
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "resource-type-1",
+          "label": "Studienvariablen",
+          "description": "Variablen einer Studie"
+        },
+        {
+          "conceptId": "resource-type-2",
+          "label": "Studiendaten",
+          "description": "Die bei einer Studie erhobenen Daten"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "resource-type-1",
+          "label": "Study variables",
+          "description": "Variables of a study"
+        },
+        {
+          "conceptId": "resource-type-2",
+          "label": "Study Data",
+          "description": "Data collected during a study"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": "Diese Liste ist erweiterbar. MEx strebt an, eine kontrollierte Liste f\u00fcr Ressourcentypen\nzu erstellen. Dazu evaluiert MEx verschiedene Quellen, z. B. auch verschiedene RK-interne Systeme, aus denen Metadaten f\u00fcr die MEx Plattform extrahiert werden."
+          }
+        ]
+      },
+      "en": {
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "rights",
+    "renderer": "plain",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Rechte"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Rights"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Alle Informationen zu den Rechten f\u00fcr diese Ressource"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Any rights information for this resource"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "Resource",
+            "text": "\"Daten unterliegen rechtlichen Beschr\u00e4nkungen im Rahmen der\nDSGVO.\""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "Resource",
+            "text": "\"Data is subject to legal restrictions under the GDPR.\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "rorID",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "sampleEntries",
+    "renderer": "bullets",
+    "kind": "text",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Auszug"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Sample entries"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Beispieleintr\u00e4ge innerhalb des Daten-Items, wie Spaltennamen, Variablennamen, Schl\u00fcsselw\u00f6rter"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Sample entries within the data item, like column names, variable names, keywords"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "Datum",
+            "text": "\"Geschlecht, Alter, Gesundheitszustand, Gesundheitsdeterminanten, Gesundheitsversorgung\", \"Keine Angabe, Wei\u00df nicht, Sehr gut, Gut, Mittelm\u00e4\u00dfig, Schlecht, Sehr schlecht\""
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "Datum",
+            "text": "Gender, age, health status, health determinants, health care,\" \"Not specified, Don't know, Very good, Good, Fair, Poor, Very poor."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sourceType",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Projektart"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Project type"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Art eines Projekts"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Type of a project"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "source-type-1",
+          "label": "Drittmittelprojekt",
+          "description": "Drittmittelprojekte werden durch F\u00f6rdermittelgebende mitfinanziert. Diese finanziellen Mittel (Drittmittel) werden durch die Forschungseinrichtungen neben den laufenden Haushaltsmitteln (vom Bund zur Verf\u00fcgung gestellt) zus\u00e4tzlich von dritter Seite eingeworben. Sie werden f\u00fcr die F\u00f6rderung von Forschung und Entwicklung sowie des wissenschaftlichen Nachwuchses f\u00fcr einen befristeten Zeitraum zur Verf\u00fcgung gestellt."
+        },
+        {
+          "conceptId": "source-type-2",
+          "label": "Internationales Projekt",
+          "description": "Projekt, an dem Akteure aus verschiedenen L\u00e4ndern der Welt beteiligt sind"
+        },
+        {
+          "conceptId": "source-type-3",
+          "label": "Internes Projekt",
+          "description": "Von Haushaltsmitteln finanziertes Projekt"
+        },
+        {
+          "conceptId": "source-type-4",
+          "label": "Auftragsforschung",
+          "description": "Ein von Dritten beauftragtes Forschungsvorhaben"
+        },
+        {
+          "conceptId": "source-type-5",
+          "label": "Sonderforschungsprojekt",
+          "description": "Projekt f\u00fcr die Grundlagenforschung"
+        },
+        {
+          "conceptId": "source-type-6",
+          "label": "Studie",
+          "description": "Untersuchungsmethode in Form von Befragungen und\/oder (Labor-)Untersuchungen"
+        },
+        {
+          "conceptId": "source-type-7",
+          "label": "Monitoring-Studie",
+          "description": "\u00dcber einen l\u00e4ngeren Zeitraum angelegte Studie mit dem Ziel, den Zustand und die Entwicklung der Gesundheit der Bev\u00f6lkerung zu ermitteln"
+        },
+        {
+          "conceptId": "source-type-8",
+          "label": "Machbarkeitsstudie",
+          "description": "Untersuchung zur Absch\u00e4tzung der Durchf\u00fchrbarkeit"
+        },
+        {
+          "conceptId": "source-type-9",
+          "label": "Add-on-Studie",
+          "description": "Erg\u00e4nzende Studie zur Hauptuntersuchung"
+        },
+        {
+          "conceptId": "source-type-10",
+          "label": "Ad-hoc-Studie",
+          "description": "Zeitlich begrenzte Kurzzeitstudie, um den aktuellen Stand zu einem Public-Health-Thema zu ermitteln"
+        },
+        {
+          "conceptId": "source-type-11",
+          "label": "Sonstige",
+          "description": "Nicht n\u00e4her definierte oder unbekannte Projektart"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "source-type-1",
+          "label": "Third party funded project",
+          "description": "Third-party funded projects are co-financed by funding agencies. These financial resources (third-party funds) are raised by the research institutions from third parties in addition to the current budget funds (provided by the federal government). They are made available for a limited period of time to support research and development as well as young scientists."
+        },
+        {
+          "conceptId": "source-type-2",
+          "label": "International project",
+          "description": "Project involving parties from different countries of the world"
+        },
+        {
+          "conceptId": "source-type-3",
+          "label": "Internal project",
+          "description": "Project financed with internal budget"
+        },
+        {
+          "conceptId": "source-type-4",
+          "label": "Contract research",
+          "description": "Research project comissioned by a client, e. g. federal mandate"
+        },
+        {
+          "conceptId": "source-type-5",
+          "label": "Special research project",
+          "description": "Special research funds from the institute's budget are available to a limited extent for internal research funding. The aim of the special research funds is to strengthen priority research projects. The allocation is made upon written application after review by the Research Council and approval by the Institute's management."
+        },
+        {
+          "conceptId": "source-type-6",
+          "label": "Study",
+          "description": "Research method in form of surveys and\/or (laboratory) testings"
+        },
+        {
+          "conceptId": "source-type-7",
+          "label": "Monitoring study",
+          "description": "Long-term study to obtain information about the state and development of the public's health"
+        },
+        {
+          "conceptId": "source-type-8",
+          "label": "Feasibility study",
+          "description": "Study to assess the practicability and implementation of the designed procedure"
+        },
+        {
+          "conceptId": "source-type-9",
+          "label": "Add-on study",
+          "description": "Additional study to the main study"
+        },
+        {
+          "conceptId": "source-type-10",
+          "label": "Ad hoc study",
+          "description": "Limited short-time study, conducted to obtain information about a current public health topic"
+        },
+        {
+          "conceptId": "source-type-11",
+          "label": "Other",
+          "description": "Undefined or unknown project type"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ]
+      },
+      "en": {
+        "furtherInformation": [
+          {
+            "entityType": "all",
+            "text": ""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "spatialCoverage",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "stableTargetId",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "startTime",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Laufzeitbeginn"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Start time"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Source",
+          "text": "Start eines Projekts"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Source",
+          "text": "Start of project"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2014"
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2014"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "succeeds",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Nachfolger von"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Succeeds"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "tag",
+    "renderer": "plain",
+    "kind": "coding",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "MeSH-Code",
+          "plural": "MeSH-Codes"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "MeSH code",
+          "plural": "MeSH codes"
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [],
+      "en": []
+    },
+    "documentation": null
+  },
+  {
+    "name": "technicalAccessibility",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Zugriffsm\u00f6glichkeit"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Technical accessibility"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": ""
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": ""
+        }
+      ]
+    },
+    "vocabulary": {
+      "de": [
+        {
+          "conceptId": "technical-accessibility-1",
+          "label": "intern",
+          "description": "Nur innerhalb des Netzwerks zug\u00e4ngliche Plattform"
+        },
+        {
+          "conceptId": "technical-accessibility-2",
+          "label": "extern",
+          "description": "\u00d6ffentlich zug\u00e4ngliche Plattform"
+        }
+      ],
+      "en": [
+        {
+          "conceptId": "technical-accessibility-1",
+          "label": "internal",
+          "description": "Platform is only accessible within the network"
+        },
+        {
+          "conceptId": "technical-accessibility-2",
+          "label": "external",
+          "description": "Openly accessible platform"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "temporalCoverage",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "timePeriod",
+    "renderer": "time",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Zeitraum"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Date range"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "Source",
+          "text": "Laufzeit(en) oder Start eines Projektes"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "Source",
+          "text": "Duration(s) or start of a project"
+        }
+      ]
+    },
+    "resolvesTo": [
+      "startTime",
+      "endTime",
+      "dateQualifier"
+    ]
+  },
+  {
+    "name": "unitOf",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Einheit von"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Unit of"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "usedInstrumentToolOrApparatus",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Tool",
+          "plural": "Tools"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Tool",
+          "plural": "Tools"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "Tools, die f\u00fcr die Erfassung, Erhebung, Analyse, Beobachtung der Ressource(n) verwendet wurden"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Tools used for capturing, acquiring, monitoring, and analyzing the resource"
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "\"MEHM - Minimal European Health Module\""
+          }
+        ],
+        "furtherInformation": [
+          {
+            "entityType": "Datum",
+            "text": "Detaillierte Beschreibung des Forschungskontexts im Zusammenhang mit dem Daten-Item. Tools, Instrumente oder Apparate, die bei der Beforschung \/ Analyse des Forschungsgegenstandes zum Einsatz kamen. Die im Beispiel angef\u00fchrte Studienvariable wurde einem bestimmten Erhebungsinstrument entnommen."
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "\"MEHM - Minimal European Health Module\""
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "version",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Version"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Version"
+        }
+      ]
+    },
+    "description": {
+      "de": [
+        {
+          "entityType": "all",
+          "text": "\u00c4nderungen einer Ressource werden in unterschiedlichen Zust\u00e4nden gespeichert und Versionen genannt. Sie geben den spezifischen Zustand einer Ressource zu einer bestimmten Zeit an."
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "text": "Changes to a resource are stored in different states and called versions. They indicate the specific state of a resource at a given time."
+        }
+      ]
+    },
+    "documentation": {
+      "de": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2016-04-22\", \"1.0.0\", \"v1"
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Datum, Notation nach semantischer Versionierung (MAJOR.MINOR.PATCH),\nVersion X"
+          }
+        ]
+      },
+      "en": {
+        "exampleValue": [
+          {
+            "entityType": "all",
+            "text": "2016-04-22\", \"1.0.0\", \"v1"
+          }
+        ],
+        "displayFormats": [
+          {
+            "entityType": "all",
+            "text": "Date, notation according to semantic versioning (MAJOR.MINOR.PATCH),\nversion X"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "wasExtractedFrom",
+    "renderer": "none",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "wasGeneratedBy",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+  },
+  {
+    "name": "website",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Website",
+          "plural": "Websites"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Website",
+          "plural": "Websites"
+        }
+      ]
+    },
+    "documentation": null
+  },
+  {
+    "name": "worksFor",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+      "de": [
+        {
+          "entityType": "all",
+          "singular": "Arbeitet bei"
+        }
+      ],
+      "en": [
+        {
+          "entityType": "all",
+          "singular": "Works for"
+        }
+      ]
+    },
+    "documentation": null
+  }
+]

@@ -1,0 +1,676 @@
+{
+  "fieldDefs": [
+    {
+      "name": "accessLocation",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "accessPlatform",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_accessPlatform",
+            "linkedTargetFields": [
+              "label",
+              "acronym"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "accessRestriction",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "acronym",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "address",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "apiAccessLocation",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "apiDescription",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "apiType",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "contact",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_contact",
+            "linkedTargetFields": [
+              "label",
+              "email",
+              "acronym",
+              "rorID",
+              "orcidID",
+              "isniID"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "contributor",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_contributor",
+            "linkedTargetFields": [
+              "label",
+              "email",
+              "acronym",
+              "rorID",
+              "orcidID",
+              "isniID"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "created",
+      "kind": "timestamp",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "createdInContextOf",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_createdInContextOf",
+            "linkedTargetFields": [
+              "label",
+              "acronym"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "dataCollectionProcess",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "dataFileFormat",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "dataOriginatesFrom",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_dataOriginatesFrom"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dataType",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "dateQualifier",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "datumType",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "departmentOrUnit",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_departmentOrUnit"
+          }
+        ]
+      }
+    },
+    {
+      "name": "description",
+      "kind": "text",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "email",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "endTime",
+      "kind": "timestamp",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "externalPartner",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_externalPartner"
+          }
+        ]
+      }
+    },
+    {
+      "name": "familyName",
+      "kind": "text",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "fundedOrCommissionedBy",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_fundedOrCommissionedBy",
+            "linkedTargetFields": [
+              "label"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "givenName",
+      "kind": "text",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "hasContributingUnit",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_hasContributingUnit",
+            "linkedTargetFields": [
+              "acronym"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hasResponsibleUnit",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_hasResponsibleUnit",
+            "linkedTargetFields": [
+              "acronym",
+              "label"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hasResponsibleUnitCode",
+      "kind": "hierarchy",
+      "indexDef": {
+        "multiValued": false,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_hasResponsibleUnitCode"
+          },
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtHierarchy",
+            "codeSystemNameOrNodeEntityType": "OrganizationalUnit",
+            "linkFieldName": "parentDepartment",
+            "displayFieldName": "acronym"
+          }
+        ]
+      }
+    },
+    {
+      "name": "identifier",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": false,
+        "ext": []
+      }
+    },
+    {
+      "name": "identifierInPlatform",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "isDerivationOf",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_isDerivationOf"
+          }
+        ]
+      }
+    },
+    {
+      "name": "isniID",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "keyword",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "label",
+      "kind": "text",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "license",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "meshTerm",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "orcidID",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "parentDepartment",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": false,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_parentDepartment"
+          }
+        ]
+      }
+    },
+    {
+      "name": "partOfResource",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_partOfResource",
+            "linkedTargetFields": [
+              "label"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "partOfSource",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_partOfSource",
+            "linkedTargetFields": [
+              "label"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "relatedDocumentation",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "relatedExternalIdentifier",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "resourceType",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "rights",
+      "kind": "text",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "rorID",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "sampleEntries",
+      "kind": "text",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "sourceType",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "spatialCoverage",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "stableTargetId",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": false,
+        "ext": []
+      }
+    },
+    {
+      "name": "startTime",
+      "kind": "timestamp",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "succeeds",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_succeeds"
+          }
+        ]
+      }
+    },
+    {
+      "name": "tag",
+      "kind": "coding",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtCoding",
+            "codingsetNames": [
+              "mesh-de-2022"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "technicalAccessibility",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "temporalCoverage",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "unitOf",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_unitOf"
+          }
+        ]
+      }
+    },
+    {
+      "name": "usedInstrumentToolOrApparatus",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "version",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "wasExtractedFrom",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_wasExtractedFrom"
+          }
+        ]
+      }
+    },
+    {
+      "name": "wasGeneratedBy",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "website",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": true,
+        "ext": []
+      }
+    },
+    {
+      "name": "worksFor",
+      "kind": "link",
+      "indexDef": {
+        "multiValued": true,
+        "ext": [
+          {
+            "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+            "relationType": "relation_worksFor"
+          }
+        ]
+      }
+    },
+    {
+      "name": "id",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": false
+      }
+    },
+    {
+      "name": "entityName",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": false
+      }
+    },
+    {
+      "name": "createdAt",
+      "kind": "timestamp",
+      "indexDef": {
+        "multiValued": false
+      }
+    },
+    {
+      "name": "businessId",
+      "kind": "string",
+      "indexDef": {
+        "multiValued": false
+      }
+    }
+  ]
+}

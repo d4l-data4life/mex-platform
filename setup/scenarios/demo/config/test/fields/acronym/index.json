@@ -1,0 +1,115 @@
+{
+    "name": "acronym",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Kurztitel",
+                "plural": "Kurztitel"
+            },
+            {
+                "entityType": "OrganizationalUnit",
+                "singular": "Akronym",
+                "plural": "Akronyme"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Short title",
+                "plural": "Short titles"
+            },
+            {
+                "entityType": "OrganizationalUnit",
+                "singular": "Acronym",
+                "plural": "Acronyms"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Kurztitel oder Akronym"
+            },
+            {
+                "entityType": "Source",
+                "text": "Kurztitel oder Akronym f\u00fcr den Titel eines Projekts"
+            },
+            {
+                "entityType": "Resource",
+                "text": "Kurztitel oder Akronym f\u00fcr den Titel einer Ressource"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Kurztitel oder Akronym f\u00fcr den Titel einer Plattform"
+            },
+            {
+                "entityType": "Datum",
+                "text": "Kurztitel oder Akronym f\u00fcr den Titel eines Daten-Items"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Short title or acronym"
+            },
+            {
+                "entityType": "Source",
+                "text": "Short title or acronym for the title of a project"
+            },
+            {
+                "entityType": "Resource",
+                "text": "Short title or acronym for the title of a resource"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Short title or acronym for the title of a platform"
+            },
+            {
+                "entityType": "Datum",
+                "text": "Short title or acronym for the title of a data item"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "KiGGS Welle 2"
+                },
+                {
+                    "entityType": "Datum",
+                    "text": "GZEmehm1"
+                },
+                {
+                    "entityType": "Platform",
+                    "text": "Reportserver"
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "KiGGS Wave 2"
+                },
+                {
+                    "entityType": "Datum",
+                    "text": "GZEmehm1"
+                },
+                {
+                    "entityType": "Platform",
+                    "text": "Reportserver"
+                }
+            ]
+        }
+    }
+}

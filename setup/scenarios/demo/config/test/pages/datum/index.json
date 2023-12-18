@@ -1,0 +1,427 @@
+{
+    "de": {
+        "title": "Daten-Item",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Projekt",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Ressource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Daten-Item",
+                    "pages\/datum"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Datum",
+                            "#datum"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Pflichtfelder",
+                                    "#pflichtfelder"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Daten-Item",
+                                            "#daten-item"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Daten-Item-Typ",
+                                            "#daten-item-typ"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Ressource",
+                                            "#ressource"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Empfohlene Felder",
+                                    "#empfohlene-felder"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Beschreibung",
+                                            "#beschreibung"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Optionale Felder",
+                                    "#optionale-felder"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Kurztitel",
+                                            "#kurztitel"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Auszug",
+                                            "#auszug"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Tool",
+                                            "#tool"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "value": [
+                    "Plattform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Datum",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "",
+                    "id": "datum"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Pflichtfelder",
+                    "id": "pflichtfelder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "daten-item"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "datumType",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "daten-item-typ"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "partOfResource",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "ressource"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Empfohlene Felder",
+                    "id": "empfohlene-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "beschreibung"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optionale Felder",
+                    "id": "optionale-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "acronym",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "kurztitel"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "sampleEntries",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "auszug"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "usedInstrumentToolOrApparatus",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "tool"
+                }
+            }
+        ]
+    },
+    "en": {
+        "title": "Data item",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Project",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Resource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Data item",
+                    "pages\/datum"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Datum",
+                            "#datum"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Mandatory fields",
+                                    "#mandatory-fields"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Data item",
+                                            "#data-item"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Data item type",
+                                            "#data-item-type"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Resource",
+                                            "#resource"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Recommended fields",
+                                    "#recommended-fields"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Description",
+                                            "#description"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Optional fields",
+                                    "#optional-fields"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Short title",
+                                            "#short-title"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Sample entries",
+                                            "#sample-entries"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Tool",
+                                            "#tool"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "value": [
+                    "Platform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Datum",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "id": "datum"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Mandatory fields",
+                    "id": "mandatory-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "data-item"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "datumType",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "data-item-type"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "partOfResource",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "resource"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Recommended fields",
+                    "id": "recommended-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "description"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optional fields",
+                    "id": "optional-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "acronym",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "short-title"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "sampleEntries",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "sample-entries"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "usedInstrumentToolOrApparatus",
+                    "entitytype": "Datum",
+                    "level": "h4",
+                    "id": "tool"
+                }
+            }
+        ]
+    }
+}

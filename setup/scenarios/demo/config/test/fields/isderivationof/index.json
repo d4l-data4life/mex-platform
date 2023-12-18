@@ -1,0 +1,10 @@
+{
+    "name": "isDerivationOf",
+    "renderer": "none",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+}

@@ -1,0 +1,28 @@
+{
+    "de": {
+        "client": "Leider ist etwas schiefgelaufen. Bitte versuchen Sie es sp\u00e4ter erneut.",
+        "ignoreIssue": "Problem ignorieren",
+        "network": "Der Dienst kann nicht erreicht werden. Bitte \u00fcberpr\u00fcfen Sie, ob Sie mit einem Netzwerk verbunden sind, und versuchen Sie es dann erneut.",
+        "retry": "Nochmal versuchen",
+        "server": "Es liegt eine vor\u00fcbergehende St\u00f6rung des Dienstes vor. Bitte versuchen Sie es sp\u00e4ter erneut.",
+        "title": "Etwas ist schiefgelaufen",
+        "closeConfirm": {
+            "continue": "Ja, fortfahren",
+            "text": "Wenn Sie das Problem ignorieren, werden einige Abschnitte m\u00f6glicherweise nicht richtig angezeigt. Sie k\u00f6nnen es auch noch einmal versuchen oder zur vorherigen Seite zur\u00fcckgehen.",
+            "title": "Sind Sie sicher?"
+        }
+    },
+    "en": {
+        "client": "Unfortunately something went wrong. Please try again later.",
+        "ignoreIssue": "Ignore this issue",
+        "network": "The service can\u2019t be reached and we can\u2019t show you anything here. Please check if you\u2019re connected to a network and try again.",
+        "retry": "Try again",
+        "server": "There is a temporary disruption of service. Please try again later.",
+        "title": "Something went wrong",
+        "closeConfirm": {
+            "continue": "Yes, continue",
+            "text": "If you ignore the issue, some sections may not display properly.  You can also try again, or try going back to the previous page. ",
+            "title": "Are you sure?"
+        }
+    }
+}

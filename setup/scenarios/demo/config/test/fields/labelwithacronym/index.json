@@ -1,0 +1,14 @@
+{
+    "name": "labelWithAcronym",
+    "renderer": "title",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "useTranslationsFrom": "label",
+    "resolvesTo": [
+        "label",
+        "acronym"
+    ]
+}

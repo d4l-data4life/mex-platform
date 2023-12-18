@@ -1,0 +1,56 @@
+{
+    "name": "externalPartner",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Weitere Beteiligte"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "External Contributors"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Externe Organisationen oder Institutionen, die zum Projekt beitragen wie z. B. Forschungskooperationspartner oder Dienstleistende"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "External organisations or institutions, which contribute to the project, e. g. research cooperation partner or service provider"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": {
+        "de": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Der offizielle Name der Organisation, kein Akronym oder Abk\u00fcrzung, z. B. \"Bundesinstitut f\u00fcr Risikobewertung\" und nicht \"BfR\""
+                }
+            ]
+        },
+        "en": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "The official name of the organization, not an acronym or abbreviation, e.g. \"Bundesinstitut f\u00fcr Risikobewertung\" and not \"BfR\""
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "de": {
+        "title": "MEx-Inhalte im \u00dcberblick",
+        "updatedAt": "Letzte Aktualisierung:",
+        "metrics": {
+            "Datum": "Daten-Items",
+            "Platform": "Plattformen",
+            "Resource": "Ressourcen",
+            "Source": "Projekte"
+        }
+    },
+    "en": {
+        "dataItems": "Data items",
+        "platforms": "Platforms",
+        "resources": "Resources",
+        "sources": "Sources",
+        "title": "MEx content overview",
+        "updatedAt": "Last update:",
+        "metrics": {
+            "Datum": "Data items",
+            "Platform": "Platforms",
+            "Resource": "Resources",
+            "Source": "Projects"
+        }
+    }
+}

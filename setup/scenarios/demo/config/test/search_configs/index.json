@@ -1,0 +1,177 @@
+{
+    "searchConfigs": [
+        {
+            "name": "accessPlatform",
+            "type": "searchFocus",
+            "fields": [
+                "accessPlatform__label",
+                "accessPlatform__acronym"
+            ]
+        },
+        {
+            "name": "accessRestriction",
+            "type": "ordinalAxis",
+            "fields": [
+                "accessRestriction"
+            ]
+        },
+        {
+            "name": "acronym",
+            "type": "ordinalAxis",
+            "fields": [
+                "acronym"
+            ]
+        },
+        {
+            "name": "contact",
+            "type": "searchFocus",
+            "fields": [
+                "contact__label",
+                "contact__email",
+                "contact__acronym",
+                "contact__rorID",
+                "contact__orcidID",
+                "contact__isniID"
+            ]
+        },
+        {
+            "name": "contributor",
+            "type": "searchFocus",
+            "fields": [
+                "contributor__label",
+                "contributor__email",
+                "contributor__acronym",
+                "contributor__rorID",
+                "contributor__orcidID",
+                "contributor__isniID"
+            ]
+        },
+        {
+            "name": "created",
+            "type": "ordinalAxis",
+            "fields": [
+                "created",
+                "startTime"
+            ]
+        },
+        {
+            "name": "createdAt",
+            "type": "ordinalAxis",
+            "fields": [
+                "createdAt"
+            ]
+        },
+        {
+            "name": "createdInContextOf",
+            "type": "ordinalAxis",
+            "fields": [
+                "createdInContextOf"
+            ]
+        },
+        {
+            "name": "dataFileFormat",
+            "type": "ordinalAxis",
+            "fields": [
+                "dataFileFormat"
+            ]
+        },
+        {
+            "name": "default",
+            "type": "searchFocus",
+            "fields": [
+                "description",
+                "label",
+                "acronym",
+                "keyword",
+                "meshTerm",
+                "relatedDocumentation",
+                "createdInContextOf__label",
+                "createdInContextOf__acronym",
+                "contributor__label",
+                "contributor__email",
+                "contributor__acronym",
+                "contributor__rorID",
+                "contributor__orcidID",
+                "contributor__isniID",
+                "partOfSource__label",
+                "hasResponsibleUnit__label",
+                "hasResponsibleUnit__acronym",
+                "tag"
+            ]
+        },
+        {
+            "name": "entityName",
+            "type": "ordinalAxis",
+            "fields": [
+                "entityName"
+            ]
+        },
+        {
+            "name": "hasResponsibleUnitCode",
+            "type": "hierarchyAxis",
+            "fields": [
+                "hasResponsibleUnitCode"
+            ]
+        },
+        {
+            "name": "keyword",
+            "type": "ordinalAxis",
+            "fields": [
+                "keyword"
+            ]
+        },
+        {
+            "name": "label",
+            "type": "ordinalAxis",
+            "fields": [
+                "label"
+            ]
+        },
+        {
+            "name": "partOfResource",
+            "type": "ordinalAxis",
+            "fields": [
+                "partOfResource"
+            ]
+        },
+        {
+            "name": "resourceType",
+            "type": "ordinalAxis",
+            "fields": [
+                "resourceType"
+            ]
+        },
+        {
+            "name": "sourceType",
+            "type": "ordinalAxis",
+            "fields": [
+                "sourceType"
+            ]
+        },
+        {
+            "name": "tag",
+            "type": "ordinalAxis",
+            "fields": [
+                "tag"
+            ]
+        },
+        {
+            "name": "title",
+            "type": "searchFocus",
+            "fields": [
+                "label",
+                "acronym",
+                "createdInContextOf__label",
+                "createdInContextOf__acronym",
+                "partOfSource__label"
+            ]
+        },
+        {
+            "name": "wasExtractedFrom",
+            "type": "ordinalAxis",
+            "fields": [
+                "wasExtractedFrom"
+            ]
+        }
+    ]
+}

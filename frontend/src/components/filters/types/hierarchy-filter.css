@@ -1,0 +1,73 @@
+.hierarchy-filter {
+  padding-top: var(--spacing-small);
+}
+
+.hierarchy-filter ul {
+  display: block;
+  margin: 0;
+  list-style: none outside;
+  flex: 1 1 auto;
+}
+
+.hierarchy-filter > ul {
+  padding-left: 0;
+}
+
+.hierarchy-filter--empty {
+  text-align: center;
+  color: var(--color-gray-2);
+}
+
+.hierarchy-filter__parent {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  text-align: left;
+}
+
+.hierarchy-filter__parent-label {
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 2px;
+  margin: -2px;
+  overflow: hidden;
+}
+
+.hierarchy-filter__parent-button {
+  flex: 0;
+  background: transparent;
+  border: 0 none;
+  line-height: inherit;
+  cursor: pointer;
+  box-sizing: content-box;
+  padding: 0 var(--spacing-xsmall);
+  margin: var(--spacing-xsmall-negative);
+  margin-left: var(--spacing-xsmall);
+}
+
+.hierarchy-filter .hierarchy-filter__item {
+  padding: var(--spacing-xsmall) 0;
+}
+
+.hierarchy-filter__button-chevron {
+  color: var(--color-secondary-1);
+}
+
+.hierarchy-filter__children-container {
+  display: flex;
+}
+
+.hierarchy-filter__children-container::before {
+  display: block;
+  content: '';
+  width: 1px;
+  min-height: 100%;
+  background-color: var(--color-primary-4);
+  margin: var(--spacing-xsmall) 0;
+}
+
+.hierarchy-filter__children {
+  padding-left: var(--spacing-small);
+  min-width: 0;
+}

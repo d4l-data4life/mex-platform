@@ -1,0 +1,27 @@
+.filter {
+  display: block;
+  margin-top: var(--spacing-smedium);
+}
+
+.filter__headline {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 0 var(--spacing-small-negative);
+  padding: var(--spacing-small);
+  min-width: 100%;
+  text-align: left;
+  font-weight: 600;
+  background: transparent;
+  border: 0 none;
+  line-height: inherit;
+  cursor: pointer;
+  color: var(--color-secondary-1);
+  border-bottom: 1px solid var(--color-divider);
+  box-sizing: content-box;
+}
+
+.filter__headline span {
+  flex: 1;
+  margin-right: var(--spacing-small);
+}

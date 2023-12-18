@@ -1,0 +1,8 @@
+{
+    "name": "usedInstrumentToolOrApparatus",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

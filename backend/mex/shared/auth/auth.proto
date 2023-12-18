@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package d4l.mex.auth;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/auth;auth";
+
+
+message Claims  {
+  string tenant_id      = 1;
+  string app_id         = 2;
+  string user_id        = 3;
+  uint64 privileges     = 4;
+}
+
+message ApiKeys {
+  // Map from API key to role name
+  map<string, string> keys_roles = 1;
+}

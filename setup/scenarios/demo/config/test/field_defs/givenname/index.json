@@ -1,0 +1,8 @@
+{
+    "name": "givenName",
+    "kind": "text",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

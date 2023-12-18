@@ -1,0 +1,21 @@
+{
+    "name": "contributor",
+    "kind": "link",
+    "indexDef": {
+        "multiValued": true,
+        "ext": [
+            {
+                "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+                "relationType": "relation_contributor",
+                "linkedTargetFields": [
+                    "label",
+                    "email",
+                    "acronym",
+                    "rorID",
+                    "orcidID",
+                    "isniID"
+                ]
+            }
+        ]
+    }
+}

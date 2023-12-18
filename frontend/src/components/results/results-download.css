@@ -1,0 +1,20 @@
+.results-download__button {
+  display: block;
+  background: transparent;
+  padding: var(--spacing-small);
+  margin: 0 var(--spacing-smedium);
+  border: 0 none;
+  border-radius: var(--spacing-small);
+  color: var(--color-secondary-1);
+  transition: color var(--duration-quick);
+  cursor: pointer;
+}
+
+.results-download__button:active {
+  color: var(--color-primary-1);
+}
+
+.results-download__button:disabled {
+  color: var(--color-gray-2);
+  cursor: not-allowed;
+}

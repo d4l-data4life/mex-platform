@@ -1,0 +1,8 @@
+{
+    "name": "sampleEntries",
+    "kind": "text",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

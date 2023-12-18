@@ -1,0 +1,8 @@
+{
+    "name": "labelWithEmail",
+    "kind": null,
+    "indexDef": {
+        "multiValued": false,
+        "ext": []
+    }
+}

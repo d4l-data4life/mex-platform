@@ -1,0 +1,16 @@
+syntax = "proto3";
+package d4l.mex.items;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/items;items";
+
+message ItemValue {
+  string field_name  = 1;
+  string field_value = 2;
+  string language    = 3;
+}
+
+message Item {
+  string entity_type            = 1;
+  string business_id            = 2;
+  repeated ItemValue values     = 3;
+}

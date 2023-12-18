@@ -1,0 +1,15 @@
+{
+    "name": "tag",
+    "kind": "coding",
+    "indexDef": {
+        "multiValued": true,
+        "ext": [
+            {
+                "@type": "type.googleapis.com\/mex.v0.IndexDefExtCoding",
+                "codingsetNames": [
+                    "mesh-de-2022"
+                ]
+            }
+        ]
+    }
+}

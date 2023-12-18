@@ -1,0 +1,55 @@
+{
+    "name": "startTime",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Laufzeitbeginn"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Start time"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Source",
+                "text": "Start eines Projekts"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Source",
+                "text": "Start of project"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2014"
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2014"
+                }
+            ]
+        }
+    }
+}

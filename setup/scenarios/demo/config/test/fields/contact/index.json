@@ -1,0 +1,66 @@
+{
+    "name": "contact",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Kontakt",
+                "plural": "Kontakte"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Contact",
+                "plural": "Contacts"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Source",
+                "text": "Person oder Fachgruppe, die wei\u00df, wie man auf die Ressource zugreift, Probleme behebt oder anderweitig Probleme im Zusammenhang mit der Ressource l\u00f6st"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Person oder Fachgruppe, die wei\u00df, wie man auf die Plattform zugreift, Probleme behebt oder anderweitig Probleme im Zusammenhang mit der Plattform l\u00f6st"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Source",
+                "text": "Person or unit that can help with accessing, troubleshooting, or otherwise field issues related to the resource."
+            },
+            {
+                "entityType": "Platform",
+                "text": "Person or unit that can help with accessing, troubleshooting, or otherwise field issues related to the platform."
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": {
+        "de": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Bei Personen werden Vor- und Nachname und zugeh\u00f6riges Fachgebiet angezeigt, bei Fachgruppen das K\u00fcrzel. Beispiel: \"FG 21\", \"Maxi Musterfrau, FG 21\""
+                }
+            ]
+        },
+        "en": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "For persons, the first and last name and the associated field are displayed, for units their acronym. Example: \"FG 21\", \"Maxi Musterfrau, FG 21\""
+                }
+            ]
+        }
+    }
+}

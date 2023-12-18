@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package d4l.cfg;
+
+import "google/protobuf/descriptor.proto";
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/known/configpb";
+
+message Options {
+  // If the value of the effective environment variable is empty or the variable is not set at all,
+  // this value is used (as if the variable would have had this value).
+  // Not specifying this option is equivalent to setting it to the empty string.
+  // If a default is specified, the field cannot be made secret.
+  string default = 1;
+
+  // Indicates that the config field is confidential.
+  // When printed, the config field is redacted.
+  // When translated to K8s descriptors, the field becomes part
+  // of a K8s Secret (and not a K8s ConfigMap).
+  // A secret field cannot have a default value.
+  bool secret = 2;
+
+  // Can be used to explicitly specifiy the environment variable name,
+  // instead of the one derived from the field path in the Golang struct.
+  string env = 3;
+
+  // If true, the field is treated as if absent.
+  // No translation or parsing takes place.
+  bool ignore = 4;
+}
+
+message Descriptor {
+  string title   = 1;
+  string summary = 2;
+  repeated string description = 3;
+}
+
+message Export {
+    // If true does not get turned into a field in a ConfigMap or Secret.
+    bool ignore = 1;
+
+    // Can be used to set the source environment variable (otherwise the generated name is used).
+    string source = 2;
+}
+
+extend google.protobuf.FieldOptions {
+  Options opts         = 20000;
+  Descriptor desc      = 20001;
+  repeated string tags = 20002;
+  Export k8s           = 20003;
+}
+
+extend google.protobuf.MessageOptions {
+  Descriptor mdesc      = 20002;
+  repeated string mtags = 20003;
+}
+
+extend google.protobuf.FileOptions {
+  string main_message = 50000;
+}

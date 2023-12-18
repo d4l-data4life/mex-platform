@@ -1,0 +1,52 @@
+@keyframes placeholderLine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.placeholder {
+  display: block;
+}
+
+.placeholder--inline {
+  display: inline;
+}
+
+.placeholder__line {
+  --animation-duration: 2s;
+
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  background: var(--color-gray-4);
+  border-radius: var(--spacing-xsmall);
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  box-sizing: content-box;
+  user-select: none;
+  pointer-events: none;
+  color: transparent;
+}
+
+.placeholder__line::before {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(
+    to right,
+    var(--color-gray-3-transparent) 0%,
+    var(--color-gray-3) 50%,
+    var(--color-white) 55%,
+    var(--color-gray-3-transparent) 100%
+  );
+  animation: placeholderLine var(--animation-duration) linear infinite;
+}

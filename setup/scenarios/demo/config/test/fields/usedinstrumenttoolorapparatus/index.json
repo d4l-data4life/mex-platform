@@ -1,0 +1,63 @@
+{
+    "name": "usedInstrumentToolOrApparatus",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Tool",
+                "plural": "Tools"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Tool",
+                "plural": "Tools"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Tools, die f\u00fcr die Erfassung, Erhebung, Analyse, Beobachtung der Ressource(n) verwendet wurden"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Tools used for capturing, acquiring, monitoring, and analyzing the resource"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "\"MEHM - Minimal European Health Module\""
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "Datum",
+                    "text": "Detaillierte Beschreibung des Forschungskontexts im Zusammenhang mit dem Daten-Item. Tools, Instrumente oder Apparate, die bei der Beforschung \/ Analyse des Forschungsgegenstandes zum Einsatz kamen. Die im Beispiel angef\u00fchrte Studienvariable wurde einem bestimmten Erhebungsinstrument entnommen."
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "\"MEHM - Minimal European Health Module\""
+                }
+            ]
+        }
+    }
+}

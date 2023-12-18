@@ -1,0 +1,116 @@
+{
+    "name": "apiType",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "API-Typ",
+                "plural": "API-Typen"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "API type",
+                "plural": "API types"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Typ eines Application Programming Interface (API), z. B. REST oder SOAP"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Type of an Application Programming Interface (API), e.g. REST or SOAP"
+            }
+        ]
+    },
+    "vocabulary": {
+        "de": [
+            {
+                "conceptId": "api-type-1",
+                "label": "REST",
+                "description": "Representational State Transfer: Softwarearchitektur verteilter Systeme, insbesondere f\u00fcr Webservices"
+            },
+            {
+                "conceptId": "api-type-2",
+                "label": "SOAP",
+                "description": "Simple Object Access Protocol: Netzwerkprotokoll, mit dessen Hilfe Daten zwischen Systemen ausgetauscht werden k\u00f6nnen"
+            },
+            {
+                "conceptId": "api-type-3",
+                "label": "SPARQL endpoint",
+                "description": "Schnittstelle f\u00fcr SPARQL zur Abfrage und Manipulation von Daten im RDF-Format"
+            },
+            {
+                "conceptId": "api-type-4",
+                "label": "propriet\u00e4r",
+                "description": "Nicht-standardisierte Schnittstelle"
+            },
+            {
+                "conceptId": "api-type-5",
+                "label": "RPC",
+                "description": "Remote Procedure Call: Client-Server-Interaktionstechnik zur Realisierung von Interprozesskommunikation"
+            },
+            {
+                "conceptId": "api-type-6",
+                "label": "GraphQL",
+                "description": "Open-Source-Datenabfrage- und Manipulationssprache und Laufzeitsystem zum Beantworten von Abfragen mit vorhandenen Daten"
+            },
+            {
+                "conceptId": "api-type-7",
+                "label": "Sonstige",
+                "description": "Nicht n\u00e4her definierter oder unbekannter API-Typ"
+            }
+        ],
+        "en": [
+            {
+                "conceptId": "api-type-1",
+                "label": "REST",
+                "description": "Representational State Transfer: Software architectural style for decoupled components, especially web services"
+            },
+            {
+                "conceptId": "api-type-2",
+                "label": "SOAP",
+                "description": "Simple Object Access Protocol: Messaging protocol specification for exchanging data in the implementation of web services in computer networks"
+            },
+            {
+                "conceptId": "api-type-3",
+                "label": "SPARQL endpoint",
+                "description": "Interface for SPARQL to retrieve and manipulate data in RDF format"
+            },
+            {
+                "conceptId": "api-type-4",
+                "label": "proprietary",
+                "description": "Non-standardized interface"
+            },
+            {
+                "conceptId": "api-type-5",
+                "label": "RPC",
+                "description": "Remote Procedure Call: Form of client-server interaction, typically implemented via a request-response message-passing system"
+            },
+            {
+                "conceptId": "api-type-6",
+                "label": "GraphQL",
+                "description": "Open-source data query and manipulation language for APIs, and runtime for fulfilling queries with existing data"
+            },
+            {
+                "conceptId": "api-type-7",
+                "label": "Other",
+                "description": "Undefined or unknown API type"
+            }
+        ]
+    },
+    "documentation": null
+}

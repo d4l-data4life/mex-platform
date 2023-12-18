@@ -1,0 +1,10 @@
+node_modules
+build
+
+.vscode/*
+
+my.Makefile
+envs.json
+output
+scratch
+*.pem

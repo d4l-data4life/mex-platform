@@ -1,0 +1,83 @@
+syntax = "proto3";
+package d4l.mex.jobs;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/known/jobspb";
+
+message CreateJobRequest {
+    string title = 1;
+}
+
+message CreateJobResponse {
+    string job_id = 1;
+}
+
+message GetJobLogsRequest {
+    string job_id = 1;
+}
+
+message GetJobLogsResponse {
+    string job_id        = 1;
+    repeated string logs = 2;
+}
+
+message GetJobItemsRequest {
+    string job_id = 1;
+}
+
+message GetJobItemsResponse {
+    string job_id            = 1;
+    repeated string item_ids = 2;
+}
+
+message AddJobLogsRequest {
+    string job_id        = 1;
+    repeated string logs = 2;
+}
+
+message AddJobLogsResponse {
+    string job_id   = 1;
+    int32 log_count = 2;
+}
+
+message AddJobItemsRequest {
+    string job_id            = 1;
+    repeated string item_ids = 2;
+}
+
+message AddJobItemsResponse {
+    string job_id    = 1;
+    int32 item_count = 2;
+}
+
+message SetJobStatusRequest {
+    string job_id = 1;
+    string status = 2;
+}
+
+message SetJobStatusResponse {
+    string job_id = 1;
+    string status = 2;
+}
+
+message SetJobErrorRequest {
+    string job_id = 1;
+    string error  = 2;
+}
+
+message SetJobErrorResponse {
+    string job_id = 1;
+}
+
+message GetJobRequest {
+    string job_id = 1;
+}
+
+message GetJobResponse {
+    string job_id     = 1;
+    string title      = 2;
+    string status     = 3;
+    string error      = 4;
+    string created_at = 5;
+    int32 log_count   = 6;
+    int32 item_count  = 7;
+}

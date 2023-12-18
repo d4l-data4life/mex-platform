@@ -1,0 +1,13 @@
+{
+    "name": "labelWithEmail",
+    "renderer": "plain",
+    "kind": null,
+    "importance": "none",
+    "isVirtual": true,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "resolvesTo": [
+        "label",
+        "email"
+    ]
+}

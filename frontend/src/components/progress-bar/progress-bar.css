@@ -1,0 +1,36 @@
+@keyframes progressBarFadeIn {
+  0% {
+    height: 0;
+    opacity: 0;
+    margin: 0;
+  }
+  100% {
+    height: var(--spacing-xsmall);
+    opacity: 1;
+    margin: var(--progress-bar-margin) 0;
+  }
+}
+
+.progress-bar {
+  --progress-bar-margin: 0;
+
+  display: block;
+  height: var(--spacing-xsmall);
+  border-radius: var(--spacing-xsmall);
+  background: var(--color-gray-4);
+  animation: progressBarFadeIn var(--duration-quick) ease-in-out;
+  margin: var(--progress-bar-margin) 0;
+  cursor: wait;
+  overflow: hidden;
+}
+
+.progress-bar--spaced {
+  --progress-bar-margin: var(--spacing-smedium);
+}
+
+.progress-bar__progress {
+  height: 100%;
+  width: 0;
+  background: var(--color-secondary-2);
+  transition: width var(--duration-quick) ease-out;
+}

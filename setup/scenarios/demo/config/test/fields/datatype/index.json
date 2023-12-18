@@ -1,0 +1,14 @@
+{
+    "name": "dataType",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "vocabulary": {
+        "de": [],
+        "en": []
+    },
+    "documentation": null
+}

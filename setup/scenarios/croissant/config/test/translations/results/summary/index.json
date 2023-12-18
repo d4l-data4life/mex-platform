@@ -1,0 +1,14 @@
+{
+    "de": {
+        "filters": "Aktive Filter:",
+        "multiple": "<strong>{{count}}<\/strong> Treffer",
+        "none": "<strong>Keine<\/strong> Treffer",
+        "one": "<strong>Ein<\/strong> Treffer"
+    },
+    "en": {
+        "filters": "Active filters:",
+        "multiple": "<strong>{{count}}<\/strong> matches",
+        "none": "<strong>No<\/strong> matches",
+        "one": "<strong>One<\/strong> match"
+    }
+}

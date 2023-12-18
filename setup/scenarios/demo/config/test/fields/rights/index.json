@@ -1,0 +1,55 @@
+{
+    "name": "rights",
+    "renderer": "plain",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Rechte"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Rights"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Alle Informationen zu den Rechten f\u00fcr diese Ressource"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Any rights information for this resource"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "Resource",
+                    "text": "\"Daten unterliegen rechtlichen Beschr\u00e4nkungen im Rahmen der\nDSGVO.\""
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "Resource",
+                    "text": "\"Data is subject to legal restrictions under the GDPR.\""
+                }
+            ]
+        }
+    }
+}

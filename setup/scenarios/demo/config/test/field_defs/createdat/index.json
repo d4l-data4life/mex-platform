@@ -1,0 +1,8 @@
+{
+    "name": "createdAt",
+    "kind": "timestamp",
+    "indexDef": {
+        "multiValued": false,
+        "ext": []
+    }
+}

@@ -1,0 +1,41 @@
+@keyframes accordionDelayedOverflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: visible;
+  }
+}
+
+.accordion {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  pointer-events: none;
+}
+
+.accordion--animated {
+  height: auto;
+  pointer-events: initial;
+}
+
+.accordion__inner {
+  opacity: 0;
+  will-change: margin-top, opacity;
+}
+
+.accordion--animated > .accordion__inner {
+  transition: opacity var(--duration-medium) ease-in-out, margin-top var(--duration-medium) ease-in-out;
+}
+
+.accordion--expanded {
+  position: relative;
+  animation: accordionDelayedOverflow 0s linear var(--duration-medium) forwards;
+  z-index: var(--z-index-accordion);
+}
+
+.accordion--expanded > .accordion__inner {
+  opacity: 1;
+  margin-top: 0 !important;
+}

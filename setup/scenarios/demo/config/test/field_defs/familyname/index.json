@@ -1,0 +1,8 @@
+{
+    "name": "familyName",
+    "kind": "text",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

@@ -1,0 +1,139 @@
+{
+  "config": {
+    "search": {
+      "limit": 12,
+      "facetLimit": 15,
+      "paginationRangeCount": 5,
+      "queryMaxEditDistance": 1,
+      "queryUseNGramField": true,
+      "ordinalAxes": [
+        {
+          "name": "createdAt",
+          "uiField": "createdAt"
+        },
+        {
+          "name": "entityName",
+          "uiField": "entityName"
+        },
+        {
+          "name": "createdAt",
+          "uiField": "createdAt"
+        }
+      ],
+      "displayedFields": [
+        {
+          "entityType": "all",
+          "field": "name",
+          "targetField": null
+        },
+        {
+          "entityType": "all",
+          "field": "description",
+          "targetField": null
+        },
+        {
+          "entityType": "Dataset",
+          "field": "license",
+          "targetField": null
+        }
+      ],
+      "sidebarFeatures": [],
+      "foci": [
+        null
+      ],
+      "sorting": [
+        {
+          "axis": null,
+          "order": "desc"
+        },
+        {
+          "axis": "name",
+          "order": "asc"
+        },
+        {
+          "axis": "name",
+          "order": "desc"
+        }
+      ],
+      "facets": [
+        {
+          "axis": "entityName",
+          "type": "exact"
+        }
+      ]
+    },
+    "browse": {
+      "tabs": []
+    },
+    "item": {
+      "displayedFields": [
+        {
+          "entityType": "Dataset",
+          "field": "name"
+        },
+        {
+          "entityType": "Dataset",
+          "field": "description"
+        },
+        {
+          "entityType": "Dataset",
+          "field": "license"
+        },
+        {
+          "entityType": "RecordSet",
+          "field": "description"
+        },
+        {
+          "entityType": "RecordSet",
+          "field": "name"
+        }
+      ],
+      "dedicatedViewSupportedEntityTypes": [
+        "Dataset",
+        "RecordSet"
+      ],
+      "sidebarFeatures": [],
+      "relatedSearch": []
+    },
+    "analytics": null,
+    "languageSwitcher": {
+      "languages": [
+        "de",
+        "en"
+      ]
+    },
+    "home": {
+      "supportEmailAddress": "support@example.com",
+      "chart": null,
+      "dashboardMetrics": [
+        {
+          "entityType": "Dataset",
+          "axis": "entityName",
+          "method": "bucket"
+        },
+        {
+          "entityType": "RecordSet",
+          "axis": "entityName",
+          "method": "bucket"
+        }
+      ],
+      "latestUpdateAxis": "createdAt"
+    },
+    "fields": {
+      "entityTypeField": null,
+      "completenessRankingWeights": {
+        "mandatory": 50,
+        "recommended": 40,
+        "optional": 10
+      },
+      "defaultFieldConceptPrefix": "https:\/\/mex.data4life.care\/concept\/",
+      "externalFieldConceptPrefixes": [
+        "https:\/\/www.iana.org\/assignments\/"
+      ],
+      "emptyValueFallback": {
+        "de": "--",
+        "en": "--"
+      }
+    }
+  }
+}

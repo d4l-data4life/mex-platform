@@ -1,0 +1,7 @@
+{
+    "name": "resourceType",
+    "type": "ordinalAxis",
+    "fields": [
+        "resourceType"
+    ]
+}

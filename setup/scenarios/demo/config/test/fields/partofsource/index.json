@@ -1,0 +1,24 @@
+{
+    "name": "partOfSource",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Source"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Source"
+            }
+        ]
+    },
+    "documentation": null
+}

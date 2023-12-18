@@ -1,0 +1,16 @@
+{
+    "de": {
+        "dropdown": "Version",
+        "highlight": "Hervorhebung",
+        "latest": "Letzte \u00c4nderung: {{date}}",
+        "legend": "\u00c4nderungen an Metadaten in dieser Version",
+        "toggle": "Versionen"
+    },
+    "en": {
+        "dropdown": "Version",
+        "highlight": "Highlight",
+        "latest": "Last update: {{date}}",
+        "legend": "changes in metadata in this version",
+        "toggle": "Versions"
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "name": "endTime",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Laufzeitende"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "End time"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Source",
+                "text": "(Geplantes) Ende eines Projektes"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Source",
+                "text": "(Planned) end of a project"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2017"
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2017"
+                }
+            ]
+        }
+    }
+}

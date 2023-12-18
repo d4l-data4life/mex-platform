@@ -1,0 +1,24 @@
+{
+    "name": "worksFor",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Arbeitet bei"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Works for"
+            }
+        ]
+    },
+    "documentation": null
+}

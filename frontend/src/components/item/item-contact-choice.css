@@ -1,0 +1,11 @@
+.item-contact-choice__tiles {
+  margin: var(--spacing-smedium) 0 var(--spacing-large);
+}
+
+.item-contact-choice__tile {
+  display: block;
+}
+
+.item-contact-choice__tile + .item-contact-choice__tile {
+  margin-top: var(--spacing-smedium);
+}

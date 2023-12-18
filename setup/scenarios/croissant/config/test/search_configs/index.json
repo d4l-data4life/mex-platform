@@ -1,0 +1,26 @@
+{
+  "searchConfigs": [
+    {
+      "name": "createdAt",
+      "type": "ordinalAxis",
+      "fields": [
+        "createdAt"
+      ]
+    },
+    {
+      "name": "default",
+      "type": "searchFocus",
+      "fields": [
+        "description",
+        "name"
+      ]
+    },
+    {
+      "name": "entityName",
+      "type": "ordinalAxis",
+      "fields": [
+        "entityName"
+      ]
+    }
+  ]
+}

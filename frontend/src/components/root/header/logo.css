@@ -1,0 +1,74 @@
+@keyframes logoLoader {
+  0% {
+    stroke-dashoffset: 150;
+  }
+
+  100% {
+    stroke-dashoffset: -522;
+  }
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flagFadeIn {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.logo {
+  display: block;
+  height: 100%;
+}
+
+.logo--loader {
+  fill: none;
+  stroke: currentColor;
+  stroke-dasharray: 336;
+  stroke-dashoffset: 0;
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  overflow: visible;
+  animation: 3s logoLoader linear infinite, var(--duration-medium) logoFadeIn ease-in;
+}
+
+.logo__flag {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  line-height: 0.7;
+  color: var(--color-primary-1);
+  background: var(--color-red-light);
+  padding: var(--spacing-xxsmall);
+  border-radius: var(--spacing-xxsmall);
+  animation: var(--duration-medium) flagFadeIn ease-out;
+  cursor: help;
+}
+
+.tooltip.logo__flag-tooltip {
+  display: block;
+  position: absolute;
+  left: 100%;
+  top: var(--spacing-small);
+  margin-left: var(--spacing-xsmall-negative);
+}

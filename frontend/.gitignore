@@ -1,0 +1,11 @@
+build
+node_modules
+.env
+.DS_Store
+.vscode
+
+/www
+/coverage
+/stats.html
+
+/deploy/helm-chart/Chart.yaml

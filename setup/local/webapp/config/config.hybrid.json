@@ -1,0 +1,8 @@
+{
+  "AUTH_PROVIDER": "NOAUTH",
+  "AUTH_CLIENT_ID": "test-client-id",
+  "AUTH_AUTHORIZE_URI": "https://localhost:53000/api/v0/oauth/authorize",
+  "AUTH_TOKEN_URI": "https://localhost:53000/api/v0/oauth/token",
+  "AUTH_LOGOUT_URI": "https://localhost:53000/api/v0/oauth/logout",
+  "MATOMO_SITE_ID": 0
+}

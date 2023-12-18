@@ -1,0 +1,56 @@
+{
+    "name": "fundedOrCommissionedBy",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Gef\u00f6rdert \/ in Auftrag gegeben durch"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Funded \/ commissioned by"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Name der F\u00f6rdermittelgebenden (z. B. eingeworbene Forschungsmittel) oder Aufraggebenden (z. B. gesetzlicher Erlass)"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Name of the funder (e.g. research funds) or commissioner (e.g. federal mandate)"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": {
+        "de": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Der offizielle Name der Organisation, kein Akronym oder Abk\u00fcrzung, z. B. \"Bundesministerium f\u00fcr Gesundheit\" und nicht \"BMG\""
+                }
+            ]
+        },
+        "en": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "The official name of the organization, not an acronym or abbreviation, e.g. \"Bundesministerium f\u00fcr Gesundheit\" and not \"BMG\""
+                }
+            ]
+        }
+    }
+}

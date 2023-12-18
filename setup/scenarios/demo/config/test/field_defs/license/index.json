@@ -1,0 +1,8 @@
+{
+    "name": "license",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

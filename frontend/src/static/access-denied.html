@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" translate="no">
+  <head>
+    <meta charset="utf-8" />
+    <title>MEx</title>
+    <meta name="google" value="notranslate" />
+    <meta name="Description" content="Metadata Exchange" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <meta name="theme-color" content="#202020" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self'; worker-src 'self'; frame-src 'self'; manifest-src 'self'; object-src 'self'; block-all-mixed-content"
+    />
+    <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+
+    <link rel="apple-touch-icon" href="/assets/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png" />
+    <link href="/build/app.css" rel="stylesheet" />
+    <link rel="manifest" href="/assets/manifest.json" />
+
+    <style>
+      body {
+        display: flex;
+        flex-flow: column nowrap;
+        min-height: 100%;
+      }
+
+      header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        padding: var(--spacing-smedium);
+        background: var(--color-primary-1);
+        color: var(--color-white);
+        flex: none;
+      }
+
+      .logo {
+        display: block;
+        flex: none;
+        fill: var(--color-white);
+        width: 66px;
+        height: 24px;
+      }
+
+      .logo-button {
+        display: block;
+        margin: var(--spacing-small-negative);
+        padding: var(--spacing-small);
+        border: 0 none;
+        background: transparent;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      nav {
+        display: block;
+        flex: none;
+        margin-left: auto;
+      }
+
+      nav button {
+        padding: var(--spacing-xxsmall) var(--spacing-xsmall);
+        border: 0 none;
+        background: transparent;
+        color: inherit;
+        font-family: inherit;
+        font-weight: 400;
+        line-height: inherit;
+        cursor: pointer;
+      }
+
+      nav button.active {
+        font-weight: 600;
+      }
+
+      main {
+        display: none;
+        padding: var(--spacing-xlarge) var(--spacing-large);
+        margin: 0 auto;
+        max-width: 480px;
+        text-align: center;
+        flex: 1 0 auto;
+      }
+
+      main.visible {
+        display: block;
+      }
+
+      footer {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-medium) var(--spacing-smedium);
+        background: var(--color-secondary-1);
+        color: var(--color-white);
+        flex: none;
+      }
+
+      footer button {
+        display: block;
+        flex: none;
+        padding: var(--spacing-small);
+        margin: var(--spacing-small-negative) var(--spacing-small);
+        text-decoration: underline;
+        text-decoration-color: var(--color-secondary-3);
+        transition: color var(--duration-quick) ease-out, text-decoration-color var(--duration-quick) ease-out;
+        border: 0 none;
+        background: transparent;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        font-weight: inherit;
+        cursor: pointer;
+      }
+
+      footer button:hover,
+      footer button:focus-visible,
+      footer button:active {
+        color: var(--color-highlight-2);
+        text-decoration-color: var(--color-highlight-2);
+      }
+
+      .illustration {
+        --illustration-width: 66px;
+        --illustration-height: 80px;
+
+        margin: var(--spacing-smedium) auto;
+      }
+
+      h1 {
+        font-size: var(--font-size-l);
+        font-weight: 400;
+        color: var(--color-primary-1);
+        margin: var(--spacing-smedium) 0 var(--spacing-large);
+      }
+
+      .main h2 {
+        font-size: var(--font-size-base);
+        font-weight: 600;
+        margin: var(--spacing-smedium) 0;
+      }
+
+      .main p {
+        margin: var(--spacing-smedium) 0 var(--spacing-large);
+      }
+
+      .copy div + div {
+        margin-top: var(--spacing-smedium);
+      }
+
+      .copy h1,
+      .copy h2,
+      .copy h3,
+      .copy h4
+      .copy h5 {
+        margin: var(--spacing-medium) 0 0;
+      }
+
+      .copy h2 {
+        font-size: var(--font-size-m);
+        font-weight: 400;
+      }
+
+      .copy a {
+        color: var(--color-secondary-1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button class="logo-button" onclick="changeSection('main')">
+          <svg class="logo" aria-hidden="true" role="presentation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 24">
+            <path
+              d="m62.5 22.75-2.19-2.62-1.25-1.5-.1-.12-.23.3a14.66 14.66 0 0 1-3.25 2.86 12.37 12.37 0 0 1-5.33 2.16 12.07 12.07 0 0 1-13.1-8.15l-.1-.34-.33-.07a7.06 7.06 0 0 1-3.03-1.44c-.34-.28-.99-.93-1.29-1.31-.68-.86-1.2-1.73-2.48-4.1a30 30 0 0 0-2.54-4.23 5.84 5.84 0 0 0-4.1-2.32c-.4-.06-1.67-.05-2.11.01-.78.12-1.4.3-1.99.6-1.6.81-2.55 2.34-2.93 4.67-.06.36-.06.51-.08 6.05l-.03 8.23v2.54h-1.8l-.01-8.11c0-8.93 0-8.21-.18-9.13a6.37 6.37 0 0 0-1.87-3.54c-.8-.7-1.76-1.1-3.04-1.3-.46-.08-1.83-.08-2.3 0-1.4.2-2.46.7-3.27 1.54a6.89 6.89 0 0 0-1.7 4.2c-.03.21-.04 2.9-.04 8.33v8.01H0l.01-8.18c.01-7.52.01-8.22.06-8.55a8.93 8.93 0 0 1 1.84-4.66A7.1 7.1 0 0 1 6.9.06a14.3 14.3 0 0 1 2.2 0 7.1 7.1 0 0 1 6.03 4.13l.17-.3a6.8 6.8 0 0 1 3.36-3.2 8.13 8.13 0 0 1 2.48-.63c.47-.05 1.57-.06 2.03 0a7.63 7.63 0 0 1 5.8 3.45 48.7 48.7 0 0 1 3.15 5.4c.47.92.7 1.3 1.02 1.76a7.93 7.93 0 0 0 2.17 2.13c.42.26 1.18.6 1.22.55.02-.01 0-.18-.01-.38A12 12 0 0 1 52.84.84c.02 0-.67 1.58-.72 1.64l-.4-.12a9.33 9.33 0 0 0-3.04-.53A10.15 10.15 0 0 0 38.4 13.5c.03.08.04.08.6 0 .51-.07.83-.15 5.07-1.31l4.12-1.12c.02.03.47 1.68.45 1.71 0 .02-.29.11-.63.2-1.55.42-6.23 1.7-7.17 1.97a12.07 12.07 0 0 1-1.96.44l.13.33a10.2 10.2 0 0 0 14.47 5.05c1.3-.72 2.45-1.67 3.71-3.04.51-.55.56-.62.51-.7-.03-.06-2.3-2.78-3.8-4.54l-.43-.53h2.45l1.5 1.78c.81.99 1.5 1.8 1.52 1.81.02.02.54-.58 1.55-1.78L62 11.97h2.45l-.14.16c-.89 1.04-4.12 4.92-4.12 4.94 0 .02 4.2 5.04 5.73 6.85L66 24h-2.46z"
+            />
+          </svg>
+        </button>
+      <nav>
+        <button data-language="de" onclick="changeLanguage('de')">DE</button> / <button data-language="en" onclick="changeLanguage('en')">EN</button>
+      </nav>
+    </header>
+    <main class="main" data-section="main">
+      <svg
+        class="illustration"
+        aria-hidden="true"
+        role="presentation"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 66 80"
+      >
+        <rect fill="var(--color-gray-4)" width="40" height="8" x="13" y="72" rx="4" />
+        <path
+          fill="var(--color-primary-1)"
+          d="M32.5 28a17.5 17.5 0 1 1 0 35 17.5 17.5 0 0 1 0-35zm0 3a14.5 14.5 0 1 0 0 29 14.5 14.5 0 0 0 0-29zM56 2a8 8 0 0 1 8 8v32a8 8 0 0 1-8 8h-3.5a20.5 20.5 0 0 0 .4-3H56a5 5 0 0 0 5-4.8V17H5v25a5 5 0 0 0 4.8 5H12a20.5 20.5 0 0 0 .5 3H10a8 8 0 0 1-8-8V10a8 8 0 0 1 8-8h46zm0 3H10a5 5 0 0 0-5 4.8V14h56v-4a5 5 0 0 0-4.8-5H56zM31.5 8a1.5 1.5 0 0 1 0 3h-20a1.5 1.5 0 0 1 0-3h20zm-6 36h14a1.5 1.5 0 0 1 0 3h-14a1.5 1.5 0 0 1 0-3z"
+        />
+      </svg>
+      <h1 data-translation="title"></h1>
+      <h2 data-translation="text"></h1>
+      <p data-translation="hint"></p>
+    </main>
+    <main class="copy" data-section="imprint" data-translation="imprintText" data-translation-formatter="pseudoMd2Html"></main>
+    <main class="copy" data-section="privacyPolicy" data-translation="privacyPolicyText" data-translation-formatter="pseudoMd2Html"></main>
+    <footer>
+      <button data-translation="imprint" onclick="changeSection('imprint')"></button>
+      <button data-translation="privacyPolicy" onclick="changeSection('privacyPolicy')"></button>
+    </footer>
+
+    <script id="translations" type="application/json">
+      {"de": {}: "en": {}}
+    </script>
+    <script>
+      var language = 'de';
+      var section = 'main';
+
+      function pseudoMd2Html(text) {
+        text = text.replace(/<([^>]+)>/gm, function(_, p1) {
+          var link = p1.indexOf('@') !== -1 ? 'mailto:' + p1 : p1;
+          return '<a href="' + link + '" target="_blank" rel="noopener noreferrer">' + p1 + '</a>';
+        });
+        text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/gm, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+        text = text.replace(/^#{1,5} (.+)$/gm, function(match, p1) {
+          var h = match.replace(p1, '').length - 1;
+          return '<h' + h + '>' + p1 + '</h' + h + '>';
+        });
+        text = text.replace(/[*]{2}(.+)?[*]{2}/gm, '<strong>$1</strong>');
+
+        return text.split('\n\n').map(part => '<div>' + part.replace(/\n/gm, '<br />') + '</div>').join('');
+      }
+
+      function renderTranslations() {
+        var translations = JSON.parse(document.getElementById('translations').innerText);
+        Array.from(document.querySelectorAll('[data-translation]')).forEach(function(el) {
+          var text = translations[language][el.dataset.translation] || translations.de[el.dataset.translation];
+
+          if (el.dataset.translationFormatter === 'pseudoMd2Html') {
+            el.innerHTML = pseudoMd2Html(text);
+          } else {
+            el.innerText = text;
+          }
+        });
+        Array.from(document.querySelectorAll('[data-language]')).forEach(function(el) {
+          el.classList.toggle('active', language === el.dataset.language);
+        });
+      }
+
+      function showSection() {
+        Array.from(document.querySelectorAll('[data-section]')).forEach(function(el) {
+          el.classList.toggle('visible', section === el.dataset.section);
+        });
+        window.scrollTo(0, 0);
+      }
+
+      function changeLanguage(newLanguage) {
+        language = newLanguage;
+        renderTranslations();
+      }
+
+      function changeSection(newSection) {
+        section = newSection;
+        showSection();
+      }
+
+      renderTranslations();
+      showSection();
+    </script>
+  </body>
+</html>

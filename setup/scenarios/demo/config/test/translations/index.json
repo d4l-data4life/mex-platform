@@ -1,0 +1,550 @@
+{
+  "de": {
+    "auth": {
+      "loginFailed": "Anmeldung ist fehlgeschlagen",
+      "redirect": "Sie werden zur Anmeldung weitergeleitet \u2026",
+      "retryLogin": "Erneut versuchen",
+      "Testing": "Test value",
+      "loggedOut": {
+        "login": "Erneut anmelden",
+        "title": "Sie sind nun abgemeldet"
+      }
+    },
+    "browse": {
+      "resourceCount": "{{count}} Ressource",
+      "resourcesCount": "{{count}} Ressourcen",
+      "sourceCount": "{{count}} Projekt",
+      "sourcesCount": "{{count}} Projekte",
+      "title": "Durchst\u00f6bern nach",
+      "empty": {
+        "text": "Durchst\u00f6bern nach \u201e{{name}}\u201c ist derzeit nicht verf\u00fcgbar.\nVersuchen Sie, eine andere Option zu w\u00e4hlen, oder nutzen Sie stattdessen die Suche.",
+        "title": "Diese Option ist derzeit nicht verf\u00fcgbar"
+      },
+      "hierarchy": {
+        "all": "Alle",
+        "allOf": "{{text}}: Alle"
+      }
+    },
+    "consent": {
+      "analytics": {
+        "accept": "Einwilligen",
+        "reject": "Ablehnen",
+        "text": "Mit Ihrer Einwilligung analysieren wir Ihre Nutzung unserer Web-App zur Verbesserung unseres Angebots. Wenn Sie in die Verarbeitung von Nutzungsanalysedaten einwilligen m\u00f6chten, klicken Sie auf \u201eEinwilligen\u201d. Sie k\u00f6nnen unsere Web-Angebote auch ohne Einwilligung in die Analyse Ihrer Nutzung verwenden."
+      }
+    },
+    "content": {
+      "completeness": {
+        "entityType": "MEx-Entit\u00e4t",
+        "mandatory": "Pflicht",
+        "optional": "Optional",
+        "recommended": "Empfohlen"
+      },
+      "documentation": {
+        "codingType": "coding",
+        "controlledListType": "kontrollierte Liste",
+        "dateType": "Datum",
+        "description": "Beschreibung",
+        "displayFormats": "Anzeigeformat(e)",
+        "exampleValue": "Beispiel",
+        "furtherInformation": "Weitere Informationen",
+        "idType": "ID",
+        "mandatoryImportance": "Pflicht",
+        "multiValue": "mehrfach",
+        "name": "Bezeichnung im MEx-Metadatenmodell",
+        "noneImportance": "nicht relevant",
+        "optionalImportance": "optional",
+        "properties": "Feldeigenschaften",
+        "recommendedImportance": "empfohlen",
+        "singleValue": "einfach",
+        "textType": "Text",
+        "undefinedType": "-",
+        "urlType": "URL",
+        "vocabulary": "Werte kontrollierte Liste"
+      },
+      "navigation": {
+        "title": "Mehr \u00fcber MEx erfahren"
+      }
+    },
+    "dashboard": {
+      "title": "MEx-Inhalte im \u00dcberblick",
+      "updatedAt": "Letzte Aktualisierung:",
+      "metrics": {
+        "Datum": "Daten-Items",
+        "Platform": "Plattformen",
+        "Resource": "Ressourcen",
+        "Source": "Projekte"
+      }
+    },
+    "download": {
+      "results": {
+        "cancel": "Abbrechen",
+        "start": "Herunterladen",
+        "text": "Laden Sie die Details Ihrer aktuellen Suchergebnisse als CSV-Datei herunter.",
+        "title": "Ergebnisse herunterladen",
+        "wait": "Bitte warten\u2026 Dies k\u00f6nnte etwas dauern\u2026"
+      }
+    },
+    "error": {
+      "client": "Leider ist etwas schiefgelaufen. Bitte versuchen Sie es sp\u00e4ter erneut.",
+      "ignoreIssue": "Problem ignorieren",
+      "network": "Der Dienst kann nicht erreicht werden. Bitte \u00fcberpr\u00fcfen Sie, ob Sie mit einem Netzwerk verbunden sind, und versuchen Sie es dann erneut.",
+      "retry": "Nochmal versuchen",
+      "server": "Es liegt eine vor\u00fcbergehende St\u00f6rung des Dienstes vor. Bitte versuchen Sie es sp\u00e4ter erneut.",
+      "title": "Etwas ist schiefgelaufen",
+      "closeConfirm": {
+        "continue": "Ja, fortfahren",
+        "text": "Wenn Sie das Problem ignorieren, werden einige Abschnitte m\u00f6glicherweise nicht richtig angezeigt. Sie k\u00f6nnen es auch noch einmal versuchen oder zur vorherigen Seite zur\u00fcckgehen.",
+        "title": "Sind Sie sicher?"
+      }
+    },
+    "filters": {
+      "chartTooltip": "{{value}}: {{count}} Treffer",
+      "empty": "-- keine Eintr\u00e4ge --",
+      "from": "von",
+      "hierarchyDirect": "{{text}} (direkt)",
+      "more": "Mehr anzeigen",
+      "remove": "Filter entfernen: {{name}}",
+      "reset": "Zur\u00fccksetzen",
+      "title": "Filter",
+      "to": "bis"
+    },
+    "form": {
+      "add": "+",
+      "back": "Zur\u00fcck",
+      "next": "Weiter",
+      "submit": "Senden"
+    },
+    "item": {
+      "entityError": "Fehler beim Abrufen von Informationen zur Entit\u00e4t \u201e{{- identifier}}\u201c",
+      "referenceError": "Beim Abrufen von Informationen zu folgenden Entit\u00e4ten im Feld \u201e{{field}}\u201c ist leider ein Fehler aufgetreten: {{- identifiers}}",
+      "completeness": {
+        "close": "OK",
+        "intro": "Bei der Berechnung der Metadaten-Vollst\u00e4ndigkeit wird ber\u00fccksichtigt, welche Metadaten-Felder bereits ausgef\u00fcllt sind. F\u00fcr die einzelnen Felder wird dabei eine unterschiedliche Gewichtung vorgenommen.\n\n<strong>Pflichtfelder<\/strong> flie\u00dfen zu <strong>{{mandatory}} %<\/strong> in die Gewichtung ein\n<strong>Empfohlene Felder<\/strong> flie\u00dfen zu <strong>{{recommended}} %<\/strong> in die Gewichtung ein\n<strong>Optionale Felder<\/strong> flie\u00dfen zu <strong>{{optional}} %<\/strong> in die Gewichtung ein",
+        "missing": "Fehlende Metadaten-Felder:",
+        "more": "Erfahren Sie mehr zum Thema Metadaten-Vollst\u00e4ndigkeit",
+        "score": "{{score}}%",
+        "tabs": {
+          "mandatory": "Pflicht ({{count}})",
+          "optional": "Optional ({{count}})",
+          "recommended": "Empfohlen ({{count}})"
+        }
+      },
+      "contact": {
+        "dataOwner": {
+          "cancel": "Abbrechen",
+          "choiceText": "Was m\u00f6chten Sie tun?",
+          "choiceTitle": "Eigent\u00fcmer der Daten kontaktieren",
+          "start": "Kontaktieren",
+          "email": {
+            "label": "E-Mail schreiben",
+            "subject": "Frage zu MEx-Daten",
+            "text": "Senden Sie eine E-Mail an die Dateninhaber*in und stellen Sie Fragen (\u00f6ffnet Ihr E-Mail-Programm)."
+          },
+          "form": {
+            "label": "Anfrage zum Zugriff auf die Daten senden",
+            "text": "F\u00fcllen Sie ein Formular aus und beantworten Sie einige Fragen dar\u00fcber, warum und wie Sie auf die Daten zugreifen m\u00f6chten."
+          }
+        }
+      },
+      "navigation": {
+        "metadata": "Metadaten: {{entityType}}",
+        "pagination": "Durch Suchergebnisse bl\u00e4ttern",
+        "resultIndex": "Suchergebnis {{index}}\/{{count}}",
+        "resultIndexAria": "Suchergebnis {{index}} von {{count}}",
+        "search": "Suchergebnisse",
+        "versions": {
+          "dropdown": "Version",
+          "highlight": "Hervorhebung",
+          "latest": "Letzte \u00c4nderung: {{date}}",
+          "legend": "\u00c4nderungen an Metadaten in dieser Version",
+          "toggle": "Versionen"
+        }
+      },
+      "notFound": {
+        "button": "Zur Suche gehen",
+        "text": "Der Datensatz kann leider nicht gefunden werden. Bitte beginnen Sie eine neue Suche.",
+        "title": "Daten konnten nicht gefunden werden"
+      },
+      "relatedResults": {
+        "datum": "Verwandte Daten-Items ({{count}})",
+        "more": "Alle Ergebnisse",
+        "resource": "Verwandte Ressourcen"
+      }
+    },
+    "navigation": {
+      "back": "Zur\u00fcck",
+      "beta": "Dies ist eine Betaversion, die noch instabil sein kann. Wir nehmen bis zur offiziellen Ver\u00f6ffentlichung noch wesentliche \u00c4nderungen an dieser Software vor.",
+      "disclaimer": "Alle Angaben basieren auf Informationen aus den datenhaltenden Originalsystemen. Es besteht keine Gew\u00e4hr f\u00fcr Richtigkeit, Vollst\u00e4ndigkeit und Aktualit\u00e4t dieser Informationen.",
+      "forward": "Vor",
+      "label": "Seiten",
+      "language": "Sprache: {{language}}",
+      "learningEnvironment": "Mehr erfahren \u00fcber MEx",
+      "logout": "Abmelden",
+      "services": "Services",
+      "title": "MEx",
+      "version": "MEx Metadata Exchange \u2013 {{version}}",
+      "footer": {
+        "label": "Footer"
+      },
+      "pages": {
+        "details": "Details",
+        "home": "Start",
+        "search": "Suche"
+      }
+    },
+    "notFound": {
+      "button": "Zur Startseite gehen",
+      "text": "Anscheinend haben Sie eine Webadresse (URL) erreicht, die es nicht gibt. Zur\u00fcck zur Startseite?",
+      "title": "Seite nicht gefunden"
+    },
+    "notifications": {
+      "oauthError": "Autorisierung fehlgeschlagen",
+      "sessionExpired": "Sitzung abgelaufen",
+      "download": {
+        "results": {
+          "error": "Beim Herunterladen der Ergebnisse ist leider ein Fehler aufgetreten",
+          "success": "Ergebnisse erfolgreich heruntergeladen"
+        }
+      }
+    },
+    "range": {
+      "end": "Ende des Bereichs",
+      "many": "Schieberegler {{index}} von {{count}}",
+      "one": "Schieberegler",
+      "start": "Anfang des Bereichs"
+    },
+    "results": {
+      "busy": "Neueste Suchergebnisse werden geladen",
+      "summary": {
+        "filters": "Aktive Filter:",
+        "multiple": "<strong>{{count}}<\/strong> Treffer",
+        "none": "<strong>Keine<\/strong> Treffer",
+        "one": "<strong>Ein<\/strong> Treffer"
+      }
+    },
+    "search": {
+      "execute": "Suchen",
+      "fields": "Felder",
+      "info": "Metadaten durchsuchen von <strong>Projekten<\/strong> | <strong>Ressourcen<\/strong> | <strong>Daten-Items<\/strong> | <strong>Plattformen<\/strong>",
+      "instructions": "Grenzen Sie Ihre Suche auf einzelne Felder ein mit der Dropdown-Liste links vom Suchfeld. Oder verwenden Sie die folgenden logischen Operatoren.",
+      "placeholder": "Suchbegriffe",
+      "queryHelp": "Zeige Ergebnisse f\u00fcr",
+      "reset": "Eingabe zur\u00fccksetzen",
+      "title": "Metadaten jederzeit im Zugriff",
+      "empty": {
+        "text": "Sie k\u00f6nnen die Suche durch Verwendung von Synonymen oder allgemeineren Suchbegriffen wiederholen.",
+        "title": "Keine passenden Ergebnisse gefunden"
+      },
+      "focus": {
+        "accessPlatform": "Zugriffsplattform",
+        "all": "Alle Felder",
+        "contact": "Kontakt",
+        "contributor": "Mitwirkende*r",
+        "title": "Titel"
+      },
+      "tips": {
+        "text": "`*` Suche mit Platzhalter (Wildcard)\nSternchen (*) steht f\u00fcr ein oder mehrere Zeichen\nBeispiel: Impf*\n--\n`\"\"` Genaue Suche\nAnf\u00fchrungszeichen (\") auf beiden Seiten eines Begriffs oder einer Phrase\nBeispiel: \"Finde genau diesen Satz\"\n--\n`+` UND-Verkn\u00fcpfung\nPluszeichen (+) mit umgebenden Leerzeichen kombiniert Suchbegriffe (Standard)\nBeispiel: Mumps + Masern\n--\n`|` ODER-Verkn\u00fcpfung\nSenkrechter Strich (|) mit umgebenden Leerzeichen kombiniert Suchbegriffe\nBeispiel: Schnupfen | Erk\u00e4ltung\n--\n`-` Ausschlie\u00dfen (NOT)\nBindestrich (-) schlie\u00dft den nachfolgend angegebenen Begriff aus\nBeispiel: Kidney -Bohne\n--\n`()` Gruppierte Suche\nKlammern gruppieren mehrere Suchbedingungen\nBeispiel: (Mumps + Masern) | (Virusinfektion + Kinder)",
+        "title": "Suchtipps"
+      }
+    },
+    "sorting": {
+      "label": "Sortierung:",
+      "asc": {
+        "created": "\u00c4lteste zuerst",
+        "label": "Titel A-Z"
+      },
+      "desc": {
+        "created": "Neueste zuerst",
+        "label": "Titel Z-A",
+        "null": "Relevanz"
+      }
+    },
+    "support": {
+      "contact": "Support kontaktieren",
+      "subject": "Frage\/Feedback zu MEx",
+      "text": "Haben Sie Fragen, Ideen zur Verbesserung oder m\u00f6chten Sie ein technisches Problem melden?"
+    },
+    "tag": {
+      "close": "Entfernen"
+    },
+    "tooltip": {
+      "label": "Hinweis"
+    }
+  },
+  "en": {
+    "auth": {
+      "loginFailed": "Sign-in failed",
+      "redirect": "You're being redirected to the sign-in \u2026",
+      "retryLogin": "Retry",
+      "loggedOut": {
+        "login": "Sign in again",
+        "title": "You are now signed out"
+      }
+    },
+    "browse": {
+      "resourceCount": "{{count}} resource",
+      "resourcesCount": "{{count}} resources",
+      "sourceCount": "{{count}} source",
+      "sourcesCount": "{{count}} sources",
+      "title": "Browse by",
+      "empty": {
+        "text": "Browsing by \u201c{{name}}\u201d is currently unavailable.\nTry choosing another option or use the search instead.",
+        "title": "This option is currently unavailable"
+      },
+      "hierarchy": {
+        "all": "All",
+        "allOf": "{{text}}: All"
+      }
+    },
+    "consent": {
+      "analytics": {
+        "accept": "Consent",
+        "reject": "Reject",
+        "text": "With your consent, we\u2019ll analyze your behavior in our web app to improve our offering for all users. If you consent to the transmission of analysis data, click \u201cConsent\u201d. You can use our offering without giving consent to analyze your behavior."
+      }
+    },
+    "content": {
+      "completeness": {
+        "entityType": "Entity Type",
+        "mandatory": "Mandatory",
+        "optional": "Optional",
+        "recommended": "Recommended"
+      },
+      "documentation": {
+        "codingType": "coding",
+        "controlledListType": "controlled list",
+        "dateType": "date",
+        "description": "Description",
+        "displayFormats": "Display format(s)",
+        "exampleValue": "Example",
+        "furtherInformation": "Further information",
+        "idType": "ID",
+        "mandatoryImportance": "Mandatory",
+        "multiValue": "multi-valued",
+        "name": "Name in the MEx meta data model",
+        "noneImportance": "not relevant",
+        "optionalImportance": "optional",
+        "properties": "Properties",
+        "recommendedImportance": "recommended",
+        "singleValue": "single-valued",
+        "textType": "text",
+        "undefinedType": "-",
+        "urlType": "URL",
+        "vocabulary": "Controlled list values"
+      },
+      "navigation": {
+        "title": "Learn about MEx"
+      }
+    },
+    "dashboard": {
+      "dataItems": "Data items",
+      "platforms": "Platforms",
+      "resources": "Resources",
+      "sources": "Sources",
+      "title": "MEx content overview",
+      "updatedAt": "Last update:",
+      "metrics": {
+        "Datum": "Data items",
+        "Platform": "Platforms",
+        "Resource": "Resources",
+        "Source": "Projects"
+      }
+    },
+    "download": {
+      "results": {
+        "cancel": "Cancel",
+        "start": "Download",
+        "text": "Download the details of your current search results as a CSV file.",
+        "title": "Download results",
+        "wait": "Please wait\u2026 This may take a while\u2026"
+      }
+    },
+    "error": {
+      "client": "Unfortunately something went wrong. Please try again later.",
+      "ignoreIssue": "Ignore this issue",
+      "network": "The service can\u2019t be reached and we can\u2019t show you anything here. Please check if you\u2019re connected to a network and try again.",
+      "retry": "Try again",
+      "server": "There is a temporary disruption of service. Please try again later.",
+      "title": "Something went wrong",
+      "closeConfirm": {
+        "continue": "Yes, continue",
+        "text": "If you ignore the issue, some sections may not display properly.  You can also try again, or try going back to the previous page. ",
+        "title": "Are you sure?"
+      }
+    },
+    "filters": {
+      "chartTooltip": "{{value}}: {{count}} matches",
+      "empty": "-- no entries --",
+      "from": "from",
+      "hierarchyDirect": "{{text}} (direct)",
+      "more": "Show more",
+      "remove": "Remove filter: {{name}}",
+      "reset": "Reset",
+      "title": "Filters",
+      "to": "to"
+    },
+    "form": {
+      "add": "+",
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit"
+    },
+    "item": {
+      "contact": {
+        "dataOwner": {
+          "cancel": "Cancel",
+          "choiceText": "What would you like to do?",
+          "choiceTitle": "Contact data owner",
+          "start": "Contact",
+          "email": {
+            "label": "Write email",
+            "subject": "Question about MEx data",
+            "text": "Send an email to data owner and ask questions (opens your email client)."
+          },
+          "form": {
+            "label": "Send request to access the data",
+            "text": "Fill out a form and answer some questions to describe why and how you want to access the data."
+          }
+        }
+      },
+      "contactSubject": "Question about MEx data",
+      "entityError": "Error trying to fetch information about entity \u201c{{- identifier}}\u201d",
+      "referenceError": "An error happened while fetching information for field \u201c{{field}}\u201d about the following entities: {{- identifiers}}",
+      "completeness": {
+        "close": "OK",
+        "intro": "The metadata completeness calculation takes into account which metadata fields are already filled in. A different weighting is applied to the individual fields.\n\n<strong>Mandatory<\/strong> fields account for <strong>{{mandatory}}%<\/strong> of the weighting\n<strong>Recommended<\/strong> fields account for <strong>{{recommended}}%<\/strong> of the weighting\n<strong>Optional<\/strong> fields account for <strong>{{optional}}%<\/strong> of the weighting",
+        "missing": "Missing metadata fields:",
+        "more": "Learn more about metadata completeness",
+        "score": "{{score}}%",
+        "tabs": {
+          "mandatory": "Mandatory ({{count}})",
+          "optional": "Optional ({{count}})",
+          "recommended": "Recommended ({{count}})"
+        }
+      },
+      "navigation": {
+        "metadata": "Metadata: {{entityType}}",
+        "pagination": "Search results pagination",
+        "resultIndex": "Search result {{index}}\/{{count}}",
+        "resultIndexAria": "Search result {{index}} of {{count}}",
+        "search": "Search results",
+        "versions": {
+          "dropdown": "Version",
+          "highlight": "Highlight",
+          "latest": "Last update: {{date}}",
+          "legend": "changes in metadata in this version",
+          "toggle": "Versions"
+        }
+      },
+      "notFound": {
+        "button": "Go to search",
+        "text": "Unfortunately, the data record can't be found. Please try starting a new search.",
+        "title": "Data not found"
+      },
+      "relatedResults": {
+        "datum": "Related data items ({{count}})",
+        "more": "All results",
+        "resource": "Related resources"
+      }
+    },
+    "navigation": {
+      "back": "Back",
+      "beta": "This is a beta version, which might be unstable. We\u2019re still making substantial changes to this software until the official release.",
+      "disclaimer": "All data is based on information from the original systems holding the data. Accuracy, completeness, and up-to-dateness of this information can't be ensured.",
+      "forward": "Forward",
+      "label": "Pages",
+      "language": "Language: {{language}}",
+      "learningEnvironment": "Learn more about MEx",
+      "logout": "Sign out",
+      "services": "Services",
+      "title": "MEx",
+      "version": "MEx Metadata Exchange \u2013 {{version}}",
+      "footer": {
+        "label": "Footer"
+      },
+      "pages": {
+        "details": "Details",
+        "home": "Home",
+        "search": "Search"
+      }
+    },
+    "notFound": {
+      "button": "Go to home page",
+      "text": "It looks like you've reached a web address (URL) that doesn't exist. Go back to home page instead?",
+      "title": "Page not found"
+    },
+    "notifications": {
+      "oauthError": "Authorization failed",
+      "sessionExpired": "Session expired",
+      "download": {
+        "results": {
+          "error": "Unfortunately, an error occurred while downloading the results",
+          "success": "Results downloaded successfully"
+        }
+      }
+    },
+    "range": {
+      "end": "Range end",
+      "many": "Slider {{index}} of {{count}}",
+      "one": "Slider",
+      "start": "Range start"
+    },
+    "results": {
+      "busy": "Loading latest search results",
+      "summary": {
+        "filters": "Active filters:",
+        "multiple": "<strong>{{count}}<\/strong> matches",
+        "none": "<strong>No<\/strong> matches",
+        "one": "<strong>One<\/strong> match"
+      }
+    },
+    "search": {
+      "execute": "Search",
+      "fields": "Fields",
+      "info": "Search through metadata of <strong>Projects<\/strong> | <strong>Resources<\/strong> | <strong>Data items<\/strong> | <strong>Platforms<\/strong>",
+      "placeholder": "Search terms",
+      "queryHelp": "Showing results for",
+      "reset": "Reset input",
+      "title": "Metadata available for you",
+      "instructions": "Limit your search to specific fields using the drop-down list left of the search field. Or use the logical operators below.",
+      "empty": {
+        "text": "You can try to search again using synonyms or more general terms than your current search.",
+        "title": "No matching results found"
+      },
+      "focus": {
+        "accessPlatform": "Access platform",
+        "all": "All fields",
+        "contact": "Contact",
+        "contributor": "Contributor",
+        "title": "Title"
+      },
+      "tips": {
+        "text": "`*` Placeholder search (wildcard)\nAsterisk (*) substitutes one or more characters\nExample: vacc*\n--\n`\"\"` Exact match search\nQuotes (\") on both sides of a term or phrase\nExample: \"Find exactly this sentence\"\n--\n`+` AND operator\nPlus character (+) with surrounding empty space combines search (default)\nExample: rubella + measles\n--\n`|` OR operator\nPipe character (|) with surrounding empty space combines search\nExample: cold | flu\n--\n`-` Exclude words (NOT)\nHyphen (-) excludes the term that follows\nExample: kidney -bean\n--\n`()` Grouped search\nParentheses group several search conditions\nExample: (rubella + measles) | (viral infection + children)",
+        "title": "Search tips"
+      }
+    },
+    "sorting": {
+      "label": "Sorting:",
+      "asc": {
+        "created": "Oldest first",
+        "label": "Title A-Z"
+      },
+      "desc": {
+        "created": "Newest first",
+        "label": "Title Z-A",
+        "null": "Relevance"
+      }
+    },
+    "support": {
+      "contact": "Contact support",
+      "subject": "Question\/feedback about MEx",
+      "text": "Do you have questions, ideas for improvement or would you like to report a technical problem?"
+    },
+    "tag": {
+      "close": "Remove"
+    },
+    "tooltip": {
+      "label": "Hint"
+    }
+  }
+}

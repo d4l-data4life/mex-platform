@@ -1,0 +1,148 @@
+{
+    "de": {
+        "title": "MEx-Datenfeldkatalog",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Projekt",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Ressource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Daten-Item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Plattform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Source",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/source",
+                    "id": "source"
+                }
+            },
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Resource",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/resource",
+                    "id": "resource"
+                }
+            },
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Datum",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/datum",
+                    "id": "datum"
+                }
+            },
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Platform",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/platform",
+                    "id": "platform"
+                }
+            }
+        ]
+    },
+    "en": {
+        "title": "MEx data field catalog",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Project",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Resource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Data item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Platform",
+                    "pages\/platform"
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Source",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/source",
+                    "id": "source"
+                }
+            },
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Resource",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/resource",
+                    "id": "resource"
+                }
+            },
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Datum",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/datum",
+                    "id": "datum"
+                }
+            },
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Platform",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "pages\/platform",
+                    "id": "platform"
+                }
+            }
+        ]
+    }
+}

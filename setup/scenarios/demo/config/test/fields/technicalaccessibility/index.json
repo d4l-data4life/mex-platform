@@ -1,0 +1,64 @@
+{
+  "name": "technicalAccessibility",
+  "renderer": "plain",
+  "kind": "string",
+  "importance": "none",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": true,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Zugriffsm\u00f6glichkeit"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Technical accessibility"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Technische Erreichbarkeit innerhalb oder au\u00dferhalb des Netzwerks"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "Technical accessibility"
+      }
+    ]
+  },
+  "vocabulary": {
+    "de": [
+      {
+        "conceptId": "technical-accessibility-1",
+        "label": "intern",
+        "description": "Nur innerhalb des Netzwerks zug\u00e4ngliche Plattform"
+      },
+      {
+        "conceptId": "technical-accessibility-2",
+        "label": "extern",
+        "description": "\u00d6ffentlich zug\u00e4ngliche Plattform"
+      }
+    ],
+    "en": [
+      {
+        "conceptId": "technical-accessibility-1",
+        "label": "internal",
+        "description": "Platform is only accessible within the network"
+      },
+      {
+        "conceptId": "technical-accessibility-2",
+        "label": "external",
+        "description": "Openly accessible platform"
+      }
+    ]
+  },
+  "documentation": null
+}

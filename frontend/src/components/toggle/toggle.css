@@ -1,0 +1,81 @@
+.toggle {
+  --toggle-height: 20px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  user-select: none;
+  transition: opacity var(--duration-quick) ease-out;
+  cursor: pointer;
+}
+
+.toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.toggle__label:not(:empty) {
+  margin-right: var(--spacing-small);
+}
+
+.toggle__handle {
+  position: relative;
+  width: calc(var(--toggle-height) * 2);
+  height: var(--toggle-height);
+  padding: 0;
+  margin: 0;
+  flex: none;
+  border: 2px solid var(--color-primary-4);
+  border-radius: calc(var(--toggle-height) / 2);
+  background: var(--color-primary-5);
+  box-sizing: border-box;
+  cursor: inherit;
+}
+
+.toggle__knob {
+  position: absolute;
+  display: block;
+  top: -2px;
+  left: -2px;
+  height: var(--toggle-height);
+  width: var(--toggle-height);
+  flex: none;
+  border: 2px solid var(--color-secondary-1);
+  border-radius: calc(var(--toggle-height) / 2);
+  background: var(--color-white);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: left var(--duration-quick) ease-in-out, background-color var(--duration-quick) ease-in-out;
+  pointer-events: none;
+}
+
+.toggle--active .toggle__knob {
+  left: calc(100% + 2px - var(--toggle-height));
+  background-color: var(--color-secondary-1);
+}
+
+.toggle__icon:not(svg) {
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.toggle__icon {
+  transition: var(--duration-quick) opacity ease-in-out;
+  opacity: 0;
+}
+
+.toggle__icon--inactive {
+  color: var(--color-secondary-1);
+}
+
+.toggle__icon--active {
+  color: var(--color-white);
+}
+
+.toggle:not(.toggle--active) .toggle__icon--inactive,
+.toggle.toggle--active .toggle__icon--active {
+  opacity: 1;
+}

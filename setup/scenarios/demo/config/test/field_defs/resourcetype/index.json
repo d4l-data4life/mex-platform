@@ -1,0 +1,8 @@
+{
+    "name": "resourceType",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "name": "apiDescription",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "API-Dokumentation"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "API documentation"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Dokumentation des Application Programming Interface (API)"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Documentation of the Application Programming Interface (API)"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "Platform",
+                    "text": "\"https:\/\/app.swaggerhub.com\/apis\/microsoft-rs\/PBIRS\/2.0\""
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "Platform",
+                    "text": "\"https:\/\/app.swaggerhub.com\/apis\/microsoft-rs\/PBIRS\/2.0\""
+                }
+            ]
+        }
+    }
+}

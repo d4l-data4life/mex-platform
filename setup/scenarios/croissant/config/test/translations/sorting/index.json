@@ -1,0 +1,26 @@
+{
+    "de": {
+        "label": "Sortierung:",
+        "asc": {
+            "created": "\u00c4lteste zuerst",
+            "label": "Titel A-Z"
+        },
+        "desc": {
+            "created": "Neueste zuerst",
+            "label": "Titel Z-A",
+            "null": "Relevanz"
+        }
+    },
+    "en": {
+        "label": "Sorting:",
+        "asc": {
+            "created": "Oldest first",
+            "label": "Title A-Z"
+        },
+        "desc": {
+            "created": "Newest first",
+            "label": "Title Z-A",
+            "null": "Relevance"
+        }
+    }
+}

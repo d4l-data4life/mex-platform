@@ -1,0 +1,7 @@
+{
+    "name": "keyword",
+    "type": "ordinalAxis",
+    "fields": [
+        "keyword"
+    ]
+}

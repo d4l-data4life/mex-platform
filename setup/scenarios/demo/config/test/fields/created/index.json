@@ -1,0 +1,67 @@
+{
+    "name": "created",
+    "renderer": "time",
+    "kind": "timestamp",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Erstellt"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Created"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Resource",
+                "text": "Datum, an dem die Ressource erstellt wurde; dies kann sich auf einen Zeitraum in der Vergangenheit, einen Datumsbereich oder ein einzelnes Datum f\u00fcr eine endg\u00fcltige Komponente beziehen, z. B. die fertiggestellte Datei mit allen Daten."
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Resource",
+                "text": "Date the resource itself was created; this could refer to a timeframe in history, a date range, or a single date for a final component, e.g., the finalised file with all the data."
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2016-04-22T02:35:03"
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "Resource",
+                    "text": "Gemeint ist das Datum der Erstellung der Ressource (dem Datensatz, der Datei). Das Datum soll so genau wie m\u00f6glich angegeben werden. Wenn vorhanden, mit Zeitstempel."
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "2016-04-22T02:35:03"
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "Resource",
+                    "text": "Meant is the date of creation of the resource (the record, the file). The date should be specified as accurately as possible. If available, with timestamp."
+                }
+            ]
+        }
+    }
+}

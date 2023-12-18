@@ -1,0 +1,171 @@
+{
+    "name": "dataFileFormat",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Dateiformat"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "File format"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Technisches Format der Ressource"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Technical format of the resource"
+            }
+        ]
+    },
+    "vocabulary": {
+        "de": [
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/atom+xml",
+                "label": "atom",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/pdf",
+                "label": "pdf",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "label": "pptx",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "label": "xlsx",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "label": "docx",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x-mimearchive",
+                "label": "mhtml",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.sas",
+                "label": "sas",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.stata",
+                "label": "stata",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/xml",
+                "label": "xml",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/image\/tiff",
+                "label": "tiff",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/text\/csv",
+                "label": "csv",
+                "description": ""
+            }
+        ],
+        "en": [
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/atom+xml",
+                "label": "atom",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/pdf",
+                "label": "pdf",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.presentationml.presentation",
+                "label": "pptx",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "label": "xlsx",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "label": "docx",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x-mimearchive",
+                "label": "mhtml",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.sas",
+                "label": "sas",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/x.stata",
+                "label": "stata",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/application\/xml",
+                "label": "xml",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/image\/tiff",
+                "label": "tiff",
+                "description": ""
+            },
+            {
+                "conceptId": "https:\/\/www.iana.org\/assignments\/media-types\/text\/csv",
+                "label": "csv",
+                "description": ""
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "furtherInformation": [
+                {
+                    "entityType": "Resource",
+                    "text": "Es wird empfohlen keine propriet\u00e4ren Formate zu verwenden. Dies bedeutet,\noffene Formate zu nutzen, die unabh\u00e4ngig vom Hersteller und Lizenzen durch andere Personen nachgenutzt werden k\u00f6nnen. Beispielweise ist eine csv-Datei einer xls-Datei vorzuziehen."
+                }
+            ]
+        },
+        "en": {
+            "furtherInformation": [
+                {
+                    "entityType": "Resource",
+                    "text": "It is recommended not to use proprietary formats. This means\nto use open formats that can be reused by others, regardless of the manufacturer and licenses. For example, a csv file is preferable to an xls file."
+                }
+            ]
+        }
+    }
+}

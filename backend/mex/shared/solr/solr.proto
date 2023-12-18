@@ -1,0 +1,89 @@
+syntax = "proto3";
+package mex.v0;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/solr;solr";
+
+import "google/protobuf/any.proto";
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+message Sorting {
+  string axis = 1;
+  string order = 2;
+}
+
+message StringRange {
+  string min = 1;
+  string max = 2;
+}
+
+message AxisConstraint {
+  string type                        = 1;
+  string axis                        = 2;
+  repeated string values             = 3;
+  repeated string single_node_values = 4;
+  repeated StringRange string_ranges = 5;
+  string combine_operator            = 6;
+}
+
+message Facet {
+  string type      = 1;
+  string axis     = 2;
+  uint32 limit     = 3;
+  uint32 offset    = 4;
+  string stat_name = 5;
+  string stat_op   = 6;
+}
+
+message DocValue {
+  string field_name  = 1;
+  string field_value = 2;
+  string language    = 3;
+}
+
+message DocItem {
+  string item_id           = 1;
+  string entity_type       = 2;
+  repeated DocValue values = 3;
+}
+
+message HierarchyInfo {
+  string parent_value = 1;
+  string display      = 2;
+  uint32 depth        = 3;
+}
+
+message FacetBucket {
+  string value = 1;
+  uint32 count = 2;
+
+  google.protobuf.Any hierarchyInfo = 3;
+}
+
+message FacetResult {
+  string type                  = 1;
+  string axis                  = 2;
+  uint32 bucketNo              = 3;
+  repeated FacetBucket buckets = 4;
+  string statName              = 5;
+  string stringStatResult      = 6;
+}
+
+message FieldHighlight {
+  string fieldName         = 1;
+  repeated string snippets = 2;
+  string language          = 3;
+}
+
+message Highlight {
+  string itemId                   = 1;
+  repeated FieldHighlight matches = 2;
+}
+
+message Diagnostics {
+  bool parsing_succeeded                = 1;
+  repeated string parsing_errors        = 2;
+  string cleaned_query                  = 3;
+  bool query_was_cleaned                = 4;
+  repeated string ignored_errors        = 5;
+}

@@ -1,0 +1,20 @@
+{
+    "de": {
+        "results": {
+            "cancel": "Abbrechen",
+            "start": "Herunterladen",
+            "text": "Laden Sie die Details Ihrer aktuellen Suchergebnisse als CSV-Datei herunter.",
+            "title": "Ergebnisse herunterladen",
+            "wait": "Bitte warten\u2026 Dies k\u00f6nnte etwas dauern\u2026"
+        }
+    },
+    "en": {
+        "results": {
+            "cancel": "Cancel",
+            "start": "Download",
+            "text": "Download the details of your current search results as a CSV file.",
+            "title": "Download results",
+            "wait": "Please wait\u2026 This may take a while\u2026"
+        }
+    }
+}

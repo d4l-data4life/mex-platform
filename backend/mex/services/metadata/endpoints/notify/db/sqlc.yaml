@@ -1,0 +1,8 @@
+version: "1"
+packages:
+  - path: "."
+    name: "dbNotify"
+    engine: "postgresql"
+    schema: "../../../migrations/migrate_database"
+    queries: "queries.sql"
+    sql_package: "pgx/v5"

@@ -1,0 +1,17 @@
+QUOTED_TERM=1
+TERM=2
+FREE_DASH=3
+AND=4
+OR=5
+NOT=6
+LPAR=7
+RPAR=8
+QUOTE=9
+WS=10
+LEFTOVER=11
+'+'=4
+'|'=5
+'-'=6
+'('=7
+')'=8
+'"'=9

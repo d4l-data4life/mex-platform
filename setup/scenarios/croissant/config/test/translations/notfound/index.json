@@ -1,0 +1,12 @@
+{
+    "de": {
+        "button": "Zur Startseite gehen",
+        "text": "Anscheinend haben Sie eine Webadresse (URL) erreicht, die es nicht gibt. Zur\u00fcck zur Startseite?",
+        "title": "Seite nicht gefunden"
+    },
+    "en": {
+        "button": "Go to home page",
+        "text": "It looks like you've reached a web address (URL) that doesn't exist. Go back to home page instead?",
+        "title": "Page not found"
+    }
+}

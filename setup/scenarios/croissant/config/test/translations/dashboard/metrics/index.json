@@ -1,0 +1,14 @@
+{
+    "de": {
+        "Datum": "Daten-Items",
+        "Platform": "Plattformen",
+        "Resource": "Ressourcen",
+        "Source": "Projekte"
+    },
+    "en": {
+        "Datum": "Data items",
+        "Platform": "Platforms",
+        "Resource": "Resources",
+        "Source": "Projects"
+    }
+}

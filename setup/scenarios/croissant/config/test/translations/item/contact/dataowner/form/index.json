@@ -1,0 +1,10 @@
+{
+    "de": {
+        "label": "Anfrage zum Zugriff auf die Daten senden",
+        "text": "F\u00fcllen Sie ein Formular aus und beantworten Sie einige Fragen dar\u00fcber, warum und wie Sie auf die Daten zugreifen m\u00f6chten."
+    },
+    "en": {
+        "label": "Send request to access the data",
+        "text": "Fill out a form and answer some questions to describe why and how you want to access the data."
+    }
+}

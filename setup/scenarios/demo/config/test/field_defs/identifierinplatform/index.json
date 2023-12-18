@@ -1,0 +1,8 @@
+{
+    "name": "identifierInPlatform",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

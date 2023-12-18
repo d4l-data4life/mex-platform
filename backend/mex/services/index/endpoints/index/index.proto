@@ -1,0 +1,128 @@
+syntax = "proto3";
+
+package d4l.mex.index;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/index/endpoints/index/pb;pb";
+
+import "d4l/security.proto";
+import "google/api/annotations.proto";
+
+message CreateIndexRequest {
+  // intentionally empty
+}
+
+message CreateIndexResponse {
+  string job_id = 1;
+}
+
+message UpdateIndexRequest {
+  // intentionally empty
+}
+
+message UpdateIndexResponse {
+  string job_id = 1;
+}
+
+message DeleteIndexRequest {
+  // intentionally empty
+}
+
+message DeleteIndexResponse {
+  // intentionally empty
+}
+
+message IndexLatestItemRequest {
+  string business_id = 1;
+}
+
+message IndexLatestItemResponse {
+}
+
+message DummyRequest {}
+message DummyResponse {}
+
+message ReplicaStatus {
+  string name  = 1;
+  string state = 2;
+  bool leader  = 3;
+}
+
+message ShardStatus {
+  string name                     = 1;
+  string health                   = 2;
+  string state                    = 3;
+  repeated ReplicaStatus replicas = 4;
+}
+
+message SolrClusterStatus {
+  string collection           = 1;
+  string health               = 2;
+  repeated ShardStatus shards = 3;
+}
+
+message IndexStatusRequest  {}
+
+message IndexStatusResponse {
+  SolrClusterStatus cluster_status = 1;
+  uint32   item_count              = 2;
+  string message                   = 3;
+}
+
+service Index {
+  rpc IndexStatus (IndexStatusRequest) returns (IndexStatusResponse) {
+    option (google.api.http) = {
+      get: "/api/v0/metadata/index"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "index"
+      verb:  "query"
+    };
+  }
+
+  rpc CreateIndex (CreateIndexRequest) returns (CreateIndexResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/metadata/index"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "index"
+      verb:  "update"
+    };
+  }
+
+  rpc UpdateIndex (UpdateIndexRequest) returns (UpdateIndexResponse) {
+    option (google.api.http) = {
+      put: "/api/v0/metadata/index"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "index"
+      verb:  "update"
+    };
+  }
+
+  rpc IndexLatestItem (IndexLatestItemRequest) returns (IndexLatestItemResponse) {
+    option (google.api.http) = {
+      put: "/api/v0/metadata/index/{business_id}"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "index"
+      verb:  "update"
+    };
+  }
+
+  rpc DeleteIndex (DeleteIndexRequest) returns (DeleteIndexResponse) {
+    option (google.api.http) = {
+      delete: "/api/v0/metadata/index"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "index"
+      verb:  "delete"
+    };
+  }
+
+}

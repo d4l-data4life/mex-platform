@@ -1,0 +1,40 @@
+{
+    "name": "dataCollectionProcess",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Methode",
+                "plural": "Methoden"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Method",
+                "plural": "Methods"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "F\u00fcr die Studie oder Forschung oder Ressource verwendete Methodik"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Methodology employed for the study or research or resource"
+            }
+        ]
+    },
+    "documentation": null
+}

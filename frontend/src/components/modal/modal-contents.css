@@ -1,0 +1,22 @@
+.modal-contents__icon {
+  margin: var(--spacing-medium) auto;
+}
+
+.modal-contents__title {
+  margin: var(--spacing-medium) auto;
+  font-size: var(--font-size-l);
+  color: var(--color-primary-1);
+  font-weight: 400;
+}
+
+.modal-contents__text {
+  margin: var(--spacing-medium) auto 0;
+}
+
+.modal-contents__buttons {
+  margin-top: var(--spacing-medium);
+}
+
+.modal-contents__buttons button + button {
+  margin-left: var(--spacing-small);
+}

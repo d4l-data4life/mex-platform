@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+package d4l.mex.cfg.test;
+
+import "d4l/config.proto";
+import "google/protobuf/duration.proto";
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/cfg/test/pb;cfgtestpb";
+
+option (d4l.cfg.main_message) = "TestConfig";
+
+message TestConfig {
+  option (d4l.cfg.mtags) = "*";
+
+  message Database {
+    option (d4l.cfg.mtags) = "*";
+
+    string user                        =  1 [(d4l.cfg.opts) = { default: "hjones" }];
+
+    string password                    =  2 [
+      (d4l.cfg.opts) = {                      secret: true },
+      (d4l.cfg.tags) = "AAA",
+      (d4l.cfg.tags) = "BBB"
+    ];
+
+    uint32 port                        =  3 [(d4l.cfg.opts) = { default: "5432" env: "PORT_NUMBER"                }];
+    repeated string search_path        =  4 [(d4l.cfg.opts) = { default: "mex,public"             }];
+    bool use_ssl                    =  5 [
+      (d4l.cfg.opts) = { default: "true" },
+      (d4l.cfg.desc) = { title: "Whether to use TLS/SSL" }
+    ];
+    google.protobuf.Duration timeout =  6 [
+      (d4l.cfg.opts) = { default: "2s" },
+      (d4l.cfg.k8s) = { ignore: true }
+    ];
+  }
+
+  message Server {
+    option (d4l.cfg.mtags) = "foo";
+    option (d4l.cfg.mtags) = "bar";
+
+    google.protobuf.Duration timeout = 1 [
+      (d4l.cfg.opts) = {
+        default: "5s"
+      },
+      (d4l.cfg.tags) = "bar",
+      (d4l.cfg.tags) = "wom",
+      (d4l.cfg.k8s) = { source: "GLOBAL_TIMEOUT" }
+    ];
+
+    fixed32 max_header_bytes = 4 [(d4l.cfg.opts) = { default: "2097152" }];
+
+    bytes signing_private_key_pem  = 10 [
+      (d4l.cfg.opts) = { secret: true },
+      (d4l.cfg.desc) = {
+        summary: "summary"
+        description: "desc 1"
+        description: "desc 2"
+        description: "desc 3"
+      }
+    ];
+
+  }
+
+  double pi = 1;
+  Database db = 2;
+  Server server = 3;
+
+  repeated bytes public_keys = 6;
+  repeated bytes secret_keys = 7 [(d4l.cfg.opts) = { secret: true }];
+
+  uint64 ignore_me = 10 [(d4l.cfg.opts) = { ignore: true }];
+
+  repeated sint64 fibonacci = 8;
+  repeated double constants = 9;
+
+}
+
+message NonMain {
+  string foo = 1;
+}

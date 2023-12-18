@@ -1,0 +1,58 @@
+{
+    "name": "hasContributingUnit",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Mitwirkende Fachabteilung",
+                "plural": "Mitwirkende Fachabteilungen"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Contributing Unit",
+                "plural": "Contributing Units"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Am Projekt mitwirkende Fachabteilung(en)"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Unit(s) contributing to the project"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": {
+        "de": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Akronym der Fachabteilung, z.B. \"FG 21\", \"FG 22\""
+                }
+            ]
+        },
+        "en": {
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "Acronym of the unit, e.g. \"FG 21\", \"FG 22\""
+                }
+            ]
+        }
+    }
+}

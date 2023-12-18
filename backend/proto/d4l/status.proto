@@ -1,0 +1,29 @@
+syntax = "proto3";
+package d4l.mex.status;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/known/statuspb";
+
+import "google/protobuf/timestamp.proto";
+
+enum Color {
+  RED   = 0; // errored out
+  AMBER = 1; // in progress
+  GREEN = 2; // all good
+}
+
+message Progress {
+  string step = 1;
+  string details = 2;
+}
+
+message Status {
+  string service_tag = 1;
+  string replica = 2;
+
+  Color color = 3;
+  string config_hash = 4;
+
+  google.protobuf.Timestamp last_reported = 5;
+
+  Progress progress = 6;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "meshTerm",
+  "kind": "string",
+  "indexDef": {
+    "multiValued": true,
+    "ext": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+    "name": "entityName",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Art"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Type"
+            }
+        ]
+    },
+    "vocabulary": {
+        "de": [
+            {
+                "conceptId": "Datum",
+                "label": "Daten-Item",
+                "description": "Eine einzelne Information oder ein Daten-Item innerhalb einer Ressource"
+            },
+            {
+                "conceptId": "OrganizationalUnit",
+                "label": "Fachabteilung",
+                "description": ""
+            },
+            {
+                "conceptId": "Person",
+                "label": "Person",
+                "description": ""
+            },
+            {
+                "conceptId": "Platform",
+                "label": "Plattform",
+                "description": "Ein technisches Datenverarbeitungssystem mit der M\u00f6glichkeit des physischen Zugriffs auf die Ressource zur Wiederverwendung"
+            },
+            {
+                "conceptId": "Resource",
+                "label": "Ressource",
+                "description": "Datensatz, ein definiertes Objekt, eine Sammlung von Informationen oder der Name einer Forschungssoftware"
+            },
+            {
+                "conceptId": "Source",
+                "label": "Projekt",
+                "description": "Ein (Forschungs-)Projekt, ein System, ein Arbeitsbereich, in dem die Ressourcen erzeugt wurden"
+            }
+        ],
+        "en": [
+            {
+                "conceptId": "Datum",
+                "label": "Data item",
+                "description": "A single piece of information or an item of data within a resource"
+            },
+            {
+                "conceptId": "OrganizationalUnit",
+                "label": "Unit",
+                "description": ""
+            },
+            {
+                "conceptId": "Person",
+                "label": "Person",
+                "description": ""
+            },
+            {
+                "conceptId": "Platform",
+                "label": "Platform",
+                "description": "A technical data processing system with the possibility of physical access to the resource for reuse"
+            },
+            {
+                "conceptId": "Resource",
+                "label": "Resource",
+                "description": "Data set, a defined object, a collection of information, or the name of a piece of research software"
+            },
+            {
+                "conceptId": "Source",
+                "label": "Project",
+                "description": "A (research) project, a system, a workspace in which the resources were generated"
+            }
+        ]
+    },
+    "documentation": null
+}

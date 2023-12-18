@@ -1,0 +1,25 @@
+.not-found {
+  display: block;
+  text-align: center;
+  padding: var(--spacing-xxlarge) 0;
+}
+
+.not-found__illustration {
+  --illustration-width: 62px;
+  --illustration-height: 80px;
+
+  margin: 0 auto var(--spacing-smedium);
+}
+
+.not-found__title {
+  margin: var(--spacing-smedium) 0 var(--spacing-small);
+  font-size: var(--font-size-l);
+  font-weight: 400;
+  color: var(--color-primary-1);
+}
+
+.not-found__text {
+  margin: var(--spacing-small) 0 var(--spacing-smedium);
+  font-size: var(--font-size-s);
+  color: var(--color-base);
+}

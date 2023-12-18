@@ -1,0 +1,13 @@
+{
+    "name": "parentDepartment",
+    "kind": "link",
+    "indexDef": {
+        "multiValued": false,
+        "ext": [
+            {
+                "@type": "type.googleapis.com\/mex.v0.IndexDefExtLink",
+                "relationType": "relation_parentDepartment"
+            }
+        ]
+    }
+}

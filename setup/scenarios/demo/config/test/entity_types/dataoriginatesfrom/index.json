@@ -1,0 +1,7 @@
+{
+    "name": "dataOriginatesFrom",
+    "config": {
+        "isFocal": false,
+        "isAggregatable": false
+    }
+}

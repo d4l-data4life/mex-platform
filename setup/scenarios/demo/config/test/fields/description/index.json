@@ -1,0 +1,103 @@
+{
+    "name": "description",
+    "renderer": "description",
+    "kind": "text",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Beschreibung"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Description"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Resource",
+                "text": "Kurze Beschreibung der Ressource, der Komponenten und des Kontextes, wie die Ressource erstellt wurde"
+            },
+            {
+                "entityType": "Source",
+                "text": "Kurze Beschreibung des Projekts oder des Forschungskontexts, in dem die Ressource erstellt wurde"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Kurze Beschreibung der Plattform"
+            },
+            {
+                "entityType": "Datum",
+                "text": "Kurze Beschreibung des Daten-Items"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Resource",
+                "text": "Brief description of the resource, its components, and the context of how the resource was created"
+            },
+            {
+                "entityType": "Source",
+                "text": "Brief description of the project or the research context in which the resource was created"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Brief description of the platform"
+            },
+            {
+                "entityType": "Datum",
+                "text": "Brief description of the data item"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "Source",
+                    "text": "\"Mit KiGGS Welle 2 wurden die Datenerhebungen der „Studie zu Gesundheit von Kindern und Jugendlichen in Deutschland“ fortgesetzt.\""
+                },
+                {
+                    "entityType": "Resource",
+                    "text": "\"Mit KiGGS Welle 2 wurden die Datenerhebungen der „Studie zu Gesundheit von Kindern und Jugendlichen in Deutschland“ fortgesetzt.\""
+                },
+                {
+                    "entityType": "Datum",
+                    "text": "\"Gesundheitszustand des Kindes im Allgemeinen\""
+                },
+                {
+                    "entityType": "Platform",
+                    "text": "\"Der Data Server ist eine serverbasierte Berichtsplattform.\""
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "Source",
+                    "text": "\"New information about the KIGGS study.\""
+                },
+                {
+                    "entityType": "Resource",
+                    "text": "\"New information about the KIGGS study.\""
+                },
+                {
+                    "entityType": "Datum",
+                    "text": "General state of health of the child"
+                },
+                {
+                    "entityType": "Platform",
+                    "text": "\"The Data Server is a server-based reporting platform.\""
+                }
+            ]
+        }
+    }
+}

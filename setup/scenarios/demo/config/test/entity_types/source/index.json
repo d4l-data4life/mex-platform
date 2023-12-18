@@ -1,0 +1,8 @@
+{
+    "name": "Source",
+    "config": {
+        "isFocal": true,
+        "isAggregatable": false,
+        "businessIdFieldName": "identifier"
+    }
+}

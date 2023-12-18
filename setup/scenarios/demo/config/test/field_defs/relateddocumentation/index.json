@@ -1,0 +1,8 @@
+{
+    "name": "relatedDocumentation",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

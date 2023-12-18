@@ -1,0 +1,112 @@
+.footer::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-image: var(--background-pattern-left), var(--background-pattern-right),
+    linear-gradient(
+      to bottom,
+      var(--color-white) 0,
+      var(--color-white) 59px,
+      var(--color-footer-border) 59px,
+      var(--color-footer-border) 60px,
+      var(--color-secondary-1) 60px,
+      var(--color-secondary-1) 120px
+    );
+  background-position: left top, right top, left top;
+  background-repeat: no-repeat;
+  background-size: 150px 120px, 150px 120px, 100% 100%;
+}
+
+.footer.footer--thin::before {
+  content: none;
+}
+
+.footer {
+  background: var(--color-secondary-1);
+  color: var(--color-white);
+  margin-top: var(--spacing-xlarge);
+}
+
+.footer.footer--thin {
+  margin-top: 0;
+}
+
+.footer__pre {
+  padding: var(--spacing-smedium) var(--spacing-xlarge) 0;
+  text-align: center;
+  color: var(--color-secondary-4);
+}
+
+.footer__inner {
+  text-align: center;
+  padding: var(--spacing-medium) var(--spacing-smedium) var(--spacing-xlarge) var(--spacing-smedium);
+}
+
+.footer__note {
+  display: block;
+  flex: none;
+  font-weight: 600;
+  color: var(--color-highlight-3);
+}
+
+.footer__navigation {
+  display: block;
+  flex: none;
+  margin-left: auto;
+}
+
+.footer__navigation-container {
+  list-style: none outside;
+  margin: var(--spacing-medium) 0 0;
+  padding: 0;
+}
+
+.footer__navigation-item {
+  position: relative;
+  white-space: nowrap;
+  margin: var(--spacing-small);
+}
+
+.footer__navigation-item a {
+  color: currentColor;
+  transition: color var(--duration-quick) ease-out, text-decoration-color var(--duration-quick) ease-out;
+  padding: var(--spacing-small);
+  margin: var(--spacing-small-negative);
+  text-decoration: underline;
+  text-decoration-color: var(--color-secondary-3);
+}
+
+.footer__navigation-item a:hover,
+.footer__navigation-item a:focus {
+  color: var(--color-highlight-2);
+  text-decoration-color: var(--color-highlight-2);
+}
+
+@media (--media-tablet) {
+  .footer__pre {
+    margin: -60px 150px 0;
+    min-height: 60px;
+    box-sizing: border-box;
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+  }
+
+  .footer__note {
+    margin-right: var(--spacing-medium);
+  }
+
+  .footer__navigation-container {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-large);
+    margin: 0;
+  }
+
+  .footer__navigation-item {
+    margin: 0;
+  }
+}

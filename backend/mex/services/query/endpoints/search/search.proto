@@ -1,0 +1,56 @@
+syntax = "proto3";
+package d4l.mex.search;
+
+option go_package = "github.com/d4l-data4life/mex/mex/services/query/endpoints/search/pb;pb";
+
+import "shared/solr/solr.proto";
+import "d4l/security.proto";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+service Search {
+  rpc Search (SearchRequest) returns (SearchResponse) {
+    option (google.api.http) = {
+      post: "/api/v0/query/search"
+      body: "*"
+    };
+    option (d4l.api.security.authn_type) = BEARER_TOKEN;
+    option (d4l.api.security.required_privileges) = {
+      resource: "index"
+      verb:  "query"
+    };
+    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+      description: "Perform a search for matching items"
+    };
+  }
+}
+
+message SearchRequest {
+  string   query           = 1 [(grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {description: "Solr search query"}];
+  repeated string fields   = 2;
+  .mex.v0.Sorting  sorting  = 3;
+  uint32   limit           = 4;
+  uint32   offset          = 5;
+  string   search_focus    = 6;
+
+  repeated string highlight_fields = 7;
+  bool auto_highlight              = 8;
+
+  repeated .mex.v0.Facet facets                    =  9;
+  repeated .mex.v0.AxisConstraint axis_constraints = 10;
+
+  uint32 max_edit_distance = 11;
+  bool use_ngram_field     = 12;
+}
+
+message SearchResponse {
+  uint32   num_found            =  1;
+  bool     num_found_exact      =  2;
+  uint32   start                =  3;
+  double   max_score            =  4;
+
+  repeated .mex.v0.DocItem items        = 10;
+  repeated .mex.v0.FacetResult facets   = 11;
+  repeated .mex.v0.Highlight highlights = 12;
+  .mex.v0.Diagnostics diagnostics       = 13;
+}

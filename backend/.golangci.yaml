@@ -1,0 +1,91 @@
+run:
+  deadline: 5m
+
+  skip-dirs:
+    - deploy
+    - jenkinsfile
+    - sql
+    - vendor
+    - pb
+    - tools/codings
+  skip-files:
+    - ".*/debug/.*\\.go"
+    - ".*_test\\.go"
+    - "bindata.go"
+    - ".*\\.pb\\.go"
+    - ".*_lexer\\.go"
+    - ".*_parser\\.go"
+
+linters-settings:
+  gocyclo:
+    # minimal code complexity to report, 30 by default (but we recommend 10-20)
+    min-complexity: 12
+  gocognit:
+    # minimal code complexity to report, 30 by default (but we recommend 10-20)
+    min-complexity: 16
+  goimports:
+    # put imports beginning with prefix after 3rd-party packages;
+    # it's a comma-separated list of prefixes
+    local-prefixes: github.com/gesundheitscloud/
+  golint:
+    # minimal confidence for issues, default is 0.8
+    min-confidence: 0
+  gosec:
+    severity: medium
+  lll:
+    # max line length, lines longer will be reported. Default is 120.
+    # '\t' is counted as 1 character by default, and can be changed with the tab-width option
+    line-length: 180
+  gomnd:
+    ignored-numbers:
+      - "2"
+      - "32"
+      - "64"
+  revive:
+    rules:
+      - name: "unused-parameter"
+        disabled: true
+
+linters:
+  disable-all: true
+  enable:
+    - bodyclose
+    - depguard
+    - dogsled
+    - errcheck
+    - gochecknoinits
+    - goconst
+    - gocritic
+    #  - godox # uncomment for finding FIXMEs and TODOs et al.
+    - gofmt
+    - gofumpt
+    - goimports
+    - revive
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - nonamedreturns
+    - lll
+    - misspell
+    - nakedret
+    - nilerr
+    - nolintlint
+    - exportloopref
+    - staticcheck
+    - typecheck
+    - unconvert
+    - unused
+    - whitespace
+    - gomnd
+
+issues:
+  exclude-rules:
+    - path: "_test\\.go"
+      linters:
+        - dupl
+        - funlen
+        - goconst
+        - gosec
+        - revive
+        - gomnd

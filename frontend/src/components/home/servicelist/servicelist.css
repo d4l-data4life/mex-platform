@@ -1,0 +1,27 @@
+.servicelist {
+  display: block;
+}
+
+.servicelist__title {
+  color: var(--color-primary-1);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  margin: 0 0 var(--spacing-xsmall);
+}
+
+.servicelist__list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none outside;
+}
+
+.servicelist__link {
+  margin-top: var(--spacing-smedium);
+}
+
+.servicelist__link a {
+  color: var(--color-secondary-1);
+  padding: var(--spacing-xsmall);
+  margin: var(--spacing-xsmall-negative);
+}

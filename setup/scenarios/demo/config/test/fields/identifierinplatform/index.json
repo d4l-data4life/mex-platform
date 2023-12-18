@@ -1,0 +1,10 @@
+{
+    "name": "identifierInPlatform",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "documentation": null
+}

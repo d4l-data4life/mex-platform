@@ -1,0 +1,93 @@
+{
+  "name": "accessLocation",
+  "renderer": "link",
+  "kind": "string",
+  "importance": "mandatory",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": false,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Zugriffsort",
+        "plural": "Zugriffsorte"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Access location",
+        "plural": "Access locations"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Zugriffsort (Speicherpfad oder  URL)"
+      },
+      {
+        "entityType": "Platform",
+        "text": "Zugriffsort (Speicherpfad oder  URL) der Plattform"
+      },
+      {
+        "entityType": "Resource",
+        "text": "Zugriffsort (Speicherpfad oder  URL) der Ressource"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "Access location (storage path or URL)"
+      },
+      {
+        "entityType": "Platform",
+        "text": "Access location (storage path or URL) of the platform"
+      },
+      {
+        "entityType": "Resource",
+        "text": "Access location (storage path or URL) of the resource"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "exampleValue": [
+        {
+          "entityType": "all",
+          "text": ""
+        },
+        {
+          "entityType": "Platform",
+          "text": ""
+        }
+      ],
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "Angabe des Speicher-\/Zugriffsorts, an dem die Ressource hinterlegt ist. Sofern\nsich dieser in einer Datenbank befindet, ist der Speicher-\/Zugriffsort der\nDatenbank angegeben."
+        }
+      ]
+    },
+    "en": {
+      "exampleValue": [
+        {
+          "entityType": "all",
+          "text": ""
+        },
+        {
+          "entityType": "Platform",
+          "text": ""
+        }
+      ],
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "Specification of the storage\/access location where the resource is stored. If\ncontains a database, the storage\/access location of the database is specified."
+        }
+      ]
+    }
+  }
+}

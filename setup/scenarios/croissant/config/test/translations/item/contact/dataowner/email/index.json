@@ -1,0 +1,12 @@
+{
+    "de": {
+        "label": "E-Mail schreiben",
+        "subject": "Frage zu MEx-Daten",
+        "text": "Senden Sie eine E-Mail an die Dateninhaber*in und stellen Sie Fragen (\u00f6ffnet Ihr E-Mail-Programm)."
+    },
+    "en": {
+        "label": "Write email",
+        "subject": "Question about MEx data",
+        "text": "Send an email to data owner and ask questions (opens your email client)."
+    }
+}

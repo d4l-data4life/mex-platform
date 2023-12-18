@@ -1,0 +1,23 @@
+build/
+dist/
+node_modules/
+coverage/
+ssl/
+
+.env
+.env.yaml
+!.env.example.yaml
+
+.DS_Store
+
+# Chart.yaml is templated via Chart.template.yaml
+Chart.yaml
+
+secrets.yaml
+*.shell.*
+*.sandbox.*
+*.stg.*
+*.staging.*
+*.prod.*
+
+data/generated

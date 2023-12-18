@@ -1,0 +1,388 @@
+{
+  "de": {
+    "title": "Impressum",
+    "alignment": "left",
+    "flags": [],
+    "toc": [
+      {
+        "value": [
+          "Impressum",
+          "pages\/imprint"
+        ],
+        "children": [
+          {
+            "value": [
+              "Impressum",
+              "#impressum"
+            ],
+            "children": [
+              {
+                "value": [
+                  "Herausgeber",
+                  "#herausgeber"
+                ],
+                "children": [
+                  {
+                    "value": [
+                      "Verantwortlich i.S.d. Medienstaatsvertrags",
+                      "#verantwortlich-i-s-d-medienstaatsvertrags"
+                    ],
+                    "children": []
+                  },
+                  {
+                    "value": [
+                      "Kontakt",
+                      "#kontakt"
+                    ],
+                    "children": []
+                  },
+                  {
+                    "value": [
+                      "Umsatzsteueridentifikationsnummer",
+                      "#umsatzsteueridentifikationsnummer"
+                    ],
+                    "children": []
+                  },
+                  {
+                    "value": [
+                      "Hosting",
+                      "#hosting"
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "value": [
+                  "Haftungsausschluss",
+                  "#haftungsausschluss"
+                ],
+                "children": []
+              },
+              {
+                "value": [
+                  "Copyright",
+                  "#copyright"
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": [
+          "Datenschutzerkl\u00e4rung",
+          "pages\/privacy-policy"
+        ]
+      },
+      {
+        "value": [
+          "Erkl\u00e4rung zur Barrierefreiheit",
+          "pages\/accessibility-statement"
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "content": {
+          "level": "h1",
+          "text": "Impressum",
+          "id": "impressum"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Herausgeber",
+          "id": "herausgeber"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Verantwortlich i.S.d. Medienstaatsvertrags",
+          "id": "verantwortlich-i-s-d-medienstaatsvertrags"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Kontakt",
+          "id": "kontakt"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Umsatzsteueridentifikationsnummer",
+          "id": "umsatzsteueridentifikationsnummer"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Hosting",
+          "id": "hosting"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Haftungsausschluss",
+          "id": "haftungsausschluss"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Copyright",
+          "id": "copyright"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      }
+    ]
+  },
+  "en": {
+    "title": "Imprint",
+    "alignment": "left",
+    "flags": [],
+    "toc": [
+      {
+        "value": [
+          "Imprint",
+          "pages\/imprint"
+        ],
+        "children": [
+          {
+            "value": [
+              "Imprint",
+              "#imprint"
+            ],
+            "children": [
+              {
+                "value": [
+                  "Editor",
+                  "#editor"
+                ],
+                "children": [
+                  {
+                    "value": [
+                      "Responsible within the intendment of the Interstate Broadcasting Treaty (Rundfunkstaatsvertrag, RStV)",
+                      "#responsible-within-the-intendment-of-the-interstate-broadcasting-treaty-rundfunkstaatsvertrag-rstv"
+                    ],
+                    "children": []
+                  },
+                  {
+                    "value": [
+                      "Contact",
+                      "#contact"
+                    ],
+                    "children": []
+                  },
+                  {
+                    "value": [
+                      "VAT ID number",
+                      "#vat-id-number"
+                    ],
+                    "children": []
+                  },
+                  {
+                    "value": [
+                      "Hosting",
+                      "#hosting"
+                    ],
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "value": [
+                  "Disclaimer",
+                  "#disclaimer"
+                ],
+                "children": []
+              },
+              {
+                "value": [
+                  "Copyright",
+                  "#copyright"
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "value": [
+          "Privacy policy",
+          "pages\/privacy-policy"
+        ]
+      },
+      {
+        "value": [
+          "Accessibility statement",
+          "pages\/accessibility-statement"
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "heading",
+        "content": {
+          "level": "h1",
+          "text": "Imprint",
+          "id": "imprint"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Editor",
+          "id": "editor"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Responsible within the intendment of the Interstate Broadcasting Treaty (Rundfunkstaatsvertrag, RStV)",
+          "id": "responsible-within-the-intendment-of-the-interstate-broadcasting-treaty-rundfunkstaatsvertrag-rstv"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Contact",
+          "id": "contact"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "VAT ID number",
+          "id": "vat-id-number"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h3",
+          "text": "Hosting",
+          "id": "hosting"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Disclaimer",
+          "id": "disclaimer"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      },
+      {
+        "type": "heading",
+        "content": {
+          "level": "h2",
+          "text": "Copyright",
+          "id": "copyright"
+        }
+      },
+      {
+        "type": "text",
+        "content": {
+          "text": "<p>Lorem ipsum.<\/p>"
+        }
+      }
+    ]
+  }
+}

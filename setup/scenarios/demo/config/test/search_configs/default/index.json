@@ -1,0 +1,24 @@
+{
+    "name": "default",
+    "type": "searchFocus",
+    "fields": [
+        "description",
+        "label",
+        "acronym",
+        "keyword",
+        "meshTerm",
+        "relatedDocumentation",
+        "createdInContextOf__label",
+        "createdInContextOf__acronym",
+        "contributor__label",
+        "contributor__email",
+        "contributor__acronym",
+        "contributor__rorID",
+        "contributor__orcidID",
+        "contributor__isniID",
+        "partOfSource__label",
+        "hasResponsibleUnit__label",
+        "hasResponsibleUnit__acronym",
+        "tag"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "name": "hasResponsibleUnitCode",
+    "renderer": "none",
+    "kind": "hierarchy",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "useTranslationsFrom": "hasResponsibleUnit",
+    "documentation": null
+}

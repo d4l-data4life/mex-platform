@@ -1,0 +1,14 @@
+syntax = "proto3";
+package d4l.mex.searchconfig;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/searchconfig;searchconfig";
+
+message SearchConfigObject {
+  string name = 1;
+  string type = 2;
+  repeated string fields = 3;
+}
+
+message SearchConfigList {
+  repeated SearchConfigObject search_configs = 1;
+}

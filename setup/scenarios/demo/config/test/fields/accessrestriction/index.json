@@ -1,0 +1,81 @@
+{
+    "name": "accessRestriction",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Zugriffsbeschr\u00e4nkung"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Access restriction"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Beschreibung, ob die Ressource f\u00fcr alle zug\u00e4nglich ist (offen) oder einen eingeschr\u00e4nkten Zugang hat (restriktiv)"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Description if resource is available for everyone (open) or has got any restricted access (restricted)"
+            }
+        ]
+    },
+    "vocabulary": {
+        "de": [
+            {
+                "conceptId": "access-restriction-1",
+                "label": "offen",
+                "description": "Die Ressource ist offen zug\u00e4nglich."
+            },
+            {
+                "conceptId": "access-restriction-2",
+                "label": "restriktiv",
+                "description": "Ressource ist eingeschr\u00e4nkt zug\u00e4nglich. Beispielsweise enthalten die Daten vertrauliche Informationen oder personenbezogene Daten. Dies bedeutet, dass Einschr\u00e4nkungen bei der Nachnutzung der Daten vorliegen und die Daten entweder \u00f6ffentlich gar nicht oder nur unter bestimmten Voraussetzungen verf\u00fcgbar sind, z. B. aggregierte Daten."
+            }
+        ],
+        "en": [
+            {
+                "conceptId": "access-restriction-1",
+                "label": "open",
+                "description": "The resource is openly available to the public."
+            },
+            {
+                "conceptId": "access-restriction-2",
+                "label": "restricted",
+                "description": "Resource has restricted access. For example, the data contains classified information or personal data. This means that there are restrictions on the subsequent use of the data and the data is either not available to the public at all or only available under certain conditions, e.g. aggregated data."
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "furtherInformation": [
+                {
+                    "entityType": "all",
+                    "text": "Ressource ist f\u00fcr alle zug\u00e4nglich (offen) oder hat einen\neingeschr\u00e4nkten Zugang (restriktiv)."
+                }
+            ]
+        },
+        "en": {
+            "furtherInformation": [
+                {
+                    "entityType": "all",
+                    "text": "Resource is accessible to all (open) or has restricted access (restrictive)."
+                }
+            ]
+        }
+    }
+}

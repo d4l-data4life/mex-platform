@@ -1,0 +1,40 @@
+{
+    "name": "meshTerm",
+    "renderer": "plain",
+    "kind": "string",
+    "importance": "optional",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "MeSH-Begriff",
+                "plural": "MeSH-Begriffe"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "MeSH term",
+                "plural": "MeSH terms"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "all",
+                "text": "Medical Subject Headings (MeSH) Thesaurus ist ein kontrolliertes und hierarchisch organisiertes Vokabular, das von der National Library of Medicine erstellt wurde."
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "text": "Medical Subject Headings (MeSH) thesaurus is a controlled and hierarchically-organized vocabulary produced by the National Library of Medicine."
+            }
+        ]
+    },
+    "documentation": null
+}

@@ -1,0 +1,375 @@
+version: "3.9"
+
+# Common MEx core service env variables
+x-mex-db-config: &mex-db-config
+  MEX_DB_HOSTNAME: mex-db
+  MEX_DB_PORT: 5432
+  MEX_DB_NAME: mex_local
+  MEX_DB_USER: mexadmin
+  MEX_DB_PASSWORD: admin
+  MEX_DB_CONNECTION_ATTEMPTS: 10
+  MEX_DB_CONNECTION_PAUSE: 3s
+  MEX_DB_SSL_MODE: disable
+
+x-mex-redis-config: &mex-redis-config
+  MEX_REDIS_HOSTNAME: mex-redis
+  MEX_REDIS_PASSWORD: admin
+  MEX_REDIS_PORT: 6379
+  MEX_REDIS_DB: 1
+  MEX_REDIS_PUB_SUB_PREFIX: local
+
+x-mex-solr-config: &mex-solr-config
+  MEX_SOLR_ORIGIN: http://mex-solr:8983
+  MEX_SOLR_BASICAUTH_USER: ∅
+  MEX_SOLR_BASICAUTH_PASSWORD: ∅
+  MEX_SOLR_REPLICATION_FACTOR: 1
+  MEX_SOLR_CONNECTION_ATTEMPTS: 20
+
+services:
+  #######################################################################
+  ## Data layer services
+
+  mex-db:
+    image: postgres:15.2
+    restart: always
+    container_name: mex-db
+    environment:
+      POSTGRES_DB: mex_local
+      POSTGRES_USER: mexadmin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "55432:5432"
+
+  mex-solr-1:
+    image: solr:9.2.0
+    restart: always
+    container_name: mex-solr
+    entrypoint:
+      [
+        "docker-entrypoint.sh",
+        "solr",
+        "start",
+        "-f",
+        "-c",
+        "-q",
+        "-z",
+        "mex-zoo-1:2181,mex-zoo-2:2181,mex-zoo-3:2181",
+      ]
+    environment:
+      SOLR_LOG_LEVEL: ERROR
+    ports:
+      - "58983:8983"
+    depends_on:
+      - mex-zoo-1
+      - mex-zoo-2
+      - mex-zoo-3
+
+  mex-solr-2:
+    image: solr:9.2.0
+    restart: always
+    entrypoint:
+      [
+        "docker-entrypoint.sh",
+        "solr",
+        "start",
+        "-f",
+        "-c",
+        "-q",
+        "-z",
+        "mex-zoo-1:2181,mex-zoo-2:2181,mex-zoo-3:2181",
+      ]
+    environment:
+      SOLR_LOG_LEVEL: ERROR
+    depends_on:
+      - mex-zoo-1
+      - mex-zoo-2
+      - mex-zoo-3
+
+  mex-solr-3:
+    image: solr:9.2.0
+    restart: always
+    entrypoint:
+      [
+        "docker-entrypoint.sh",
+        "solr",
+        "start",
+        "-f",
+        "-c",
+        "-q",
+        "-z",
+        "mex-zoo-1:2181,mex-zoo-2:2181,mex-zoo-3:2181",
+      ]
+    environment:
+      SOLR_LOG_LEVEL: ERROR
+    depends_on:
+      - mex-zoo-1
+      - mex-zoo-2
+      - mex-zoo-3
+
+  mex-zoo-1:
+    image: zookeeper:3.8.1
+    restart: always
+    container_name: mex-zoo-1
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=mex-zoo-1:2888:3888;2181  server.2=mex-zoo-2:2888:3888;2181  server.3=mex-zoo-3:2888:3888;2181
+      ZOO_4LW_COMMANDS_WHITELIST: mntr, conf, ruok
+
+  mex-zoo-2:
+    image: zookeeper:3.8.1
+    restart: always
+    container_name: mex-zoo-2
+    environment:
+      ZOO_MY_ID: 2
+      ZOO_SERVERS: server.1=mex-zoo-1:2888:3888;2181  server.2=mex-zoo-2:2888:3888;2181  server.3=mex-zoo-3:2888:3888;2181
+      ZOO_4LW_COMMANDS_WHITELIST: mntr, conf, ruok
+
+  mex-zoo-3:
+    image: zookeeper:3.8.1
+    restart: always
+    container_name: mex-zoo-3
+    environment:
+      ZOO_MY_ID: 3
+      ZOO_SERVERS: server.1=mex-zoo-1:2888:3888;2181  server.2=mex-zoo-2:2888:3888;2181  server.3=mex-zoo-3:2888:3888;2181
+      ZOO_4LW_COMMANDS_WHITELIST: mntr, conf, ruok
+
+  mex-redis:
+    image: redis:4
+    container_name: mex-redis
+    restart: always
+    command: redis-server --requirepass admin
+    ports:
+      - "56379:6379"
+
+  #######################################################################
+  ## MEx services
+
+  mex-metadata-svc:
+    container_name: mex-metadata-svc
+    build:
+      context: ../backend
+      target: final
+    entrypoint: /app/mex-metadata-svc
+    restart: always
+    depends_on:
+      - mex-db
+      - mex-solr-1
+      - mex-solr-2
+      - mex-solr-3
+      - mex-redis
+    environment:
+      MEX_TENANT_ID: local
+      <<: [*mex-db-config, *mex-redis-config]
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_PEM_B64: "IA=="
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_FILES: /pairgen/pairgen.ca.pem
+
+      MEX_OAUTH_INTERNAL_AUTH_SERVICE_HOSTNAME: mex-auth-svc
+      MEX_OAUTH_CLIENT_ID: test-client-id
+      MEX_OAUTH_PRODUCER_GROUP_ID: producer-group-id
+      MEX_OAUTH_CONSUMER_GROUP_ID: consumer-group-id
+
+      MEX_JWKS_REMOTE_KEYS_URI: http://mex-auth-svc:3000/api/v0/oauth/keys
+      MEX_LOGGING_TRACE_ENABLED: "false"
+      MEX_LOGGING_TRACE_SECRET: s3cr3t
+      MEX_SERVICES_DUPLICATE_DETECTION_ALGORITHM: LATEST_ONLY
+      MEX_SERVICES_CONFIG_ORIGIN: http://mex-config-svc:3000
+      MEX_SERVICES_BI_EVENTS_FILTER_ORIGIN: http://mex-proxy:8080
+      MEX_SERVICES_BI_EVENTS_FILTER_PATH: /null/events
+      MEX_SERVICES_BI_EVENTS_FILTER_SECRET: geh31m
+      MEX_NOTIFY_EMAILER_TYPE: MOCKMAILER
+      MEX_NOTIFY_FLOWMAILER_CLIENT_ID: "1234"
+      MEX_NOTIFY_FLOWMAILER_CLIENT_SECRET: "foo"
+      MEX_NOTIFY_FLOWMAILER_ACCOUNT_ID: "1234"
+
+    volumes:
+      - "pairgen-ca:/pairgen:ro"
+
+  mex-query-svc:
+    container_name: mex-query-svc
+    build:
+      context: ../backend
+      target: final
+    entrypoint: /app/mex-query-svc
+    restart: always
+    depends_on:
+      - mex-db
+      - mex-solr-1
+      - mex-solr-2
+      - mex-solr-3
+      - mex-redis
+    environment:
+      MEX_TENANT_ID: local
+      <<: [*mex-db-config, *mex-redis-config, *mex-solr-config]
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_PEM_B64: "IA=="
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_FILES: /pairgen/pairgen.ca.pem
+      MEX_JWKS_REMOTE_KEYS_URI: http://mex-auth-svc:3000/api/v0/oauth/keys
+      MEX_OAUTH_INTERNAL_AUTH_SERVICE_HOSTNAME: mex-auth-svc
+      MEX_OAUTH_CLIENT_ID: test-client-id
+      MEX_OAUTH_PRODUCER_GROUP_ID: producer-group-id
+      MEX_OAUTH_CONSUMER_GROUP_ID: consumer-group-id
+      MEX_LOGGING_TRACE_ENABLED: "false"
+      MEX_LOGGING_TRACE_SECRET: s3cr3t
+      MEX_SERVICES_CONFIG_ORIGIN: http://mex-config-svc:3000
+      MEX_SERVICES_BI_EVENTS_FILTER_ORIGIN: http://mex-proxy:8080
+      MEX_SERVICES_BI_EVENTS_FILTER_PATH: /null/events
+      MEX_SERVICES_BI_EVENTS_FILTER_SECRET: geh31m
+    volumes:
+      - "pairgen-ca:/pairgen:ro"
+
+  mex-index-svc:
+    container_name: mex-index-svc
+    build:
+      context: ../backend
+      target: final
+    entrypoint: /app/mex-index-svc
+    restart: always
+    depends_on:
+      - mex-db
+      - mex-solr-1
+      - mex-solr-2
+      - mex-solr-3
+      - mex-redis
+    environment:
+      MEX_TENANT_ID: local
+      <<: [*mex-db-config, *mex-redis-config, *mex-solr-config]
+      MEX_JWKS_REMOTE_KEYS_URI: http://mex-auth-svc:3000/api/v0/oauth/keys
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_PEM_B64: "IA=="
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_FILES: /pairgen/pairgen.ca.pem
+      MEX_OAUTH_INTERNAL_AUTH_SERVICE_HOSTNAME: mex-auth-svc
+      MEX_OAUTH_CLIENT_ID: test-client-id
+      MEX_OAUTH_PRODUCER_GROUP_ID: producer-group-id
+      MEX_OAUTH_CONSUMER_GROUP_ID: consumer-group-id
+      MEX_LOGGING_TRACE_ENABLED: "false"
+      MEX_LOGGING_TRACE_SECRET: s3cr3t
+      MEX_SERVICES_CONFIG_ORIGIN: http://mex-config-svc:3000
+      MEX_SERVICES_BI_EVENTS_FILTER_ORIGIN: http://mex-proxy:8080
+      MEX_SERVICES_BI_EVENTS_FILTER_PATH: /null/events
+      MEX_SERVICES_BI_EVENTS_FILTER_SECRET: geh31m
+    volumes:
+      - "pairgen-ca:/pairgen:ro"
+
+  mex-auth-svc:
+    container_name: mex-auth-svc
+    build:
+      context: ../backend
+      target: final
+    entrypoint: /app/mex-auth-svc
+    restart: always
+    depends_on:
+      - mex-redis
+    environment:
+      MEX_TENANT_ID: local
+      <<: *mex-redis-config
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_PEM_B64: "IA=="
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_FILES: /pairgen/pairgen.ca.pem
+      MEX_OAUTH_SERVER_ENABLED: "true"
+      MEX_OAUTH_CLIENT_ID: test-client-id
+      MEX_OAUTH_PRODUCER_GROUP_ID: producer-group-id
+      MEX_OAUTH_CONSUMER_GROUP_ID: consumer-group-id
+      MEX_OAUTH_SERVER_CLIENT_SECRETS: s3cr3t,gehe1m
+      MEX_OAUTH_SERVER_SIGNING_PRIVATE_KEY_PEM_B64: "IA=="
+      MEX_OAUTH_SERVER_SIGNING_PRIVATE_KEY_FILE: /pairgen/default.key.pem
+      MEX_OAUTH_SERVER_REDIRECT_URIS: http://localhost:3000/auth,http://localhost:4000/auth,http://localhost:4001/auth,http://localhost:53000/auth,https://mex-proxy/auth,https://localhost:53000/auth
+      MEX_LOGGING_TRACE_ENABLED: "false"
+      MEX_LOGGING_TRACE_SECRET: s3cr3t
+      MEX_SERVICES_BI_EVENTS_FILTER_ORIGIN: http://mex-proxy:8080
+      MEX_SERVICES_BI_EVENTS_FILTER_PATH: /null/events
+      MEX_SERVICES_BI_EVENTS_FILTER_SECRET: geh31m
+    volumes:
+      - "pairgen-ca:/pairgen:ro"
+
+  mex-config-svc:
+    container_name: mex-config-svc
+    build:
+      context: ../backend
+      target: final
+    entrypoint: /app/mex-config-svc
+    restart: always
+    depends_on:
+      - mex-redis
+    environment:
+      MEX_TENANT_ID: local
+      <<: *mex-redis-config
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_PEM_B64: "IA=="
+      MEX_WEB_CA_CERTS_ADDITIONAL_CA_CERTS_FILES: /pairgen/pairgen.ca.pem
+      MEX_AUTH_API_KEYS_ROLES_B64: "eyJrZXlzUm9sZXMiOnsiZzNoMzFtIjoicHJvZHVjZXIifX0="
+      MEX_LOGGING_TRACE_ENABLED: "true"
+      MEX_LOGGING_TRACE_SECRET: s3cr3t
+      MEX_SERVICES_CONFIG_ENV_PATH: test
+      MEX_SERVICES_CONFIG_API_KEYS: g3h31m
+      MEX_SERVICES_CONFIG_GITHUB_REPO_NAME: ∅
+      MEX_SERVICES_CONFIG_GITHUB_DEPLOY_KEY_PEM_B64: "IA=="
+      MEX_SERVICES_CONFIG_UPDATE_TIMEOUT: "120s"
+      MEX_SERVICES_BI_EVENTS_FILTER_ORIGIN: http://mex-proxy:8080
+      MEX_SERVICES_BI_EVENTS_FILTER_PATH: /null/events
+      MEX_SERVICES_BI_EVENTS_FILTER_SECRET: geh31m
+    volumes:
+      - "pairgen-ca:/pairgen:ro"
+
+  mex-webapp:
+    container_name: mex-webapp
+    build:
+      context: ../frontend
+      target: serve
+    environment:
+      API_URL: /api/v0
+      CONFIG_STATIC_URL: /api/v0/config/files
+      DYNAMIC_ENV_URL: /config/config.json
+      CMS_URL: /cms
+    volumes:
+      - "./local/webapp/geo/geo.conf:/etc/nginx/conf.d/geo/geo.conf"
+      - "webapp-tmp-nginx:/tmp/nginx"
+      - "./local/webapp/config/config.hybrid.json:/usr/share/nginx/html/config/config.json"
+
+  mex-proxy:
+    container_name: mex-proxy
+    image: nginx:latest
+    volumes:
+      - "./local/nginx/nginx.conf:/etc/nginx/nginx.conf"
+      - "./local/nginx/wait4cert.sh:/docker-entrypoint.d/wait4cert.sh"
+      - "pairgen-ca:/pairgen"
+    ports:
+      - "53000:443"
+    restart: always
+    depends_on:
+      - mex-metadata-svc
+      - mex-query-svc
+      - mex-index-svc
+      - mex-auth-svc
+      - mex-config-svc
+      - mex-webapp
+      - pairgen
+
+  pairgen:
+    container_name: pairgen
+    build:
+      context: tools/pairgen
+      target: pairgen
+    environment:
+      KEY_IDS: "integration-test extractor demo test-client-id"
+      PAIRGEN_DNS_NAMES: "pairgen localhost mex-proxy"
+      CA_CERT_FILES: /pairgen/pairgen.ca
+      KEYS_FOLDERS: /pairgen,/pairgen-local
+      INTERMEDIATE_FILES: /pairgen/inter
+    volumes:
+      - "pairgen-ca:/pairgen"
+      - "./local/pairgen:/pairgen-local"
+    ports:
+      - "55000:3000"
+      - "55001:3001"
+
+  #######################################################################
+  ## Admin UIs
+
+  mex-redis-commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    container_name: mex-redis-commander
+    environment:
+      REDIS_HOSTS: local:mex-redis:6379:1:admin
+    ports:
+      - "58002:8081"
+
+volumes:
+  pairgen-ca:
+  webapp-tmp-nginx:

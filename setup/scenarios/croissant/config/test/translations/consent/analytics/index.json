@@ -1,0 +1,12 @@
+{
+  "de": {
+    "accept": "Einwilligen",
+    "reject": "Ablehnen",
+    "text": "Mit Ihrer Einwilligung analysieren wir Ihre Nutzung unserer Web-App zur Verbesserung unseres Angebots. Wenn Sie in die Verarbeitung von Nutzungsanalysedaten einwilligen m\u00f6chten, klicken Sie auf \u201eEinwilligen\u201d. Sie k\u00f6nnen unsere Web-Angebote auch ohne Einwilligung in die Analyse Ihrer Nutzung verwenden."
+  },
+  "en": {
+    "accept": "Consent",
+    "reject": "Reject",
+    "text": "With your consent, we\u2019ll analyze your behavior in our web app to improve our offering for all users. If you consent to the transmission of analysis data, click \u201cConsent\u201d. You can use our offering without giving consent to analyze your behavior."
+  }
+}

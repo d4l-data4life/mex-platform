@@ -1,0 +1,11 @@
+.filter-footer__more {
+  display: block;
+  text-align: right;
+  border: 0 none;
+  background: transparent;
+  color: var(--color-secondary-1);
+  padding: var(--spacing-xsmall);
+  margin: var(--spacing-medium) var(--spacing-xsmall-negative) var(--spacing-xsmall) auto;
+  text-decoration: underline;
+  cursor: pointer;
+}

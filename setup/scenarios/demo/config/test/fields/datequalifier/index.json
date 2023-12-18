@@ -1,0 +1,26 @@
+{
+    "name": "dateQualifier",
+    "renderer": "none",
+    "kind": "string",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": true,
+    "vocabulary": {
+        "de": [
+            {
+                "conceptId": "date-qualifier-1",
+                "label": "unbekannt",
+                "description": "Datum ist nicht bekannt"
+            }
+        ],
+        "en": [
+            {
+                "conceptId": "date-qualifier-1",
+                "label": "unknown",
+                "description": "Date is not known"
+            }
+        ]
+    },
+    "documentation": null
+}

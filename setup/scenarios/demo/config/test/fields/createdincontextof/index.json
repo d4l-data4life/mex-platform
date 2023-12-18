@@ -1,0 +1,43 @@
+{
+    "name": "createdInContextOf",
+    "renderer": "entity",
+    "kind": "link",
+    "importance": "mandatory",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Projekt",
+                "plural": "Projekte"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Project",
+                "plural": "Projects"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "descriptionText": [
+                {
+                    "entityType": "Resource",
+                    "text": "Projekt \/ Vorhaben in dessen Zusammenhang die Ressource erstellt\nwurde"
+                }
+            ]
+        },
+        "en": {
+            "descriptionText": [
+                {
+                    "entityType": "Resource",
+                    "text": "Project in connection with which the resource was created"
+                }
+            ]
+        }
+    }
+}

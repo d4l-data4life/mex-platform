@@ -1,0 +1,36 @@
+{
+    "de": {
+        "dataOwner": {
+            "cancel": "Abbrechen",
+            "choiceText": "Was m\u00f6chten Sie tun?",
+            "choiceTitle": "Eigent\u00fcmer der Daten kontaktieren",
+            "start": "Kontaktieren",
+            "email": {
+                "label": "E-Mail schreiben",
+                "subject": "Frage zu MEx-Daten",
+                "text": "Senden Sie eine E-Mail an die Dateninhaber*in und stellen Sie Fragen (\u00f6ffnet Ihr E-Mail-Programm)."
+            },
+            "form": {
+                "label": "Anfrage zum Zugriff auf die Daten senden",
+                "text": "F\u00fcllen Sie ein Formular aus und beantworten Sie einige Fragen dar\u00fcber, warum und wie Sie auf die Daten zugreifen m\u00f6chten."
+            }
+        }
+    },
+    "en": {
+        "dataOwner": {
+            "cancel": "Cancel",
+            "choiceText": "What would you like to do?",
+            "choiceTitle": "Contact data owner",
+            "start": "Contact",
+            "email": {
+                "label": "Write email",
+                "subject": "Question about MEx data",
+                "text": "Send an email to data owner and ask questions (opens your email client)."
+            },
+            "form": {
+                "label": "Send request to access the data",
+                "text": "Fill out a form and answer some questions to describe why and how you want to access the data."
+            }
+        }
+    }
+}

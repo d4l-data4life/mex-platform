@@ -1,0 +1,12 @@
+{
+    "name": "contact",
+    "type": "searchFocus",
+    "fields": [
+        "contact__label",
+        "contact__email",
+        "contact__acronym",
+        "contact__rorID",
+        "contact__orcidID",
+        "contact__isniID"
+    ]
+}

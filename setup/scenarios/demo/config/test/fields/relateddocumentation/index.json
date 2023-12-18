@@ -1,0 +1,103 @@
+{
+    "name": "relatedDocumentation",
+    "renderer": "link",
+    "kind": "string",
+    "importance": "recommended",
+    "isVirtual": false,
+    "isMultiValued": true,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "Dokumentation"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Documentation"
+            }
+        ]
+    },
+    "description": {
+        "de": [
+            {
+                "entityType": "Resource",
+                "text": "Link auf die Dokumentation der Ressource"
+            },
+            {
+                "entityType": "Source",
+                "text": "Link auf die Dokumentation des Projekts oder projektverwandte Dokumentationen"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Link auf die Dokumentation der Plattform"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "Resource",
+                "text": "Link to the documentation of the resource"
+            },
+            {
+                "entityType": "Source",
+                "text": "Link to the documentation of the project or project related documentation"
+            },
+            {
+                "entityType": "Platform",
+                "text": "Link to the documentation of the platform"
+            }
+        ]
+    },
+    "documentation": {
+        "de": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "\"S:\\path\\to\\data\""
+                },
+                {
+                    "entityType": "Platform",
+                    "text": "\"https:\/\/docs.microsoft.com\/de-de\/power-bi\""
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "all",
+                    "text": "Verweis auf den Speicher-\/Zugriffsort, an dem die Dokumentation hinterlegt ist. Nicht das Dokument selbst, auch nicht Titel des Dokuments."
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "URL oder Netzwerkordner-Dateipfad"
+                }
+            ]
+        },
+        "en": {
+            "exampleValue": [
+                {
+                    "entityType": "all",
+                    "text": "\"S:\\path\\to\\data\""
+                },
+                {
+                    "entityType": "Platform",
+                    "text": "\"https:\/\/docs.microsoft.com\/de-de\/power-bi\""
+                }
+            ],
+            "furtherInformation": [
+                {
+                    "entityType": "all",
+                    "text": "Reference to the storage\/access location where the documentation is stored. Not the document itself, nor the title of the document."
+                }
+            ],
+            "displayFormats": [
+                {
+                    "entityType": "all",
+                    "text": "URL or network folder file path"
+                }
+            ]
+        }
+    }
+}

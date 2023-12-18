@@ -1,0 +1,10 @@
+{
+    "de": {
+        "error": "Beim Herunterladen der Ergebnisse ist leider ein Fehler aufgetreten",
+        "success": "Ergebnisse erfolgreich heruntergeladen"
+    },
+    "en": {
+        "error": "Unfortunately, an error occurred while downloading the results",
+        "success": "Results downloaded successfully"
+    }
+}

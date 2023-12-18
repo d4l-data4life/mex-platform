@@ -1,0 +1,102 @@
+@keyframes animatedStrokeUnderline1 {
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.u-animated-stroke-underline-1 {
+  display: inline-block;
+  text-shadow: 1px 1px 0 var(--color-text-shadow);
+}
+
+.u-animated-stroke-underline-1::after {
+  display: block;
+  content: '';
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(to right, var(--color-highlight-3) 0%, var(--color-highlight-3-transparent) 100%);
+  margin: 0 5%;
+  width: 0%;
+  animation: var(--duration-medium) animatedStrokeUnderline1 cubic-bezier(1, 0, 1, 1);
+  animation-fill-mode: forwards;
+  margin-top: -0.15em;
+}
+
+.u-underline-2 {
+  display: inline-block;
+}
+
+.u-underline-3 {
+  display: block;
+}
+
+.u-underline-4 {
+  display: inline-block;
+}
+
+.u-underline-2::after,
+.u-underline-3::after {
+  display: block;
+  content: '';
+  height: 4px;
+  border-radius: 2px;
+}
+
+.u-underline-2::after {
+  width: var(--stylistic-underline-width);
+  max-width: calc(100% - var(--spacing-xxsmall));
+  margin: 0 1px;
+  background: var(--color-primary-5);
+}
+
+.u-underline-3::after {
+  margin: 0 4px;
+  background: var(--color-primary-4);
+}
+
+.u-underline--positive::after {
+  background-color: var(--color-green);
+}
+
+.u-underline--negative::after {
+  background-color: var(--color-red);
+}
+
+.u-underline-4::after {
+  display: block;
+  content: '';
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-primary-5);
+}
+
+.u-highlight em {
+  font-style: normal;
+  background-color: var(--color-secondary-1);
+  color: var(--color-white);
+  padding: var(--spacing-xxsmall) var(--spacing-xsmall);
+  border-radius: var(--spacing-xsmall);
+}
+
+.u-highlight-2 {
+  background-color: var(--color-highlight-4);
+}
+
+.u-visually-hidden:not(:focus):not(:active) {
+  /* Hiding content visually and usable by assistive technology */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.u-spacing-when-empty:empty {
+  display: block;
+  margin-top: var(--spacing-large);
+}

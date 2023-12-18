@@ -1,0 +1,15 @@
+# Fill out the client secret values and store this file as `~/.mexctl/config.yaml`.
+
+instances:
+  demo:
+    description: "local in Docker"
+    mexBaseUrl: https://localhost:53000
+    mexOrigin: https://localhost:53000
+    clientId: test-client-id
+    clientSecret: s3cr3t
+    tokenUrl: https://localhost:53000/api/v0/oauth/token
+    tokenContentType: application/json
+    loggingTraceSecret: s3cr3t
+    configApiKey: g3h31m
+
+defaultInstance: demo

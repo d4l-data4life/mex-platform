@@ -1,0 +1,8 @@
+{
+    "name": "id",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": false,
+        "ext": []
+    }
+}

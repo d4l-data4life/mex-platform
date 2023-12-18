@@ -1,0 +1,25 @@
+{
+    "name": "parentDepartment",
+    "renderer": "reference",
+    "kind": "link",
+    "importance": "none",
+    "isVirtual": false,
+    "isMultiValued": false,
+    "isEnumerable": false,
+    "label": {
+        "de": [
+            {
+                "entityType": "all",
+                "singular": "\u00dcbergeordnete Abteilung"
+            }
+        ],
+        "en": [
+            {
+                "entityType": "all",
+                "singular": "Parent Department"
+            }
+        ]
+    },
+    "linkedField": "label",
+    "documentation": null
+}

@@ -1,0 +1,70 @@
+@keyframes notificationsTimer {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes notificationsFade {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(var(--spacing-small));
+  }
+}
+
+.notifications {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: var(--spacing-small);
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: var(--z-index-notifications);
+}
+
+.notifications__item {
+  position: relative;
+  margin: var(--spacing-small);
+  padding: var(--spacing-small) var(--spacing-large);
+  text-align: center;
+  background: var(--color-gray-1);
+  color: var(--color-white);
+  font-weight: 600;
+  border: 1px solid var(--color-white);
+  border-radius: var(--spacing-small);
+  box-shadow: var(--shadow-overlay);
+  outline: 1px solid var(--color-gray-2);
+  overflow: hidden;
+  animation: var(--duration-medium) notificationsFade ease-out calc(8s - var(--duration-medium));
+  animation-fill-mode: forwards;
+}
+
+.notifications__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  width: 0;
+  animation: calc(8s - var(--duration-medium)) notificationsTimer ease-out;
+  animation-fill-mode: forwards;
+  background: var(--color-white);
+}
+
+.notifications__item--success {
+  background: var(--color-green);
+}

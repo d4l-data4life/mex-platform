@@ -1,0 +1,8 @@
+{
+    "name": "entityName",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": false,
+        "ext": []
+    }
+}

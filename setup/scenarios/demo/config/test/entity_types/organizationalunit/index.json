@@ -1,0 +1,8 @@
+{
+    "name": "OrganizationalUnit",
+    "config": {
+        "isFocal": false,
+        "isAggregatable": false,
+        "businessIdFieldName": "identifier"
+    }
+}

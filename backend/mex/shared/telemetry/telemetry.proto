@@ -1,0 +1,29 @@
+syntax = "proto3";
+package d4l.mex.telemetry;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/telemetry;telemetry";
+
+import "d4l/security.proto";
+import "d4l/status.proto";
+import "google/api/annotations.proto";
+
+message LivenessRequest   {}
+message LivenessResponse  {}
+
+message ReadinessRequest  {}
+
+service Telemetry {
+  rpc LivenessProbe (LivenessRequest) returns (LivenessResponse) {
+    option (google.api.http) = {
+      get: "/probes/liveness"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+
+  rpc ReadinessProbe (ReadinessRequest) returns (d4l.mex.status.Status) {
+    option (google.api.http) = {
+      get: "/probes/readiness"
+    };
+    option (d4l.api.security.authn_type) = NONE;
+  }
+}

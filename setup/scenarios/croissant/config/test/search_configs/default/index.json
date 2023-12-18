@@ -1,0 +1,8 @@
+{
+  "name": "default",
+  "type": "searchFocus",
+  "fields": [
+    "description",
+    "name"
+  ]
+}

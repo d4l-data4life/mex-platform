@@ -1,0 +1,8 @@
+{
+    "name": "stableTargetId",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": false,
+        "ext": []
+    }
+}

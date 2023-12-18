@@ -1,0 +1,9 @@
+.github
+.git
+.vscode
+jenkinsfile
+temp
+node_modules
+build
+output
+envs.json

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package d4l.mex.blobs;
+
+option go_package = "github.com/d4l-data4life/mex/mex/shared/blobs;blobs";
+
+message BlobInfo {
+  string blob_name = 1;
+  string blob_type = 2;
+}

@@ -1,0 +1,523 @@
+{
+    "de": {
+        "title": "Plattform",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Projekt",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Ressource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Daten-Item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Plattform",
+                    "pages\/platform"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Platform",
+                            "#platform"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Pflichtfelder",
+                                    "#pflichtfelder"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Plattform",
+                                            "#plattform"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Kontakt",
+                                            "#kontakt"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Zugriffsm\u00f6glichkeit",
+                                            "#zugriffsmoglichkeit"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Zugriffsort",
+                                            "#zugriffsort"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Empfohlene Felder",
+                                    "#empfohlene-felder"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Beschreibung",
+                                            "#beschreibung"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Dokumentation",
+                                            "#dokumentation"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Optionale Felder",
+                                    "#optionale-felder"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Kurztitel",
+                                            "#kurztitel"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "API-Dokumentation",
+                                            "#api-dokumentation"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "API-Typ",
+                                            "#api-typ"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "API-Zugriffsort",
+                                            "#api-zugriffsort"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Platform",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "link": "",
+                    "id": "platform"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Pflichtfelder",
+                    "id": "pflichtfelder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "plattform"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "contact",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "kontakt"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "technicalAccessibility",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "zugriffsmoglichkeit"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessLocation",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "zugriffsort"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Empfohlene Felder",
+                    "id": "empfohlene-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "beschreibung"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedDocumentation",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "dokumentation"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optionale Felder",
+                    "id": "optionale-felder"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "acronym",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "kurztitel"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "apiDescription",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "api-dokumentation"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "apiType",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "api-typ"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "apiAccessLocation",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "api-zugriffsort"
+                }
+            }
+        ]
+    },
+    "en": {
+        "title": "Platform",
+        "alignment": "left",
+        "flags": [],
+        "toc": [
+            {
+                "value": [
+                    "Project",
+                    "pages\/source"
+                ]
+            },
+            {
+                "value": [
+                    "Resource",
+                    "pages\/resource"
+                ]
+            },
+            {
+                "value": [
+                    "Data item",
+                    "pages\/datum"
+                ]
+            },
+            {
+                "value": [
+                    "Platform",
+                    "pages\/platform"
+                ],
+                "children": [
+                    {
+                        "value": [
+                            "Platform",
+                            "#platform"
+                        ],
+                        "children": [
+                            {
+                                "value": [
+                                    "Mandatory fields",
+                                    "#mandatory-fields"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Platform",
+                                            "#platform"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Contact",
+                                            "#contact"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Technical accessibility",
+                                            "#technical-accessibility"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Access location",
+                                            "#access-location"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Recommended fields",
+                                    "#recommended-fields"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Description",
+                                            "#description"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "Documentation",
+                                            "#documentation"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "value": [
+                                    "Optional fields",
+                                    "#optional-fields"
+                                ],
+                                "children": [
+                                    {
+                                        "value": [
+                                            "Short title",
+                                            "#short-title"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "API documentation",
+                                            "#api-documentation"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "API type",
+                                            "#api-type"
+                                        ],
+                                        "children": []
+                                    },
+                                    {
+                                        "value": [
+                                            "API access location",
+                                            "#api-access-location"
+                                        ],
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "type": "entityTypeHeadline",
+                "content": {
+                    "entitytype": "Platform",
+                    "level": "h2",
+                    "vocabulary": "",
+                    "id": "platform"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Mandatory fields",
+                    "id": "mandatory-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "label",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "platform"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "contact",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "contact"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "technicalAccessibility",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "technical-accessibility"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "accessLocation",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "access-location"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Recommended fields",
+                    "id": "recommended-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "description",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "description"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "relatedDocumentation",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "documentation"
+                }
+            },
+            {
+                "type": "heading",
+                "content": {
+                    "level": "h3",
+                    "text": "Optional fields",
+                    "id": "optional-fields"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "acronym",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "short-title"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "apiDescription",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "api-documentation"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "apiType",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "api-type"
+                }
+            },
+            {
+                "type": "fieldDescription",
+                "content": {
+                    "field": "apiAccessLocation",
+                    "entitytype": "Platform",
+                    "level": "h4",
+                    "id": "api-access-location"
+                }
+            }
+        ]
+    }
+}

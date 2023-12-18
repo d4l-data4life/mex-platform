@@ -1,0 +1,8 @@
+{
+    "name": "orcidID",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

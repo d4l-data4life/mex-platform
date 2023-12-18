@@ -1,0 +1,8 @@
+{
+    "name": "dataCollectionProcess",
+    "kind": "string",
+    "indexDef": {
+        "multiValued": true,
+        "ext": []
+    }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "resourceType",
+  "renderer": "plain",
+  "kind": "string",
+  "importance": "mandatory",
+  "isVirtual": false,
+  "isMultiValued": true,
+  "isEnumerable": true,
+  "label": {
+    "de": [
+      {
+        "entityType": "all",
+        "singular": "Ressourcentyp",
+        "plural": "Ressourcentypen"
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "singular": "Resource type",
+        "plural": "Resource types"
+      }
+    ]
+  },
+  "description": {
+    "de": [
+      {
+        "entityType": "all",
+        "text": "Typ(en) der Ressource. Dies kann die Art eines Datensatzes,  Forschungssoftware oder verwendete Datenbank sein."
+      }
+    ],
+    "en": [
+      {
+        "entityType": "all",
+        "text": "Type(s) of the resource. Like type of dataset, research software, and used database."
+      }
+    ]
+  },
+  "vocabulary": {
+    "de": [
+      {
+        "conceptId": "resource-type-1",
+        "label": "Studienvariablen",
+        "description": "Variablen einer Studie"
+      },
+      {
+        "conceptId": "resource-type-2",
+        "label": "Studiendaten",
+        "description": "Die bei einer Studie erhobenen Daten"
+      }
+    ],
+    "en": [
+      {
+        "conceptId": "resource-type-1",
+        "label": "Study variables",
+        "description": "Variables of a study"
+      },
+      {
+        "conceptId": "resource-type-2",
+        "label": "Study Data",
+        "description": "Data collected during a study"
+      }
+    ]
+  },
+  "documentation": {
+    "de": {
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "Diese Liste ist erweiterbar."
+        }
+      ]
+    },
+    "en": {
+      "furtherInformation": [
+        {
+          "entityType": "all",
+          "text": "This list is expandable."
+        }
+      ]
+    }
+  }
+}

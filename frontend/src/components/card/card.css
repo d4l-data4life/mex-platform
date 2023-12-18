@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  padding: var(--spacing-medium);
+  background: var(--color-primary-5);
+  border-radius: var(--spacing-xsmall);
+}
+
+.card__icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.card__row + .card__row {
+  margin-top: var(--spacing-smedium);
+}
+
+.card__row--action {
+  text-align: center;
+}
+
+.card__row + .card__row--action {
+  margin-top: var(--spacing-medium);
+}
+
+.card__label {
+  color: var(--color-gray-2);
+  font-weight: 600;
+}
+
+.card__value {
+  word-wrap: break-word;
+}
+
+.card__text {
+  text-align: center;
+  margin: var(--spacing-small) 0;
+}

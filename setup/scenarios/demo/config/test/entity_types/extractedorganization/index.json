@@ -1,0 +1,12 @@
+{
+    "name": "ExtractedOrganization",
+    "config": {
+        "isFocal": false,
+        "isAggregatable": true,
+        "businessIdFieldName": "stableTargetId",
+        "aggregationAlgorithm": "source_partition",
+        "aggregationEntityType": "Organization",
+        "partitionFieldName": "wasExtractedFrom",
+        "duplicateStrategy": "removeall"
+    }
+}
