@@ -5,7 +5,7 @@ It was built by Data4Life in connection with the [MEx (Metadata Exchange) projec
 The MEx platform is built to allow effective storage, management, search, and display of metadata, especially metadata related to scientific data and research. 
 It consists of a Stencil webapp and several backend services written in Go - see the links below for information on how to run a demo on your local machine. 
 
-The MEx platform is based on the [D4L FAIR metadata platform](https://www.data4life.care/de/d4l-fair/).
+The [D4L FAIR metadata platform](https://www.data4life.care/de/d4l-fair/) is based on the MEx platform.
 If you are interested in learning more about D4L FAIR, you can contact us via [d4l-fair@data4life.care](mailto:d4l-fair@data4life.care).
 
 ## More information
