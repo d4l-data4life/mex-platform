@@ -22,20 +22,20 @@
     "node": ">14.0.0"
   },
   "devDependencies": {
-    "@stencil/postcss": "^2.1.0",
+    "@stencil-community/postcss": "^2.2.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^18.11.9",
+    "@types/node": "^18.19.19",
     "jest": "^27.5.1",
     "jest-cli": "^27.5.1",
     "postcss-custom-media": "^8.0.2",
-    "prettier": "^2.8.0",
-    "rollup-plugin-visualizer": "^5.8.3"
+    "prettier": "^2.8.8",
+    "rollup-plugin-visualizer": "^5.12.0"
   },
   "dependencies": {
-    "@stencil/core": "^2.19.3",
+    "@stencil/core": "^2.22.3",
     "@stencil/eslint-plugin": "^0.4.0",
-    "@stencil/store": "^2.0.1",
-    "dotenv": "^16.0.3",
+    "@stencil/store": "^2.0.14",
+    "dotenv": "^16.4.5",
     "i18next": "^21.10.0",
     "stencil-router-v2": "^0.6.0",
     "uuid": "^8.3.2"
